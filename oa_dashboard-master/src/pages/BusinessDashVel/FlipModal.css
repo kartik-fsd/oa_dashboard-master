@@ -1,0 +1,30 @@
+.item {
+    margin: 15px;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding: 15px;
+    
+}
+
+.item:after {
+    content: "";
+    display: block;
+   
+    border-bottom: 1px dotted #D5D5D5;
+}
+
+.testing {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .testintd, .thinside {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .abc:nth-child(even) {
+    background-color: #dddddd;
+  }

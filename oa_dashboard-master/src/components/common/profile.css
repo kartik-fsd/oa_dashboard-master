@@ -1,0 +1,22 @@
+.pro {
+  color: #e2defe;
+  background-color: #6c61b9;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  text-transform: uppercase;
+}
+
+.email_css {
+  display: inline-block;
+  background-color: #25235c;
+  color: white;
+  padding: 6px 15px;
+  margin-bottom: 36px;
+  border-radius: 5px;
+  margin-top: 12px;
+}

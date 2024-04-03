@@ -1,0 +1,18 @@
+input.filter-text {
+  float: right;
+  width: 200px;
+  height: 38px;
+  margin: 0;
+  /* margin-top: -64px;
+    margin-right: 130px; */
+  padding-left: 20px;
+}
+
+.filter-text {
+  margin-top: -67px !important;
+}
+
+.my-active-table .filter-text {
+  position: relative;
+  top: -7px;
+}

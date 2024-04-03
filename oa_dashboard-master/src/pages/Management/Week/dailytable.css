@@ -1,0 +1,58 @@
+.daily-table tr:nth-child(1),
+.daily-table tr:nth-child(2),
+.daily-table tr:nth-child(3),
+.daily-table tr:nth-child(4),
+.daily-table tr:nth-child(5),
+.daily-table tr:nth-child(6),
+.daily-table tr:nth-child(7) {
+  background-color: #ebf7f5;
+}
+
+.daily-table tr:nth-child(8),
+.daily-table tr:nth-child(9),
+.daily-table tr:nth-child(10),
+.daily-table tr:nth-child(11),
+.daily-table tr:nth-child(12),
+.daily-table tr:nth-child(13),
+.daily-table tr:nth-child(14) {
+  background-color: #fef8ee;
+}
+
+.daily-table tr:nth-child(15),
+.daily-table tr:nth-child(16),
+.daily-table tr:nth-child(17),
+.daily-table tr:nth-child(18),
+.daily-table tr:nth-child(19),
+.daily-table tr:nth-child(20),
+.daily-table tr:nth-child(21) {
+  background-color: #ebf5fc;
+}
+
+.daily-table tr:nth-child(22),
+.daily-table tr:nth-child(23),
+.daily-table tr:nth-child(24),
+.daily-table tr:nth-child(25),
+.daily-table tr:nth-child(26),
+.daily-table tr:nth-child(27),
+.daily-table tr:nth-child(28) {
+  background-color: #fff0ec;
+}
+
+.daily-table tr:nth-child(29),
+.daily-table tr:nth-child(30),
+.daily-table tr:nth-child(31) {
+  background-color: #ebf1fe;
+}
+
+.daily-table::-webkit-scrollbar {
+  width: 2px;
+  height: 4px;
+}
+
+/* .my-table::-webkit-scrollbar-thumb {
+  background-color: green;
+} */
+
+/* success  #ebf7f5*/
+/* primary #ecedf4 */
+/* secondary #ebf1fe */

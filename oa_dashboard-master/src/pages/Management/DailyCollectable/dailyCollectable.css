@@ -1,0 +1,22 @@
+.daily-collectable .rdt_TableHead .rdt_TableCol:first-child,
+.daily-collectable .rdt_TableBody .rdt_TableCell:first-child,
+.daily-collectable .rdt_TableHead .rdt_TableCol:nth-child(1),
+.daily-collectable .rdt_TableBody .rdt_TableCell:nth-child(1) {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: #f3f3f9;
+  padding: 10px;
+}
+
+.daily-collectable .rdt_TableCol {
+  color: black;
+  font-weight: bolder;
+  font-size: 14px;
+  background-color: #f3f3f9;
+}
+
+.my-table .filter-text {
+  position: relative;
+  top: -43px;
+}

@@ -1,0 +1,11 @@
+.img_title {
+    background-color: #bbdefb;
+  
+    border-radius: 8px !important;
+    cursor: pointer;
+  }
+
+  .img_title p:hover {
+    background-color: #95ccf6eb !important;
+    border-radius: 10px !important;
+  }

@@ -1,0 +1,15 @@
+.event {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 150px;
+    bottom: 3px;
+    left: calc(50% - 1.5px);
+    content: " ";
+    display: block;
+    background: green;
+}
+
+.event.busy {
+    background: #ffbb33;
+}

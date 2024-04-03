@@ -1,0 +1,6 @@
+#ubr_table :nth-child(1) {
+  width: 10%;
+}
+#ubr_table :nth-child(4) {
+  width: 20%;
+}

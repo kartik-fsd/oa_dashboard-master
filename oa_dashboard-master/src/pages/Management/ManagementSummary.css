@@ -1,0 +1,14 @@
+/* tr>th:first-child,tr>td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1000000 !important;
+  }
+
+
+.headcol{
+  position: sticky;
+  left: 5;
+  z-index: 100 !important;
+} */
+
+

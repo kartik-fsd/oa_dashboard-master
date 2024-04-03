@@ -1,0 +1,10 @@
+.my-pipeline-table .rdt_TableHead .rdt_TableCol:first-child,
+.my-pipeline-table .rdt_TableBody .rdt_TableCell:first-child,
+.my-pipeline-table .rdt_TableHead .rdt_TableCol:nth-child(1),
+.my-pipeline-table .rdt_TableBody .rdt_TableCell:nth-child(1) {
+  position: sticky;
+  left: 0;
+  /* z-index: 1; */
+  background-color: #f3f3f9;
+  padding: 10px;
+}

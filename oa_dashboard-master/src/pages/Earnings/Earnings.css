@@ -1,0 +1,34 @@
+.react-datepicker__header {
+    background-color: #3f5289;
+    color: #eceef3;
+  }
+  
+  .example-custom-input1 {
+    padding: 8px 43px 8px 14px;
+    width: 110px;
+    height: 39px;
+    border-radius: 6px;
+    border: 1px solid #dce0e4;
+    padding-left: 8px;
+  }
+
+
+
+
+
+
+  .flatpickr-day {
+    display: none;
+  }
+  
+  .flatpickr-month {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .flatpickr-month .flatpickr-prev-month,
+  .flatpickr-month .flatpickr-next-month {
+    display: none;
+  }
+  
+  

@@ -1,0 +1,31 @@
+td.td_leads,
+tr.tr_leads {
+  background-color: #fff;
+  border: 0.6px solid rgba(179, 176, 176, 0.719) !important;
+  border-collapse: separate;
+  font-weight: 500;
+  font-family: Poppins, sans-serif;
+  color: #878a99 !important;
+  text-align: center;
+  vertical-align: center;
+  text-transform: capitalize;
+}
+
+tr.tr_leads {
+  height: 37.5px;
+  text-transform: capitalize;
+}
+
+.reconfirm_icons1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.internal_qc_icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}

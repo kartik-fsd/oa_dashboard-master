@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="process_payment_purple" transform="translate(-7521 -1378)">
+    <g id="Group_48977" data-name="Group 48977" transform="translate(-61 -54)">
+      <rect id="Rectangle_20600" data-name="Rectangle 20600" width="24" height="24" rx="4" transform="translate(7582 1432)" fill="#3f5289"/>
+    </g>
+    <g id="Group_48976" data-name="Group 48976" transform="translate(294.151 1021.982)">
+      <path id="Path_108435" data-name="Path 108435" d="M22.881,16.7a.243.243,0,0,0-.271-.175,7.078,7.078,0,1,1,5.7-4.849.244.244,0,0,0,.169.311l1.6.43a1.674,1.674,0,0,1,.24.088.244.244,0,0,0,.333-.149A9.516,9.516,0,1,0,23.2,18.909a.244.244,0,0,0,.19-.309Z" transform="translate(7216.799 358)" fill="#fff"/>
+      <path id="Path_108438" data-name="Path 108438" d="M286.458,296.367l-1.554-1.554.64-.64a.558.558,0,0,0-.25-.934l-4.677-1.249a.558.558,0,0,0-.683.683l1.232,4.6a.562.562,0,0,0,.954.328l.64-.64,1.554,1.554a.558.558,0,0,0,.789,0l1.356-1.356a.558.558,0,0,0,0-.794Z" transform="translate(6960.655 78.718)" fill="#fff"/>
+      <g id="indian-rupee-svgrepo-com" transform="translate(7235.178 363.358)">
+        <path id="Path_108439" data-name="Path 108439" d="M6,3h6.866" transform="translate(-6 -3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Path_108440" data-name="Path 108440" d="M6,8h6.866" transform="translate(-6 -5.139)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Path_108441" data-name="Path 108441" d="M6,13l3.717,3.407" transform="translate(-6 -7.278)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Path_108442" data-name="Path 108442" d="M6,13H7.717" transform="translate(-6 -7.278)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Path_108443" data-name="Path 108443" d="M9,8.722C12.814,8.722,12.814,3,9,3" transform="translate(-7.283 -3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

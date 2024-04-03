@@ -1,0 +1,130 @@
+.color .nav-custom-light {
+  background-color: #ffffff;
+}
+
+.payout_input .filter-text {
+  position: relative;
+  top: -9px;
+}
+
+.add_box {
+  display: flex;
+  float: right;
+  height: 35px;
+  cursor: pointer;
+  width: 100%;
+  align-items: center;
+  border-radius: 5px;
+  margin-right: 2rem;
+  flex-direction: row-reverse;
+}
+
+button.button_blue1 {
+  display: flex;
+  align-items: center;
+  border: 0;
+  border-radius: 8px;
+  width: 130px;
+  min-height: 37px;
+  justify-content: space-evenly;
+  color: #673695;
+  text-transform: uppercase;
+  background: #fff;
+  box-shadow: 0px 0px 2px rgb(0 0 0 / 25%);
+  border-radius: 8px;
+  border: 1px solid #673695;
+  font-size: 18px;
+}
+
+.add_page {
+  width: 75vw;
+  padding: 0 60px 40px 60px;
+  overflow: scroll !important;
+  overflow: hidden;
+}
+
+.add_page1 {
+  width: 75vw;
+  padding: 0 60px 40px 60px;
+  overflow: scroll !important;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.add_heading {
+  display: flex;
+  margin-top: 35px;
+  font-size: 18px;
+  color: #1019b1;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+label.label_edit_sow {
+  margin: 12px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.drop_css {
+  height: 40px;
+  padding-left: 25px;
+  font-size: 18px;
+  border: 1px solid #ced4d9;
+  border-radius: 5px;
+}
+
+.drop_flex {
+  display: flex;
+  flex-direction: column;
+}
+
+button.button_submit {
+  float: right;
+  width: 130px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #673695;
+  color: #673695;
+  margin-right: 60px;
+}
+
+.button_submit:hover {
+  color: #fff !important;
+  background: #673695;
+  /* border: none; */
+}
+
+.btn-css {
+  border: none;
+  display: flex;
+  height: 30px;
+  align-items: center;
+  background: red;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0px 5px;
+}
+
+.btn-css-download {
+  border: none;
+  display: flex;
+  height: 30px;
+  align-items: center;
+  background: green;
+  border-radius: 5px;
+  color: #fff;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  /* padding: 6px 12px; */
+  cursor: pointer;
+  background-color: green;
+}

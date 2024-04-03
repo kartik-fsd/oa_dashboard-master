@@ -1,0 +1,24 @@
+.my-dashboard .rdt_TableHead .rdt_TableCol:first-child,
+.my-dashboard .rdt_TableBody .rdt_TableCell:first-child,
+.my-dashboard .rdt_TableHead .rdt_TableCol:nth-child(1),
+.my-dashboard .rdt_TableBody .rdt_TableCell:nth-child(1) {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: #f3f3f9;
+  padding: 10px;
+  height: 90px;
+
+}
+
+.my-dashboard .rdt_TableCol {
+  color: black;
+  font-weight: bolder;
+  font-size: 14px;
+  background-color: #f3f3f9;
+}
+
+/* .my-search .filter-text {
+  position: relative;
+  top: -38px;
+} */

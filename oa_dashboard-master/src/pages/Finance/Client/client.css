@@ -1,0 +1,12 @@
+.custom-tooltip .tooltip-inner {
+  background-color: #ecedf4;
+}
+
+/* .custom-tooltip .tooltip-arrow {
+  border-top-color: #ecedf4 !important;
+  border-bottom-color: #ecedf4 !important;
+} */
+
+.custom-tooltip .tooltip-arrow {
+  border-top-color: blue !important;
+}

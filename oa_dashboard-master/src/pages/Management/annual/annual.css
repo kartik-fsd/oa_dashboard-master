@@ -1,0 +1,35 @@
+.my-annual-table .rdt_TableHead .rdt_TableCol:first-child,
+.my-annual-table .rdt_TableBody .rdt_TableCell:first-child,
+.my-annual-table .rdt_TableHead .rdt_TableCol:nth-child(1),
+.my-annual-table .rdt_TableBody .rdt_TableCell:nth-child(1) {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: #f3f3f9;
+  padding: 10px;
+}
+
+.my-annual-table .rdt_TableCol {
+  color: black;
+  font-weight: bolder;
+  font-size: 14px;
+  background-color: #f3f3f9;
+}
+
+.annual_table tr {
+  background-color: #ebf7f5;
+}
+
+.annual_table table {
+  position: relative; /* Create a positioning context for the table */
+  z-index: 1; /* Set a higher z-index value for the table */
+}
+
+.annual_table th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Set a higher z-index value for the table headers */
+  background-color: #f4f6f9;
+  font-weight: bold;
+}

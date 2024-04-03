@@ -1,0 +1,21 @@
+.myactivetable .filter-text {
+  position: relative !important;
+  top: -174px !important;
+}
+
+.table-container {
+  text-align: center;
+  z-index: 10000000;
+}
+
+table {
+  margin: 0 auto;
+  text-align: left;
+}
+
+td,
+th {
+  padding: 1px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+}

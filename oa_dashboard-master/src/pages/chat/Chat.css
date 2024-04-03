@@ -1,0 +1,40 @@
+.sendbird-app__wrap {
+    width: 100%;
+    height: 90vh !important;
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 75px !important;
+}
+
+.sendbird-channel-header .sendbird-channel-header__right-icon {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    display: none;
+}
+
+.sendbird-chat-header .sendbird-chat-header__right__info {
+    margin-left: 16px;
+    display: none;
+}
+
+.sendbird-dropdown__menu .sendbird-dropdown__menu-item {
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 8px 16px;
+    display: none;
+}
+
+.sendbird-theme--light .sendbird-dropdown__menu {
+    box-shadow: var(--sendbird-light-shadow-02);
+    background-color: var(--sendbird-light-background-50);
+    display: none !important;
+}
+
+.sendbird-fileviewer__header__right__actions__delete {
+    width: 64px;
+    padding: 21px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: none !important;
+}

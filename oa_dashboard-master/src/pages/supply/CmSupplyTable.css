@@ -1,0 +1,10 @@
+.my-data-table .rdt_TableHead .rdt_TableCol:first-child,
+.my-data-table .rdt_TableBody .rdt_TableCell:first-child,
+.my-data-table .rdt_TableHead .rdt_TableCol:nth-child(1),
+.my-data-table .rdt_TableBody .rdt_TableCell:nth-child(1) {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  padding: 10px;
+}
