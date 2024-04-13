@@ -201,7 +201,7 @@ const LeadDetView = ({ data, setCheck, check }) => {
           ) : (
             <></>
           )}
-          {data?.lead_maturing?.every(
+          {/* {data?.lead_maturing?.every(
             (item) => item?.lead_acknowledgement_status == "approved"
           ) && data.lead_maturing_status == "1" ? (
             <>
@@ -209,162 +209,12 @@ const LeadDetView = ({ data, setCheck, check }) => {
             </>
           ) : (
             <></>
-          )}
-          {/* <MaturningMain data={data} setCheck={setCheck} check={check} /> */}
+          )} */}
+          <MaturningMain data={data} setCheck={setCheck} check={check} />
 
           <Row>
             {/* {data.lead_nurturing_status == 1 &&
             data.lead_maturing_status == 0 ? ( */}
-            <h5 className="text-primary">Business Head Approval Request</h5>
-            {data.cc_status_lead == "0" ? (
-              <>
-                <Col xs="10" className="mt-2">
-                  <Label className="mt-1">Select Users</Label>
-                  <Select
-                    aria-label=".form-select-sm example"
-                    onChange={(e) => setSelectedUserIdArr(e)}
-                    isMulti
-                    options={opt}
-                    formatOptionLabel={formatOptionData}
-                    isClearable
-                  ></Select>
-                </Col>
-                <Col
-                  xs="2"
-                  className="d-flex align-items-end justify-content-start"
-                >
-                  <button
-                    type="button"
-                    className="btn btn-primary waves-effect waves-light"
-                    style={{ width: "80%" }}
-                    onClick={approvalSendFunction}
-                    disabled={
-                      data?.supposed_to_do?.length > 0 &&
-                      data?.requirements?.length > 0 &&
-                      data?.qualifying_criteria?.length > 0 &&
-                      data?.rejection_criteria?.length > 0 &&
-                      data?.market_population?.length > 0 &&
-                      data?.market_penetration_and_growth?.length > 0 &&
-                      data?.difficulty_level?.length > 0
-                        ? // &&
-                          // data?.market_acceptance.length > 0
-                          false
-                        : true
-                    }
-                  >
-                    Send
-                  </button>
-                </Col>
-                <Col className="mt-4">
-                  {data?.supposed_to_do?.length > 0 &&
-                  data?.requirements?.length > 0 &&
-                  data?.qualifying_criteria?.length > 0 &&
-                  data?.rejection_criteria?.length > 0 &&
-                  data?.market_population?.length > 0 &&
-                  data?.market_penetration_and_growth?.length > 0 &&
-                  data?.difficulty_level?.length > 0 ? (
-                    <></>
-                  ) : (
-                    <>
-                      <p className="fs-12 text-primary m-0">
-                        <span className="text-danger fs-12"> Note : </span>
-                        Please fill all the data before sending to BH
-                      </p>
-                    </>
-                  )}
-                </Col>
-              </>
-            ) : (
-              <></>
-            )}
-            {data.lead_maturing_status == "1" ? (
-              <Row>
-                <Col xs="12">
-                  {/* <h5 className="text-primary mb-4">
-                    Business head approval request
-                  </h5> */}
-                  <div className="mt-4">
-                    <table className="table table-nowrap">
-                      <thead>
-                        <tr className="table-primary">
-                          <th scope="col">Name</th>
-                          <th scope="col">Phone</th>
-                          <th scope="col">Date</th>
-                          <th scope="col">Invitation</th>
-                          <th scope="col">status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {data.lead_maturing?.map((item, index) => {
-                          return (
-                            <tr key={index}>
-                              <td>{item.user_name}</td>
-                              <td>{item?.user_number}</td>
-                              <td>
-                                <div>
-                                  <p className="m-0">{item?.buser_name}</p>
-                                  <p className="text-muted m-0 mt-1 fs-12">
-                                    {
-                                      item.lead_acknowledgement_status_approved_date
-                                    }
-                                  </p>
-                                </div>
-                              </td>
-                              <td>
-                                <div
-                                  style={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                  }}
-                                >
-                                  <div>sent</div>
-                                  <div
-                                    style={{
-                                      height: "18px",
-                                      width: "18px",
-                                      borderRadius: "50%",
-                                      background: "#eb6464",
-                                      marginLeft: "6px",
-                                      textAlign: "center",
-                                      padding: "2px",
-                                      display: "flex",
-                                      alignItems: "center",
-                                      justifyContent: "center",
-                                      color: "#fff",
-                                    }}
-                                  >
-                                    {item.notification_count}
-                                  </div>
-                                </div>
-                              </td>
-                              <td>
-                                <span
-                                  className={`badge rounded-pill ${
-                                    item.lead_acknowledgement_status ==
-                                    "approved"
-                                      ? "badge-soft-success"
-                                      : "badge-soft-warning"
-                                  }`}
-                                  style={{
-                                    minWidth: "70px",
-                                    textTransform: "capitalize",
-                                  }}
-                                >
-                                  {item.lead_acknowledgement_status}
-                                </span>
-                              </td>
-                            </tr>
-                          );
-                        })}
-                      </tbody>
-                    </table>
-                  </div>
-                </Col>
-                <hr style={{ marginTop: "32px", marginBottom: "32px" }} />
-              </Row>
-            ) : (
-              <></>
-            )}
 
             <Col xs="12" className="mt-5">
               <div className="d-flex justify-content-between">

@@ -186,14 +186,14 @@ const BusinessLeads = () => {
                       className="edit-item-btn d-flex align-items-center"
                       onClick={() => setFilt("nurturing")}
                     >
-                      <i className=" ri-checkbox-blank-circle-fill fs-16 align-bottom me-2 text-primary"></i>
+                      <i className=" ri-checkbox-circle-line fs-16 align-bottom me-2 text-muted"></i>
                       Nurturing
                     </DropdownItem>
                     <DropdownItem
                       className="edit-item-btn d-flex align-items-center"
                       onClick={() => setFilt("maturing")}
                     >
-                      <i className=" ri-checkbox-blank-circle-fill fs-16 align-bottom me-2 text-warning"></i>
+                      <i className=" ri-checkbox-circle-line fs-16 align-bottom me-2 text-muted"></i>
                       Maturing
                     </DropdownItem>
                     <DropdownItem
@@ -202,7 +202,7 @@ const BusinessLeads = () => {
                         setFilt("hot_lead");
                       }}
                     >
-                      <i className=" ri-checkbox-blank-circle-fill fs-16 align-bottom me-2 text-success"></i>
+                      <i className="  ri-edit-line align-bottom me-2 text-muted"></i>
                       Hot Lead
                     </DropdownItem>
                   </DropdownMenu>

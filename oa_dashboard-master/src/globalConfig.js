@@ -10,6 +10,6 @@ module.exports = {
     BUSINESS_URL: "http://43.204.241.215:8014/",
   },
   farming: {
-    farming_URL: process.env.REACT_APP_BASE_URL_FARMING_URL,
+    farming_URL: "http://43.204.241.215:7999",
   },
 };

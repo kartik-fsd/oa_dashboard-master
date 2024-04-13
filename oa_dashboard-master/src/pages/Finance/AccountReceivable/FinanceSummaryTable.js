@@ -125,7 +125,14 @@ const FinanceSummaryTable = ({
       sortable: true,
       cell: (d) => (
         <div>
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "10px",
+              width: "max-content",
+            }}
+          >
             <div>
               {d?.brand_logo ? (
                 <img

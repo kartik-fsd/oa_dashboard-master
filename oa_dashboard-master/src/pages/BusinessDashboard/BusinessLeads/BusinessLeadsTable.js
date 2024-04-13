@@ -189,67 +189,21 @@ const BusinessLeadsTable = ({ data }) => {
     //   ),
     // },
     {
+      name: "Created By",
+      selector: (row) => row.user_name,
+      width: "150px",
+      sortable: true,
+      center: true,
+      cell: (d) => <div className="fs-12">{d.user_name}</div>,
+    },
+    {
       name: "Created On",
       selector: (row) => row.created_at,
       sortable: true,
       center: true,
       cell: (d) => (
-        <div>
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <div>
-              {d?.brand_logo ? (
-                <img
-                  src={d?.user_profile}
-                  alt=""
-                  className="rounded-circle avatar-sm"
-                />
-              ) : (
-                <div className="avatar-sm">
-                  <div className="avatar-title rounded-circle bg-soft-primary  text-primary text-capitalize">
-                    {d?.client_name ?? ""}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <div>
-              <div className="fs-12">
-                {d?.user_name}
-                {/* <span
-                  className="badge badge-soft-primary ms-1"
-                  style={{ fontSize: "8px" }}
-                >
-                  {d?.company_unique_id}
-                </span> */}
-              </div>
-              <div className="fs-10 text-muted">{d?.created_at}</div>
-              <div
-                style={{ display: "flex", gap: "5px", alignItems: "center" }}
-              >
-                {/* <div
-                  className="fs-10 text-muted"
-                  id={"UncontrolledTooltip" + d.client_unique_id}
-                  style={{
-                    overflow: "hidden",
-                    whiteSpace: "nowrap",
-                    maxWidth: "200px",
-                    textOverflow: "ellipsis",
-                    cursor: "pointer",
-                  }}
-                >
-                  {d?.company_address}
-                </div>
-                <UncontrolledTooltip
-                  placement="top"
-                  target={"UncontrolledTooltip" + d?.client_unique_id}
-                  className="custom-tooltip"
-                >
-                  <span className="text-dark">{d?.company_address}</span>
-                </UncontrolledTooltip> */}
-              </div>
-            </div>
-          </div>
-        </div>
+        // <div className="fs-12">08-12-2023&nbsp;@&nbsp;00:00&nbsp;pm</div>
+        <div className="fs-12">{d.created_at}</div>
       ),
     },
     {

@@ -19,21 +19,18 @@ const Navdata = () => {
   const [isPages, setIsPages] = useState(false);
   const [isSow, setIsSow] = useState(true);
   const [isInvoice, setIsInvoice] = useState(false);
-  const [ismanFinance, setIsmanFinance] = useState(false);
   const [isPayout, setIsPayout] = useState(false);
   const [isUnbuilt, setIsUnbuilt] = useState(false);
   const [isCluster, setIsCluster] = useState(false);
   const [isQc, setIsQc] = useState(false);
   const [isHr, setIsHr] = useState(false);
   const [isMan, setIsMan] = useState(false);
-  const [isFounder, setisFounder] = useState(false);
   const [isFinance, setIsFinance] = useState(false);
   const [isSupply, setIsSupply] = useState(false);
 
   const [isBusiness, setIsBusiness] = useState(false);
   const [isBusinessProj, setIsBusinessProj] = useState(false);
   const [isBusinessLead, setIsBusinessLead] = useState(false);
-  const [isFinanceLead, setIsFinanceLead] = useState(false);
   const [isAdvanceUi, setIsAdvanceUi] = useState(false);
   const [isForms, setIsForms] = useState(false);
   const [isTables, setIsTables] = useState(false);
@@ -43,7 +40,6 @@ const Navdata = () => {
   const [isMultiLevel, setIsMultiLevel] = useState(false);
   const [isChat, setIsChat] = useState(false);
   const [userType, setUserType] = useState("");
-  console.log(userType, "checkusertype");
 
   // Apps
   const [isEmail, setEmail] = useState(false);
@@ -82,8 +78,6 @@ const Navdata = () => {
 
   const [iscurrentState, setIscurrentState] = useState("Dashboard");
   const [sub_items, set_sub_items] = useState([]);
-
-  const [isLoading, setIsLoading] = React.useState(false);
 
   const myProjects = [
     {
@@ -322,36 +316,21 @@ const Navdata = () => {
       },
       stateVariables: isLeads,
     },
-    {
-      id: "Project",
-      label: "Project",
-      icon: "mdi mdi-briefcase-edit-outline",
-      link: "/business-dashboard/project",
-      click: function (e) {
-        e.preventDefault();
-        setIsLeads(!isLeads);
-        setIsProjects(false);
-        setIsQc(false);
-        setIsBusiness(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isLeads,
-    },
-    {
-      id: "AgreementList",
-      label: "Agreement",
-      icon: "mdi mdi-briefcase-edit-outline",
-      link: "/business-dashboard/agreement-list",
-      click: function (e) {
-        e.preventDefault();
-        setIsLeads(!isLeads);
-        setIsProjects(false);
-        setIsQc(false);
-        setIsBusiness(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isLeads,
-    },
+    // {
+    //   id: "Project",
+    //   label: "Project",
+    //   icon: "mdi mdi-briefcase-edit-outline",
+    //   link: "/business-dashboard/project",
+    //   click: function (e) {
+    //     e.preventDefault();
+    //     setIsLeads(!isLeads);
+    //     setIsProjects(false);
+    //     setIsQc(false);
+    //     setIsBusiness(false);
+    //     updateIconSidebar(e);
+    //   },
+    //   stateVariables: isLeads,
+    // },
     // {
     //   id: "Project",
     //   label: "dummy",
@@ -367,56 +346,6 @@ const Navdata = () => {
     //   },
     //   stateVariables: isLeads,
     // },
-  ];
-
-  const financeBusinessLeads = [
-    // {
-    //   id: 'mp-accounts',
-    //   label: 'MP Accounts',
-    //   icon: 'mdi mdi-briefcase-edit-outline',
-    //   link: '/business/project',
-    //   click: function (e) {
-    //     e.preventDefault();
-    //     setIsLeads(!isLeads);
-    //     setIsProjects(false);
-    //     setIsQc(false);
-    //     setIsBusiness(false);
-    //     updateIconSidebar(e);
-    //   },
-    //   stateVariables: isLeads,
-    // },
-
-    {
-      id: "ar-summary",
-      label: "AR Summary",
-      icon: "mdi mdi-briefcase-edit-outline",
-      link: "/finance/ar-summary",
-      click: function (e) {
-        e.preventDefault();
-        setIsLeads(!isLeads);
-        setIsProjects(false);
-        setIsQc(false);
-        setIsBusiness(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isLeads,
-    },
-
-    {
-      id: "ubr-summary",
-      label: "Ubr Summary",
-      icon: "mdi mdi-briefcase-edit-outline",
-      link: "/finance/ubr",
-      click: function (e) {
-        e.preventDefault();
-        setIsLeads(!isLeads);
-        setIsProjects(false);
-        setIsQc(false);
-        setIsBusiness(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isLeads,
-    },
   ];
   const projectMain = [
     {
@@ -513,75 +442,7 @@ const Navdata = () => {
     },
   ];
 
-  const manFinanceItems = [
-    {
-      id: "Dailycollectables",
-      label: "Daily Collections",
-      icon: " ri-group-line",
-      link: "/management/daily-collections",
-      click: function (e) {
-        e.preventDefault();
-        setIsSow(!isSow);
-        setIscurrentState("Sow");
-        setIsBusiness(false);
-        setIsSupply(false);
-
-        setIsProjects(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isMan,
-    },
-    {
-      id: "ArSummary",
-      label: "AR Summary",
-      icon: "ri-briefcase-line",
-      link: "/management/ar-summary",
-      click: function (e) {
-        e.preventDefault();
-        setIsSow(!isSow);
-        setIscurrentState("Sow");
-        setIsBusiness(false);
-        setIsSupply(false);
-
-        setIsProjects(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isMan,
-    },
-    {
-      id: "Ubr Summary",
-      label: "Ubr Summary",
-      icon: "ri-stack-fill",
-
-      link: "/management/ubr",
-      click: function (e) {
-        e.preventDefault();
-        setIsSow(!isSow);
-        setIscurrentState("Sow");
-        updateIconSidebar(e);
-      },
-      stateVariables: isSow,
-    },
-  ];
-
   const managementItems = [
-    {
-      id: "Finances",
-      label: "Finance",
-      icon: "mdi mdi-briefcase-clock-outline",
-      link: "/finance",
-      parentId: "ManFinance",
-      isChildItem: true,
-      click: function (e) {
-        e.preventDefault();
-        // setIsSow(!isSow);
-        setIsmanFinance(!ismanFinance);
-        setIscurrentState("Sow");
-        updateIconSidebar(e);
-      },
-      stateVariables: ismanFinance,
-      childItems: manFinanceItems,
-    },
     {
       id: "daily tarcking",
       label: "Daily Performance ",
@@ -599,7 +460,23 @@ const Navdata = () => {
       },
       stateVariables: isMan,
     },
+    // {
+    //   id: "daily tarcking",
+    //   label: "Daily Approval ",
+    //   icon: "ri-bar-chart-box-line",
+    //   link: "/management/dailytracking-approval",
+    //   click: function (e) {
+    //     e.preventDefault();
+    //     setIsSow(!isSow);
+    //     setIscurrentState("Sow");
+    //     setIsBusiness(false);
+    //     setIsSupply(false);
 
+    //     setIsProjects(false);
+    //     updateIconSidebar(e);
+    //   },
+    //   stateVariables: isMan,
+    // },
     {
       id: "week",
       label: "Monthly Summary",
@@ -635,10 +512,10 @@ const Navdata = () => {
       stateVariables: isMan,
     },
     {
-      id: "business-roaster",
-      label: "Business Roster ",
-      icon: "mdi mdi-chart-bar-stacked",
-      link: "/management/business-roaster",
+      id: "Dailycollectables",
+      label: "Daily Collections",
+      icon: " ri-group-line",
+      link: "/management/daily-collections",
       click: function (e) {
         e.preventDefault();
         setIsSow(!isSow);
@@ -651,7 +528,41 @@ const Navdata = () => {
       },
       stateVariables: isMan,
     },
+    {
+      id: "ArSummary",
+      label: "AR Summary",
+      icon: "ri-briefcase-line",
+      link: "/management/ar-summary",
+      click: function (e) {
+        e.preventDefault();
+        setIsSow(!isSow);
+        setIscurrentState("Sow");
+        setIsBusiness(false);
+        setIsSupply(false);
 
+        setIsProjects(false);
+        updateIconSidebar(e);
+      },
+      stateVariables: isMan,
+    },
+    // {
+    //   id: "card",
+    //   label: "card",
+    //   icon: "mdi mdi-briefcase-account-outline",
+    //   link: "/business/card",
+    //   click: function (e) {
+    //     e.preventDefault();
+    //     setIsSow(!isSow);
+    //     setIscurrentState("Sow");
+    //     setIsBusiness(false);
+    //     setIsSupply(false);
+
+    //     setIsProjects(false);
+    //     updateIconSidebar(e);
+    //   },
+    //   stateVariables: isMan,
+    //   // subItems: myProjects,
+    // },
     {
       id: "annual",
       label: "Annual",
@@ -670,49 +581,29 @@ const Navdata = () => {
       stateVariables: isMan,
       // subItems: myProjects,
     },
-  ];
+    // {
+    //   id: "project card",
+    //   label: "Project Card",
+    //   icon: " ri-group-line",
+    //   link: "/management/card",
+    //   click: function (e) {
+    //     e.preventDefault();
+    //     setIsSow(!isSow);
+    //     setIscurrentState("Sow");
+    //     setIsBusiness(false);
+    //     setIsSupply(false);
 
-  const managementItemsNotAdmin = [
-    {
-      id: "Finances",
-      label: "Finance",
-      icon: "mdi mdi-briefcase-clock-outline",
-      link: "/finance",
-      parentId: "ManFinance",
-      isChildItem: true,
-      click: function (e) {
-        e.preventDefault();
-        // setIsSow(!isSow);
-        setIsmanFinance(!ismanFinance);
-        setIscurrentState("Sow");
-        updateIconSidebar(e);
-      },
-      stateVariables: ismanFinance,
-      childItems: manFinanceItems,
-    },
-    {
-      id: "week",
-      label: "Monthly Summary",
-      icon: "ri-bar-chart-horizontal-fill",
-      link: "/management/week",
-      click: function (e) {
-        e.preventDefault();
-        setIsSow(!isSow);
-        setIscurrentState("Sow");
-        setIsBusiness(false);
-        setIsSupply(false);
-
-        setIsProjects(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isMan,
-    },
+    //     setIsProjects(false);
+    //     updateIconSidebar(e);
+    //   },
+    //   stateVariables: isMan,
+    // },
 
     // {
-    //   id: "business-roaster",
-    //   label: "Business Roster ",
-    //   icon: "mdi mdi-chart-bar-stacked",
-    //   link: "/management/business-roaster",
+    //   id: "Sumamry",
+    //   label: "Summary ",
+    //   icon: "mdi mdi-pipe",
+    //   link: "/management/summary",
     //   click: function (e) {
     //     e.preventDefault();
     //     setIsSow(!isSow);
@@ -948,70 +839,7 @@ const Navdata = () => {
         setIsSupply(false);
       },
       stateVariables: isMan,
-      subItems:
-        userType.role == "super_admin"
-          ? managementItems
-          : managementItemsNotAdmin,
-    },
-  ];
-  const founderItems = [
-    {
-      id: "daily performance",
-      label: "Daily Performance ",
-      icon: "ri-bar-chart-box-line",
-      link: "/founders/dailytracking",
-      click: function (e) {
-        e.preventDefault();
-        setIsSow(!isSow);
-        setIscurrentState("Sow");
-        setIsBusiness(false);
-        setIsSupply(false);
-        setisFounder(!isFounder);
-        setIsProjects(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isFounder,
-    },
-    {
-      id: "monthly summary",
-      label: "Monthly Summary",
-      icon: "ri-bar-chart-horizontal-fill",
-      link: "/founders/monthly-summary",
-      click: function (e) {
-        e.preventDefault();
-        setIsSow(!isSow);
-        setIscurrentState("Sow");
-        setIsBusiness(false);
-        setIsSupply(false);
-
-        setIsProjects(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isMan,
-    },
-  ];
-
-  const foundersMain = [
-    {
-      id: "Founders",
-      label: "Founders",
-      icon: "ri-group-fill",
-      link: "/#",
-      click: function (e) {
-        e.preventDefault();
-        setisFounder(!isFounder);
-        setIsMan(false);
-        setIsHr(false);
-        setIsQc(false);
-        setIsBusiness(false);
-        setIsProjects(false);
-        setIscurrentState("Sow");
-        updateIconSidebar(e);
-        setIsFinance(false);
-        setIsSupply(false);
-      },
-      stateVariables: isFounder,
-      subItems: founderItems,
+      subItems: managementItems,
     },
   ];
 
@@ -1033,23 +861,23 @@ const Navdata = () => {
       stateVariables: isInvoice,
       childItems: invoiceItems,
     },
-    {
-      id: "dashboard",
-      label: "Dashboard",
-      icon: "mdi mdi-briefcase-clock-outline",
-      link: "/invoices",
-      parentId: "payout",
-      isChildItem: true,
-      click: function (e) {
-        e.preventDefault();
-        // setIsSow(!isSow);
-        setIsPayout(!isPayout);
-        setIscurrentState("Sow");
-        updateIconSidebar(e);
-      },
-      stateVariables: isPayout,
-      childItems: payoutItems,
-    },
+    // {
+    //   id: "dashboard",
+    //   label: "Dashboard",
+    //   icon: "mdi mdi-briefcase-clock-outline",
+    //   link: "/invoices",
+    //   parentId: "payout",
+    //   isChildItem: true,
+    //   click: function (e) {
+    //     e.preventDefault();
+    //     // setIsSow(!isSow);
+    //     setIsPayout(!isPayout);
+    //     setIscurrentState("Sow");
+    //     updateIconSidebar(e);
+    //   },
+    //   stateVariables: isPayout,
+    //   childItems: payoutItems,
+    // },
     // {
     //   id: "unbuiltrevenue",
     //   label: "Unbuilt Revenue",
@@ -1083,21 +911,6 @@ const Navdata = () => {
       },
       stateVariables: isSow,
     },
-    {
-      id: "Ubr Summary",
-      label: "Ubr Summary",
-      icon: "ri-stack-fill",
-
-      link: "/finance/ubr",
-      click: function (e) {
-        e.preventDefault();
-        setIsSow(!isSow);
-        setIscurrentState("Sow");
-        updateIconSidebar(e);
-      },
-      stateVariables: isSow,
-    },
-
     {
       id: "Overdue Invoices",
       label: "Collection Tracker",
@@ -1179,24 +992,6 @@ const Navdata = () => {
         updateIconSidebar(e);
       },
       stateVariables: isSow,
-    },
-
-    {
-      id: "Dailycollectables",
-      label: "Daily Collections",
-      icon: " ri-group-line",
-      link: "/finance/daily-collections",
-      click: function (e) {
-        e.preventDefault();
-        setIsSow(!isSow);
-        setIscurrentState("Sow");
-        setIsBusiness(false);
-        setIsSupply(false);
-
-        setIsProjects(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isMan,
     },
     // {
 
@@ -1348,25 +1143,6 @@ const Navdata = () => {
       stateVariables: isBusinessProj,
       childItems: projectsItemsBusiness,
     },
-    {
-      id: "Finance",
-      label: "Finance ",
-      link: "/#",
-      icon: "bx bx-donate-heart",
-      parentId: "Operations",
-      isChildItem: true,
-      click: function (e) {
-        e.preventDefault();
-        // setEmail(!isEmail);
-        // setIsQc(false);
-        setIsFinanceLead(!isFinanceLead);
-        setIsBusinessProj(false);
-        updateIconSidebar(e);
-        // setIsFinance(false);
-      },
-      stateVariables: isFinanceLead,
-      childItems: financeBusinessLeads,
-    },
   ];
 
   const businessMain = [
@@ -1387,10 +1163,7 @@ const Navdata = () => {
         setIsMan(false);
       },
       stateVariables: isBusiness,
-      subItems:
-        sessionStorage.getItem("role") == "head"
-          ? businessItems
-          : businessItems.splice(0, businessItems.length - 1),
+      subItems: businessItems,
     },
   ];
 
@@ -1720,20 +1493,20 @@ const Navdata = () => {
 
   useEffect(() => {
     const pathName = api.VENDOR_URL + extract_token;
-    setIsLoading(true);
+
     axios
       .get(pathName)
 
       .then((res) => {
         setUserType(res.data);
-        setIsLoading(false);
+
+        console.log("respavan", res.data);
         sessionStorage.setItem("useraccesstype", res.data.type);
         sessionStorage.setItem("role", res.data.role);
       })
       .catch((err) => {
         console.log(err);
-      })
-      .finally(() => setIsLoading(false));
+      });
   }, []);
 
   const menuItems = [
@@ -1818,18 +1591,13 @@ const Navdata = () => {
   }
 
   // for hr
-  if (userType?.hr == "1") {
-    menuFinal.push(...hrMain);
-  }
+  // if (userType?.hr == "1") {
+  //   menuFinal.push(...hrMain);
+  // }
 
   // for management
   if (userType?.management == "1") {
     menuFinal.push(...managementMain);
-  }
-
-  // for founders
-  if (userType?.founders == "1") {
-    menuFinal.push(...foundersMain);
   }
 
   return (
