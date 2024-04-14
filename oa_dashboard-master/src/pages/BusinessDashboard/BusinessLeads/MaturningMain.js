@@ -1438,7 +1438,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
 
       {/* Project Feasibility Discussion start  */}
 
-      {data?.cc_status_lead == "1" ? (
+      {/* {data?.cc_status_lead == "1" ? (
         <>
           <Row className="">
             <h5 className="text-primary mb-3 mt-4">
@@ -1556,7 +1556,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
         </>
       ) : (
         <></>
-      )}
+      )} */}
 
       <Row className="mt-4">
         <div style={{ display: "flex", justifyContent: "space-between" }}>
