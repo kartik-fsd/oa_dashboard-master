@@ -316,6 +316,21 @@ const Navdata = () => {
       },
       stateVariables: isLeads,
     },
+    {
+      id: "AgreementList",
+      label: "Agreement",
+      icon: "mdi mdi-briefcase-edit-outline",
+      link: "/business-dashboard/agreement-list",
+      click: function (e) {
+        e.preventDefault();
+        setIsLeads(!isLeads);
+        setIsProjects(false);
+        setIsQc(false);
+        setIsBusiness(false);
+        updateIconSidebar(e);
+      },
+      stateVariables: isLeads,
+    },
     // {
     //   id: "Project",
     //   label: "Project",
