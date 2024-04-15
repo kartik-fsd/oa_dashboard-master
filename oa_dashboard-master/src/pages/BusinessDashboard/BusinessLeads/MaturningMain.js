@@ -274,6 +274,8 @@ const MaturningMain = ({ data, setCheck, check }) => {
 
   const handleSubmitCommercial = () => {
     const link = api.TASKMO_URL + update_lead_details;
+    const link2 = api.TASKMO_URL + "/create_pfd";
+    const parsedId = parseInt(id, 10);
     const body = {
       lead_id: id,
       time_to_search: a,
@@ -295,6 +297,13 @@ const MaturningMain = ({ data, setCheck, check }) => {
       .then((res) => {
         successnotify("success");
         setCheck(!check);
+      })
+      .catch((err) => console.log(err));
+
+    axios
+      .post(link2, { lead_id: parsedId })
+      .then((res) => {
+        console.log(res);
       })
       .catch((err) => console.log(err));
   };

@@ -381,19 +381,19 @@ const LeadDetEdit = ({ open, setOpen, data, setCheck, check }) => {
                       {/* <th scope="col">Payment</th> */}
                     </tr>
                   </thead>
-                  {/* <tbody>
-                  {data.milestones?.map((item, index) => {
-                    return (
-                      <tr key={index}>
-                        <td>{item.type}</td>
-                        <td>{item.type_value}</td>
-                        <td>{moment(item.month).format("YYYY-MM-DD")}</td>
-                        <td>{item.quantity}</td>
-                        <td>delete icon</td>
-                      </tr>
-                    );
-                  })}
-                </tbody> */}
+                  <tbody>
+                    {data.milestones?.map((item, index) => {
+                      return (
+                        <tr key={index}>
+                          <td>{item.type}</td>
+                          <td>{item.type_value}</td>
+                          <td>{moment(item.month).format("YYYY-MM-DD")}</td>
+                          <td>{item.quantity}</td>
+                          <td>delete icon</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
 
                   <tbody>
                     {mileStoneData?.map((item, index) => {
