@@ -13,7 +13,7 @@ import LanguageDropdown from "../components/common/LanguageDropdown";
 // import WebAppsDropdown from '../Components/Common/WebAppsDropdown';
 // import MyCartDropdown from '../Components/Common/MyCartDropdown';
 import FullScreenDropdown from "../components/common/FullScreenDropdown";
-import NotificationDropdown from "../components/common/NotificationDropdown";
+//import NotificationDropdown from "../components/common/NotificationDropdown";
 import ProfileDropdown from "../components/common/ProfileDropdown";
 import LightDark from "../components/common/LightDark";
 import { api } from "../globalConfig";

@@ -1,5 +1,5 @@
-import { App as SendBirdApp } from "sendbird-uikit";
-import "sendbird-uikit/dist/index.css";
+import { App as SendbirdApp } from "@sendbird/uikit-react";
+import "@sendbird/uikit-react/dist/index.css";
 import { useEffect, useState } from "react";
 import "./Chat.css";
 import { api } from "../../globalConfig";
@@ -38,7 +38,7 @@ const Chat = (props) => {
       {/* {props.checkEmail.id ? ( */}
       <>
         {checkEmail.id && (
-          <SendBirdApp
+          <SendbirdApp
             appId={`0F28A255-6B2F-41B2-A213-B99227FD3BD2`} // Specify your Sendbird application ID.
             userId={`p${checkEmail?.id}`} // Specify your user ID.
             nickname={`Support`}
