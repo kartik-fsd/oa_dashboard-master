@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { agreement_details } from "../../../assets/utils/Business";
 import { api } from "../../../globalConfig";
 import axios from "axios";
-import { PDFViewer } from "react-view-pdf";
 import BreadCrumb from "../../../components/common/BreadCrumb";
 import { dataAravindApproval } from "../../../assets/utils/TaskmoUrl";
 import { Context } from "../../../App";

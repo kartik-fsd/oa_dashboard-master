@@ -13,7 +13,6 @@ import {
 } from "reactstrap";
 
 import image from "../../../assets/images/users/avatar-1.jpg";
-import { PDFViewer } from "react-view-pdf";
 import { isSafeInteger } from "lodash";
 import { api } from "../../../globalConfig";
 import axios from "axios";
@@ -25,7 +24,13 @@ import {
 } from "../../../assets/utils/sow";
 import { useParams } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
-import { point } from "leaflet";
+
+import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/Page/TextLayer.css";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+let resizeTimer;
 
 const Issues = () => {
   const { id } = useParams();
@@ -45,6 +50,7 @@ const Issues = () => {
   const [updateDataone, setUpdateDataone] = React.useState(false);
   const hiddenFileInput = React.useRef(null);
   const [color, setColor] = React.useState("");
+  const [width, setWidth] = React.useState(1200);
 
   const toggle = () => setModal(!modal);
   const toggle2 = () => setModal2(!modal2);
@@ -144,6 +150,22 @@ const Issues = () => {
   //   }
   //   return color;
   // }
+  const handleResize = () => {
+    // Debounce window resize
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => setWidth(window.innerWidth), 300);
+  };
+  useEffect(() => {
+    setWidth(window.innerWidth);
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   React.useEffect(() => {
     function getRandomColor() {
@@ -519,9 +541,9 @@ const Issues = () => {
         <ModalHeader> Issue Proof </ModalHeader>
 
         <ModalBody>
-          <div className="mt-5">
-            <PDFViewer url={issueproof?.issue_proof} />
-          </div>
+          <Document file={issueproof?.issue_proof} className="mt-5">
+            <Page pageNumber={1} scale={width > 786 ? 1.3 : 0.6} />
+          </Document>
         </ModalBody>
       </Modal>
       {/* <ToastContainer /> */}

@@ -1,7 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useRef } from "react";
-import { PDFViewer } from "react-view-pdf/lib";
+
+import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/Page/TextLayer.css";
+import "react-pdf/dist/Page/AnnotationLayer.css";
 import {
   getAgreement,
   getEinvoice,
@@ -11,11 +14,14 @@ import { farming } from "../../../globalConfig";
 import { successnotify, warningnotify } from "../../Toasts";
 import "./agreement.css";
 
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+let resizeTimer;
 const Agreement = (data) => {
   const [agreement, setAgreement] = useState("");
   const [einvoice, setEinvoice] = useState("");
   const hiddenFile = useRef(null);
   const hiddenFile2 = useRef(null);
+  const [width, setWidth] = React.useState(1200);
 
   console.log(data.data.invoice_id, "idd");
 
@@ -73,6 +79,24 @@ const Agreement = (data) => {
         console.log(e);
       });
   }, []);
+
+  const handleResize = () => {
+    // Debounce window resize
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => setWidth(window.innerWidth), 300);
+  };
+  useEffect(() => {
+    setWidth(window.innerWidth);
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div>
       <div className="add_agreement">
@@ -165,8 +189,12 @@ const Agreement = (data) => {
         )}
       </div>
       <div className="mt-5 agreement_box">
-        <PDFViewer url={einvoice} />
-        <PDFViewer url={agreement} />
+        <Document file={einvoice} className="mt-5">
+          <Page pageNumber={1} scale={width > 786 ? 1.3 : 0.6} />
+        </Document>
+        <Document file={agreement} className="mt-5">
+          <Page pageNumber={1} scale={width > 786 ? 1.3 : 0.6} />
+        </Document>
       </div>
     </div>
   );
