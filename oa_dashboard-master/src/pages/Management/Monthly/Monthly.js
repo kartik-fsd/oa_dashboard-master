@@ -233,12 +233,12 @@ const Monthly = () => {
 
   console.log(daysInMonth, todayDate, "lion");
 
-  const actMilPerDay = (detMonth.act_milestone / daysInMonth) * todayDate;
-  const expMilePerDay = (detMonth.exp_milestone / daysInMonth) * todayDate;
+  const actMilPerDay = (detMonth?.act_milestone / daysInMonth) * todayDate;
+  const expMilePerDay = (detMonth?.exp_milestone / daysInMonth) * todayDate;
   const milePer = (actMilPerDay / expMilePerDay) * 100;
 
-  const actRevPerDay = (detMonth.act_revenue / daysInMonth) * todayDate;
-  const expRevPerDay = (detMonth.exp_revenue / daysInMonth) * todayDate;
+  const actRevPerDay = (detMonth?.act_revenue / daysInMonth) * todayDate;
+  const expRevPerDay = (detMonth?.exp_revenue / daysInMonth) * todayDate;
   const revPer = (actRevPerDay / expRevPerDay) * 100;
 
   const actExpen = (detMonth.act_expenses / daysInMonth) * todayDate;
@@ -599,7 +599,7 @@ const Monthly = () => {
                                 duration={2}
                               /> */}
                               <span>
-                                {indianNumbers(detMonth.act_milestone, 2)}
+                                {indianNumbers(detMonth?.act_milestone, 2)}
                               </span>
                             </div>
                           </h2>

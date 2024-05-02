@@ -376,16 +376,16 @@ const ManagerDashboard = () => {
   const daysInMonth = getDaysInMonth(year, month);
   const todayDate = Number(moment(date).format("DD"));
 
-  const actMilPerDay = (detMonth.act_milestone / daysInMonth) * todayDate;
-  const expMilePerDay = (detMonth.exp_milestone / daysInMonth) * todayDate;
+  const actMilPerDay = (detMonth?.act_milestone / daysInMonth) * todayDate;
+  const expMilePerDay = (detMonth?.exp_milestone / daysInMonth) * todayDate;
   const milePer = (actMilPerDay / expMilePerDay) * 100;
 
-  const actRevPerDay = (detMonth.act_revenue / daysInMonth) * todayDate;
-  const expRevPerDay = (detMonth.exp_revenue / daysInMonth) * todayDate;
+  const actRevPerDay = (detMonth?.act_revenue / daysInMonth) * todayDate;
+  const expRevPerDay = (detMonth?.exp_revenue / daysInMonth) * todayDate;
   const revPer = (actRevPerDay / expRevPerDay) * 100;
 
-  const actExpen = (detMonth.act_expenses / daysInMonth) * todayDate;
-  const expExpen = (detMonth.exp_expenses / daysInMonth) * todayDate;
+  const actExpen = (detMonth?.act_expenses / daysInMonth) * todayDate;
+  const expExpen = (detMonth?.exp_expenses / daysInMonth) * todayDate;
   const expenPer = (actExpen / expExpen) * 100;
 
   const mile = milePer?.toFixed(2);
@@ -635,7 +635,7 @@ const ManagerDashboard = () => {
                             <h2 className="mb-0">
                               <div className="counter-value text-start">
                                 <span>
-                                  {indianNumbers(detMonth.act_milestone, 2)}
+                                  {indianNumbers(detMonth?.act_milestone, 2)}
                                 </span>
                               </div>
                             </h2>
