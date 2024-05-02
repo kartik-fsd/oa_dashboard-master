@@ -10,11 +10,14 @@ const LeadProjDetails = () => {
           <Row>
             <Col xs="12" className="mt-5">
               <div className="d-flex justify-content-between">
-                <h5 className="text-primary mb-4">Lead Nurturing</h5>
+                <h5 className=" mb-4" style={{ color: "#b83016" }}>
+                  Lead Nurturing
+                </h5>
                 {/* {data?.project_intro_status == "0" ? (
                   <div>
                     <i
-                      className=" ri-edit-box-line fs-20 text-primary cursor-pointer"
+                      className=" ri-edit-box-line fs-20  cursor-pointer"
+                      style={{color: "#b83016"}}
                       onClick={() => setOpen(!open)}
                     ></i>
                   </div>
@@ -91,7 +94,7 @@ const LeadProjDetails = () => {
               <hr style={{ marginTop: "24px", marginBottom: "24px" }}></hr>
             </Col>
             <Col xs="12" className="mt-2">
-              <h5 className="mb-4 text-primary">Difficulty level</h5>
+              <h5 className="mb-4 ">Difficulty level</h5>
               <div className="d-flex gap-4 align-items-center">
                 <label className="m-0 d-flex align-items-center text-dark">
                   <input
@@ -130,7 +133,7 @@ const LeadProjDetails = () => {
               <hr style={{ marginTop: "24px", marginBottom: "24px" }}></hr>
             </Col>
             <Col xs="12" className="mt-2">
-              <h5 className="mb-4 text-primary">Deliverables</h5>
+              <h5 className="mb-4 ">Deliverables</h5>
               <div>
                 <table className="table caption-top table-nowrap">
                   <thead className="table-light">

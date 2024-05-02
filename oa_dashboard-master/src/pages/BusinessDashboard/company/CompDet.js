@@ -91,21 +91,24 @@ const CompDet = () => {
                         <div>
                           <div className="d-flex gap-4 align-items-start">
                             <h4
-                              className="fw-bold text-primary"
-                              style={{ fontSize: "15px" }}
+                              className="fw-bold "
+                              style={{ fontSize: "15px", color: "#b83016" }}
                             >
                               {clientDet.company_name}
                             </h4>
                             {/* <span className="badge text-bg-primary">
                               {clientDet.com_status}
                             </span> */}
-                            <span className="badge badge-soft-primary">
+                            <span
+                              className="badge badge-soft"
+                              style={{ backgroundColor: "#f07d47" }}
+                            >
                               {clientDet.com_status}
                             </span>
                             <div style={{ marginLeft: "auto" }}>
                               <i
-                                className=" ri-edit-box-line fs-18 text-primary"
-                                style={{ cursor: "pointer" }}
+                                className=" ri-edit-box-line fs-18 "
+                                style={{ cursor: "pointer", color: "#b83016" }}
                                 onClick={() => {
                                   setOpen4(!open4);
                                 }}
@@ -181,8 +184,8 @@ const CompDet = () => {
                       </h6>
 
                       <i
-                        className=" ri-edit-box-line fs-18 text-primary"
-                        style={{ cursor: "pointer" }}
+                        className=" ri-edit-box-line fs-18 "
+                        style={{ cursor: "pointer", color: "#b83016" }}
                         onClick={() => {
                           setOpen1(!open1);
                         }}
@@ -297,8 +300,8 @@ const CompDet = () => {
                         Company Description
                       </h6>
                       <i
-                        className=" ri-edit-box-line fs-18 text-primary"
-                        style={{ cursor: "pointer" }}
+                        className=" ri-edit-box-line fs-18 "
+                        style={{ cursor: "pointer", color: "#b83016" }}
                         onClick={() => {
                           setOpen5(!open5);
                         }}
@@ -321,8 +324,8 @@ const CompDet = () => {
                         Comapny Address
                       </h6>
                       <i
-                        className=" ri-edit-box-line fs-18 text-primary"
-                        style={{ cursor: "pointer" }}
+                        className=" ri-edit-box-line fs-18 "
+                        style={{ cursor: "pointer", color: "#b83016" }}
                         onClick={() => {
                           setOpen2(!open2);
                         }}
@@ -404,8 +407,8 @@ const CompDet = () => {
                         GST Details
                       </h6>
                       <i
-                        className=" ri-edit-box-line fs-18 text-primary"
-                        style={{ cursor: "pointer" }}
+                        className=" ri-edit-box-line fs-18 "
+                        style={{ cursor: "pointer", color: "#b83016" }}
                         onClick={() => {
                           setOpen6(!open6);
                         }}
@@ -484,8 +487,8 @@ const CompDet = () => {
                         Client Details
                       </h6>
                       <i
-                        className=" ri-edit-box-line fs-18 text-primary"
-                        style={{ cursor: "pointer" }}
+                        className=" ri-edit-box-line fs-18 "
+                        style={{ cursor: "pointer", color: "#b83016" }}
                         onClick={() => {
                           setOpen3(!open3);
                         }}
@@ -539,8 +542,8 @@ const CompDet = () => {
                         Founder Details
                       </h6>
                       <i
-                        className=" ri-edit-box-line fs-18 text-primary"
-                        style={{ cursor: "pointer" }}
+                        className=" ri-edit-box-line fs-18 "
+                        style={{ cursor: "pointer", color: "#b83016" }}
                         onClick={() => {
                           setOpen7(!open7);
                         }}

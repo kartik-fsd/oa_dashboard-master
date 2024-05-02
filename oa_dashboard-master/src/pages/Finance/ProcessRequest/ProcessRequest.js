@@ -55,7 +55,17 @@ const ProcessRequest = () => {
               <h5 className="card-title mb-0 fs-20">Process Request</h5>
               <div>
                 {/* <button
-              className="btn btn-primary"
+              className="btn" style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
               style={{ marginRight: "220px" }}
               onClick={() => {
                 "";
@@ -74,7 +84,17 @@ const ProcessRequest = () => {
             </button> */}
                 {/* <button
                   type="button"
-                  className="btn btn-primary"
+                  className="btn" style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
                   style={{ marginRight: "10px", minWidth: "105px" }}
                 >
                   KL:{" "}
@@ -84,7 +104,17 @@ const ProcessRequest = () => {
                 </button>
                 <button
                   type="button"
-                  className="btn btn-primary"
+                  className="btn" style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
                   style={{ marginRight: "8px", minWidth: "105px" }}
                 >
                   CF:{" "}
@@ -94,8 +124,20 @@ const ProcessRequest = () => {
                 </button> */}
                 <button
                   type="button"
-                  className="btn btn-primary"
-                  style={{ marginRight: "18px", minWidth: "105px" }}
+                  className="btn"
+                  style={{
+                    backgroundColor: "#ec5c24",
+                    color: "whitesmoke",
+                    transition: "background-color 0.3s ease",
+                    marginRight: "18px",
+                    minWidth: "105px",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.backgroundColor = "#dd4319")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.backgroundColor = "#ec5c24")
+                  }
                 >
                   Total:{" "}
                   <span>
@@ -106,7 +148,7 @@ const ProcessRequest = () => {
                   id="btnGroupDrop1"
                   style={{ marginRight: "220px" }}
                 >
-                  <DropdownToggle color="primary" caret>
+                  <DropdownToggle style={{ backgroundColor: "#ec5c24" }} caret>
                     <i
                       className=" ri-filter-line align-bottom"
                       style={{

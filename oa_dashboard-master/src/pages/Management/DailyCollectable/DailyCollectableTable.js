@@ -79,8 +79,8 @@ const DailyCollectableTable = (props) => {
               (M-1) <br /> Collections
             </span>
             <span
-              className="badge rounded-pill badge-soft-primary fs-10"
-              style={{ minWidth: "76px" }}
+              className="badge rounded-pill badge-soft fs-10"
+              style={{ minWidth: "76px", backgroundColor: "#f07d47" }}
             >
               {indianNumbers(Math.abs(total[0]?.target_old?.toFixed(0)))}
             </span>
@@ -102,8 +102,8 @@ const DailyCollectableTable = (props) => {
               (M-0) <br /> Collections
             </span>
             <span
-              className="badge rounded-pill badge-soft-primary fs-10"
-              style={{ minWidth: "76px" }}
+              className="badge rounded-pill badge-soft fs-10"
+              style={{ minWidth: "76px", backgroundColor: "#f07d47" }}
             >
               {indianNumbers(total[0]?.target_current?.toFixed(0))}
             </span>
@@ -136,7 +136,10 @@ const DailyCollectableTable = (props) => {
                   />
                 ) : (
                   <div className="avatar-sm">
-                    <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                    <div
+                      className="avatar-title rounded-circle"
+                      style={{ color: "#b83016", backgroundColor: "#f07d47" }}
+                    >
                       {d?.brand_name[0] ?? ""}
                     </div>
                   </div>
@@ -150,7 +153,10 @@ const DailyCollectableTable = (props) => {
                   style={{ display: "flex", gap: "5px", alignItems: "center" }}
                 >
                   <div className="fs-10 text-muted">
-                    <span className="badge badge-soft-primary">
+                    <span
+                      className="badge badge-soft"
+                      style={{ backgroundColor: "#f07d47" }}
+                    >
                       {d.user_id}
                     </span>
                   </div>
@@ -170,7 +176,12 @@ const DailyCollectableTable = (props) => {
                     />
                   ) : (
                     <div className="avatar-sm">
-                      <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                      <div className="avatar-title rounded-circle"
+                      style={{
+                           color: "#b83016",
+                                  backgroundColor: "#f07d47",
+                      }}
+                      >
                         {d?.brand_name[0] ?? ""}
                       </div>
                     </div>
@@ -232,8 +243,8 @@ const DailyCollectableTable = (props) => {
             <span>{item.name?.split("_").join("-")}</span>
             {/* <span>{item.value.toFixed(0)}</span> */}
             <span
-              className="badge badge-soft-primary"
-              style={{ minWidth: "42px" }}
+              className="badge badge-soft"
+              style={{ minWidth: "42px", backgroundColor: "#f07d47" }}
             >
               {indianNumbers(item.value?.toFixed(0)) || 0}
             </span>

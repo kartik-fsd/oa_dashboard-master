@@ -236,11 +236,12 @@ const DashboardSupplyTableInside = () => {
             <div>
               <div>
                 <span
-                  className="badge badge-soft-primary"
+                  className="badge badge-soft"
                   style={{
                     width: "60px",
                     fontWeight: 600,
                     fontSize: "12px",
+                    backgroundColor: "#f07d47",
                   }}
                 >
                   {d[it.name].split(",")[0]}
@@ -284,8 +285,12 @@ const DashboardSupplyTableInside = () => {
                 <h5 className="card-title mb-0">
                   Lead Details &nbsp;
                   <span
-                    style={{ minWidth: "100px", maxWidth: "200px" }}
-                    className="badge badge-soft-primary"
+                    style={{
+                      minWidth: "100px",
+                      maxWidth: "200px",
+                      backgroundColor: "#f07d47",
+                    }}
+                    className="badge badge-soft"
                   >
                     {loc == "supplydashboard"
                       ? localStorage.getItem("tsmName")

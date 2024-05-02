@@ -127,7 +127,7 @@ const FseList = ({ type }) => {
       {/* <ToastContainer /> */}
 
       <div className="d-flex justify-content-between align-items-center w-80 px-4">
-        <h5 className="card-title mb-0"></h5>
+        <h5 className="card-title mb-0" />
       </div>
 
       <Card>
@@ -135,8 +135,12 @@ const FseList = ({ type }) => {
           <div className="d-flex flex-column">
             <div className="d-flex gap-2 align-items-center">
               <div
-                className="form-check form-switch form-switch-primary"
-                style={{ display: "flex", alignItems: "center", gap: "10px" }}
+                className="form-check form-switch"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                }}
               >
                 <Input
                   className="form-check-input"

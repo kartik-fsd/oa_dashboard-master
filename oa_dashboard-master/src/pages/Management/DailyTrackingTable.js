@@ -51,8 +51,12 @@ const DailyTrackingTable = ({ year }) => {
             </span>
             <div className="d-flex flex-column gap-1">
               <span
-                className="badge text-bg-primary"
-                style={{ marginTop: "5px" }}
+                className="badge"
+                style={{
+                  marginTop: "5px",
+                  color: "#fffff",
+                  backgroundColor: "#ec5c24",
+                }}
               >
                 &#x20B9;{indianNumbers(pipeline.overall_target, 2)}
               </span>
@@ -113,7 +117,7 @@ const DailyTrackingTable = ({ year }) => {
         //         </span>
         //       </div>
         //       <div>
-        //         <span className="fs-12 text-primary">ID: 12345</span>
+        //         <span className="fs-12 " style={{color: "#b83016",}}>ID: 12345</span>
         //         {/* <span className="badge text-bg-info">ID: {d.sow_id}</span> */}
         //         <span
         //           className={`badge  ${

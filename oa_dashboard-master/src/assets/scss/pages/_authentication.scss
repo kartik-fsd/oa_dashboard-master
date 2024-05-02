@@ -34,14 +34,14 @@
 }
 
 .auth-one-bg{
-    background-image: url("../../images/auth-one-bg.jpg");
+    background-image: url("../../images/LoginImage.webp");
     background-position: center;
     background-size: cover;
 
-    .bg-overlay{
-        background: linear-gradient(to right, darken($primary, 6%), $primary);
-        opacity: 0.9;
-    }
+    // .bg-overlay{
+    //     background: linear-gradient(to right, darken($primary, 6%), $primary);
+    //     opacity: 0.9;
+    // }
 
     .shape{
         position: absolute;
@@ -53,7 +53,7 @@
         >svg {
             width: 100%;
             height: auto;
-            fill: var(--#{$variable-prefix}body-bg);
+           // fill: var(--#{$variable-prefix}body-bg);
         }
     }
 }

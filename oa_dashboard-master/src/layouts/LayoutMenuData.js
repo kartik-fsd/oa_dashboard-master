@@ -270,98 +270,98 @@ const Navdata = () => {
     //   // subItems: myProjects,
     // },
   ];
-  const projectsItemsLeads = [
-    {
-      id: "Lead",
-      label: "Lead",
-      icon: "mdi mdi-briefcase-edit-outline",
-      link: "/business/leads",
-      click: function (e) {
-        e.preventDefault();
-        setIsLeads(!isLeads);
-        setIsProjects(false);
-        setIsQc(false);
-        setIsBusiness(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isLeads,
-    },
-    {
-      id: "Client",
-      label: "Client",
-      icon: "mdi mdi-briefcase-edit-outline",
-      link: "/business-dashboard/client",
-      click: function (e) {
-        e.preventDefault();
-        setIsLeads(!isLeads);
-        setIsProjects(false);
-        setIsQc(false);
-        setIsBusiness(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isLeads,
-    },
-    {
-      id: "Company",
-      label: "Compnay",
-      icon: "mdi mdi-briefcase-edit-outline",
-      link: "/business-dashboard/company",
-      click: function (e) {
-        e.preventDefault();
-        setIsLeads(!isLeads);
-        setIsProjects(false);
-        setIsQc(false);
-        setIsBusiness(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isLeads,
-    },
-    {
-      id: "AgreementList",
-      label: "Agreement",
-      icon: "mdi mdi-briefcase-edit-outline",
-      link: "/business-dashboard/agreement-list",
-      click: function (e) {
-        e.preventDefault();
-        setIsLeads(!isLeads);
-        setIsProjects(false);
-        setIsQc(false);
-        setIsBusiness(false);
-        updateIconSidebar(e);
-      },
-      stateVariables: isLeads,
-    },
-    // {
-    //   id: "Project",
-    //   label: "Project",
-    //   icon: "mdi mdi-briefcase-edit-outline",
-    //   link: "/business-dashboard/project",
-    //   click: function (e) {
-    //     e.preventDefault();
-    //     setIsLeads(!isLeads);
-    //     setIsProjects(false);
-    //     setIsQc(false);
-    //     setIsBusiness(false);
-    //     updateIconSidebar(e);
-    //   },
-    //   stateVariables: isLeads,
-    // },
-    // {
-    //   id: "Project",
-    //   label: "dummy",
-    //   icon: "mdi mdi-briefcase-edit-outline",
-    //   link: "/business-dashboard/my-leads",
-    //   click: function (e) {
-    //     e.preventDefault();
-    //     setIsLeads(!isLeads);
-    //     setIsProjects(false);
-    //     setIsQc(false);
-    //     setIsBusiness(false);
-    //     updateIconSidebar(e);
-    //   },
-    //   stateVariables: isLeads,
-    // },
-  ];
+  //const projectsItemsLeads = [
+  // {
+  //   id: "Lead",
+  //   label: "Lead",
+  //   icon: "mdi mdi-briefcase-edit-outline",
+  //   link: "/business/leads",
+  //   click: function (e) {
+  //     e.preventDefault();
+  //     setIsLeads(!isLeads);
+  //     setIsProjects(false);
+  //     setIsQc(false);
+  //     setIsBusiness(false);
+  //     updateIconSidebar(e);
+  //   },
+  //   stateVariables: isLeads,
+  // },
+  // {
+  //   id: "Client",
+  //   label: "Client",
+  //   icon: "mdi mdi-briefcase-edit-outline",
+  //   link: "/business-dashboard/client",
+  //   click: function (e) {
+  //     e.preventDefault();
+  //     setIsLeads(!isLeads);
+  //     setIsProjects(false);
+  //     setIsQc(false);
+  //     setIsBusiness(false);
+  //     updateIconSidebar(e);
+  //   },
+  //   stateVariables: isLeads,
+  // },
+  // {
+  //   id: "Company",
+  //   label: "Compnay",
+  //   icon: "mdi mdi-briefcase-edit-outline",
+  //   link: "/business-dashboard/company",
+  //   click: function (e) {
+  //     e.preventDefault();
+  //     setIsLeads(!isLeads);
+  //     setIsProjects(false);
+  //     setIsQc(false);
+  //     setIsBusiness(false);
+  //     updateIconSidebar(e);
+  //   },
+  //   stateVariables: isLeads,
+  // },
+  // {
+  //   id: "AgreementList",
+  //   label: "Agreement",
+  //   icon: "mdi mdi-briefcase-edit-outline",
+  //   link: "/business-dashboard/agreement-list",
+  //   click: function (e) {
+  //     e.preventDefault();
+  //     setIsLeads(!isLeads);
+  //     setIsProjects(false);
+  //     setIsQc(false);
+  //     setIsBusiness(false);
+  //     updateIconSidebar(e);
+  //   },
+  //   stateVariables: isLeads,
+  // },
+  // {
+  //   id: "Project",
+  //   label: "Project",
+  //   icon: "mdi mdi-briefcase-edit-outline",
+  //   link: "/business-dashboard/project",
+  //   click: function (e) {
+  //     e.preventDefault();
+  //     setIsLeads(!isLeads);
+  //     setIsProjects(false);
+  //     setIsQc(false);
+  //     setIsBusiness(false);
+  //     updateIconSidebar(e);
+  //   },
+  //   stateVariables: isLeads,
+  // },
+  // {
+  //   id: "Project",
+  //   label: "dummy",
+  //   icon: "mdi mdi-briefcase-edit-outline",
+  //   link: "/business-dashboard/my-leads",
+  //   click: function (e) {
+  //     e.preventDefault();
+  //     setIsLeads(!isLeads);
+  //     setIsProjects(false);
+  //     setIsQc(false);
+  //     setIsBusiness(false);
+  //     updateIconSidebar(e);
+  //   },
+  //   stateVariables: isLeads,
+  // },
+  // ];
   const projectMain = [
     {
       id: "Operations",
@@ -1119,26 +1119,85 @@ const Navdata = () => {
       // subItems: myProjects,
     },
 
+    // {
+    //   id: "Leads",
+    //   label: "Leads",
+    //   link: "/#",
+    //   icon: "bx bx-donate-heart",
+    //   parentId: "Operations",
+    //   isChildItem: true,
+    //   click: function (e) {
+    //     e.preventDefault();
+    //     // setEmail(!isEmail);
+    //     // setIsQc(false);
+    //     setIsBusinessLead(!isBusinessLead);
+    //     setIsBusinessProj(false);
+    //     updateIconSidebar(e);
+    //     // setIsFinance(false);
+    //   },
+    //   stateVariables: isBusinessLead,
+    //   childItems: projectsItemsLeads,
+    // },
     {
-      id: "Leads",
-      label: "Leads",
-      link: "/#",
-      icon: "bx bx-donate-heart",
-      parentId: "Operations",
-      isChildItem: true,
+      id: "Lead",
+      label: "Lead",
+      icon: "mdi mdi-briefcase-edit-outline",
+      link: "/business/leads",
       click: function (e) {
         e.preventDefault();
-        // setEmail(!isEmail);
-        // setIsQc(false);
-        setIsBusinessLead(!isBusinessLead);
-        setIsBusinessProj(false);
+        setIsLeads(!isLeads);
+        setIsProjects(false);
+        setIsQc(false);
+        setIsBusiness(false);
         updateIconSidebar(e);
-        // setIsFinance(false);
       },
-      stateVariables: isBusinessLead,
-      childItems: projectsItemsLeads,
+      stateVariables: isLeads,
     },
-
+    {
+      id: "Client",
+      label: "Client",
+      icon: "mdi mdi-account-tie-outline",
+      link: "/business-dashboard/client",
+      click: function (e) {
+        e.preventDefault();
+        setIsLeads(!isLeads);
+        setIsProjects(false);
+        setIsQc(false);
+        setIsBusiness(false);
+        updateIconSidebar(e);
+      },
+      stateVariables: isLeads,
+    },
+    {
+      id: "Company",
+      label: "Compnay",
+      icon: "mdi mdi-domain",
+      link: "/business-dashboard/company",
+      click: function (e) {
+        e.preventDefault();
+        setIsLeads(!isLeads);
+        setIsProjects(false);
+        setIsQc(false);
+        setIsBusiness(false);
+        updateIconSidebar(e);
+      },
+      stateVariables: isLeads,
+    },
+    {
+      id: "AgreementList",
+      label: "Lead Agreement",
+      icon: "mdi mdi-progress-pencil",
+      link: "/business-dashboard/agreement-list",
+      click: function (e) {
+        e.preventDefault();
+        setIsLeads(!isLeads);
+        setIsProjects(false);
+        setIsQc(false);
+        setIsBusiness(false);
+        updateIconSidebar(e);
+      },
+      stateVariables: isLeads,
+    },
     {
       id: "Projects",
       label: "Projects",

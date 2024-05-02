@@ -154,7 +154,10 @@ const ProcessRequestTable = ({ leadData }) => {
                 />
               ) : (
                 <div className="avatar-sm">
-                  <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                  <div
+                    className="avatar-title rounded-circle  "
+                    style={{ backgroundColor: "#f07d47", color: "#b83016" }}
+                  >
                     {d?.brand_name?.charAt(0) ?? ""}
                   </div>
                 </div>
@@ -194,7 +197,12 @@ const ProcessRequestTable = ({ leadData }) => {
           <div className="d-flex flex-column align-items-center gap-1">
             <span className="fs-11">{d.brand_name}</span>
 
-            <span className="badge badge-soft-primary">{d.sow_id}</span>
+            <span
+              className="badge badge-soft"
+              style={{ backgroundColor: "#f07d47" }}
+            >
+              {d.sow_id}
+            </span>
           </div>
         </div>
       ),
@@ -245,7 +253,7 @@ const ProcessRequestTable = ({ leadData }) => {
       width: "100px",
       center: true,
       cell: (d) => (
-        <div className="amt_table text-primary">
+        <div className="amt_table " style={{ color: "#b83016" }}>
           {d.payment_type == "direct_sp" ? (
             <span
               className="badge rounded-pill badge-soft-success"
@@ -307,7 +315,11 @@ const ProcessRequestTable = ({ leadData }) => {
         <div>
           {isLoading ? (
             <>
-              <div className="spinner-border text-primary" role="status">
+              <div
+                className="spinner-border "
+                role="status"
+                style={{ color: "#b83016" }}
+              >
                 <span className="sr-only">Loading...</span>
               </div>
             </>

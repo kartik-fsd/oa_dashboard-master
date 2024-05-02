@@ -12,7 +12,7 @@ import TwoColumnLayout from "./TwoColumnLayout";
 import { Container } from "reactstrap";
 import HorizontalLayout from "./HorizontalLayout";
 import VerticalLayouts from "./VerticalLayouts";
-
+import onx from "../assets/images/onxAwign.svg";
 const Sidebar = ({ layoutModeType, sideBar, setSideBar }) => {
   useEffect(() => {
     var verticalOverlay = document.getElementsByClassName("vertical-overlay");
@@ -56,20 +56,26 @@ const Sidebar = ({ layoutModeType, sideBar, setSideBar }) => {
       >
         <div className="navbar-brand-box">
           <Link to="/" className="logo logo-dark">
-            <span className="logo-sm">
-              <img src={logoSm} alt="" height="40" width="120" />
-            </span>
             <span className="logo-lg">
-              <img src="/taskmologo.png" alt="" height="40" width="120" />
+              <img
+                src={onx}
+                alt="onx"
+                role="presentation"
+                height="40"
+                width="120"
+              />
             </span>
           </Link>
 
           <Link to="/" className="logo logo-light">
-            <span className="logo-sm">
-              <img src={logoSm} alt="" height="40" width="120" />
-            </span>
             <span className="logo-lg">
-              <img src={logoLight} alt="" height="40" width="120" />
+              <img
+                src={onx}
+                alt="onx"
+                role="presentation"
+                height="40"
+                width="120"
+              />
             </span>
           </Link>
           <button

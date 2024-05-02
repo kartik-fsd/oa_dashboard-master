@@ -101,7 +101,10 @@ const ProfileDropdown = () => {
                 />
               ) : (
                 <div className="avatar-xxs">
-                  <div className="avatar-title rounded bg-soft-primary text-primary">
+                  <div
+                    className="avatar-title rounded"
+                    style={{ backgroundColor: "#f07d47", color: "#b83016" }}
+                  >
                     {userData?.full_name?.charAt(0).toUpperCase()}
                   </div>
                 </div>

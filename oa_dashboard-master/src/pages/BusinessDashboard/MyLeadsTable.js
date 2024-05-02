@@ -185,7 +185,10 @@ const MyLeadsTable = ({ dataone }) => {
                 >
                   <div className="avatar-group-item">
                     <div className="avatar-xs">
-                      <div className="avatar-title rounded-circle bg-light text-primary">
+                      <div
+                        className="avatar-title rounded-circle bg-light "
+                        style={{ color: "#b83016" }}
+                      >
                         1
                       </div>
                     </div>
@@ -206,7 +209,10 @@ const MyLeadsTable = ({ dataone }) => {
                 >
                   <div className="avatar-group-item">
                     <div className="avatar-xs">
-                      <div className="avatar-title rounded-circle bg-light text-primary">
+                      <div
+                        className="avatar-title rounded-circle bg-light "
+                        style={{ color: "#b83016" }}
+                      >
                         2
                       </div>
                     </div>
@@ -227,7 +233,10 @@ const MyLeadsTable = ({ dataone }) => {
                 >
                   <div className="avatar-group-item">
                     <div className="avatar-xs">
-                      <div className="avatar-title rounded-circle bg-light text-primary">
+                      <div
+                        className="avatar-title rounded-circle bg-light "
+                        style={{ color: "#b83016" }}
+                      >
                         3
                       </div>
                     </div>

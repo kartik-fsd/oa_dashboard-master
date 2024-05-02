@@ -79,7 +79,8 @@ const Addgst = ({ toggleTab, comId }) => {
               <Col xs="2">
                 <button
                   type="submit"
-                  className="btn btn-primary waves-effect waves-light mt-4"
+                  className="btn  waves-effect waves-light mt-4"
+                  style={{ backgroundColor: "#ec5c24" }}
                   disabled={gst == "" ? true : false}
                   // onClick={() => handleCheckGst()}
                 >
@@ -180,8 +181,8 @@ const Addgst = ({ toggleTab, comId }) => {
               <div className="d-flex justify-content-end gap-2 mt-4 ">
                 <button
                   type="button"
-                  className="btn btn-primary btn-label waves-effect waves-light w-xs px-2"
-                  style={{ marginLeft: "10px" }}
+                  className="btn  btn-label waves-effect waves-light w-xs px-2"
+                  style={{ marginLeft: "10px", backgroundColor: "#ec5c24" }}
                   onClick={() => handleSubmit()}
                 >
                   <i className="bx bx-save align-middle me-1  fs-14 "></i>

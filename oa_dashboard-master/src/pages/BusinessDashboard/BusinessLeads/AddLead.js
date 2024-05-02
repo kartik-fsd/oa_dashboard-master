@@ -141,7 +141,12 @@ const AddLead = (props) => {
         <div>{dataToShow?.client_name}</div>
         <div>&nbsp;-&nbsp;</div>
         <div>
-          <span className="badge badge-soft-primary">
+          <span
+            className="badge badge-soft"
+            style={{
+              backgroundColor: "#f07d47",
+            }}
+          >
             {dataToShow?.client_designation}
           </span>
         </div>
@@ -210,7 +215,7 @@ const AddLead = (props) => {
             setBrandData(null);
             setOpen(false);
           }}
-          className="text-primary"
+          style={{ color: "#b83016" }}
         >
           Add Lead
         </ModalHeader>
@@ -271,8 +276,8 @@ const AddLead = (props) => {
                   className="rounded-circle avatar-sm"
                 />
                 <span
-                  className="badge badge-soft-primary"
-                  style={{ fontSize: "9px" }}
+                  className="badge badge-soft"
+                  style={{ fontSize: "9px", backgroundColor: "#f07d47" }}
                 >
                   {brandData?.company_unique_id}
                 </span>
@@ -444,8 +449,8 @@ const AddLead = (props) => {
               }}
               disabled={but}
               type="button"
-              className="btn btn-primary btn-label waves-effect waves-light w-xs px-2"
-              style={{ marginLeft: "10px" }}
+              className="btn  btn-label waves-effect waves-light w-xs px-2"
+              style={{ marginLeft: "10px", backgroundColor: "#ec5c24" }}
             >
               <i className=" bx bx-save  align-middle fs-14 me-1 "></i>
               Save

@@ -121,7 +121,18 @@ const Invoice2022 = () => {
             <div>
               <button
                 type="button"
-                className="btn btn-primary"
+                className="btn"
+                style={{
+                  backgroundColor: "#ec5c24",
+                  color: "whitesmoke",
+                  transition: "background-color 0.3s ease",
+                }}
+                onMouseEnter={(e) =>
+                  (e.target.style.backgroundColor = "#dd4319")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.backgroundColor = "#ec5c24")
+                }
                 style={{ marginRight: "220px" }}
                 onClick={() => setInvMod(!invMod)}
               >

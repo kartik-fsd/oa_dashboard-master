@@ -99,7 +99,7 @@ function CommentBox({ project_data }) {
                     />
                   </div>
                   <div className="flex-grow-1 ms-3">
-                    <h5 className="fs-13 text-primary">
+                    <h5 className="fs-13 " style={{ color: "#b83016" }}>
                       {item.full_name}{" "}
                       <small className="text-muted">{item.sent_date}</small>
                     </h5>

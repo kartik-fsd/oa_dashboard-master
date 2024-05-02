@@ -68,8 +68,8 @@ const PaymentRequestTable = ({ data, updated, setUpdated }) => {
       // cell: (d) => (
       //   <div>
       //     <span
-      //       className="badge rounded-pill badge-soft-primary"
-      //       style={{ width: "50px" }}
+      //       className="badge rounded-pill"
+      //       style={{ width: "50px",backgrounfColor:"#f07d47" }}
       //     >
       //       {d.sow_id}
       //     </span>
@@ -88,7 +88,10 @@ const PaymentRequestTable = ({ data, updated, setUpdated }) => {
                 />
               ) : (
                 <div className="avatar-sm">
-                  <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                  <div
+                    className="avatar-title rounded-circle"
+                    style={{ color: "#b83016", backgroundColor: "#f07d47" }}
+                  >
                     {d?.brand_name?.charAt(0) ?? ""}
                   </div>
                 </div>
@@ -137,7 +140,10 @@ const PaymentRequestTable = ({ data, updated, setUpdated }) => {
                 />
               ) : (
                 <div className="avatar-sm">
-                  <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                  <div
+                    className="avatar-title rounded-circle"
+                    style={{ color: "#b83016", backgroundColor: "#f07d47" }}
+                  >
                     {d?.req_name?.charAt(0) ?? ""}
                   </div>
                 </div>
@@ -182,7 +188,7 @@ const PaymentRequestTable = ({ data, updated, setUpdated }) => {
       width: "100px",
       center: true,
       cell: (d) => (
-        <div className="amt_table text-primary">
+        <div className="amt_table " style={{ color: "#b83016" }}>
           {d.user_type == "direct_sp" ? (
             <span
               className="badge rounded-pill badge-soft-success"

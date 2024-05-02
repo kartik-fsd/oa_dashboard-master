@@ -186,7 +186,10 @@ function AddAgreement({
           </Row>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={saveData} style={{ fontSize: 15 }}>
+          <Button
+            onClick={saveData}
+            style={{ fontSize: 15, backgroundColor: "#ec5c24" }}
+          >
             <i
               className=" ri-download-2-line align-bottom me-2 text-light-muted"
               style={{ fontSize: "15px", cursor: "pointer" }}

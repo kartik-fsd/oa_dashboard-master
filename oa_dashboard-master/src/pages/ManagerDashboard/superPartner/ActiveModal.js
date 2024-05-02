@@ -99,7 +99,17 @@ const ActiveModal = ({
           </div>
         </ModalBody>
         <ModalFooter>
-          <button className="btn btn-primary" onClick={() => handlesubmit()}>
+          <button
+            className="btn"
+            style={{
+              backgroundColor: "#ec5c24",
+              color: "whitesmoke",
+              transition: "background-color 0.3s ease",
+            }}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#dd4319")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = "#ec5c24")}
+            onClick={() => handlesubmit()}
+          >
             save
           </button>
         </ModalFooter>

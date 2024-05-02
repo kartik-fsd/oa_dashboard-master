@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Col,
   Label,
@@ -7,34 +7,34 @@ import {
   ModalFooter,
   ModalHeader,
   Row,
-} from 'reactstrap';
-import Flatpickr from 'react-flatpickr';
-import moment from 'moment';
-import Select from 'react-select';
+} from "reactstrap";
+import Flatpickr from "react-flatpickr";
+import moment from "moment";
+import Select from "react-select";
 import {
   createInv,
   createProjectInvoice,
   digital_client_dropdown,
   getClient,
   gst_list,
-} from '../../../assets/utils/farmingBase';
-import axios from 'axios';
-import { farming } from '../../../globalConfig';
-import { successnotify, warningnotify } from '../../Toasts';
+} from "../../../assets/utils/farmingBase";
+import axios from "axios";
+import { farming } from "../../../globalConfig";
+import { successnotify, warningnotify } from "../../Toasts";
 
 const InvoiceModal = ({ open, setOpen, data }) => {
-  const [clientId, setClientId] = React.useState('');
-  const [poNum, setPoNum] = React.useState('');
-  const [poDate, setPoDate] = React.useState('');
-  const [startDate, setStartDate] = React.useState('');
-  const [endDate, setEndDate] = React.useState('');
-  const [dueDate, setDueDate] = React.useState('');
+  const [clientId, setClientId] = React.useState("");
+  const [poNum, setPoNum] = React.useState("");
+  const [poDate, setPoDate] = React.useState("");
+  const [startDate, setStartDate] = React.useState("");
+  const [endDate, setEndDate] = React.useState("");
+  const [dueDate, setDueDate] = React.useState("");
   const [clientData, setClientData] = React.useState([]);
-  const [tds, setTds] = React.useState('0');
+  const [tds, setTds] = React.useState("0");
   const [loader, setLoader] = React.useState(false);
   const [isErr, setIsErr] = React.useState(false);
   const [gstDataList, setGstDataList] = React.useState([]);
-  const [selectedGstValue, setSelectedGstValue] = React.useState('');
+  const [selectedGstValue, setSelectedGstValue] = React.useState("");
 
   const gstList = async () => {
     let apiData = farming.farming_URL + gst_list;
@@ -54,23 +54,23 @@ const InvoiceModal = ({ open, setOpen, data }) => {
     gstList();
   }, []);
 
-  console.log(tds, 'tds');
+  console.log(tds, "tds");
 
   const colorStyles = {
-    control: (styles) => ({ ...styles, height: '38px' }),
+    control: (styles) => ({ ...styles, height: "38px" }),
   };
 
   const onStartDateChange = (e) => {
-    const startdate = moment(e[0]).format('YYYY-MM-DD');
+    const startdate = moment(e[0]).format("YYYY-MM-DD");
     setStartDate(startdate);
   };
 
   const onEndDateChange = (e) => {
-    const enddate = moment(e[0]).format('YYYY-MM-DD');
+    const enddate = moment(e[0]).format("YYYY-MM-DD");
     setEndDate(enddate);
   };
   const onDueDateChange = (e) => {
-    const enddate = moment(e[0]).format('YYYY-MM-DD');
+    const enddate = moment(e[0]).format("YYYY-MM-DD");
     setDueDate(enddate);
   };
 
@@ -85,7 +85,7 @@ const InvoiceModal = ({ open, setOpen, data }) => {
 
   const poDateChange = (e) => {
     console.log(e);
-    const podate = moment(e[0]).format('YYYY-MM-DD');
+    const podate = moment(e[0]).format("YYYY-MM-DD");
     setPoDate(podate);
   };
 
@@ -96,42 +96,42 @@ const InvoiceModal = ({ open, setOpen, data }) => {
   const currentFinancialYear =
     today < financialYearStart ? currentYear - 1 : currentYear;
 
-  console.log(currentFinancialYear, 'year');
+  console.log(currentFinancialYear, "year");
 
   const handleCreateInv = () => {
     const link = farming.farming_URL + createProjectInvoice;
-    if (selectedGstValue == '' || !selectedGstValue) {
-      warningnotify('please Select GST');
+    if (selectedGstValue == "" || !selectedGstValue) {
+      warningnotify("please Select GST");
     }
     const body = {
       client_id: data.client_id,
       project_acc: data.invoice_id,
       sow_id: data.sow_id,
-      is_manual: 'yes',
+      is_manual: "yes",
       po_no: poNum,
       po_date: poDate,
       start_date: startDate,
       end_date: endDate,
       due_date: dueDate,
-      billing_status: 'billed',
+      billing_status: "billed",
       year: currentFinancialYear,
       tds_per: tds,
       gst_id: selectedGstValue,
     };
 
     if (
-      body.start_date == '' ||
-      body.end_date == '' ||
-      body.due_date == '' ||
-      body.tds_per == ''
+      body.start_date == "" ||
+      body.end_date == "" ||
+      body.due_date == "" ||
+      body.tds_per == ""
     ) {
-      warningnotify('please fill the details');
+      warningnotify("please fill the details");
     } else {
       axios
         .post(link, body)
         .then((res) => {
           console.log(res.data);
-          successnotify('success');
+          successnotify("success");
           setOpen(false);
         })
         .catch((err) => console.log(err));
@@ -161,13 +161,13 @@ const InvoiceModal = ({ open, setOpen, data }) => {
         size="lg"
         toggle={() => {
           setOpen(false);
-          setPoDate('');
-          setPoNum('');
-          setStartDate('');
-          setEndDate('');
-          setSelectedGstValue('');
-          setDueDate('');
-          setTds('0');
+          setPoDate("");
+          setPoNum("");
+          setStartDate("");
+          setEndDate("");
+          setSelectedGstValue("");
+          setDueDate("");
+          setTds("0");
         }}
         centered={true}
       >
@@ -176,7 +176,7 @@ const InvoiceModal = ({ open, setOpen, data }) => {
             setOpen(false);
           }}
         >
-          <h5 style={{ color: '#3f5289 ' }}>Create Invoice</h5>
+          <h5 style={{ color: "#3f5289 " }}>Create Invoice</h5>
         </ModalHeader>
         <ModalBody>
           <Row>
@@ -228,7 +228,7 @@ const InvoiceModal = ({ open, setOpen, data }) => {
                 <Flatpickr
                   className="form-control"
                   options={{
-                    dateFormat: 'd M, Y',
+                    dateFormat: "d M, Y",
                   }}
                   name="po_date"
                   id="podate"
@@ -242,7 +242,7 @@ const InvoiceModal = ({ open, setOpen, data }) => {
                 <Flatpickr
                   className="form-control"
                   options={{
-                    dateFormat: 'd M, Y',
+                    dateFormat: "d M, Y",
                   }}
                   name="start_date"
                   id="podate1"
@@ -258,7 +258,7 @@ const InvoiceModal = ({ open, setOpen, data }) => {
                 <Flatpickr
                   className="form-control"
                   options={{
-                    dateFormat: 'd M, Y',
+                    dateFormat: "d M, Y",
                   }}
                   name="end_date"
                   id="podate2"
@@ -274,7 +274,7 @@ const InvoiceModal = ({ open, setOpen, data }) => {
                 <Flatpickr
                   className="form-control"
                   options={{
-                    dateFormat: 'd M, Y',
+                    dateFormat: "d M, Y",
                   }}
                   name="end_date"
                   id="podate2"
@@ -326,7 +326,8 @@ const InvoiceModal = ({ open, setOpen, data }) => {
         <ModalFooter>
           <button
             type="button"
-            className="btn btn-primary waves-effect waves-light"
+            className="btn waves-effect waves-light"
+            style={{ backgroundColor: "#ec5c24" }}
             onClick={() => {
               handleCreateInv();
             }}

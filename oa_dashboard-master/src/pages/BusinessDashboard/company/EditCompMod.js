@@ -172,7 +172,8 @@ const EditCompMod = ({ open, setOpen, data, check, setCheck }) => {
         <ModalFooter>
           <button
             type="button"
-            className="btn btn-primary waves-effect waves-light"
+            className="btn  waves-effect waves-light"
+            style={{ backgroundColor: "#ec5c24" }}
             onClick={() => handleUpdate()}
           >
             Update

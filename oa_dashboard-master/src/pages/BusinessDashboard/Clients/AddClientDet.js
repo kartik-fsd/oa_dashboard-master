@@ -66,21 +66,24 @@ const AddClientDet = () => {
                   <div>
                     <div className="d-flex gap-4 align-items-center ">
                       <h4
-                        className="fw-bold text-primary m-0"
-                        style={{ fontSize: "15px" }}
+                        className="fw-bold  m-0"
+                        style={{ fontSize: "15px", color: "#b83016" }}
                       >
                         {clientDet.company_name}
                       </h4>
                       {/* <span className="badge text-bg-primary">
                               {clientDet.com_status}
                             </span> */}
-                      <span className="badge badge-soft-primary">
+                      <span
+                        className="badge badge-soft"
+                        style={{ backgroundColor: "#f07d47" }}
+                      >
                         {clientDet.company_unique_id}
                       </span>
                       <div style={{ marginLeft: "auto" }}>
                         <i
-                          className=" ri-edit-box-line fs-18 text-primary"
-                          style={{ cursor: "pointer" }}
+                          className=" ri-edit-box-line fs-18 "
+                          style={{ cursor: "pointer", color: "#b83016" }}
                           onClick={() => {
                             setOpen3(!open3);
                           }}
@@ -108,8 +111,8 @@ const AddClientDet = () => {
                       Client Personal Details
                     </h6>
                     <i
-                      className=" ri-edit-box-line fs-18 text-primary"
-                      style={{ cursor: "pointer" }}
+                      className=" ri-edit-box-line fs-18 "
+                      style={{ cursor: "pointer", color: "#b83016" }}
                       onClick={() => {
                         setOpen1(!open1);
                       }}
@@ -132,7 +135,10 @@ const AddClientDet = () => {
                           &#x3a;&#xa0;&#xa0;&#xa0;&#xa0;
                           {clientDet.client_name}
                         </p>
-                        <span className="badge badge-soft-primary">
+                        <span
+                          className="badge badge-soft"
+                          style={{ backgroundColor: "#f07d47" }}
+                        >
                           {clientDet.client_unique_id}
                         </span>
                       </div>
@@ -203,8 +209,8 @@ const AddClientDet = () => {
                       Client Professional Details
                     </h6>
                     <i
-                      className=" ri-edit-box-line fs-18 text-primary"
-                      style={{ cursor: "pointer" }}
+                      className=" ri-edit-box-line fs-18 "
+                      style={{ cursor: "pointer", color: "#b83016" }}
                       onClick={() => {
                         setOpen2(!open2);
                       }}
@@ -259,8 +265,8 @@ const AddClientDet = () => {
                       GST Details
                     </h6>
                     <i
-                      className=" ri-edit-box-line fs-18 text-primary"
-                      style={{ cursor: "pointer" }}
+                      className=" ri-edit-box-line fs-18 "
+                      style={{ cursor: "pointer" ,color :"#b83016"}}
                       onClick={() => {
                         setOpen3(!open3);
                       }}

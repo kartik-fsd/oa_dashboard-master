@@ -89,7 +89,11 @@ const CmOverview = () => {
       <Container fluid>
         {/* <Row>
           <Col xs={"3"}>
-            <Card className="card-animate overflow-hidden bg-soft-success text-primary">
+            <Card className="card-animate overflow-hidden bg-soft-success " 
+                   style={{
+                                  color: "#b83016",
+                                  
+                                }}>
               <CardBody style={{ zIndex: "1" }}>
                 <div
                   className="d-flex align-items-center justify-content-between"
@@ -109,7 +113,8 @@ const CmOverview = () => {
             </Card>
           </Col>
           <Col xs={"3"}>
-            <Card className="card-animate overflow-hidden bg-soft-danger text-primary">
+            <Card className="card-animate overflow-hidden bg-soft-danger "
+                   style={{color: "#b83016"}}>
               <CardBody style={{ zIndex: "1" }}>
                 <div
                   className="d-flex align-items-center justify-content-between"
@@ -129,7 +134,9 @@ const CmOverview = () => {
             </Card>
           </Col>
           <Col xs={"3"}>
-            <Card className="card-animate overflow-hidden bg-soft-warning text-primary">
+            <Card className="card-animate overflow-hidden bg-soft-warning "        style={{
+                                  color: "#b83016"
+                                }}>
               <CardBody style={{ zIndex: "1" }}>
                 <div
                   className="d-flex align-items-center justify-content-between"
@@ -149,7 +156,11 @@ const CmOverview = () => {
             </Card>
           </Col>
           <Col xs={"3"}>
-            <Card className="card-animate overflow-hidden bg-soft-secondary text-primary">
+            <Card className="card-animate overflow-hidden bg-soft-secondary "
+                   style={{
+                                  color: "#b83016"
+                                }}
+            >
               <CardBody style={{ zIndex: "1" }}>
                 <div
                   className="d-flex align-items-center justify-content-between"
@@ -190,7 +201,13 @@ const CmOverview = () => {
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-1">
                         <div className="avatar-xs">
-                          <div className="avatar-title bg-soft-primary text-primary fs-18 rounded">
+                          <div
+                            className="avatar-title bg-soft  fs-18 rounded"
+                            style={{
+                              color: "#b83016",
+                              backgroundColor: "#f07d47",
+                            }}
+                          >
                             <i className="mdi mdi-briefcase-check-outline"></i>
                           </div>
                         </div>
@@ -353,7 +370,17 @@ const CmOverview = () => {
                         >
                           <DropdownToggle className="btn  btn-sm" tag="button">
                             <button
-                              className="btn btn-primary"
+                              className="btn" style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
                               style={{ marginRight: "8px" }}
                             >
                               <i className=" ri-filter-line align-bottom me-1"></i>
@@ -394,7 +421,9 @@ const CmOverview = () => {
                                 setFilter("hold");
                               }}
                             >
-                              <i className=" ri-checkbox-blank-circle-fill align-bottom me-2 text-primary"></i>
+                              <i className=" ri-checkbox-blank-circle-fill align-bottom me-2 "        style={{
+                                  color: "#b83016"
+                                }}></i>
                               Hold
                             </DropdownItem>
                           </DropdownMenu>
@@ -406,7 +435,17 @@ const CmOverview = () => {
                         >
                           <DropdownToggle className="btn  btn-sm" tag="button">
                             <button
-                              className="btn btn-primary"
+                              className="btn" style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
                               style={{
                                 marginRight: "-70px",
                                 visibility: "hidden",
@@ -470,14 +509,23 @@ const CmOverview = () => {
                       )} */}
                       <button
                         type="button"
-                        className="btn btn-primary"
+                        className="btn"
                         style={{
+                          backgroundColor: "#ec5c24",
+                          color: "whitesmoke",
+                          transition: "background-color 0.3s ease",
                           marginRight: "220px",
                           visibility:
                             location.pathname == "/hr/onboarding"
                               ? "hidden"
                               : "visible",
                         }}
+                        onMouseEnter={(e) =>
+                          (e.target.style.backgroundColor = "#dd4319")
+                        }
+                        onMouseLeave={(e) =>
+                          (e.target.style.backgroundColor = "#ec5c24")
+                        }
                         onClick={() => setOpen(!open)}
                         disabled={context.oaDetials.role == "cm" ? false : true}
                       >
@@ -525,8 +573,19 @@ const CmOverview = () => {
                       >
                         <DropdownToggle className="btn  btn-sm" tag="button">
                           <button
-                            className="btn btn-primary"
-                            style={{ marginRight: "8px" }}
+                            className="btn"
+                            style={{
+                              backgroundColor: "#ec5c24",
+                              color: "whitesmoke",
+                              transition: "background-color 0.3s ease",
+                              marginRight: "8px",
+                            }}
+                            onMouseEnter={(e) =>
+                              (e.target.style.backgroundColor = "#dd4319")
+                            }
+                            onMouseLeave={(e) =>
+                              (e.target.style.backgroundColor = "#ec5c24")
+                            }
                           >
                             <i className=" ri-filter-line align-bottom me-1"></i>
                             Filter
@@ -566,7 +625,12 @@ const CmOverview = () => {
                               setFilter("hold");
                             }}
                           >
-                            <i className=" ri-checkbox-blank-circle-fill align-bottom me-2 text-primary"></i>
+                            <i
+                              className=" ri-checkbox-blank-circle-fill align-bottom me-2 "
+                              style={{
+                                color: "#b83016",
+                              }}
+                            ></i>
                             Hold
                           </DropdownItem>
                         </DropdownMenu>
@@ -578,11 +642,20 @@ const CmOverview = () => {
                       >
                         <DropdownToggle className="btn  btn-sm" tag="button">
                           <button
-                            className="btn btn-primary"
+                            className="btn"
                             style={{
+                              backgroundColor: "#ec5c24",
+                              color: "whitesmoke",
+                              transition: "background-color 0.3s ease",
                               marginRight: "-70px",
                               visibility: "hidden",
                             }}
+                            onMouseEnter={(e) =>
+                              (e.target.style.backgroundColor = "#dd4319")
+                            }
+                            onMouseLeave={(e) =>
+                              (e.target.style.backgroundColor = "#ec5c24")
+                            }
                             onClick={() => {
                               "";
                             }}
@@ -642,14 +715,23 @@ const CmOverview = () => {
                     )}
                     <button
                       type="button"
-                      className="btn btn-primary"
+                      className="btn"
                       style={{
+                        backgroundColor: "#ec5c24",
+                        color: "whitesmoke",
+                        transition: "background-color 0.3s ease",
                         marginRight: "220px",
                         visibility:
                           location.pathname == "/hr/onboarding"
                             ? "hidden"
                             : "visible",
                       }}
+                      onMouseEnter={(e) =>
+                        (e.target.style.backgroundColor = "#dd4319")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.target.style.backgroundColor = "#ec5c24")
+                      }
                       onClick={() => setOpen(!open)}
                       disabled={context.oaDetials.role == "cm" ? false : true}
                     >

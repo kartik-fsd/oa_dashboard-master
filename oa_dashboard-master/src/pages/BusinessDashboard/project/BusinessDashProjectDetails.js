@@ -172,7 +172,10 @@ const BusinessDashProjectDetails = () => {
                       {/* <span className="badge text-bg-primary">
                         {projectDetails.company_unique_id}
                       </span> */}
-                      <span className="badge badge-soft-primary">
+                      <span
+                        className="badge badge-soft"
+                        style={{ backgroundColor: "#f07d47" }}
+                      >
                         {" "}
                         {projectDetails.company_unique_id}
                       </span>

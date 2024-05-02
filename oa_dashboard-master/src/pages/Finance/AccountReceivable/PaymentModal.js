@@ -246,7 +246,10 @@ const PaymentModal = ({ setOpen, open, userData, setCheck, check, paysum }) => {
       name: "Sl No",
       selector: "slno",
       cell: (d) => (
-        <div className="fs-12  badge rounded-pill badge-soft-primary">
+        <div
+          className="fs-12  badge rounded-pill badge-soft"
+          style={{ backgroundColor: "f07d47" }}
+        >
           {d.slno}
         </div>
       ),
@@ -275,7 +278,11 @@ const PaymentModal = ({ setOpen, open, userData, setCheck, check, paysum }) => {
     {
       name: "Recived Date",
       selector: "date",
-      cell: (d) => <div className="fs-12 text-primary">{d.date}</div>,
+      cell: (d) => (
+        <div className="fs-12 " style={{ color: "#b83016" }}>
+          {d.date}
+        </div>
+      ),
       sortable: true,
       width: "130px",
     },
@@ -283,7 +290,7 @@ const PaymentModal = ({ setOpen, open, userData, setCheck, check, paysum }) => {
       name: "Attachment",
       selector: "attachment",
       cell: (d) => (
-        <div className="fs-12 text-primary">
+        <div className="fs-12 " style={{ color: "#b83016" }}>
           {d.attachment ? (
             <a href={d.attachment}>
               <i className=" ri-download-cloud-2-fill fs-24 text-secondary ms-4"></i>
@@ -502,7 +509,7 @@ const PaymentModal = ({ setOpen, open, userData, setCheck, check, paysum }) => {
           <ModalHeader className="justify-content-end">
             <button
               type="submit"
-              className="btn btn-primary waves-effect waves-light mb-4 "
+              className="btn btn- waves-effect waves-light mb-4 "
               disabled={userData.bad_debt == "yes" && !recv}
               // onClick={handleSubmitPayment}
             >

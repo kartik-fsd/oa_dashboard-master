@@ -205,11 +205,13 @@ const LeadDetails = () => {
       </Card> */}
       <Card>
         <CardHeader>
-          <h5 className="text-primary">Lead Nurturing</h5>
+          <h5 style={{ color: "#b83016" }}>Lead Nurturing</h5>
         </CardHeader>
         <CardBody>
           <Col xs="12" className="mb-4">
-            <h5 className="mb-4 text-primary">What are we supposed to do?</h5>
+            <h5 className="mb-4 " style={{ color: "#b83016" }}>
+              What are we supposed to do?
+            </h5>
             <div id="ck">
               <CKEditor
                 editor={ClassicEditor}
@@ -223,7 +225,9 @@ const LeadDetails = () => {
             </div>
           </Col>
           <Col xs="12" className="mb-4">
-            <h5 className="mb-4 text-primary">What are the requirement?</h5>
+            <h5 className="mb-4 " style={{ color: "#b83016" }}>
+              What are the requirement?
+            </h5>
             <div id="ck">
               <CKEditor
                 editor={ClassicEditor}
@@ -235,7 +239,7 @@ const LeadDetails = () => {
             </div>
           </Col>
           <Col xs="12" className="mb-4">
-            <h5 className="mb-4 text-primary">
+            <h5 className="mb-4 " style={{ color: "#b83016" }}>
               What are the qualifying criteria?
             </h5>
             <div id="ck">
@@ -249,7 +253,7 @@ const LeadDetails = () => {
             </div>
           </Col>
           <Col xs="12" className="mb-4">
-            <h5 className="mb-4 text-primary">
+            <h5 className="mb-4 " style={{ color: "#b83016" }}>
               What are the rejection criteria?
             </h5>
             <div id="ck">
@@ -263,7 +267,9 @@ const LeadDetails = () => {
             </div>
           </Col>
           <Col xs="12" className="mb-4">
-            <h5 className="mb-4 text-primary">Market population?</h5>
+            <h5 className="mb-4 " style={{ color: "#b83016" }}>
+              Market population?
+            </h5>
             <div id="ck">
               <CKEditor
                 editor={ClassicEditor}
@@ -276,7 +282,9 @@ const LeadDetails = () => {
             <hr className="mt-5"></hr>
           </Col>
           <Col xs="12">
-            <h5 className="mb-4 text-primary">Difficulty level?</h5>
+            <h5 className="mb-4 " style={{ color: "#b83016" }}>
+              Difficulty level?
+            </h5>
             <div className="d-flex gap-4 align-items-center">
               <label className="m-0 d-flex align-items-center">
                 <input
@@ -316,7 +324,9 @@ const LeadDetails = () => {
           <div>
             <Col xs="12">
               <div className="d-flex justify-content-between">
-                <h5 className="mb-4 text-primary">Deliverables</h5>
+                <h5 className="mb-4 " style={{ color: "#b83016" }}>
+                  Deliverables
+                </h5>
                 <div>
                   <button
                     disabled={
@@ -330,7 +340,10 @@ const LeadDetails = () => {
                         : true
                     }
                     type="button"
-                    className="btn btn-primary waves-effect waves-light btn-sm"
+                    className="btn  waves-effect waves-light btn-sm"
+                    style={{
+                      backgroundColor: "#ec5c24",
+                    }}
                     onClick={handleClickAdd}
                   >
                     Add
@@ -432,7 +445,9 @@ const LeadDetails = () => {
           </div>
 
           <Col xs="12" className="mt-2">
-            <h5 className="mb-4 text-primary">Deliverables</h5>
+            <h5 className="mb-4 " style={{ color: "#b83016" }}>
+              Deliverables
+            </h5>
             <div>
               {mileStoneData?.length == 0 ? (
                 <div style={{}}>No TableData Found</div>
@@ -496,7 +511,8 @@ const LeadDetails = () => {
           <Col xs="12" className="d-flex justify-content-end">
             <button
               type="button"
-              className="btn btn-primary waves-effect waves-light "
+              className="btn  waves-effect waves-light "
+              style={{ backgroundColor: "#ec5c24" }}
             >
               Update
             </button>

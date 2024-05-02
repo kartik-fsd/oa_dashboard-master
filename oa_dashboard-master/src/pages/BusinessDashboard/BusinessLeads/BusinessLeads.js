@@ -105,7 +105,10 @@ const BusinessLeads = () => {
               <CardBody>
                 <div className="d-flex align-items-center">
                   <div className="avatar-sm flex-shrink-0">
-                    <span className="avatar-title bg-light text-primary rounded-circle fs-3">
+                    <span
+                      className="avatar-title bg-light  rounded-circle fs-3"
+                      style={{ color: "#b83016" }}
+                    >
                       <i className={"align-middle  bx bx-user-circle"}></i>
                     </span>
                   </div>
@@ -132,7 +135,10 @@ const BusinessLeads = () => {
               <CardBody>
                 <div className="d-flex align-items-center">
                   <div className="avatar-sm flex-shrink-0">
-                    <span className="avatar-title bg-light text-primary rounded-circle fs-3">
+                    <span
+                      className="avatar-title bg-light  rounded-circle fs-3"
+                      style={{ color: "#b83016" }}
+                    >
                       <i className={"align-middle  bx bxs-hot"}></i>
                     </span>
                   </div>
@@ -159,12 +165,13 @@ const BusinessLeads = () => {
       <Card>
         <CardHeader>
           <div className="d-flex justify-content-between align-items-center">
-            <h5>My Leads</h5>
+            <h5 style={{ color: "#b83016" }}>My Leads</h5>
             <div style={{ marginRight: "228px" }}>
               <div>
                 <button
                   type="button"
-                  className="btn btn-primary waves-effect waves-light me-1"
+                  className="btn  waves-effect waves-light me-1"
+                  style={{ backgroundColor: "#ec5c24" }}
                   onClick={() => setOpen(!open)}
                 >
                   <i className=" ri-add-fill align-bottom me-1 fs-14"></i>
@@ -175,7 +182,8 @@ const BusinessLeads = () => {
                   <DropdownToggle className="btn  " tag="button">
                     <button
                       type="button"
-                      className="btn btn-primary waves-effect waves-light"
+                      className="btn  waves-effect waves-light"
+                      style={{ backgroundColor: "#ec5c24" }}
                     >
                       <i className=" ri-filter-3-line align-bottom fs-14 me-1"></i>
                       Filter

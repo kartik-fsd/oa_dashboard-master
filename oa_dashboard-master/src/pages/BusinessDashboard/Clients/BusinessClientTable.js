@@ -62,8 +62,8 @@ const BusinessClientTable = ({ data }) => {
 
   //         <div className="d-flex flex-column gap-1 ">
   //           <span
-  //             className="fs-11  text-primary"
-  //             style={{ wordBreak: "break-all", fontWeight: "450" }}
+  //             className="fs-11  "
+  //             style={{ wordBreak: "break-all", fontWeight: "450",color :"#b83016" }}
   //           >
   //             {d.company_name}
   //           </span>
@@ -143,7 +143,10 @@ const BusinessClientTable = ({ data }) => {
                 />
               ) : (
                 <div className="avatar-sm">
-                  <div className="avatar-title rounded-circle bg-soft-primary  text-primary text-capitalize">
+                  <div
+                    className="avatar-title rounded-circle    text-capitalize"
+                    style={{ color: "#b83016", backgroundColor: "#f07d47" }}
+                  >
                     {d?.client_name[0] ?? ""}
                   </div>
                 </div>
@@ -159,8 +162,8 @@ const BusinessClientTable = ({ data }) => {
               >
                 {d?.brand_name}
                 <span
-                  className="badge badge-soft-primary ms-2 cursor-pointer"
-                  style={{ fontSize: "8px" }}
+                  className="badge badge-soft ms-2 cursor-pointer"
+                  style={{ fontSize: "8px", backgroundColor: "#f07d47" }}
                   onClick={() => {
                     history.push(
                       `/business-dashboard/addclient/${d.client_id}`
@@ -261,7 +264,7 @@ const BusinessClientTable = ({ data }) => {
     //         </div>
     //       ) : (
     //         <div className="avatar-sm">
-    //           <div className="avatar-title rounded-circle bg-soft-primary text-primary">
+    //           <div className="avatar-title rounded-circle  "style:{{backgroundColor:"#f07d47",color :"#b83016"}}>
     //             {d.brand_name[0]}
     //           </div>
     //         </div>
@@ -307,7 +310,7 @@ const BusinessClientTable = ({ data }) => {
     //   name: "G.S.T No.",
     //   selector: (row) => row.gst,
     //   left: true,
-    //   cell: (d) => <div className="text-primary">{d.gst}</div>,
+    //   cell: (d) => <div style={{ color: "#b83016"}}>{d.gst}</div>,
     // },
     {
       name: "Created By",
@@ -327,7 +330,10 @@ const BusinessClientTable = ({ data }) => {
                 />
               ) : (
                 <div className="avatar-sm">
-                  <div className="avatar-title rounded-circle bg-soft-primary  text-primary text-capitalize">
+                  <div
+                    className="avatar-title rounded-circle    text-capitalize"
+                    style={{ color: "#b83016" }}
+                  >
                     {d?.client_name[0] ?? ""}
                   </div>
                 </div>

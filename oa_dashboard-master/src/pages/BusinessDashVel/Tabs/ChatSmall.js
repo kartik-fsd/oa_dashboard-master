@@ -125,7 +125,10 @@ function ChatSmall({ project_data }) {
                         className="ctext-wrap-content"
                         style={{ textAlign: "left" }}
                       >
-                        <p className="mb-0 ctext-content fs-12 text-primary mb-2">
+                        <p
+                          className="mb-0 ctext-content fs-12  mb-2"
+                          style={{ color: "#b83016" }}
+                        >
                           {item.full_name}
                         </p>
                         <p className="mb-0 ctext-content fs-11">

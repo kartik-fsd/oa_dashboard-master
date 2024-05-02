@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { useLocation, useParams } from "react-router-dom";
 import {
   Button,
   Card,
@@ -15,14 +15,14 @@ import {
   Row,
   Form,
   Input,
-} from 'reactstrap';
-import TableForManager from './TableForManager';
-import Flatpickr from 'react-flatpickr';
-import { api, farming } from '../../globalConfig';
-import { overall_projects } from '../../assets/utils/sow';
-import axios from 'axios';
-import moment from 'moment';
-import Select from 'react-select';
+} from "reactstrap";
+import TableForManager from "./TableForManager";
+import Flatpickr from "react-flatpickr";
+import { api, farming } from "../../globalConfig";
+import { overall_projects } from "../../assets/utils/sow";
+import axios from "axios";
+import moment from "moment";
+import Select from "react-select";
 import {
   aravindSowAdd,
   create_sow,
@@ -32,34 +32,34 @@ import {
   work_id_manager,
   active_sow,
   add_campaign,
-} from '../../assets/utils/dashboard';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import ManagerAdd from './managerChanges/ManagerAdd';
-import ManagerEdit from './managerChanges/ManagerEdit';
-import { extract_token } from '../../assets/utils/common';
-import { title } from '../../common/pathName';
-import { business_projects } from '../../assets/utils/Business';
+} from "../../assets/utils/dashboard";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import ManagerAdd from "./managerChanges/ManagerAdd";
+import ManagerEdit from "./managerChanges/ManagerEdit";
+import { extract_token } from "../../assets/utils/common";
+import { title } from "../../common/pathName";
+import { business_projects } from "../../assets/utils/Business";
 import {
   invActiveproj,
   projDetailsofmonth,
-} from '../../assets/utils/farmingBase';
-import ActiveTable from './ActiveTable';
-import { indianNumbers } from '../../components/common/indianNumbers';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
-import DailyDowloadMod from '../Management/Week/DailyDowloadMod';
+} from "../../assets/utils/farmingBase";
+import ActiveTable from "./ActiveTable";
+import { indianNumbers } from "../../components/common/indianNumbers";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import DailyDowloadMod from "../Management/Week/DailyDowloadMod";
 
 const ManagerDashboard = () => {
   const { modal_signUpModals_1, openModalside, closeModalside } =
     useContext(AppContext);
 
   const colorStyles = {
-    control: (styles) => ({ ...styles, height: '35px' }),
+    control: (styles) => ({ ...styles, height: "35px" }),
   };
 
   const location = useLocation();
-  console.log(location.pathname, 'testingpathname');
+  console.log(location.pathname, "testingpathname");
   const [formData, setFormData] = React.useState({});
   const [modal_signUpModals, set_modal_signUpModals] = React.useState(false);
   const [loop, set_loop] = React.useState([]);
@@ -69,10 +69,10 @@ const ManagerDashboard = () => {
   const [dm_open, setDm_open] = useState(false);
   const [nextData, setNextData] = useState(true);
   const [card, setCard] = useState({});
-  const [sowId, setSowId] = useState('');
+  const [sowId, setSowId] = useState("");
   const [isLoading, setIsLoading] = React.useState(false);
   const [isErr, setIsErr] = React.useState(false);
-  const [userType, setUserType] = React.useState('');
+  const [userType, setUserType] = React.useState("");
   const [oashow, setOaShow] = React.useState(false);
   const [switchData, setSwitchData] = React.useState(false);
   const [openD, setOpenD] = React.useState(false);
@@ -83,7 +83,7 @@ const ManagerDashboard = () => {
 
   const path = useLocation();
   const final = path.pathname.slice(1);
-  const split = final.split('/');
+  const split = final.split("/");
   const Cap = split[0][0].toUpperCase() + split[0].slice(1);
   document.title = `${title}`;
 
@@ -102,12 +102,12 @@ const ManagerDashboard = () => {
   const postCampaign = api.OA_URL + add_campaign;
   const [managerData, setManagerData] = React.useState([]);
   const [oaData, setOaData] = React.useState([]);
-  const [workteam, setWorkTeam] = React.useState('');
+  const [workteam, setWorkTeam] = React.useState("");
   const [check1, setCheck1] = React.useState(false);
   const [sow, setSow] = React.useState([]);
-  const [dmSow, setDmSow] = React.useState('');
-  const [dmCamp, setDmCamp] = React.useState('');
-  const [campLink, setCampLink] = React.useState('');
+  const [dmSow, setDmSow] = React.useState("");
+  const [dmCamp, setDmCamp] = React.useState("");
+  const [campLink, setCampLink] = React.useState("");
   const [financeData, setFinanceData] = React.useState([]);
   const [finCheck, setFinCheck] = React.useState(false);
   const [detMonth, setDetMonth] = React.useState({});
@@ -133,7 +133,7 @@ const ManagerDashboard = () => {
         setIsLoading(false);
       })
       .catch((err) => {
-        console.log(err, 'err');
+        console.log(err, "err");
         setIsErr(true);
       })
       .finally(() => {
@@ -150,7 +150,7 @@ const ManagerDashboard = () => {
           // setOaShow(true)
           setOaData(res?.data?.data);
         })
-        .catch((err) => console.log(err, 'errint'));
+        .catch((err) => console.log(err, "errint"));
     }
   }, [oashow, workteam]);
 
@@ -172,25 +172,25 @@ const ManagerDashboard = () => {
           axios
             .patch(aravindSowAdd, enterAravind)
             .then((res) => {
-              console.log('success res');
+              console.log("success res");
             })
             .catch((err) => {
               console.log(err);
             });
         }
         if (res.data?.error) {
-          toast('Something went wrong', {
-            position: 'top-center',
+          toast("Something went wrong", {
+            position: "top-center",
             hideProgressBar: true,
             closeOnClick: false,
-            className: 'bg-warning text-white',
+            className: "bg-warning text-white",
           });
         } else {
-          toast('success', {
-            position: 'top-center',
+          toast("success", {
+            position: "top-center",
             hideProgressBar: true,
             closeOnClick: false,
-            className: 'bg-success text-white',
+            className: "bg-success text-white",
           });
           // setNextData(false);
           closeModalside();
@@ -218,11 +218,11 @@ const ManagerDashboard = () => {
   }, []);
   const handleChange = (e) => {
     if (e.target == undefined) {
-      const name = 'start_date';
-      const value = moment(e[0]).format('YYYY-MM-DD');
+      const name = "start_date";
+      const value = moment(e[0]).format("YYYY-MM-DD");
       setFormData({ ...formData, [name]: value });
-    } else if (e.target.name == 'manager_work_id') {
-      const data = e.target.value.split(',');
+    } else if (e.target.name == "manager_work_id") {
+      const data = e.target.value.split(",");
       setWorkTeam(data[1]);
       setFormData({ ...formData, [e.target.name]: data[0] });
     } else {
@@ -231,8 +231,8 @@ const ManagerDashboard = () => {
     }
   };
   const handleChange1 = (e) => {
-    const name = 'end_date';
-    const value = moment(e[0]).format('YYYY-MM-DD');
+    const name = "end_date";
+    const value = moment(e[0]).format("YYYY-MM-DD");
     setFormData({ ...formData, [name]: value });
   };
 
@@ -242,7 +242,7 @@ const ManagerDashboard = () => {
     set_loop([...loop]);
   };
   const handleChange2 = (e, index) => {
-    loop[`${index}`].target_date = moment(e[0]).format('YYYY-MM-DD');
+    loop[`${index}`].target_date = moment(e[0]).format("YYYY-MM-DD");
   };
 
   const handleChange3 = (e, index) => {
@@ -255,18 +255,18 @@ const ManagerDashboard = () => {
 
     axios.post(insertManagerTargetUrl, filterFinal).then((res) => {
       if (res.data?.error) {
-        toast('Something went wrong', {
-          position: 'top-center',
+        toast("Something went wrong", {
+          position: "top-center",
           hideProgressBar: true,
           closeOnClick: false,
-          className: 'bg-warning text-white',
+          className: "bg-warning text-white",
         });
       } else {
-        toast('success', {
-          position: 'top-center',
+        toast("success", {
+          position: "top-center",
           hideProgressBar: true,
           closeOnClick: false,
-          className: 'bg-success text-white',
+          className: "bg-success text-white",
         });
         set_modal_signUpModals(false);
       }
@@ -279,7 +279,7 @@ const ManagerDashboard = () => {
       .then((res) => {
         setSow(res.data.sows);
       })
-      .catch((err) => console.log(err, 'err'));
+      .catch((err) => console.log(err, "err"));
   };
 
   const dmModal = () => {
@@ -334,9 +334,9 @@ const ManagerDashboard = () => {
     const link =
       farming.farming_URL +
       invActiveproj +
-      '/' +
+      "/" +
       (startDate.getMonth() + 1) +
-      '/' +
+      "/" +
       startDate.getFullYear();
     setIsLoadingFin(true);
     axios
@@ -345,7 +345,7 @@ const ManagerDashboard = () => {
         setIsLoadingFin(false);
         setFinanceData(res.data.data);
         setDetMonth(res.data.totaldata);
-        console.log(res.data, 'resdata');
+        console.log(res.data, "resdata");
       })
       .catch((err) => console.log(err))
       .finally(() => setIsLoadingFin(false));
@@ -371,10 +371,10 @@ const ManagerDashboard = () => {
     return new Date(year, month, 0).getDate();
   }
 
-  const year = moment(date).format('YYYY');
-  const month = moment(date).format('MM'); // April (Note that months are zero-indexed in JavaScript, so April is represented as 3)
+  const year = moment(date).format("YYYY");
+  const month = moment(date).format("MM"); // April (Note that months are zero-indexed in JavaScript, so April is represented as 3)
   const daysInMonth = getDaysInMonth(year, month);
-  const todayDate = Number(moment(date).format('DD'));
+  const todayDate = Number(moment(date).format("DD"));
 
   const actMilPerDay = (detMonth.act_milestone / daysInMonth) * todayDate;
   const expMilePerDay = (detMonth.exp_milestone / daysInMonth) * todayDate;
@@ -398,7 +398,7 @@ const ManagerDashboard = () => {
     <input value={value} onClick={onClick} className="example-custom-input" />
   ));
 
-  ExampleCustomInput.displayName = 'ExampleCustomInput';
+  ExampleCustomInput.displayName = "ExampleCustomInput";
 
   return (
     <React.Fragment>
@@ -409,33 +409,38 @@ const ManagerDashboard = () => {
           <Card>
             <CardHeader
               className="d-flex justify-content-between align-items-center"
-              style={{ marginTop: '10px', padding: '13px' }}
+              style={{ marginTop: "10px", padding: "13px" }}
             >
               <h5
-                className="text-primary fw-600 fs-16"
-                style={{ letterSpacing: '2px', marginLeft: '15px' }}
+                className=" fw-600 fs-16"
+                style={{
+                  letterSpacing: "2px",
+                  marginLeft: "15px",
+                  color: "#b83016",
+                }}
               >
-                {location.pathname == '/my-projects/new'
-                  ? 'New Projects'
-                  : location.pathname == '/my-projects/active'
-                  ? 'Active Projects'
-                  : location.pathname == '/my-projects/onhold'
-                  ? 'Onhold Projects'
-                  : location.pathname == '/my-projects/closed'
-                  ? 'Closed Projects'
-                  : location.pathname == '/business/project/active'
-                  ? 'Active'
-                  : ''}
+                {location.pathname == "/my-projects/new"
+                  ? "New Projects"
+                  : location.pathname == "/my-projects/active"
+                  ? "Active Projects"
+                  : location.pathname == "/my-projects/onhold"
+                  ? "Onhold Projects"
+                  : location.pathname == "/my-projects/closed"
+                  ? "Closed Projects"
+                  : location.pathname == "/business/project/active"
+                  ? "Active"
+                  : ""}
                 <div>
-                  {window.location.pathname == '/my-projects/active' ||
-                  window.location.pathname == '/business/project/active' ? (
+                  {window.location.pathname == "/my-projects/active" ||
+                  window.location.pathname == "/business/project/active" ? (
                     <div className="d-flex gap-2 align-items-center">
                       <div
-                        className="form-check form-switch form-switch-primary"
+                        className="form-check form-switch"
                         style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '10px',
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "10px",
+                          backgroundColor: "#f07d47",
                         }}
                       >
                         <Input
@@ -443,7 +448,7 @@ const ManagerDashboard = () => {
                           type="checkbox"
                           role="switch"
                           id="flexSwitchCheckDefault"
-                          style={{ width: '30px' }}
+                          style={{ width: "30px" }}
                           onChange={(e) => {
                             setSwitchData(e.target.checked);
                             // handleChangeTaskers(e.target.checked);
@@ -465,14 +470,15 @@ const ManagerDashboard = () => {
               </h5>
               <div>
                 <h5
-                  className="text-primary fw-600 fs-16"
+                  className=" fw-600 fs-16"
                   style={{
-                    letterSpacing: '2px',
+                    letterSpacing: "2px",
                     marginLeft:
-                      location.pathname == '/finance/project/active' ||
-                      location.pathname == '/business/project'
-                        ? '-351px'
-                        : '15px',
+                      location.pathname == "/finance/project/active" ||
+                      location.pathname == "/business/project"
+                        ? "-351px"
+                        : "15px",
+                    color: "#b83016",
                   }}
                 >
                   {/* {location.pathname == "/my-projects/new"
@@ -495,30 +501,34 @@ const ManagerDashboard = () => {
                     ? "Closed Projects"
                     : ""} */}
 
-                  {location.pathname == '/finance/project/active' ||
-                  location.pathname == '/business/project'
-                    ? 'MP Accounts'
-                    : ''}
+                  {location.pathname == "/finance/project/active" ||
+                  location.pathname == "/business/project"
+                    ? "MP Accounts"
+                    : ""}
                 </h5>
               </div>
 
               <div
-                style={{ display: 'flex', alignItems: 'center', gap: '10px' }}
+                style={{ display: "flex", alignItems: "center", gap: "10px" }}
               >
-                {location.pathname == '/finance/project/active' ||
-                location.pathname == '/business/project' ? (
+                {location.pathname == "/finance/project/active" ||
+                location.pathname == "/business/project" ? (
                   <div>
                     <i
-                      className=" ri-download-2-line text-primary"
-                      style={{ fontSize: '24px', cursor: 'pointer' }}
+                      className=" ri-download-2-line "
+                      style={{
+                        fontSize: "24px",
+                        cursor: "pointer",
+                        color: "#b83016",
+                      }}
                       onClick={() => setOpenD(!openD)}
                     ></i>
                   </div>
                 ) : (
-                  ''
+                  ""
                 )}
-                <div style={{ height: '35px', marginRight: '240px' }}>
-                  <div className="d-flex gap-2" style={{ height: '40px' }}>
+                <div style={{ height: "35px", marginRight: "240px" }}>
+                  <div className="d-flex gap-2" style={{ height: "40px" }}>
                     {/* <Flatpickr
                         className="form-control"
                         placeholder="Date"
@@ -533,8 +543,8 @@ const ManagerDashboard = () => {
                           filterBasedOnDate(e[0]);
                         }}
                       /> */}
-                    {location.pathname == '/finance/project/active' ||
-                    location.pathname == '/business/project' ? (
+                    {location.pathname == "/finance/project/active" ||
+                    location.pathname == "/business/project" ? (
                       <DatePicker
                         selected={startDate}
                         onChange={(date) => setStartDate(date)}
@@ -551,7 +561,7 @@ const ManagerDashboard = () => {
                 </div>
               </div>
 
-              {userType == 'all' && location.pathname == '/my-projects/new' ? (
+              {userType == "all" && location.pathname == "/my-projects/new" ? (
                 <></>
               ) : // <button
               //   className="btn btn-primary"
@@ -564,20 +574,20 @@ const ManagerDashboard = () => {
               //   ></i>
               //   New Project
               // </button>
-              userType == 'all' && location.pathname == '/my-projects/dm' ? (
+              userType == "all" && location.pathname == "/my-projects/dm" ? (
                 <button
-                  className="btn btn-primary  "
+                  className="btn"
                   onClick={dmModal}
-                  style={{ marginRight: '220px' }}
+                  style={{ marginRight: "220px", backgroundColor: "#ec5c24" }}
                 >
                   <i
                     className="ri-add-line align-middle me-1 "
-                    style={{ marginBottom: '30px' }}
+                    style={{ marginBottom: "30px" }}
                   ></i>
                   DM
                 </button>
               ) : (
-                ''
+                ""
               )}
               {/* <button
                 className="btn btn-primary "
@@ -587,28 +597,36 @@ const ManagerDashboard = () => {
               </button> */}
             </CardHeader>
             <CardBody>
-              {location.pathname == '/finance/project/active' ||
-              location.pathname == '/business/project' ? (
+              {location.pathname == "/finance/project/active" ||
+              location.pathname == "/business/project" ? (
                 <div>
                   <Row
-                    className="row-cols-md-3 row-cols-1 m-2 bg-soft-primary"
-                    style={{ borderRadius: '12px' }}
+                    className="row-cols-md-3 row-cols-1 m-2 bg-soft"
+                    style={{
+                      borderRadius: "12px",
+                      backgroundColor: "#f07d47",
+                    }}
                   >
-                    <Col className={'col-lg border-end '}>
+                    <Col className={"col-lg border-end "}>
                       <div className="mt-3 mt-md-0 py-3 px-3">
                         <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                          <span className="text-primary">Milestone</span>
+                          <span style={{ color: "#b83016" }}>Milestone</span>
                           <div className="d-flex gap-1 justify-content-center align-items-center">
                             <i
                               className={`fs-16 float-end align-middle ${
                                 mile > 80
-                                  ? 'text-success ri-arrow-up-circle-line '
+                                  ? "text-success ri-arrow-up-circle-line "
                                   : mile < 80 && mile > 50
-                                  ? 'text-warning ri-arrow-up-circle-line '
-                                  : 'text-danger ri-arrow-down-circle-line '
+                                  ? "text-warning ri-arrow-up-circle-line "
+                                  : "text-danger ri-arrow-down-circle-line "
                               } `}
                             ></i>
-                            <span className="fs-10 text-primary">{mile}%</span>
+                            <span
+                              className="fs-10 "
+                              style={{ color: "#b83016" }}
+                            >
+                              {mile}%
+                            </span>
                           </div>
                         </h5>
                         <div className="d-flex align-items-center">
@@ -634,7 +652,7 @@ const ManagerDashboard = () => {
                             <div>
                               <span
                                 className="badge bg-light text-dark mb-0 fs-10"
-                                style={{ minWidth: '80px' }}
+                                style={{ minWidth: "80px" }}
                               >
                                 {detMonth.per_milestone}
                               </span>
@@ -644,13 +662,16 @@ const ManagerDashboard = () => {
                         <div className="mt-2">
                           <p className="mb-0 text-muted d-flex justify-content-between">
                             <div className="d-flex align-items-center gap-1">
-                              <i className=" ri-stop-fill text-primary fs-14 "></i>
+                              <i
+                                className=" ri-stop-fill  fs-14 "
+                                style={{ color: "#b83016" }}
+                              ></i>
                               <span className="me-3 fs-10">Set Target</span>
                             </div>
                             <div>
                               <span
                                 className="badge bg-light text-dark mb-0 fs-10"
-                                style={{ minWidth: '80px' }}
+                                style={{ minWidth: "80px" }}
                               >
                                 {detMonth.exp_milestone}
                               </span>
@@ -659,21 +680,26 @@ const ManagerDashboard = () => {
                         </div>
                       </div>
                     </Col>
-                    <Col className={'col-lg border-end '}>
+                    <Col className={"col-lg border-end "}>
                       <div className="mt-3 mt-md-0 py-3 px-3">
                         <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                          <span className="text-primary">Revenue</span>
+                          <span style={{ color: "#b83016" }}>Revenue</span>
                           <div className="d-flex justify-content-center align-items-center gap-1">
                             <i
                               className={`fs-16 float-end align-middle  ${
                                 rev > 80
-                                  ? 'text-success ri-arrow-up-circle-line'
+                                  ? "text-success ri-arrow-up-circle-line"
                                   : rev < 80 && rev > 50
-                                  ? 'text-warning ri-arrow-up-circle-line'
-                                  : 'text-danger ri-arrow-down-circle-line'
+                                  ? "text-warning ri-arrow-up-circle-line"
+                                  : "text-danger ri-arrow-down-circle-line"
                               } `}
                             ></i>
-                            <span className="fs-10 text-primary">{rev}%</span>
+                            <span
+                              className="fs-10 "
+                              style={{ color: "#b83016" }}
+                            >
+                              {rev}%
+                            </span>
                           </div>
                         </h5>
                         <div className="d-flex align-items-center">
@@ -699,7 +725,7 @@ const ManagerDashboard = () => {
                             <div>
                               <span
                                 className="badge bg-light text-dark mb-0 fs-10"
-                                style={{ minWidth: '80px' }}
+                                style={{ minWidth: "80px" }}
                               >
                                 {indianNumbers(detMonth.per_revenue, 2)}
                               </span>
@@ -709,7 +735,10 @@ const ManagerDashboard = () => {
                         <div className="mt-2">
                           <p className="mb-0 text-muted d-flex justify-content-between ">
                             <div className="d-flex align-items-center gap-1">
-                              <i className=" ri-stop-fill text-primary fs-14 "></i>
+                              <i
+                                className=" ri-stop-fill  fs-14 "
+                                style={{ color: "#b83016" }}
+                              ></i>
 
                               <span className="me-3 fs-10">
                                 Expected Revenue
@@ -718,7 +747,7 @@ const ManagerDashboard = () => {
                             <div>
                               <span
                                 className="badge bg-light text-dark mb-0 fs-10"
-                                style={{ minWidth: '80px' }}
+                                style={{ minWidth: "80px" }}
                               >
                                 {indianNumbers(detMonth.exp_revenue, 2)}
                               </span>
@@ -728,21 +757,26 @@ const ManagerDashboard = () => {
                       </div>
                     </Col>
 
-                    <Col className={'col-lg border-end '}>
+                    <Col className={"col-lg border-end "}>
                       <div className="mt-3 mt-md-0 py-3 px-3">
                         <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                          <span className="text-primary">Expenses</span>
+                          <span style={{ color: "#b83016" }}>Expenses</span>
                           <div className="d-flex justify-content-center align-items-center gap-1">
                             <i
                               className={`fs-18 float-end align-middle  ${
                                 exp > 80
-                                  ? 'text-success ri-arrow-up-circle-line'
+                                  ? "text-success ri-arrow-up-circle-line"
                                   : exp < 80 && exp > 50
-                                  ? 'text-warning ri-arrow-up-circle-line'
-                                  : 'text-danger ri-arrow-down-circle-line'
+                                  ? "text-warning ri-arrow-up-circle-line"
+                                  : "text-danger ri-arrow-down-circle-line"
                               } `}
                             ></i>
-                            <span className="fs-10 text-primary">{exp}%</span>
+                            <span
+                              className="fs-10 "
+                              style={{ color: "#b83016" }}
+                            >
+                              {exp}%
+                            </span>
                           </div>
                         </h5>
                         <div className="d-flex align-items-center">
@@ -768,7 +802,7 @@ const ManagerDashboard = () => {
                             <div>
                               <span
                                 className="badge bg-light text-dark mb-0 fs-10"
-                                style={{ minWidth: '80px' }}
+                                style={{ minWidth: "80px" }}
                               >
                                 {indianNumbers(detMonth.per_expenses)}
                               </span>
@@ -778,7 +812,10 @@ const ManagerDashboard = () => {
                         <div className="mt-2">
                           <p className="mb-0 text-muted d-flex justify-content-between ">
                             <div className="d-flex align-items-center gap-1">
-                              <i className=" ri-stop-fill text-primary fs-14 "></i>
+                              <i
+                                className=" ri-stop-fill  fs-14 "
+                                style={{ color: "#b83016" }}
+                              ></i>
                               <span className="me-3 fs-10">
                                 Expected Expenses
                               </span>
@@ -786,7 +823,7 @@ const ManagerDashboard = () => {
                             <div>
                               <span
                                 className="badge bg-light text-dark mb-0 fs-10"
-                                style={{ minWidth: '80px' }}
+                                style={{ minWidth: "80px" }}
                               >
                                 {indianNumbers(detMonth.exp_expenses)}
                               </span>
@@ -795,10 +832,10 @@ const ManagerDashboard = () => {
                         </div>
                       </div>
                     </Col>
-                    <Col className={'col-lg  '}>
+                    <Col className={"col-lg  "}>
                       <div className="mt-3 mt-md-0 py-3 px-3">
                         <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                          <span className="text-primary">Gross Margin</span>
+                          <span style={{ color: "#b83016" }}>Gross Margin</span>
                           {/* <i
                             className={
                               "fs-18 float-end align-middle ri-arrow-up-circle-line text-success"
@@ -817,7 +854,7 @@ const ManagerDashboard = () => {
                             </h2>
                           </div>
                         </div>
-                        <div className="mt-3 " style={{ width: '100%' }}>
+                        <div className="mt-3 " style={{ width: "100%" }}>
                           <p className="mb-0 text-muted d-flex justify-content-between">
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill text-warning fs-14 "></i>
@@ -827,26 +864,29 @@ const ManagerDashboard = () => {
                             <div>
                               <span
                                 className="badge bg-light text-dark mb-0 fs-10"
-                                style={{ minWidth: '80px' }}
+                                style={{ minWidth: "80px" }}
                               >
-                                {detMonth.per_g_margin?.toFixed(2) + '%'}
+                                {detMonth.per_g_margin?.toFixed(2) + "%"}
                               </span>
                             </div>
                           </p>
                         </div>
-                        <div className="mt-2" style={{ width: '100%' }}>
+                        <div className="mt-2" style={{ width: "100%" }}>
                           <p className="mb-0 text-muted d-flex justify-content-between">
                             <div className="d-flex align-items-center gap-1">
-                              <i className=" ri-stop-fill text-primary fs-14 "></i>
+                              <i
+                                className=" ri-stop-fill  fs-14 "
+                                style={{ color: "#b83016" }}
+                              ></i>
 
                               <span className="me-3 fs-10">Expected GM %</span>
                             </div>
                             <div>
                               <span
                                 className="badge bg-light text-dark mb-0 fs-10"
-                                style={{ minWidth: '80px' }}
+                                style={{ minWidth: "80px" }}
                               >
-                                {detMonth.exp_g_margin?.toFixed(2) + '%'}
+                                {detMonth.exp_g_margin?.toFixed(2) + "%"}
                               </span>
                             </div>
                           </p>
@@ -858,8 +898,8 @@ const ManagerDashboard = () => {
               ) : (
                 <></>
               )}
-              {location.pathname == '/finance/project/active' ||
-              location.pathname == '/business/project' ? (
+              {location.pathname == "/finance/project/active" ||
+              location.pathname == "/business/project" ? (
                 <ActiveTable
                   finData={financeData}
                   finCheck={finCheck}
@@ -890,7 +930,7 @@ const ManagerDashboard = () => {
               setNextData(true);
               setShow(false);
               setFormData({});
-              setsortBy('');
+              setsortBy("");
               setOaData([]);
             }}
             centered={true}
@@ -902,7 +942,7 @@ const ManagerDashboard = () => {
                 closeModalside();
                 setNextData(true);
                 setShow(false);
-                setsortBy('');
+                setsortBy("");
                 setOaData([]);
 
                 setFormData({});
@@ -926,7 +966,7 @@ const ManagerDashboard = () => {
                               project_id: sortBy?.main_id,
                               project_title: sortBy?.project_title,
                               ref_table_name: sortBy?.ref_table_name,
-                              add_lead_status: 'none',
+                              add_lead_status: "none",
                             });
 
                             setCard({
@@ -957,9 +997,9 @@ const ManagerDashboard = () => {
                                 src={card.card_logo}
                                 alt="logo"
                                 style={{
-                                  width: '150px',
-                                  height: '100%',
-                                  borderRadius: '50%',
+                                  width: "150px",
+                                  height: "100%",
+                                  borderRadius: "50%",
                                 }}
                               />
                             </div>
@@ -1083,7 +1123,7 @@ const ManagerDashboard = () => {
                               </select>
                             </Col>
                           ) : (
-                            ''
+                            ""
                           )}
                         </Row>
                         <Row className="align-items-center g-3 mt-2">
@@ -1210,7 +1250,7 @@ const ManagerDashboard = () => {
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
-  const token = 'sdfsdfff';
+  const token = "sdfsdfff";
   const [modal_signUpModals_1, set_modal_signUpModals_1] =
     React.useState(false);
   const openModalside = () => {

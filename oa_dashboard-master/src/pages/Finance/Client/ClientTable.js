@@ -149,7 +149,10 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
                 />
               ) : (
                 <div className="avatar-sm">
-                  <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                  <div
+                    className="avatar-title rounded-circle bg-soft"
+                    style={{ color: "#b83016", backgroundColor: "#f07d47" }}
+                  >
                     {d?.bd_name[0] ?? ""}
                   </div>
                 </div>
@@ -160,8 +163,8 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
               <div className="fs-12">
                 {d?.bd_name}
                 <span
-                  className="badge badge-soft-primary ms-1"
-                  style={{ fontSize: "8px" }}
+                  className="badge badge-soft ms-1"
+                  style={{ fontSize: "8px", backgroundColor: "#f07d47" }}
                 >
                   {d?.company_unique_id}
                 </span>
@@ -219,8 +222,8 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
           <div className="fs-12">
             {d.client_name}{" "}
             <span
-              className="badge badge-soft-primary ms-1"
-              style={{ fontSize: "8px" }}
+              className="badge badge-soft ms-1"
+              style={{ fontSize: "8px", backgroundColor: "#f07d47" }}
             >
               {d?.client_unique_id}
             </span>
@@ -253,7 +256,7 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
     //         </div>
     //       ) : (
     //         <div className="avatar-sm">
-    //           <div className="avatar-title rounded-circle bg-soft-primary text-primary">
+    //           <div className="avatar-title rounded-circle bg-soft-primary ">
     //             {d.brand_name[0]}
     //           </div>
     //         </div>
@@ -298,7 +301,7 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
     //   name: "G.S.T No.",
     //   selector: (row) => row.gst,
     //   left: true,
-    //   cell: (d) => <div className="text-primary">{d.gst}</div>,
+    //   cell: (d) => <div style={{ color: "#b83016"}}>{d.gst}</div>,
     // },
     // {
     //   name: "Company Name",
@@ -694,8 +697,13 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
 
                 <button
                   type="submit"
-                  style={{ float: "right", marginTop: "10px", width: "100px" }}
-                  className="btn btn-primary d-flex gap-2 justify-content-center"
+                  style={{
+                    float: "right",
+                    marginTop: "10px",
+                    width: "100px",
+                    backgroundColor: "#ec5c24",
+                  }}
+                  className="btn d-flex gap-2 justify-content-center"
                   //   disabled={remark == ""}
                 >
                   <i className="ri-add-line align-bottom"></i>
@@ -865,8 +873,13 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
                 <button
                   disabled={false}
                   type="submit"
-                  style={{ float: "right", marginTop: "10px", width: "100px" }}
-                  className="btn btn-primary d-flex gap-2 justify-content-center"
+                  style={{
+                    float: "right",
+                    marginTop: "10px",
+                    width: "100px",
+                    backgroundColor: "#ec5c24",
+                  }}
+                  className="btn d-flex gap-2 justify-content-center"
                   //   onClick={() => handleAdd()}
                   //   disabled={remark == ""}
                 >

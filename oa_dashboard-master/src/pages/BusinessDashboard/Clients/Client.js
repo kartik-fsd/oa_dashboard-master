@@ -23,8 +23,12 @@ const Client = () => {
         <CardHeader>
           <div className="d-flex align-items-center gap-4 ">
             <h5
-              className="text-primary fw-600 fs-16"
-              style={{ letterSpacing: "2px", marginLeft: "15px" }}
+              className="fw-600 fs-16"
+              style={{
+                letterSpacing: "2px",
+                marginLeft: "15px",
+                color: "#b83016",
+              }}
             >
               My Client
             </h5>
@@ -38,7 +42,10 @@ const Client = () => {
                         className="avatar-xs flex-shrink-0"
                         style={{ height: "26px" }}
                       >
-                        <span className="avatar-title bg-primary rounded fs-3">
+                        <span
+                          className="avatar-title rounded fs-3"
+                          style={{ backgroundColor: "#ec5c24" }}
+                        >
                           <i
                             className=" ri-shopping-basket-line text-light "
                             style={{ fontSize: "16px" }}

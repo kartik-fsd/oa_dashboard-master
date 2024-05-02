@@ -77,8 +77,19 @@ const PaymentRequest = () => {
                 <div>
                   <button
                     type="button"
-                    className="btn btn-primary"
-                    style={{ minWidth: "130px" }}
+                    className="btn"
+                    style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                      minWidth: "130px",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
                   >
                     Vendor: <span>{indianNumbers(ops.vendor, 2)}</span>
                   </button>
@@ -86,8 +97,19 @@ const PaymentRequest = () => {
                 <div>
                   <button
                     type="button"
-                    className="btn btn-primary"
-                    style={{ minWidth: "130px" }}
+                    className="btn"
+                    style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                      minWidth: "130px",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
                   >
                     Tasker: <span>{indianNumbers(ops.tasker, 2)}</span>
                   </button>
@@ -96,8 +118,19 @@ const PaymentRequest = () => {
                   {" "}
                   <button
                     type="button"
-                    className="btn btn-primary"
-                    style={{ minWidth: "130px" }}
+                    className="btn"
+                    style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                      minWidth: "130px",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
                   >
                     TSM: <span>{indianNumbers(ops.tsm, 2)}</span>
                   </button>
@@ -107,7 +140,10 @@ const PaymentRequest = () => {
                     id="btnGroupDrop1"
                     // style={{ marginRight: "220px" }}
                   >
-                    <DropdownToggle color="primary" caret>
+                    <DropdownToggle
+                      style={{ backgroundColor: "#ec5c24" }}
+                      caret
+                    >
                       <i
                         className=" ri-filter-line align-bottom"
                         style={{
@@ -141,7 +177,10 @@ const PaymentRequest = () => {
                     id="btnGroupDrop1"
                     // style={{ marginRight: "220px" }}
                   >
-                    <DropdownToggle color="primary" caret>
+                    <DropdownToggle
+                      style={{ backgroundColor: "#ec5c24" }}
+                      caret
+                    >
                       <i
                         className=" ri-filter-line align-bottom"
                         style={{

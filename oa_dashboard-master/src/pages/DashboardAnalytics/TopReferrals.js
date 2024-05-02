@@ -226,9 +226,12 @@ const TopReferrals = ({ graphData, monthData }) => {
                   aria-valuemax="100"
                 ></div>
                 <div
-                  className="progress-bar bg-primary"
+                  className="progress-bar"
                   role="progressbar"
-                  style={{ width: `${earningStats?.phase4 || 0}%` }}
+                  style={{
+                    width: `${earningStats?.phase4 || 0}%`,
+                    backgroundColor: "#ec5c24",
+                  }}
                   aria-valuenow="16"
                   aria-valuemin="0"
                   aria-valuemax="100"
@@ -281,7 +284,10 @@ const TopReferrals = ({ graphData, monthData }) => {
               <div className="d-flex mb-2">
                 <div className="flex-grow-1">
                   <p className="text-truncate text-muted fs-14 mb-0">
-                    <i className="mdi mdi-circle align-middle text-primary me-2"></i>
+                    <i
+                      className="mdi mdi-circle align-middle  me-2"
+                      style={{ color: "#b83016" }}
+                    ></i>
                     10,000 - 15,000
                   </p>
                 </div>

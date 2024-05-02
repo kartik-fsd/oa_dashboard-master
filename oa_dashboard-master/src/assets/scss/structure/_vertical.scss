@@ -27,8 +27,8 @@
 .navbar-menu {
   width: $vertical-menu-width;
   z-index: $vertical-menu-z-index;
-  background: #3F5189 !important;
-  overflow: scroll;
+  background: #f07d47 !important;
+  //overflow: scroll;
   border-right: 1px solid $vertical-menu-border;
   bottom: 0;
   margin-top: 0;
@@ -48,11 +48,11 @@
       font-family: $vertical-menu-item-font-family;
 
       &.active {
-        color: $vertical-menu-item-active-color;
+        color: #f1f1f1;
       }
 
       &:hover {
-        color: $vertical-menu-item-hover-color;
+        color: #ffffff;
       }
 
       i {
@@ -75,7 +75,7 @@
       }
 
       &:hover {
-        color: black;
+        color: rgb(83, 80, 80);
 
         .icon-dual {
           color: $vertical-menu-item-hover-color;
@@ -93,10 +93,10 @@
           font-size: 1.05rem;
           position: absolute;
           right: 18px;
-          color: $vertical-menu-title-color;
+          color: white;
         }
 
-        &[aria-expanded="true"] {
+        &[aria-expanded=true] {
           color: $vertical-menu-item-active-color;
 
           .icon-dual {
@@ -149,7 +149,7 @@
         }
 
         &:hover {
-          color: #000;
+          color: rgb(96, 93, 93);
 
           &:before {
             background-color: transparent;   
@@ -158,7 +158,7 @@
         }
 
         &.active {
-          color: $vertical-menu-item-active-color;
+          color: rgb(94, 89, 89);
 
           &:before {
             background-color: $vertical-menu-item-active-color;
@@ -196,7 +196,7 @@
   transition: all 0.1s ease-out;
   position: sticky;
   top: 0;
-  background: #3f5289;
+  background: #f07d47;
   z-index: 1000 !important;
   margin-bottom: 30px;
 
@@ -913,7 +913,7 @@
     }
 
     .menu-title {
-      color: $vertical-menu-title-color-dark;
+      color: white-dark;
     }
 
     .logo-dark {
@@ -1013,7 +1013,7 @@
   cursor: default;
   font-size: 11px;
   text-transform: uppercase;
-  color: $vertical-menu-title-color;
+  color: white;
   font-weight: $font-weight-semibold;
 
   span {
@@ -1243,7 +1243,7 @@
   }
 
   .menu-title {
-      color: $vertical-menu-title-color-gradient;
+      color: white-gradient;
   }
 
   .logo-dark {
@@ -1284,7 +1284,7 @@
   background-size: cover;
   background-position: 50%;
   opacity: 1 !important;
-  background-color: #405189 !important;
+  background-color: #f07d47  !important;
 }
 
 [data-sidebar-image="img-1"]{

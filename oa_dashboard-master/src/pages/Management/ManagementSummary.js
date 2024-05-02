@@ -86,7 +86,10 @@ const ManagementSummary = () => {
                               </td>
                               <td>Implement new UX</td>
                               <td>
-                                <span className="badge badge-soft-primary">
+                                <span
+                                  className="badge badge-soft"
+                                  style={{ backgroundColor: "#f07d47" }}
+                                >
                                   Backlog
                                 </span>
                               </td>

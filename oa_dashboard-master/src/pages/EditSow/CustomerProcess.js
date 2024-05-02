@@ -123,7 +123,11 @@ const CustomerProcess = (props) => {
 
   return uploadLoader ? (
     <>
-      <div className="spinner-border text-primary" role="status">
+      <div
+        className="spinner-border "
+        style={{ color: "#b83016" }}
+        role="status"
+      >
         <span className="sr-only">Loading...</span>
       </div>
     </>
@@ -355,7 +359,7 @@ const CustomerProcess = (props) => {
             <lord-icon
               src="https://cdn.lordicon.com/gsqxdxog.json"
               trigger="loop"
-              colors="primary:#f7b84b,secondary:#f06548"
+              colors="primary:#ec5c24,secondary:#f06548"
               style={{ width: "100px", height: "100px" }}
             ></lord-icon>
             <div className="mt-4 pt-2 fs-15 mx-4 mx-sm-5">

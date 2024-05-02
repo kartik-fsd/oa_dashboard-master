@@ -88,8 +88,12 @@ const TableInvoice = (props) => {
         <div className="d-flex flex-column gap-1 justify-content-center align-items-center">
           <span>
             <span
-              className="badge rounded-pill badge-soft-primary"
-              style={{ minWidth: "55px", textDecoration: "underline" }}
+              className="badge rounded-pill badge-soft"
+              style={{
+                minWidth: "55px",
+                textDecoration: "underline",
+                backgroundColor: "#f07d47",
+              }}
             >
               <a
                 target={"_blank"}
@@ -225,7 +229,10 @@ const TableInvoice = (props) => {
             <div className="fs-12 w-100">
               <div className="fs-14 fw-semi-bold">
                 {d.oa_name}{" "}
-                <span className="badge badge-soft-primary">
+                <span
+                  className="badge badge-soft"
+                  style={{ backgroundColor: "#f07d47" }}
+                >
                   {d.oa_count > 0 ? `+${d.oa_count}` : "0"}
                 </span>
               </div>{" "}
@@ -340,9 +347,7 @@ const TableInvoice = (props) => {
             {12345}
           </span> */}
 
-          <span className="text-primary" style={{ color: "green" }}>
-            {d.activity_date}
-          </span>
+          <span style={{ color: "green" }}>{d.activity_date}</span>
           {/* <div
             style={{
               fontSize: "12px",
@@ -366,8 +371,8 @@ const TableInvoice = (props) => {
       cell: (d) => (
         <div>
           <span
-            className="badge badge-soft-primary"
-            style={{ minWidth: "100px" }}
+            className="badge badge-soft"
+            style={{ minWidth: "100px", backgroundColor: "#f07d47" }}
           >
             {d?.is_paid == "yes"
               ? "Paid"

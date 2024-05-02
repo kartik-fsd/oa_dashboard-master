@@ -127,7 +127,9 @@ const AddgstDet = ({ open, setOpen, companyGst, setCheck, check }) => {
             setData({});
           }}
         >
-          <h5 className="text-primary m-0">Add Gst</h5>
+          <h5 className=" m-0" style={{ color: "#b83016" }}>
+            Add Gst
+          </h5>
         </ModalHeader>
         <ModalBody>
           <Row>
@@ -147,7 +149,18 @@ const AddgstDet = ({ open, setOpen, companyGst, setCheck, check }) => {
                   />
 
                   <button
-                    className="btn btn-primary"
+                    className="btn"
+                    style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
                     type="submit"
                     //   onClick={() => handleCheckClient()}
                   >
@@ -159,7 +172,9 @@ const AddgstDet = ({ open, setOpen, companyGst, setCheck, check }) => {
           </Row>
           {ext && search?.length == 0 ? (
             <Row className="mt-4 ">
-              <h5 className="m-0 text-primary">Gst Details</h5>
+              <h5 className="m-0 " style={{ color: "#b83016" }}>
+                Gst Details
+              </h5>
               {/* <Col xs="6" className="mt-4">
                 <div>
                   <label htmlFor="labelInput" className="form-label">
@@ -303,7 +318,8 @@ const AddgstDet = ({ open, setOpen, companyGst, setCheck, check }) => {
           <ModalFooter>
             <button
               type="button"
-              className="btn btn-primary waves-effect waves-light"
+              className="btn  waves-effect waves-light"
+              style={{ backgroundColor: "#ec5c24" }}
               onClick={() => {
                 setbut(true);
                 handleSubmit();

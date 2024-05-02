@@ -37,8 +37,12 @@ const BusinessCompany = () => {
           <div className="d-flex align-items-center  justify-content-between">
             <div className="d-flex align-items-center gap-4 ">
               <h5
-                className="text-primary fw-600 fs-16"
-                style={{ letterSpacing: "2px", marginLeft: "15px" }}
+                className=" fw-600 fs-16"
+                style={{
+                  letterSpacing: "2px",
+                  marginLeft: "15px",
+                  color: "#b83016",
+                }}
               >
                 My Compay
               </h5>
@@ -51,7 +55,10 @@ const BusinessCompany = () => {
                           className="avatar-xs flex-shrink-0"
                           style={{ height: "26px" }}
                         >
-                          <span className="avatar-title bg-primary rounded ">
+                          <span
+                            className="avatar-title  rounded "
+                            style={{ backgroundColor: "#ec5c24" }}
+                          >
                             <i
                               className=" ri-shopping-basket-line text-light"
                               style={{ fontSize: "16px" }}
@@ -78,7 +85,7 @@ const BusinessCompany = () => {
               <div style={{ marginRight: "228px" }}>
                 <button
                   type="button"
-                  className="btn btn-primary waves-effect waves-light"
+                  className="btn  waves-effect waves-light"
                   onClick={() => history.push("/business-dashboard/addcompany")}
                 >
                   <i className=" ri-add-fill align-middle me-1"></i>

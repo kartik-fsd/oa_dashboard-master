@@ -5,15 +5,15 @@
   //vertical light
 --#{$prefix}vertical-menu-bg:                      #{$white};
 --#{$prefix}vertical-menu-item-color:              #{darken($gray-600, 10%)};
---#{$prefix}vertical-menu-item-hover-color:        #{$primary};
---#{$prefix}vertical-menu-item-active-color:       #{$primary};
+--#{$prefix}vertical-menu-item-hover-color:        #F5AA7C;
+--#{$prefix}vertical-menu-item-active-color:       #F5AA7C;
 --#{$prefix}vertical-menu-sub-item-color:          #{darken($gray-600, 4%)};
---#{$prefix}vertical-menu-sub-item-hover-color:    #{$primary};
---#{$prefix}vertical-menu-sub-item-active-color:   #{$primary};
+--#{$prefix}vertical-menu-sub-item-hover-color:    #F5AA7C;
+--#{$prefix}vertical-menu-sub-item-active-color:   #F5AA7C;
 --#{$prefix}vertical-menu-title-color:             #919da9;
 
 //vertical dark
---#{$prefix}vertical-menu-bg-dark:                 #{$primary};
+--#{$prefix}vertical-menu-bg-dark:                 #F5AA7C;
 --#{$prefix}vertical-menu-item-color-dark:         #abb9e8;
 --#{$prefix}vertical-menu-item-hover-color-dark:   #{$white};
 --#{$prefix}vertical-menu-item-active-color-dark:  #{$white};
@@ -26,7 +26,7 @@
 --#{$prefix}header-bg:  #{$white};
 --#{$prefix}header-item-color:  #e9ecef;
 // Topbar - Dark
---#{$prefix}header-bg-dark:  #{$primary};
+--#{$prefix}header-bg-dark:  #F5AA7C;
 --#{$prefix}header-item-color-dark:  #b0c4d9;
 
 // Topbar Search
@@ -42,7 +42,7 @@
 // Horizontal nav
 --#{$prefix}topnav-bg: #{$white};
 --#{$prefix}topnav-item-color: #{darken($gray-600, 10%)};
---#{$prefix}topnav-item-color-active: #{$primary};
+--#{$prefix}topnav-item-color-active: #F5AA7C;
 
 // twocolumn menu
 --#{$prefix}twocolumn-menu-iconview-bg: #{$white};
@@ -62,8 +62,8 @@
 
 // component variable
 // link
---#{$prefix}link-color: #{$primary};
---#{$prefix}link-hover-color: #{$primary};
+--#{$prefix}link-color: #F5AA7C;
+--#{$prefix}link-hover-color: #F5AA7C;
 
 // Border variable
 --#{$prefix}border-color:  #{$gray-300};

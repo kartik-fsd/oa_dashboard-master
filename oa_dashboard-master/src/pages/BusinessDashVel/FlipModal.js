@@ -256,7 +256,13 @@ const FlipModal = ({
                               {projectData?.company_title}
                             </div>
                             <div>
-                              <span className="badge text-bg-primary">
+                              <span
+                                className="badge"
+                                style={{
+                                  backgroundColor: "#ec5c24",
+                                  color: "#fff",
+                                }}
+                              >
                                 {projectData?.company_unique_id}
                               </span>
                             </div>
@@ -418,7 +424,10 @@ const FlipModal = ({
                             }}
                             className="d-flex align-items-center justify-content-center"
                           >
-                            <i className="ri-download-2-line text-primary fs-16"></i>
+                            <i
+                              className="ri-download-2-line  fs-16"
+                              style={{ color: "#b83016" }}
+                            ></i>
                           </span>
                         </a>
                       </div>
@@ -922,7 +931,10 @@ const FlipModal = ({
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <i className="ri-download-2-line text-primary"></i>
+                      <i
+                        className="ri-download-2-line "
+                        style={{ color: "#b83016" }}
+                      ></i>
                     </a>
                   </div>
                 </div>
@@ -1082,7 +1094,13 @@ const FlipModal = ({
                         <div style={{ width: "28%" }}>
                           <div>{projectData?.po_title}</div>
                           <div>
-                            <span className="badge text-bg-primary">
+                            <span
+                              className="badge"
+                              style={{
+                                backgroundColor: "#ec5c24",
+                                color: "#fff",
+                              }}
+                            >
                               {projectData?.po_unique_id}
                             </span>
                           </div>
@@ -1814,7 +1832,12 @@ const FlipModal = ({
                       Add Client SPOC Details
                     </div>
                     <div>
-                      <button className="btn btn-primary waves-effect waves-light ms-4 ">
+                      <button
+                        className="btn  waves-effect waves-light ms-4 "
+                        style={{
+                          backgroundColor: "#ec5c24",
+                        }}
+                      >
                         + Add more
                       </button>
                     </div>
@@ -1969,7 +1992,10 @@ const FlipModal = ({
               <Col xs="12">
                 <div style={{ display: "flex", justifyContent: "flex-end" }}>
                   <button
-                    className="btn btn-primary waves-effect waves-light ms-4"
+                    className="btn  waves-effect waves-light ms-4"
+                    style={{
+                      backgroundColor: "#ec5c24",
+                    }}
                     disabled={but}
                     onClick={() => {
                       handleClickProjectDet();

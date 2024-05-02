@@ -127,7 +127,9 @@ const AddClientMod = ({
               setData({});
             }}
           >
-            <h5 className="text-primary m-0">Add Client</h5>
+            <h5 className=" m-0" style={{ color: "#b83016" }}>
+              Add Client
+            </h5>
           </ModalHeader>
           <ModalBody>
             <Row>
@@ -147,7 +149,18 @@ const AddClientMod = ({
                     />
 
                     <button
-                      className="btn btn-primary"
+                      className="btn"
+                      style={{
+                        backgroundColor: "#ec5c24",
+                        color: "whitesmoke",
+                        transition: "background-color 0.3s ease",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.target.style.backgroundColor = "#dd4319")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.target.style.backgroundColor = "#ec5c24")
+                      }
                       type="submit"
                       //   onClick={() => handleCheckClient()}
                     >
@@ -159,7 +172,9 @@ const AddClientMod = ({
             </Row>
             {ext && search?.length == 0 ? (
               <Row className="mt-4 ">
-                <h5 className="m-0 text-primary">Client Details</h5>
+                <h5 className="m-0 " style={{ color: "#b83016" }}>
+                  Client Details
+                </h5>
                 <Col xs="6" className="mt-4">
                   <div>
                     <label htmlFor="labelInput" className="form-label">
@@ -301,7 +316,10 @@ const AddClientMod = ({
             <ModalFooter>
               <button
                 type="button"
-                className="btn btn-primary waves-effect waves-light"
+                className="btn  waves-effect waves-light"
+                style={{
+                  backgroundColor: "#ec5c24",
+                }}
                 disabled={but}
                 onClick={() => {
                   handleSubmit();

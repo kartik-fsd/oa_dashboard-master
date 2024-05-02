@@ -117,7 +117,21 @@ function ModalFormSpocs(props) {
           </div>
           <div className="d-flex justify-content-end">
             <div className="w-100 d-flex justify-content-end mt-3">
-              <button className="btn btn-primary" onClick={handleSubmitSpoc}>
+              <button
+                className="btn"
+                style={{
+                  backgroundColor: "#ec5c24",
+                  color: "whitesmoke",
+                  transition: "background-color 0.3s ease",
+                }}
+                onMouseEnter={(e) =>
+                  (e.target.style.backgroundColor = "#dd4319")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.backgroundColor = "#ec5c24")
+                }
+                onClick={handleSubmitSpoc}
+              >
                 Submit
               </button>
             </div>
@@ -178,7 +192,22 @@ function ModalFormSpocs(props) {
 
             <Row>
               <div className="w-100 d-flex justify-content-end mt-2">
-                <button className="btn btn-primary">Submit</button>
+                <button
+                  className="btn"
+                  style={{
+                    backgroundColor: "#ec5c24",
+                    color: "whitesmoke",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.backgroundColor = "#dd4319")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.backgroundColor = "#ec5c24")
+                  }
+                >
+                  Submit
+                </button>
               </div>
             </Row>
           </Form>

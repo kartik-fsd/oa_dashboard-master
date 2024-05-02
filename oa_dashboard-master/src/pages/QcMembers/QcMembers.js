@@ -289,8 +289,19 @@ export const QcMembers = () => {
                 >
                   {switchData ? (
                     <button
-                      className="btn btn-primary"
-                      style={{ marginRight: "8px" }}
+                      className="btn"
+                      style={{
+                        backgroundColor: "#ec5c24",
+                        color: "whitesmoke",
+                        transition: "background-color 0.3s ease",
+                        marginRight: "8px",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.target.style.backgroundColor = "#dd4319")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.target.style.backgroundColor = "#ec5c24")
+                      }
                       onClick={() => {
                         handleFilterAllQc();
                       }}
@@ -308,8 +319,19 @@ export const QcMembers = () => {
                     </button>
                   ) : (
                     <button
-                      className="btn btn-primary"
-                      style={{ marginRight: "8px" }}
+                      className="btn"
+                      style={{
+                        backgroundColor: "#ec5c24",
+                        color: "whitesmoke",
+                        transition: "background-color 0.3s ease",
+                        marginRight: "8px",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.target.style.backgroundColor = "#dd4319")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.target.style.backgroundColor = "#ec5c24")
+                      }
                       onClick={() => {
                         handleRangeModal();
                       }}
@@ -327,7 +349,8 @@ export const QcMembers = () => {
                     </button>
                   )}
                   <button
-                    className="btn btn-primary add-btn"
+                    className="btn add-btn"
+                    style={{ backgroundColor: "#ec5c24" }}
                     onClick={() => setOpen(true)}
                   >
                     <i className="ri-add-line align-bottom"></i> ADD
@@ -345,7 +368,9 @@ export const QcMembers = () => {
                       alignItems: "center",
                     }}
                   >
-                    <Spinner color="primary">Loading</Spinner>
+                    <Spinner style={{ backgroundColor: "#ec5c24" }}>
+                      Loading
+                    </Spinner>
                   </div>
                 ) : err ? (
                   <div
@@ -429,7 +454,8 @@ export const QcMembers = () => {
 
                       <button
                         type="button"
-                        className="btn btn-primary waves-effect waves-light"
+                        className="btn waves-effect waves-light"
+                        style={{ backgroundColor: "#ec5c24" }}
                         onClick={handleFseSearch}
                         disabled={
                           searchfse === "" || number === "" ? true : false
@@ -520,7 +546,8 @@ export const QcMembers = () => {
                     <Col xs={"12"} className="d-flex justify-content-end">
                       <button
                         type="submit"
-                        className="btn btn-primary waves-effect waves-light"
+                        className="btn waves-effect waves-light"
+                        style={{ backgroundColor: "#ec5c24" }}
                         disabled={
                           Object.values(addQc).includes("qc") ||
                           Object.values(addQc).includes("viewer")

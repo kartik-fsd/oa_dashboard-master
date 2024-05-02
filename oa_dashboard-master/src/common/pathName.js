@@ -1,3 +1,3 @@
-const title = "Taskmo | Operations ";
+const title = "OnX | Operations ";
 
 export { title };

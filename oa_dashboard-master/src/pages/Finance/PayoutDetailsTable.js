@@ -106,8 +106,8 @@ const PayoutDetailsTable = (props) => {
         <div>
           {/* <div className="loanid">{d.sow_id}</div> */}
           <span
-            className="badge rounded-pill badge-soft-primary"
-            style={{ minWidth: "30px" }}
+            className="badge rounded-pill badge-soft"
+            style={{ minWidth: "30px", backgroundColor: "#f07d47" }}
           >
             {d.sow_id}
           </span>
@@ -125,8 +125,8 @@ const PayoutDetailsTable = (props) => {
           {/* {d.display_date} */}
 
           <span
-            className="badge rounded-pill badge-soft-primary"
-            style={{ minWidth: "30px" }}
+            className="badge rounded-pill badge-soft"
+            style={{ minWidth: "30px", backgroundColor: "#f07d47" }}
           >
             {d.display_date}
           </span>
@@ -311,7 +311,10 @@ const PayoutDetailsTable = (props) => {
             </div>
             <div>
               <button
-                className="btn btn-primary mb-1"
+                className="btn mb-1"
+                style={{
+                  backgroundColor: "#ec5c24",
+                }}
                 onClick={() => {
                   setOpen4(!open4);
                 }}

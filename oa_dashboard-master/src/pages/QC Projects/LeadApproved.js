@@ -42,8 +42,6 @@ const LeadApproved = (props) => {
       });
   };
 
- 
-
   return (
     <div>
       <Modal
@@ -80,7 +78,8 @@ const LeadApproved = (props) => {
                 {!datadown && (
                   <button
                     type="button"
-                    className="btn btn-primary waves-effect waves-light"
+                    className="btn waves-effect waves-light"
+                    style={{ backgroundColor: "#ec5c24" }}
                     onClick={() => hiddenFileInput.current.click()}
                   >
                     <i
@@ -106,7 +105,8 @@ const LeadApproved = (props) => {
                   >
                     <button
                       type="button"
-                      className="btn btn-primary waves-effect waves-light"
+                      className="btn waves-effect waves-light"
+                      style={{ backgroundColor: "#ec5c24" }}
                       onClick={() => ""}
                     >
                       <i className="  ri-download-2-fill"></i>

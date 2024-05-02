@@ -54,7 +54,9 @@ const ProjectLeads = () => {
                     alignItems: "center",
                   }}
                 >
-                  <h5 className="card-title mb-0">Hot Leads</h5>
+                  <h5 className="card-title mb-0" style={{ color: "#b83016" }}>
+                    Hot Leads
+                  </h5>
                   <div>
                     <div style={{ height: "40px" }}></div>
                   </div>

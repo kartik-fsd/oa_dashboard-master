@@ -469,7 +469,8 @@ function EcommerceProductDetail({ data, youtube }) {
                                       {" "}
                                       &nbsp;{" "}
                                       <i
-                                        className=" ri-add-circle-line  text-primary fs-20 cursor-pointer"
+                                        className=" ri-add-circle-line   fs-20 cursor-pointer"
+                                        style={{ color: "#b83016" }}
                                         onClick={() => set_open_spoc(true)}
                                       ></i>
                                     </div>
@@ -503,7 +504,8 @@ function EcommerceProductDetail({ data, youtube }) {
                                   {" "}
                                   &nbsp;{" "}
                                   <i
-                                    className=" ri-add-circle-line  text-primary fs-20 cursor-pointer"
+                                    className=" ri-add-circle-line   fs-20 cursor-pointer"
+                                    style={{color: "#b83016"}}
                                     onClick={() => set_open_supply(true)}
                                   ></i>
                                 </div>
@@ -572,9 +574,9 @@ function EcommerceProductDetail({ data, youtube }) {
                                     <div className="avatar-xs">
                                       <span
                                         className={
-                                          "avatar-title rounded-circle text-primary "
+                                          "avatar-title rounded-circle  "
                                         }
-                                        style={{ background: "#edeeff" }}
+                                        style={{ background: "#edeeff",color: "#b83016" }}
                                       >
                                         +{oaList?.lastArray}
                                       </span>
@@ -588,7 +590,8 @@ function EcommerceProductDetail({ data, youtube }) {
                           </Col>
                           <Col md={2}>
                             <i
-                              className=" ri-add-circle-line align-bottom text-primary fs-20 cursor-pointer"
+                              className=" ri-add-circle-line align-bottom  fs-20 cursor-pointer"
+                              style={{color: "#b83016"}}
                               onClick={() => set_open_spoc(true)}
                             ></i>
                           </Col>

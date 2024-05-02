@@ -126,8 +126,8 @@ const PipelineTable = ({
 
                   {/* testing */}
                   <div
-                    className="text-primary fw-semibold"
-                    style={{ fontSize: "10px" }}
+                    className="fw-semibold"
+                    style={{ fontSize: "10px", color: "#b83016" }}
                   >
                     {console.log(d?.sum_percentage, "d?.sum_percentage")}
                     {percent == 0 ? (
@@ -253,7 +253,10 @@ const PipelineTable = ({
           }}
         >
           <span>{item?.name?.split("_").join("-")}</span>
-          <span className="badge badge-soft-primary">
+          <span
+            className="badge badge-soft"
+            style={{ backgroundColor: "#f07d47" }}
+          >
             {percent == 0 ? (
               item?.value != "0" ? (
                 <div style={{ display: "flex", flexDirection: "column" }}>

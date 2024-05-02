@@ -175,7 +175,13 @@ const SplitRequestNew = () => {
                               />
                             ) : (
                               <div className="avatar-sm">
-                                <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                                <div
+                                  className="avatar-title rounded-circle"
+                                  style={{
+                                    color: "#b83016",
+                                    backgroundColor: "#f07d47",
+                                  }}
+                                >
                                   {data?.brand_name?.charAt(0) ?? ""}
                                 </div>
                               </div>
@@ -217,7 +223,13 @@ const SplitRequestNew = () => {
                             />
                           ) : (
                             <div className="avatar-sm">
-                              <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                              <div
+                                className="avatar-title rounded-circle"
+                                style={{
+                                  color: "#b83016",
+                                  backgroundColor: "#f07d47",
+                                }}
+                              >
                                 {data?.req_name?.charAt(0) ?? ""}
                               </div>
                             </div>
@@ -239,7 +251,7 @@ const SplitRequestNew = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="amt_table text-primary">
+                      <div className="amt_table " style={{ color: "#b83016" }}>
                         {data.user_type == "direct_sp" ? (
                           <span
                             className="badge rounded-pill badge-soft-success"
@@ -359,8 +371,11 @@ const SplitRequestNew = () => {
                               {result?.createdDates?.map((item) => (
                                 <div key={item.inv_id}>
                                   <span
-                                    className="badge rounded-pill badge-soft-primary"
-                                    style={{ width: 110 }}
+                                    className="badge rounded-pill"
+                                    style={{
+                                      width: 110,
+                                      backgroundColor: "#f07d47",
+                                    }}
                                   >
                                     {item?.ops_dat} : {item?.leads}
                                   </span>

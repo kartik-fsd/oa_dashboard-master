@@ -93,7 +93,10 @@ const BusinessDashProjectInit = () => {
         />
         <span className="text-dark fw-semibold text-capitalize mx-2">
           {item.full_name}
-          <span className="badge badge-soft-primary ms-1 me-1">
+          <span
+            className="badge badge-soft ms-1 me-1"
+            style={{ backgroundColor: "#f07d47" }}
+          >
             {item.team_name}
           </span>
           -<span className="text-muted ms-1">{item.role_designation}</span>
@@ -632,8 +635,8 @@ const BusinessDashProjectInit = () => {
                 >
                   <button
                     type="button"
-                    className="btn btn-primary waves-effect waves-light"
-                    style={{ width: "80%" }}
+                    className="btn  waves-effect waves-light"
+                    style={{ width: "80%", backgroundColor: "#ec5c24" }}
                     onClick={approvalSendFunction}
                   >
                     Send

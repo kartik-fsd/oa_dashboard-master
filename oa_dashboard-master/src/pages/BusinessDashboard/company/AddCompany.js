@@ -458,7 +458,18 @@ const AddCompany = () => {
                               />
 
                               <button
-                                className="btn btn-primary"
+                                className="btn"
+                                style={{
+                                  backgroundColor: "#ec5c24",
+                                  color: "whitesmoke",
+                                  transition: "background-color 0.3s ease",
+                                }}
+                                onMouseEnter={(e) =>
+                                  (e.target.style.backgroundColor = "#dd4319")
+                                }
+                                onMouseLeave={(e) =>
+                                  (e.target.style.backgroundColor = "#ec5c24")
+                                }
                                 type="submit"
                                 id="button-addon1"
                                 onClick={handleCheck}
@@ -495,10 +506,11 @@ const AddCompany = () => {
 
                           <button
                             type="button"
-                            className="btn btn-primary btn-label waves-effect waves-light "
+                            className="btn  btn-label waves-effect waves-light "
                             style={{
                               marginLeft: "16px",
                               paddingLeft: "14px",
+                              backgroundColor: "#ec5c24",
                             }}
                             onClick={handleLogoClick}
                           >
@@ -805,7 +817,8 @@ const AddCompany = () => {
                           <h5>Founder Details</h5>
                           <button
                             type="button"
-                            className="btn btn-primary waves-effect waves-light"
+                            className="btn  waves-effect waves-light"
+                            style={{backgroundColor:"#ec5c24"}}
                             onClick={handleAddFounder}
                           >
                             <i className=" ri-add-fill align-middle me-1"></i>
@@ -882,7 +895,10 @@ const AddCompany = () => {
                         <Row>
                           <Col xs="12">
                             <div className="d-flex justify-content-between">
-                              <h5 className="mb-4 text-primary">
+                              <h5
+                                className="mb-4 "
+                                style={{ color: "#b83016" }}
+                              >
                                 Founder Details
                               </h5>
                               <div>
@@ -908,7 +924,8 @@ const AddCompany = () => {
                                       : true
                                   }
                                   type="button"
-                                  className="btn btn-primary waves-effect waves-light btn-sm"
+                                  className="btn  waves-effect waves-light btn-sm"
+                                  style={{ backgroundColor: "#ec5c24" }}
                                   onClick={handleClickAdd}
                                 >
                                   Add
@@ -1029,7 +1046,7 @@ const AddCompany = () => {
                             <hr className="mt-5"></hr>
                           </Col>
                           <Col xs="12" className="mt-2">
-                            <h5 className="mb-4 text-primary">
+                            <h5 className="mb-4 " style={{ color: "#b83016" }}>
                               Founder Details Table
                             </h5>
                             <div>
@@ -1101,8 +1118,11 @@ const AddCompany = () => {
                       <div className="d-flex justify-content-end gap-2 ">
                         <button
                           type="button"
-                          className="btn btn-primary btn-label waves-effect waves-light w-xs px-2"
-                          style={{ marginLeft: "10px" }}
+                          className="btn  btn-label waves-effect waves-light w-xs px-2"
+                          style={{
+                            marginLeft: "10px",
+                            backgroundColor: "#ec5c24",
+                          }}
                           onClick={() => handleComapnyDetails()}
                         >
                           <i className="bx bx-save align-middle me-1  fs-14 "></i>

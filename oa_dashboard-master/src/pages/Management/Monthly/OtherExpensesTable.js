@@ -76,15 +76,15 @@ const OtherExpensesTable = ({ table, setOtherTotal, update, inv }) => {
         <div className="loanid">
           {d.type == "manual_payment" ? (
             <span
-              className="badge rounded-pill badge-soft-primary"
-              style={{ minWidth: "30px" }}
+              className="badge rounded-pill badge-soft"
+              style={{ minWidth: "30px", backgroundColor: "#f07d47" }}
             >
               Payout
             </span>
           ) : (
             <span
-              className="badge rounded-pill badge-soft-primary"
-              style={{ minWidth: "30px" }}
+              className="badge rounded-pill badge-soft"
+              style={{ minWidth: "30px", backgroundColor: "#f07d47" }}
             >
               Expense
             </span>
@@ -111,8 +111,8 @@ const OtherExpensesTable = ({ table, setOtherTotal, update, inv }) => {
         <div>
           {/* <div className="loanid">{d.sow_id}</div> */}
           <span
-            className="badge rounded-pill badge-soft-primary"
-            style={{ minWidth: "30px" }}
+            className="badge rounded-pill badge-soft"
+            style={{ minWidth: "30px", backgroundColor: "#f07d47" }}
           >
             {d.sow_id}
           </span>
@@ -130,8 +130,8 @@ const OtherExpensesTable = ({ table, setOtherTotal, update, inv }) => {
           {/* {d.display_date} */}
 
           <span
-            className="badge rounded-pill badge-soft-primary"
-            style={{ minWidth: "30px" }}
+            className="badge rounded-pill badge-soft"
+            style={{ minWidth: "30px", backgroundColor: "#f07d47" }}
           >
             {d.display_date}
           </span>

@@ -102,7 +102,12 @@ const NotificationDropdown = () => {
           )}
         </DropdownToggle>
         <DropdownMenu className="dropdown-menu-lg dropdown-menu-end p-0">
-          <div className="dropdown-head bg-primary bg-pattern rounded-top">
+          <div
+            className="dropdown-head bg-pattern rounded-top"
+            style={{
+              backgroundColor: "#ec5c24",
+            }}
+          >
             <div className="p-3">
               <Row className="align-items-center">
                 <Col>

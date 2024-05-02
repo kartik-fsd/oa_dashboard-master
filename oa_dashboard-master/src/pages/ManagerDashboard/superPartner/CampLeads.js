@@ -309,8 +309,9 @@ const CampLeads = () => {
                 float: "right",
                 marginTop: "-2px",
                 marginRight: "220px",
+                backgroundColor: "#ec5c24",
               }}
-              className="btn btn-primary "
+              className="btn "
               onClick={handleAddCampaign}
             >
               <i className="ri-add-line align-middle me-1"></i> Generate Link
@@ -328,8 +329,9 @@ const CampLeads = () => {
                   float: "right",
                   marginTop: "-2px",
                   marginRight: "220px",
+                  backgroundColor: "#ec5c24",
                 }}
-                className="btn btn-primary "
+                className="btn"
                 onClick={() => {
                   copyDmLink(
                     `dmlink${linkData?.campaign_id}`,

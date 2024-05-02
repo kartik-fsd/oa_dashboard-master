@@ -110,7 +110,8 @@ const PaymentRequestModal = ({
             ) : (
               <button
                 type="submit"
-                className="btn btn-primary waves-effect waves-light"
+                className="btn waves-effect waves-light"
+                style={{ backgroundColor: "#ec5c24" }}
                 disabled={singleData.status !== "none"}
               >
                 Process

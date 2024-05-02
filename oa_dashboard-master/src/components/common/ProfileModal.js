@@ -147,7 +147,7 @@ const ProfileModal = ({
                       fontFamily: "fantasy",
                     }}
                   >
-                    Taskmo
+                    OnX
                   </div>
                   <div className="d-flex position-absolute start-0 end-0 top-0 p-3">
                     <div className="flex-grow-1"></div>

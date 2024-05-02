@@ -93,8 +93,8 @@ function AddAgreementDetails() {
                     <div className="d-flex gap-4 align-items-center ">
                       <div>
                         <h4
-                          className="fw-bold text-primary mb-2"
-                          style={{ fontSize: "15px" }}
+                          className="fw-bold  mb-2"
+                          style={{ fontSize: "15px", color: "#b83016" }}
                         >
                           {AgreeData.company_name}
                         </h4>
@@ -241,7 +241,10 @@ function AddAgreementDetails() {
                 {!AgreeData.agreement_upload ? (
                   <button
                     type="button"
-                    className="btn btn-primary waves-effect waves-light cursor-pointer h-75"
+                    className="btn  waves-effect waves-light cursor-pointer h-75"
+                    style={{
+                      backgroundColor: "#ec5c24",
+                    }}
                     disabled
                   >
                     <span>Document</span>
@@ -255,7 +258,10 @@ function AddAgreementDetails() {
                   >
                     <button
                       type="button"
-                      className="btn btn-primary waves-effect waves-light cursor-pointer"
+                      className="btn  waves-effect waves-light cursor-pointer"
+                      style={{
+                        backgroundColor: "#ec5c24",
+                      }}
                     >
                       <span>Document</span>
                       <i className="ri-download-line align-middle ms-1 fs-14"></i>
@@ -266,8 +272,19 @@ function AddAgreementDetails() {
                   <Row>
                     <div className="d-flex justify-content-end">
                       <button
-                        className="btn btn-primary"
-                        style={{ marginBottom: "20px" }}
+                        className="btn"
+                        style={{
+                          backgroundColor: "#ec5c24",
+                          color: "whitesmoke",
+                          transition: "background-color 0.3s ease",
+                          marginBottom: "20px",
+                        }}
+                        onMouseEnter={(e) =>
+                          (e.target.style.backgroundColor = "#dd4319")
+                        }
+                        onMouseLeave={(e) =>
+                          (e.target.style.backgroundColor = "#ec5c24")
+                        }
                         onClick={handleAgreementConfirm}
                       >
                         Send Agreement

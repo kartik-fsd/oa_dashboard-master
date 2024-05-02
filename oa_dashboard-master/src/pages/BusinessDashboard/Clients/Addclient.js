@@ -68,7 +68,17 @@ const Addclient = () => {
                 />
 
                 <button
-                  className="btn btn-primary"
+                  className="btn" style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
                   type="submit"
                   id="button-addon1"
                 >
@@ -295,8 +305,8 @@ const Addclient = () => {
         </button> */}
         <button
           type="button"
-          className="btn btn-primary btn-label waves-effect waves-light w-xs px-2"
-          style={{ marginLeft: "10px" }}
+          className="btn  btn-label waves-effect waves-light w-xs px-2"
+          style={{ marginLeft: "10px", background: "#ec5c24" }}
         >
           <i className=" ri-arrow-down-line align-middle fs-14 ms-1 "></i>
           Update

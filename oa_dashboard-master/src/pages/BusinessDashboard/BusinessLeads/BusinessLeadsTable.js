@@ -87,7 +87,12 @@ const BusinessLeadsTable = ({ data }) => {
       omit: true,
       cell: (row) => (
         <div>
-          <span className="badge rounded-pill badge-soft-primary">L00243</span>
+          <span
+            className="badge rounded-pill badge-soft"
+            style={{ backgroundColor: "#f07d47" }}
+          >
+            L00243
+          </span>
         </div>
       ),
       width: "200px",
@@ -121,14 +126,19 @@ const BusinessLeadsTable = ({ data }) => {
 
           <div className="d-flex flex-column gap-1 ">
             <span
-              className="fs-11  text-primary"
-              style={{ wordBreak: "break-all", fontWeight: "450" }}
+              className="fs-11  "
+              style={{
+                wordBreak: "break-all",
+                fontWeight: "450",
+                color: "#b83016",
+              }}
             >
               {d.company_name}
             </span>
             <div>
               <span
-                className="badge text-primary bg-soft-primary fs-7 cursor-pointer"
+                className="badge  fs-7 cursor-pointer"
+                style={{ color: "#b83016", backgroundColor: "#f07d47" }}
                 onClick={() => {
                   history.push(
                     `/business-dashboard/clientDetails/${d.lead_id}`

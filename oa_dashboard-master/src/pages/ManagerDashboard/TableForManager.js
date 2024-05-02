@@ -557,7 +557,7 @@ const TableForManager = (props) => {
           {/* <div className="avatar-group">
             <div className="avatar-group-item">
               <div className="avatar-sm">
-                <div className="avatar-title rounded-circle bg-light text-primary">
+                <div className="avatar-title rounded-circle bg-light " style:{{color: "#b83016"}}>
                   {d.main_team}
                 </div>
               </div>
@@ -619,7 +619,10 @@ const TableForManager = (props) => {
             <div className="fs-12 w-100">
               <div className="fs-14 fw-semi-bold">
                 {d.oa_name}{" "}
-                <span className="badge badge-soft-primary text-capitalize">
+                <span
+                  className="badge badge-soft text-capitalize"
+                  style={{ backgroundColor: "#f07d47" }}
+                >
                   {d.oa_count > 0 ? `+${d.oa_count}` : "0"}
                 </span>
               </div>{" "}
@@ -1452,7 +1455,8 @@ const TableForManager = (props) => {
             />
             <button
               type="button"
-              className="btn btn-primary waves-effect waves-light"
+              className="btn waves-effect waves-light"
+              style={{backgroundColor:"#ec5c24" }}
               onClick={() =>
                 copyDmLink(`dmlink${d.campaign_id}`, d.campaign_name)
               }
@@ -2016,7 +2020,14 @@ const TableForManager = (props) => {
               aria-label="Recipient's username with two button addons"
             />
             <button
-              className="btn btn-primary"
+              className="btn"
+              style={{
+                backgroundColor: "#ec5c24",
+                color: "whitesmoke",
+                transition: "background-color 0.3s ease",
+              }}
+              onMouseEnter={(e) => (e.target.style.backgroundColor = "#dd4319")}
+              onMouseLeave={(e) => (e.target.style.backgroundColor = "#ec5c24")}
               type="button"
               onClick={() => {
                 myFunction();
@@ -2155,7 +2166,17 @@ const TableForManager = (props) => {
             </Row>
           </ModalBody>
           <ModalFooter>
-            <button className="btn btn-primary" type="submit">
+            <button
+              className="btn"
+              style={{
+                backgroundColor: "#ec5c24",
+                color: "whitesmoke",
+                transition: "background-color 0.3s ease",
+              }}
+              onMouseEnter={(e) => (e.target.style.backgroundColor = "#dd4319")}
+              onMouseLeave={(e) => (e.target.style.backgroundColor = "#ec5c24")}
+              type="submit"
+            >
               Submit
             </button>
           </ModalFooter>

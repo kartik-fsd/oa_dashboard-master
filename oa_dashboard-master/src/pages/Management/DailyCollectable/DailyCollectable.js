@@ -53,8 +53,12 @@ const DailyCollectable = () => {
         <CardHeader>
           <div className="d-flex justify-content-between">
             <h5
-              className="text-primary fw-600 fs-16"
-              style={{ letterSpacing: "2px", marginLeft: "15px" }}
+              className="fw-600 fs-16 "
+              style={{
+                letterSpacing: "2px",
+                marginLeft: "15px",
+                color: "#b83016",
+              }}
             >
               Daily Collections Traker
             </h5>

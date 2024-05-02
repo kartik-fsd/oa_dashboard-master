@@ -334,7 +334,21 @@ const MyCompanies = () => {
           >
             <h5 className="card-title mb-0 fs-20">MyCompanies</h5>
             <div style={{ display: "flex", gap: "12px" }}>
-              <button className="btn btn-primary" onClick={handleAddCompany}>
+              <button
+                className="btn"
+                style={{
+                  backgroundColor: "#ec5c24",
+                  color: "whitesmoke",
+                  transition: "background-color 0.3s ease",
+                }}
+                onMouseEnter={(e) =>
+                  (e.target.style.backgroundColor = "#dd4319")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.backgroundColor = "#ec5c24")
+                }
+                onClick={handleAddCompany}
+              >
                 <i
                   className="ri-add-line align-middle me-1 "
                   style={{ marginBottom: "30px" }}

@@ -71,7 +71,9 @@ const FounderDetEdit = ({ open, setOpen, data, setCheck, check }) => {
           <Row>
             <Col xs="12">
               <div className="d-flex justify-content-between">
-                <h5 className="mb-4 text-primary">Founder Details</h5>
+                <h5 className="mb-4 " style={{ color: "#b83016" }}>
+                  Founder Details
+                </h5>
                 <div>
                   <button
                     disabled={
@@ -87,7 +89,8 @@ const FounderDetEdit = ({ open, setOpen, data, setCheck, check }) => {
                         : true
                     }
                     type="button"
-                    className="btn btn-primary waves-effect waves-light btn-sm"
+                    className="btn  waves-effect waves-light btn-sm"
+                    style={{ backgroundColor: "#ec5c24" }}
                     onClick={handleClickAdd}
                   >
                     Add
@@ -194,7 +197,9 @@ const FounderDetEdit = ({ open, setOpen, data, setCheck, check }) => {
               <hr className="mt-5"></hr>
             </Col>
             <Col xs="12" className="mt-2">
-              <h5 className="mb-4 text-primary">Founder Details Table</h5>
+              <h5 className="mb-4 " style={{ color: "#b83016" }}>
+                Founder Details Table
+              </h5>
               <div>
                 {mileStoneData?.length == 0 ? (
                   <div style={{}}>No TableData Found</div>
@@ -264,7 +269,8 @@ const FounderDetEdit = ({ open, setOpen, data, setCheck, check }) => {
         <ModalFooter>
           <button
             type="button"
-            className="btn btn-primary waves-effect waves-light"
+            className="btn  waves-effect waves-light"
+            style={{ backgroundColor: "#ec5c24" }}
             onClick={() => handleSubmit()}
           >
             Update

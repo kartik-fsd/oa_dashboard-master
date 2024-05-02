@@ -21,8 +21,12 @@ export const MyClientModals = ({ modal, toggle }) => {
                 <div className="avatar-group-item">
                   <div className="avatar-sm">
                     <div
-                      className="avatar-title rounded-circle bg-light text-primary"
-                      style={{ fontSize: "24px", fontWeight: "600" }}
+                      className="avatar-title rounded-circle bg-light"
+                      style={{
+                        fontSize: "24px",
+                        fontWeight: "600",
+                        color: "#b83016",
+                      }}
                     >
                       D
                     </div>
@@ -97,7 +101,18 @@ export const MyClientModals = ({ modal, toggle }) => {
                 />
 
                 <button
-                  className="btn btn-primary"
+                  className="btn"
+                  style={{
+                    backgroundColor: "#ec5c24",
+                    color: "whitesmoke",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.backgroundColor = "#dd4319")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.backgroundColor = "#ec5c24")
+                  }
                   type="submit"
                   id="button-addon1"
                 >
@@ -245,21 +260,21 @@ export const MyClientModals = ({ modal, toggle }) => {
             </Row>
           </div>
           <div className="d-flex justify-content-end gap-2 mt-4">
-            {/* <button type="button" className="btn btn-outline-primary ">
+            {/* <button type="button" className="btn btn-outline " style={{borderColor:"#ec5c24"}}>
                     Reset
                   </button> */}
             <button
               type="button"
-              className="btn btn-outline-primary btn-label waves-effect waves-light w-xs px-2"
-              style={{ marginLeft: "10px" }}
+              className="btn btn-outline btn-label waves-effect waves-light w-xs px-2"
+              style={{ marginLeft: "10px", borderColor: "#ec5c24" }}
             >
               <i className="bx bx-reset fs-16 me-2"></i>
               Reset
             </button>
             <button
               type="button"
-              className="btn btn-primary btn-label waves-effect waves-light w-xs px-2"
-              style={{ marginLeft: "10px" }}
+              className="btn  btn-label waves-effect waves-light w-xs px-2"
+              style={{ marginLeft: "10px", backgroundColor: "#ec5c24" }}
             >
               <i className="bx bx-save fs-16 me-2 pt-1"></i>
               Save

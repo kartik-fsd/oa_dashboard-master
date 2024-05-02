@@ -78,7 +78,10 @@ const OverDueInvoicesTable = ({ tableData, setCheck, check }) => {
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <div>
               <div className="avatar-sm">
-                <div className="avatar-title rounded-circle bg-soft-primary text-primary">
+                <div
+                  className="avatar-title rounded-circle bg-soft "
+                  style={{ color: "#b83016", backgroundColor: "f07d47" }}
+                >
                   {d?.brand_name[0] ?? ""}
                 </div>
               </div>
@@ -91,7 +94,12 @@ const OverDueInvoicesTable = ({ tableData, setCheck, check }) => {
               >
                 <div className="fs-10 text-muted">
                   Billed on {d.created_on}
-                  <span className="badge badge-soft-primary">{d.net}</span>
+                  <span
+                    className="badge badge-soft"
+                    style={{ backgroundColor: "f07d47" }}
+                  >
+                    {d.net}
+                  </span>
                 </div>
               </div>
             </div>
@@ -103,11 +111,11 @@ const OverDueInvoicesTable = ({ tableData, setCheck, check }) => {
       name: "Inv No",
       selector: "amount",
       cell: (d) => (
-        <div className="text-primary fs-16" style={{ cursor: "pointer" }}>
+        <div className=" fs-16" style={{ cursor: "pointer", color: "#b83016" }}>
           <div>
             <span
-              className="badge badge-soft-primary"
-              style={{ textDecoration: "underline" }}
+              className="badge badge-soft"
+              style={{ textDecoration: "underline", backgroundColor: "f07d47" }}
             >
               {d.year == "2022"
                 ? ` 22-23 / ${d["invoice_number"]}`
@@ -126,7 +134,7 @@ const OverDueInvoicesTable = ({ tableData, setCheck, check }) => {
       name: "Amount",
       selector: "amount",
       cell: (d) => (
-        <div className="text-primary fs-12">
+        <div className=" fs-12" style={{ color: "#b83016" }}>
           &#x20B9;&nbsp;{indianNumbers(d.amount, 2)}
         </div>
       ),
@@ -138,7 +146,7 @@ const OverDueInvoicesTable = ({ tableData, setCheck, check }) => {
       name: "Balance",
       selector: "balance",
       cell: (d) => (
-        <div className="text-primary fs-12">
+        <div className=" fs-12" style={{ color: "#b83016" }}>
           &#x20B9;&nbsp;{indianNumbers(d.remaining_amount, 2)}
         </div>
       ),

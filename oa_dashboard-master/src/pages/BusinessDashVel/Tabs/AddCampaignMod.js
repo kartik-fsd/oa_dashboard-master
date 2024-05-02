@@ -175,8 +175,11 @@ const AddCampaignMod = (props) => {
                     return (
                       <>
                         <span
-                          className="badge bg-primary"
-                          style={{ minWidth: "130px" }}
+                          className="badge"
+                          style={{
+                            minWidth: "130px",
+                            backgroundColor: "#ec5c24",
+                          }}
                         >
                           <p className="m-0 fs-12 d-flex justify-content-start">
                             Area&nbsp; &nbsp; &nbsp; &nbsp;:&nbsp; {item.area}
@@ -195,7 +198,18 @@ const AddCampaignMod = (props) => {
         </Row>
       </ModalBody>
       <ModalFooter>
-        <button type="button" className="btn btn-primary" onClick={addCampaign}>
+        <button
+          type="button"
+          className="btn"
+          style={{
+            backgroundColor: "#ec5c24",
+            color: "whitesmoke",
+            transition: "background-color 0.3s ease",
+          }}
+          onMouseEnter={(e) => (e.target.style.backgroundColor = "#dd4319")}
+          onMouseLeave={(e) => (e.target.style.backgroundColor = "#ec5c24")}
+          onClick={addCampaign}
+        >
           <i className=" ri-save-line align-middle me-1"></i>
           Save
         </button>

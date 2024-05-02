@@ -159,7 +159,8 @@ const QcMemberModalEdit = (props) => {
               <Col xs={"12"} className="d-flex justify-content-end">
                 <button
                   type="submit"
-                  className="btn btn-primary waves-effect waves-light"
+                  className="btn waves-effect waves-light"
+                  style={{ backgroundColor: "#ec5c24" }}
                   // onClick={() => {
                   //   updateQc();
                   //   setOpen(false);
@@ -379,7 +380,8 @@ const QcRangeModal = (props) => {
           <Row>
             <Col xs="12" className="mt-3 d-flex justify-content-end">
               <button
-                className="btn btn-primary  "
+                className="btn"
+                style={{ backgroundColor: "#ec5c24" }}
                 onClick={() => {
                   handleDateRange();
                   setModalRange(false);
@@ -462,7 +464,8 @@ const QcFilterModal = (props) => {
               <Col xs={"4"}>
                 <button
                   type="submit"
-                  className="btn btn-primary waves-effect waves-light"
+                  className="btn waves-effect waves-light"
+                  style={{ backgroundColor: "#ec5c24" }}
                   // onClick={() => {
                   //   updateQc();
                   //   setOpen(false);

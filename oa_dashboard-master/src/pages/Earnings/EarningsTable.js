@@ -137,11 +137,12 @@ const EarningsTable = ({ performance, months, date, totalPerfomance }) => {
           </div>
         </div>
         <div
-          className="text-primary fw-semibold"
+          className=" fw-semibold"
           style={{
             textDecoration:
               location.pathname == "/supply/earnings" ? "underline" : "none",
             // backgroundColor: "#A281CB",
+            color: "#b83016",
             // border: "1px solid #A281CB",
             // borderRadius: "6px",
             fontSize: "14px",

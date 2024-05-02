@@ -94,8 +94,13 @@ const EditTds = ({ open, setOpen, data, setCheck, check }) => {
 
             <button
               //   type="submit"
-              style={{ float: "right", marginTop: "24px", width: "100px" }}
-              className="btn btn-primary d-flex gap-2 justify-content-center"
+              style={{
+                float: "right",
+                marginTop: "24px",
+                width: "100px",
+                backgroundColor: "#ec5c24",
+              }}
+              className="btn d-flex gap-2 justify-content-center"
               onClick={handleUpdate}
               //   disabled={remark == ""}
             >

@@ -69,12 +69,17 @@ const Cluster = () => {
           <div className="d-flex justify-content-between align-items-center mb-3">
             <h5 className="card-title mb-2 fs-20">Cluster</h5>
             <button
-              className="btn btn-primary"
-              onClick={handleAddCluster}
+              className="btn"
               style={{
+                backgroundColor: "#ec5c24",
+                color: "whitesmoke",
+                transition: "background-color 0.3s ease",
                 display:
                   role == "super_admin" || role == "head" ? "block" : "none",
               }}
+              onMouseEnter={(e) => (e.target.style.backgroundColor = "#dd4319")}
+              onMouseLeave={(e) => (e.target.style.backgroundColor = "#ec5c24")}
+              onClick={handleAddCluster}
             >
               <i className=" ri-add-fill align-middle me-1"></i>
               Add
@@ -107,7 +112,7 @@ const Cluster = () => {
                               className="rounded-circle avatar-sm"
                             ></img>
 
-                            <h5 className="m-0 text-primary">
+                            <h5 className="m-0 " style={{ color: "#b83016" }}>
                               {item.cluster_name}
 
                               {item.status == "active" ? (
@@ -133,10 +138,11 @@ const Cluster = () => {
                               return (
                                 <>
                                   <span
-                                    className="badge badge-soft-primary badge-border"
+                                    className="badge badge-soft badge-border"
                                     style={{
                                       display: "block",
                                       minWidth: "99px",
+                                      backgroundColor: "#f07d47",
                                     }}
                                   >
                                     {res.city}

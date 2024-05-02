@@ -278,8 +278,11 @@ const ProjectOverViewSection = ({ data, setCheck, check }) => {
                     {!data.sow_id > 0 &&
                       context?.oaDetials?.role == "super_admin" && (
                         <button
-                          className="btn btn-primary d-flex align-items-center gap-2"
+                          className="btn d-flex align-items-center gap-2"
                           onClick={() => setModelData(!modelData)}
+                          style={{
+                            backgroundColor: "#ec5c24",
+                          }}
                         >
                           <i className="ri ri-add-line"></i>
                           Move

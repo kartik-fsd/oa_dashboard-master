@@ -135,7 +135,8 @@ const ManPowerModals = ({ setOpen, open, userData }) => {
         <ModalHeader className="justify-content-end pb-3">
           <button
             type="button"
-            className="btn btn-primary waves-effect waves-light"
+            className="btn waves-effect waves-light"
+            style={{ backgroundColor: "#ec5c24" }}
             onClick={handleSupplyReq}
           >
             Add

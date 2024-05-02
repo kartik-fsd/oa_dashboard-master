@@ -133,8 +133,19 @@ const QcManagers = () => {
               }}
             >
               <button
-                className="btn btn-primary"
-                style={{ marginRight: "8px" }}
+                className="btn"
+                style={{
+                  backgroundColor: "#ec5c24",
+                  color: "whitesmoke",
+                  transition: "background-color 0.3s ease",
+                  marginRight: "8px",
+                }}
+                onMouseEnter={(e) =>
+                  (e.target.style.backgroundColor = "#dd4319")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.backgroundColor = "#ec5c24")
+                }
                 onClick={() => {
                   handleRangeModal();
                 }}

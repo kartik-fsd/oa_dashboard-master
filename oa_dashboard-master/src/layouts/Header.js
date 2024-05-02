@@ -142,7 +142,21 @@ const Header = ({
                             placeholder="Search ..."
                             aria-label="Recipient's username"
                           />
-                          <button className="btn btn-primary" type="submit">
+                          <button
+                            className="btn"
+                            style={{
+                              backgroundColor: "#ec5c24",
+                              color: "whitesmoke",
+                              transition: "background-color 0.3s ease",
+                            }}
+                            onMouseEnter={(e) =>
+                              (e.target.style.backgroundColor = "#dd4319")
+                            }
+                            onMouseLeave={(e) =>
+                              (e.target.style.backgroundColor = "#ec5c24")
+                            }
+                            type="submit"
+                          >
                             <i className="mdi mdi-magnify"></i>
                           </button>
                         </div>

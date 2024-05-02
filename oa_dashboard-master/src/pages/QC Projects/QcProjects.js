@@ -81,8 +81,19 @@ const QcProjects = () => {
               <div>
                 {userNumber === "8310918967" && (
                   <button
-                    className="btn btn-primary"
-                    style={{ marginRight: "10px" }}
+                    className="btn"
+                    style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                      marginRight: "10px",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
                     onClick={() => {
                       setLeadApprovemod(!leadApprovemod);
                     }}
@@ -101,8 +112,19 @@ const QcProjects = () => {
                   </button>
                 )}
                 <button
-                  className="btn btn-primary"
-                  style={{ marginRight: "220px" }}
+                  className="btn"
+                  style={{
+                    backgroundColor: "#ec5c24",
+                    color: "whitesmoke",
+                    transition: "background-color 0.3s ease",
+                    marginRight: "220px",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.backgroundColor = "#dd4319")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.backgroundColor = "#ec5c24")
+                  }
                   onClick={() => {
                     handleFilterModal();
                   }}
@@ -184,7 +206,8 @@ const QcProjects = () => {
             <Row>
               <Col xs="12" className="mt-3 d-flex justify-content-end">
                 <button
-                  className="btn btn-primary  "
+                  className="btn"
+                  style={{ backgroundColor: "#ec5c24" }}
                   onClick={() => {
                     handleApply();
                   }}

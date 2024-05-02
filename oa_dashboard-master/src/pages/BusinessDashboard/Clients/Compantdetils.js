@@ -143,7 +143,8 @@ const Compantdetils = ({ open, setOpen, data, setCheck, check }) => {
         <ModalFooter>
           <button
             type="button"
-            className="btn btn-primary waves-effect waves-light"
+            className="btn  waves-effect waves-light"
+            style={{ backgroundColor: "#ec5c24" }}
             // disabled={Object.keys(compDet)?.length > 0 ? false : true}
             onClick={handleUpdate}
           >

@@ -66,7 +66,8 @@ const ScriptModal = (props) => {
                 Cancel
               </button> */}
               <button
-                className="btn btn-primary  "
+                className="btn"
+                style={{ backgroundColor: "#ec5c24" }}
                 onClick={() => {
                   handleCreateqc();
                 }}
@@ -137,7 +138,11 @@ const EditModal = (props) => {
           />
           <Row>
             <Col xs="12" className="mt-3 d-flex justify-content-end gap-2">
-              <button className="btn btn-primary " onClick={handleUpdate}>
+              <button
+                className="btn"
+                onClick={handleUpdate}
+                style={{ backgroundColor: "#ec5c24" }}
+              >
                 Submit
               </button>
             </Col>

@@ -89,7 +89,8 @@ const ClientDetails = ({ toggleTab, comId }) => {
             <div className="mt-4 d-flex justify-content-end">
               <button
                 type="submit"
-                className="btn btn-primary waves-effect waves-light"
+                className="btn  waves-effect waves-light"
+                style={{ backgroundColor: "#ec5c24" }}
                 disabled={mail == "" ? true : false}
                 // onClick={() => handleCheckClient()}
               >
@@ -215,8 +216,8 @@ const ClientDetails = ({ toggleTab, comId }) => {
                 </button> */}
                 <button
                   type="button"
-                  className="btn btn-primary btn-label waves-effect waves-light w-xs px-2"
-                  style={{ marginLeft: "10px" }}
+                  className="btn  btn-label waves-effect waves-light w-xs px-2"
+                  style={{ marginLeft: "10px", backgroundColor: "#ec5c24" }}
                   onClick={() => handleSubmit()}
                 >
                   <i className="bx bx-save align-middle fs-14 me-2 pt-1"></i>

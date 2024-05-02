@@ -136,8 +136,12 @@ const EditCompanyInfo = () => {
                   <div className="avatar-group-item">
                     <div className="avatar-sm">
                       <div
-                        className="avatar-title rounded-circle bg-light text-primary"
-                        style={{ fontSize: "24px", fontWeight: "600" }}
+                        className="avatar-title rounded-circle bg-light"
+                        style={{
+                          fontSize: "24px",
+                          fontWeight: "600",
+                          color: "#b83016",
+                        }}
                       >
                         D
                       </div>
@@ -244,7 +248,18 @@ const EditCompanyInfo = () => {
                         />
 
                         <button
-                          className="btn btn-primary"
+                          className="btn"
+                          style={{
+                            backgroundColor: "#ec5c24",
+                            color: "whitesmoke",
+                            transition: "background-color 0.3s ease",
+                          }}
+                          onMouseEnter={(e) =>
+                            (e.target.style.backgroundColor = "#dd4319")
+                          }
+                          onMouseLeave={(e) =>
+                            (e.target.style.backgroundColor = "#ec5c24")
+                          }
                           type="submit"
                           id="button-addon1"
                         >
@@ -277,8 +292,12 @@ const EditCompanyInfo = () => {
 
                 <button
                   type="button"
-                  className="btn btn-primary btn-label waves-effect waves-light "
-                  style={{ marginLeft: "16px", paddingLeft: "14px" }}
+                  className="btn  btn-label waves-effect waves-light"
+                  style={{
+                    marginLeft: "16px",
+                    paddingLeft: "14px",
+                    backgroundColor: "#ec5c24",
+                  }}
                   onClick={handleLogoClick}
                 >
                   <i className="bx bx-upload fs-16 me-2"></i>
@@ -610,8 +629,8 @@ const EditCompanyInfo = () => {
               <div className="d-flex justify-content-end gap-2 ">
                 <button
                   type="button"
-                  className="btn btn-primary btn-label waves-effect waves-light w-xs px-2"
-                  style={{ marginLeft: "10px" }}
+                  className="btn  btn-label waves-effect waves-light w-xs px-2"
+                  style={{ marginLeft: "10px", backgroundColor: "#ec5c24" }}
                 >
                   <i className="bx bx-save fs-16 me-2 pt-1"></i>
                   Save
@@ -634,8 +653,9 @@ const EditCompanyInfo = () => {
                   <div className="d-flex justify-content-end gap-2 ">
                     <button
                       type="button"
-                      className="btn btn-primary btn-label waves-effect waves-light w-xs px-2"
+                      className="btn  btn-label waves-effect waves-light w-xs px-2"
                       onClick={handleAddGst}
+                      style={{ backgroundColor: "#ec5c24" }}
                     >
                       <i className="bx bx-plus fs-16 me-2  "></i>
                       Add GST
@@ -644,8 +664,8 @@ const EditCompanyInfo = () => {
                   <div className="d-flex justify-content-end gap-2 ">
                     <button
                       type="button"
-                      className="btn btn-primary btn-label waves-effect waves-light w-xs px-2"
-                      style={{ marginLeft: "10px" }}
+                      className="btn  btn-label waves-effect waves-light w-xs px-2"
+                      style={{ marginLeft: "10px", backgroundColor: "#ec5c24" }}
                       onClick={handleAddClient}
                     >
                       <i className="bx bx-plus fs-16 me-2 "></i>

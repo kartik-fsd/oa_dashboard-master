@@ -189,7 +189,8 @@ const ItemDetails = (props) => {
                       <div
                         // href="apps-ecommerce-add-product"
                         id="TooltipTop"
-                        className="btn btn-soft-primary"
+                        className="btn btn-soft"
+                        style={{ backgroundColor: "#f07d47" }}
                         onClick={() => setOpen(true)}
                       >
                         <i className="ri-live-fill align-bottom"></i>

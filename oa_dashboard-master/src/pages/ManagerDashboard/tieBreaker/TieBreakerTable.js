@@ -26,7 +26,10 @@ const TieBreakerTable = () => {
                 />
               ) : (
                 <div className="avatar-sm">
-                  <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                  <div
+                    className="avatar-title rounded-circle bg-soft"
+                    style={{ color: "#b83016", backgroundColor: "#f07d47" }}
+                  >
                     {d?.brand_name?.charAt(0) ?? ""}
                   </div>
                 </div>
@@ -41,7 +44,12 @@ const TieBreakerTable = () => {
               >
                 <div className="fs-10 text-muted">
                   03-May-2023
-                  <span className="badge badge-soft-primary">1234</span>
+                  <span
+                    className="badge badge-soft"
+                    style={{ backgroundColor: "#f07d47" }}
+                  >
+                    1234
+                  </span>
                 </div>
               </div>
             </div>

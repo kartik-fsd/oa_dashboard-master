@@ -99,11 +99,12 @@ const DashboardSupplyTable = ({
         </div>
 
         <span
-          className="badge badge-soft-primary "
+          className="badge badge-soft"
           style={{
             fontSize: "18px",
             justifySelf: "start",
             alignSelf: "star",
+            backgroundColor: "#f07d47",
           }}
         >
           ₹ {overall}
@@ -262,11 +263,12 @@ const DashboardSupplyTable = ({
             <div className="text-muted fs-10 fw-normal">{it.sow_id}</div>
 
             <span
-              className="badge badge-soft-primary "
+              className="badge badge-soft"
               style={{
                 fontSize: "8px",
                 justifySelf: "start",
                 alignSelf: "star",
+                backgroundColor: "#f07d47",
               }}
             >
               {console.log(it, "itdata")}

@@ -143,144 +143,146 @@ const ImageDesc = () => {
   };
   return (
     <div>
-        <Card className="mt-4 p-3">
-          <div style={{ padding: "12px" }}>
-            <CardTitle
-              tag="h5"
-              style={{
-                display: "flex",
-                justifyContent: "flex-start",
-                marginBottom: "0px",
-              }}
-            >
-              Title
-            </CardTitle>
-            <Row>
-              {sowqc?.map((sowqc) => {
-                let str1 = sowqc.split("_");
-                let str = str1.splice(0, str1.length - 1).join(" ");
-                str = str
-                  .toLowerCase()
-                  .split(" ")
-                  .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-                  .join(" ");
-                return (
-                  <Col
-                    sm="3"
-                    style={{ padding: "12px 12px 0px 12px" }}
-                    key={sowqc.id}
-                  >
-                    <div
-                      className="img_title"
-                      onClick={() => {
-                        handleScriptModalClose();
-                        setIntrtext(str);
-                        setImgkey(sowqc);
-                      }}
-                    >
-                      <p
-                        style={{
-                          margin: "0px",
-                          padding: "8px ",
-                          textAlign: "center",
-                          color: "#000",
-                          fontWeight: "500",
-                          fontSize: "14px",
-                        }}
-                      >
-                        {str}
-                      </p>
-                    </div>
-                  </Col>
-                );
-              })}
-            </Row>
-          </div>
-        </Card>
-        <h5
-          style={{
-            display: "flex",
-            justifyContent: "flex-start",
-            marginTop: "24px",
-          }}
-        >
-          Completed
-        </h5>
-
-        {getsowqc.map((getsowqc) => {
-          let str2 = getsowqc.image_key.split("_");
-          let imgkey = str2.splice(0, str2.length - 1).join(" ");
-          imgkey = imgkey
-            .toLowerCase()
-            .split(" ")
-            .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-            .join(" ");
-          return (
-            <>
-              <Card style={{ marginBottom: "8px" }}>
-                <div
-                  style={{
-                    padding: "18px",
-                  }}
+      <Card className="mt-4 p-3">
+        <div style={{ padding: "12px" }}>
+          <CardTitle
+            tag="h5"
+            style={{
+              display: "flex",
+              justifyContent: "flex-start",
+              marginBottom: "0px",
+            }}
+          >
+            Title
+          </CardTitle>
+          <Row>
+            {sowqc?.map((sowqc) => {
+              let str1 = sowqc.split("_");
+              let str = str1.splice(0, str1.length - 1).join(" ");
+              str = str
+                .toLowerCase()
+                .split(" ")
+                .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+                .join(" ");
+              return (
+                <Col
+                  sm="3"
+                  style={{ padding: "12px 12px 0px 12px" }}
+                  key={sowqc.id}
                 >
                   <div
+                    className="img_title"
                     onClick={() => {
-                      setSowscript(getsowqc.script);
-                      setId(getsowqc.id);
+                      handleScriptModalClose();
+                      setIntrtext(str);
+                      setImgkey(sowqc);
                     }}
-                    style={{ marginBottom: "24px" }}
                   >
-                    <div
+                    <p
                       style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "flex-start",
-                        marginBottom: "8px",
+                        margin: "0px",
+                        padding: "8px ",
+                        textAlign: "center",
+                        color: "#000",
+                        fontWeight: "500",
+                        fontSize: "14px",
                       }}
                     >
-                      <h6
-                        style={{
-                          margin: "0px",
-                          fontWeight: "550",
-                          textDecoration: "underline",
+                      {str}
+                    </p>
+                  </div>
+                </Col>
+              );
+            })}
+          </Row>
+        </div>
+      </Card>
+      <h5
+        style={{
+          display: "flex",
+          justifyContent: "flex-start",
+          marginTop: "24px",
+        }}
+      >
+        Completed
+      </h5>
+
+      {getsowqc.map((getsowqc) => {
+        let str2 = getsowqc.image_key.split("_");
+        let imgkey = str2.splice(0, str2.length - 1).join(" ");
+        imgkey = imgkey
+          .toLowerCase()
+          .split(" ")
+          .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+          .join(" ");
+        return (
+          <>
+            <Card style={{ marginBottom: "8px" }}>
+              <div
+                style={{
+                  padding: "18px",
+                }}
+              >
+                <div
+                  onClick={() => {
+                    setSowscript(getsowqc.script);
+                    setId(getsowqc.id);
+                  }}
+                  style={{ marginBottom: "24px" }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "flex-start",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    <h6
+                      style={{
+                        margin: "0px",
+                        fontWeight: "550",
+                        textDecoration: "underline",
+                      }}
+                    >
+                      {imgkey}
+                    </h6>
+                    <div className="d-flex gap-2">
+                      <button
+                        className="btn"
+                        style={{ backgroundColor: "#ec5c24" }}
+                        onClick={() => {
+                          setEditModal(!editModal);
                         }}
                       >
-                        {imgkey}
-                      </h6>
-                      <div className="d-flex gap-2">
-                        <button
-                          className="btn btn-primary  "
-                          onClick={() => {
-                            setEditModal(!editModal);
-                          }}
-                        >
-                          Edit
-                        </button>
-                        <button
-                          className="btn btn-primary  "
-                          onClick={() => {
-                            handleDelete(getsowqc.id);
-                          }}
-                        >
-                          Delete
-                        </button>
-                      </div>
-                    </div>
-                    <div
-                      style={{
-                        marginTop: "21px",
-                        display: "block",
-                        textAlign: "start",
-                      }}
-                    >
-                      <Interweave content={getsowqc.script} />
+                        Edit
+                      </button>
+                      <button
+                        className="btn"
+                        style={{ backgroundColor: "#ec5c24" }}
+                        onClick={() => {
+                          handleDelete(getsowqc.id);
+                        }}
+                      >
+                        Delete
+                      </button>
                     </div>
                   </div>
+                  <div
+                    style={{
+                      marginTop: "21px",
+                      display: "block",
+                      textAlign: "start",
+                    }}
+                  >
+                    <Interweave content={getsowqc.script} />
+                  </div>
                 </div>
-              </Card>
-            </>
-          );
-        })}
+              </div>
+            </Card>
+          </>
+        );
+      })}
       <ScriptModal
         openScriptModal={openScriptModal}
         handleScriptModalClose={handleScriptModalClose}

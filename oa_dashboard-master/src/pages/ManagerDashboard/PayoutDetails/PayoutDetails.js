@@ -302,7 +302,9 @@ const PayoutDetails = ({ type }) => {
       name: "Taskers",
       selector: (d) => d.users,
       cell: (d) => (
-        <div className="amt_table fs-14 fw-light text-primary">{d.users}</div>
+        <div className="amt_table fs-14 fw-light " style={{ color: "#b83016" }}>
+          {d.users}
+        </div>
       ),
       sortable: true,
       center: true,
@@ -360,7 +362,11 @@ const PayoutDetails = ({ type }) => {
     {
       name: "CPL",
       selector: (d) => d.cpl,
-      cell: (d) => <div className="amt_table fs-14 text-primary">{d.cpl}</div>,
+      cell: (d) => (
+        <div className="amt_table fs-14 " style={{ color: "#b83016" }}>
+          {d.cpl}
+        </div>
+      ),
       sortable: true,
       center: true,
     },
@@ -368,7 +374,7 @@ const PayoutDetails = ({ type }) => {
       name: "Total",
       selector: (d) => d.cpl,
       cell: (d) => (
-        <div className="amt_table fs-14 fw-bold text-primary">
+        <div className="amt_table fs-14 fw-bold " style={{ color: "#b83016" }}>
           ₹ {d.cpl * d.leads}
         </div>
       ),
@@ -467,12 +473,32 @@ const PayoutDetails = ({ type }) => {
     //   cell: (d) => (
     //     <div className="amt_table">
     //       {d.stats_ops == "rejected" ? (
-    //         <button className="btn btn-primary" disabled>
+    //         <button className="btn" style={{
+    //   backgroundColor: "#ec5c24",
+    //   color: "whitesmoke",
+    //   transition: "background-color 0.3s ease",
+    // }}
+    // onMouseEnter={(e) =>
+    //   (e.target.style.backgroundColor = "#dd4319")
+    // }
+    // onMouseLeave={(e) =>
+    //   (e.target.style.backgroundColor = "#ec5c24")
+    // } disabled>
     //           Download
     //         </button>
     //       ) : (
     //         <button
-    //           className="btn btn-primary"
+    //           className="btn" style={{
+    //   backgroundColor: "#ec5c24",
+    //   color: "whitesmoke",
+    //   transition: "background-color 0.3s ease",
+    // }}
+    // onMouseEnter={(e) =>
+    //   (e.target.style.backgroundColor = "#dd4319")
+    // }
+    // onMouseLeave={(e) =>
+    //   (e.target.style.backgroundColor = "#ec5c24")
+    // }
     //           onClick={() => handleDownload(d)}
     //         >
     //           Download
@@ -613,8 +639,9 @@ const PayoutDetails = ({ type }) => {
                 float: "right",
                 marginTop: "-5px",
                 marginRight: "220px",
+                backgroundColor: "#ec5c24",
               }}
-              className="btn btn-primary "
+              className="btn"
               onClick={() => {
                 set_modal_edit(true);
                 setGenerateData({});
@@ -821,15 +848,24 @@ const PayoutDetails = ({ type }) => {
                         Generate{" "}
                       </button> */}
                   <button
+                    onClick={generateFunction}
+                    disabled={count == -1}
+                    className="btn"
                     style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
                       float: "right",
                       marginTop: "25px",
                       marginLeft: "10px",
                       height: "38px",
                     }}
-                    onClick={generateFunction}
-                    disabled={count == -1}
-                    className="btn btn-primary"
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
                   >
                     <span className="d-flex align-items-center">
                       {genLoading ? (
@@ -855,8 +891,9 @@ const PayoutDetails = ({ type }) => {
                       float: "right",
                       marginTop: "25px",
                       height: "38px",
+                      backgroundColor: "#ec5c24",
                     }}
-                    className="btn btn-primary "
+                    className="btn"
                     onClick={() => {
                       setDate1(null);
                       setDate2(null);
@@ -1030,8 +1067,13 @@ const PayoutDetails = ({ type }) => {
             </Row>
 
             <button
-              style={{ float: "right", marginTop: "10px", width: "100px" }}
-              className="btn btn-primary d-flex gap-2 justify-content-center"
+              style={{
+                float: "right",
+                marginTop: "10px",
+                width: "100px",
+                backgroundColor: "#ec5c24",
+              }}
+              className="btn d-flex gap-2 justify-content-center"
               onClick={() => handleAdd()}
               disabled={remark == ""}
             >

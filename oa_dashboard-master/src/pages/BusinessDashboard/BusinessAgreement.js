@@ -18,7 +18,9 @@ const BusinessAgreement = () => {
                     alignItems: "center",
                   }}
                 >
-                  <h5 className="card-title mb-0">Agreement</h5>
+                  <h5 className="card-title mb-0" style={{ color: "#b83016" }}>
+                    Agreement
+                  </h5>
                   <div>
                     <div style={{ height: "40px", marginRight: "230px" }}></div>
                   </div>

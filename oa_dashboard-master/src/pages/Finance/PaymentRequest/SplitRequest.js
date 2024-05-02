@@ -206,7 +206,13 @@ const SplitRequest = () => {
                               />
                             ) : (
                               <div className="avatar-sm">
-                                <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                                <div
+                                  className="avatar-title rounded-circle bg-soft  "
+                                  style={{
+                                    color: "#b83016",
+                                    backgroundColor: "#f07d47",
+                                  }}
+                                >
                                   {data?.brand_name?.charAt(0) ?? ""}
                                 </div>
                               </div>
@@ -248,7 +254,13 @@ const SplitRequest = () => {
                             />
                           ) : (
                             <div className="avatar-sm">
-                              <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                              <div
+                                className="avatar-title rounded-circle bg-soft"
+                                style={{
+                                  color: "#b83016",
+                                  backgroundColor: "#f07d47",
+                                }}
+                              >
                                 {data?.req_name?.charAt(0) ?? ""}
                               </div>
                             </div>
@@ -270,7 +282,7 @@ const SplitRequest = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="amt_table text-primary">
+                      <div className="amt_table " style={{ color: "#b83016" }}>
                         {data.user_type == "direct_sp" ? (
                           <span
                             className="badge rounded-pill badge-soft-success"
@@ -321,8 +333,12 @@ const SplitRequest = () => {
                   {leadsData?.datedata?.map((item) => (
                     <div key={item.slno}>
                       <div
-                        className="badge text-bg-primary"
-                        style={{ fontSize: "20px" }}
+                        className="badge"
+                        style={{
+                          fontSize: "20px",
+                          backgroundColor: "#ec5c24",
+                          color: "#fff",
+                        }}
                       >
                         {item?.date} : {item?.leads}
                       </div>
@@ -391,21 +407,21 @@ const SplitRequest = () => {
                         ""
                       ) : (
                         <Button
-                          className="bg-primary"
                           onClick={() => {
                             window.location.reload();
                           }}
+                          style={{ backgroundColor: "#ec5c24" }}
                         >
                           clear Dates
                         </Button>
                       )}
                       {isLoaderSubmit ? (
                         <Button
-                          className="bg-primary"
                           style={{
                             fontSize: "5px",
                             height: "37px",
                             width: "101px",
+                            backgroundColor: "#ec5c24",
                           }}
                         >
                           <div
@@ -417,7 +433,10 @@ const SplitRequest = () => {
                           </div>
                         </Button>
                       ) : (
-                        <Button className="bg-primary" onClick={submitDates}>
+                        <Button
+                          style={{ backgroundColor: "#ec5c24" }}
+                          onClick={submitDates}
+                        >
                           Submit Dates
                         </Button>
                       )}

@@ -32,8 +32,12 @@ const DailyTracking = () => {
                 }}
               >
                 <h5
-                  className="text-primary fw-600 fs-16"
-                  style={{ letterSpacing: "2px", marginLeft: "15px" }}
+                  className=" fw-600 fs-16"
+                  style={{
+                    letterSpacing: "2px",
+                    marginLeft: "15px",
+                    color: "#b83016",
+                  }}
                 >
                   Annual Pipeline
                 </h5>

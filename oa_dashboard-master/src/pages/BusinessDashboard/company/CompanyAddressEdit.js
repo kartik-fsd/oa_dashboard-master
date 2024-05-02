@@ -185,8 +185,8 @@ const CompanyAddressEdit = ({ open, setOpen, data, check, setCheck }) => {
               <button
                 type="button"
                 disabled={Object.values(dataEdit).includes("") ? true : false}
-                className="btn btn-primary btn-label waves-effect waves-light w-xs px-2"
-                style={{ marginLeft: "10px" }}
+                className="btn  btn-label waves-effect waves-light w-xs px-2"
+                style={{ marginLeft: "10px", backgroundColor: "#ec5c24" }}
                 onClick={() => handleSubmit()}
               >
                 {/* <i className="bx bx-save align-middle me-1  fs-14 "></i> */}

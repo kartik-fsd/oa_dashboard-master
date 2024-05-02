@@ -31,7 +31,7 @@ import { useFormik } from "formik";
 // actions
 import { loginUser, socialLogin, resetLoginFlag } from "../../store/actions";
 
-import logoLight from "../../assets/images/logo-light.png";
+import logoLight from "../../assets/images/onxAwignDark.svg";
 import { title } from "../../common/pathName";
 import ParticlesAuth from "../AuthenticationInner/ParticlesAuth";
 import axios from "axios";
@@ -187,14 +187,14 @@ const Login = (props) => {
                   <div>
                     <Link to="/" className="d-inline-block auth-logo">
                       <img
-                        src="/taskmologo.png"
-                        alt=""
+                        src={logoLight}
+                        alt="OnX-Awign"
                         height={80}
                         width={250}
                       />
                     </Link>
                   </div>
-                  <p className="mt-3 fs-15 fw-medium">
+                  <p className="mt-3 fs-15 fw-medium text-light">
                     Login to access dashboard
                   </p>
                 </div>
@@ -224,7 +224,7 @@ const Login = (props) => {
                     <div className="text-center mt-2">
                       <h5 className="text-primary">Welcome Back !</h5>
                       <p className="text-muted">
-                        Sign in to continue with Taskmo.
+                        Sign in to continue with OnX.
                       </p>
                     </div>
                     {error && error ? (
@@ -333,9 +333,20 @@ const Login = (props) => {
 
                         <div className="mt-4">
                           <Button
-                            color="success"
-                            className="btn btn-success w-100"
+                            // color="success"
+                            className="btn w-100"
+                            style={{
+                              backgroundColor: "#dd4319",
+                              color: "#ffffff",
+                              border: "none",
+                            }}
                             type="submit"
+                            onMouseEnter={(e) =>
+                              (e.target.style.backgroundColor = "#dd4319")
+                            }
+                            onMouseLeave={(e) =>
+                              (e.target.style.backgroundColor = "#ec5c24")
+                            }
                           >
                             Sign In With OTP
                           </Button>

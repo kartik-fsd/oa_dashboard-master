@@ -202,7 +202,8 @@ const AddCluster = ({ open, setOpen, setCheck, check }) => {
             <Col xs={"12"} className="d-flex justify-content-end">
               <button
                 type="button"
-                className="btn btn-primary waves-effect waves-light"
+                className="btn waves-effect waves-light"
+                style={{ backgroundColor: "#ec5c24" }}
                 onClick={handleAddCluster}
               >
                 Add
@@ -309,7 +310,8 @@ const CityModal = ({ cityMod, setCityMod, clustId, setCheck, check }) => {
             <Col xs={"12"} className="d-flex justify-content-end">
               <button
                 type="button"
-                className="btn btn-primary waves-effect waves-light"
+                className="btn waves-effect waves-light"
+                style={{ backgroundColor: "#ec5c24" }}
                 disabled={city.length < 1 ? true : false}
                 onClick={handleAddCity}
               >
@@ -449,7 +451,8 @@ const AddManager = ({
               {manager == null ? (
                 <button
                   type="button"
-                  className="btn btn-primary waves-effect waves-light"
+                  className="btn waves-effect waves-light"
+                  style={{ backgroundColor: "#ec5c24" }}
                   onClick={handleManager}
                 >
                   Add
@@ -458,14 +461,16 @@ const AddManager = ({
                 <div>
                   <button
                     type="button"
-                    className="btn btn-primary waves-effect waves-light me-2"
+                    className="btn waves-effect waves-light me-2"
+                    style={{ backgroundColor: "#ec5c24" }}
                     onClick={handleRemoveManager}
                   >
                     Yes
                   </button>
                   <button
                     type="button"
-                    className="btn btn-primary waves-effect waves-light"
+                    className="btn waves-effect waves-light"
+                    style={{ backgroundColor: "#ec5c24" }}
                     onClick={() => setAddMod(false)}
                   >
                     No
@@ -662,7 +667,8 @@ const EditModal = ({ openEdit, setOpenEdit, userData, setCheck, check }) => {
             <Col xs={"12"} className="d-flex justify-content-end">
               <button
                 type="button"
-                className="btn btn-primary waves-effect waves-light"
+                className="btn waves-effect waves-light"
+                style={{ backgroundColor: "#ec5c24" }}
                 disabled={name == "" && resurl == "" ? true : false}
                 onClick={handleUpdate}
               >

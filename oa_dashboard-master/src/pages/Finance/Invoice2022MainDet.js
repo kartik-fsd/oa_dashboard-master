@@ -109,7 +109,13 @@ const Invoice2022MainDet = () => {
           title={
             <div className="d-flex gap-2">
               <span>Invoice</span>
-              <span className="badge rounded-pill text-bg-primary">
+              <span
+                className="badge rounded-pill"
+                style={{
+                  backgroundColor: "#ec5c24",
+                  color: "#ffffff",
+                }}
+              >
                 {state.data.invoice_id}
               </span>
             </div>

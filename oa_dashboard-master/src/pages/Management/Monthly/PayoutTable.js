@@ -240,8 +240,8 @@ const PayoutTable = ({ table, setPayoutTotal, setLeads }) => {
         <div>
           {/* <div className="loanid">{d.sow_id}</div> */}
           <span
-            className="badge rounded-pill badge-soft-primary"
-            style={{ minWidth: "30px" }}
+            className="badge rounded-pill badge-soft"
+            style={{ minWidth: "30px", backgroundColor: "#f07d47" }}
           >
             {d.sow_id}
           </span>
@@ -259,8 +259,8 @@ const PayoutTable = ({ table, setPayoutTotal, setLeads }) => {
           {/* {d.display_date} */}
 
           <span
-            className="badge rounded-pill badge-soft-primary"
-            style={{ minWidth: "30px" }}
+            className="badge rounded-pill badge-soft"
+            style={{ minWidth: "30px", backgroundColor: "#f07d47" }}
           >
             {d.display_date}
           </span>

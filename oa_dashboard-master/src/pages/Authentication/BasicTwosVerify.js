@@ -5,7 +5,7 @@ import ParticlesAuth from "../AuthenticationInner/ParticlesAuth";
 import OtpInput from "react-otp-input";
 //import images
 // import logoLight from "../../../assets/images/logo-light.png";
-import logoLight from "../../assets/images/logo-light.png";
+import logoLight from "../../assets/images/onxAwignDark.svg";
 import axios from "axios";
 import { verifyOtp } from "../../assets/utils/login";
 import { use } from "i18next";
@@ -72,12 +72,7 @@ const BasicTwosVerify = () => {
                   <div className="text-center mt-sm-5 mb-4 text-white-50">
                     <div>
                       <Link to="/login" className="d-inline-block auth-logo">
-                        <img
-                          src="/taskmologo.png"
-                          alt=""
-                          height={80}
-                          width={250}
-                        />
+                        <img src={logoLight} alt="" height={80} width={250} />
                       </Link>
                     </div>
                     <p className="mt-3 fs-15 fw-medium">Login to access</p>
@@ -91,7 +86,10 @@ const BasicTwosVerify = () => {
                     <CardBody className="p-4">
                       <div className="mb-4">
                         <div className="avatar-lg mx-auto">
-                          <div className="avatar-title bg-light text-primary display-5 rounded-circle">
+                          <div
+                            className="avatar-title bg-light  display-5 rounded-circle"
+                            style={{ color: "#b83016" }}
+                          >
                             <i className="ri-mail-line"></i>
                           </div>
                         </div>
@@ -217,8 +215,20 @@ const BasicTwosVerify = () => {
 
                             <div>
                               <Button
-                                color="success"
-                                className="w-100"
+                                // color="success"
+                                className="btn w-100"
+                                style={{
+                                  backgroundColor: "#dd4319",
+                                  color: "#ffffff",
+                                  border: "none",
+                                }}
+                                type="submit"
+                                onMouseEnter={(e) =>
+                                  (e.target.style.backgroundColor = "#dd4319")
+                                }
+                                onMouseLeave={(e) =>
+                                  (e.target.style.backgroundColor = "#ec5c24")
+                                }
                                 onClick={callenterOTP}
                               >
                                 Confirm
@@ -229,8 +239,20 @@ const BasicTwosVerify = () => {
                         {!incorrect && (
                           <div className="mt-3">
                             <Button
-                              color="success"
-                              className="w-100"
+                              // color="success"
+                              className="btn w-100"
+                              style={{
+                                backgroundColor: "#dd4319",
+                                color: "#ffffff",
+                                border: "none",
+                              }}
+                              type="submit"
+                              onMouseEnter={(e) =>
+                                (e.target.style.backgroundColor = "#dd4319")
+                              }
+                              onMouseLeave={(e) =>
+                                (e.target.style.backgroundColor = "#ec5c24")
+                              }
                               onClick={callenterOTP}
                             >
                               Confirm
@@ -245,7 +267,8 @@ const BasicTwosVerify = () => {
                       Didn't receive a code ?{" "}
                       <Link
                         to="/auth-pass-reset-basic"
-                        className="fw-semibold text-primary text-decoration-underline"
+                        className="fw-semibold text-decoration-underline"
+                        style={{ color: "#b83016" }}
                       >
                         Resend
                       </Link>{" "}

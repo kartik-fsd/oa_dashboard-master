@@ -239,7 +239,10 @@ const MaturningMain = ({ data, setCheck, check }) => {
         />
         <span className="text-dark fw-semibold text-capitalize mx-2">
           {item.full_name}
-          <span className="badge badge-soft-primary ms-1 me-1">
+          <span
+            className="badge badge-soft- ms-1 me-1"
+            style={{ backgroundColor: "#f07d47" }}
+          >
             {item.team_name}
           </span>
           -<span className="text-muted ms-1">{item.role_designation}</span>
@@ -255,7 +258,10 @@ const MaturningMain = ({ data, setCheck, check }) => {
       <div style={{ display: "flex", gap: "15px" }}>
         <div style={{ width: "100px" }}>
           {" "}
-          <span className="badge text-bg-primary" style={{ width: "80px" }}>
+          <span
+            className="badge"
+            style={{ width: "80px", backgroundColor: "#ec5c24", color: "#fff" }}
+          >
             {item.agreement_unique_id}
           </span>
         </div>
@@ -520,7 +526,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
               !data?.project_intro_status ? (
                 <Row className="mb-4">
                   <Col xs="12" className="mb-2">
-                    <h5 className="text-primary mb-3 mt-4">
+                    <h5 className=" mb-3 mt-4" style={{ color: "#b83016" }}>
                       Project Initiation{" "}
                     </h5>
                   </Col>
@@ -559,7 +565,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
               data?.lead_approval_status != "approved" ? (
                 <Row className="mb-4">
                   <Col xs="12" className="mb-2">
-                    <h5 className="text-primary mb-3 mt-4">
+                    <h5 className=" mb-3 mt-4" style={{ color: "#b83016" }}>
                       Project Initiation{" "}
                     </h5>
                   </Col>
@@ -567,8 +573,19 @@ const MaturningMain = ({ data, setCheck, check }) => {
                     <Row>
                       <div className="d-flex justify-content-center">
                         <button
-                          className="btn btn-primary"
-                          style={{ marginBottom: "20px" }}
+                          className="btn"
+                          style={{
+                            backgroundColor: "#ec5c24",
+                            color: "whitesmoke",
+                            transition: "background-color 0.3s ease",
+                            marginBottom: "20px",
+                          }}
+                          onMouseEnter={(e) =>
+                            (e.target.style.backgroundColor = "#dd4319")
+                          }
+                          onMouseLeave={(e) =>
+                            (e.target.style.backgroundColor = "#ec5c24")
+                          }
                           onClick={handleProjectConfirm}
                         >
                           Project Approval
@@ -583,7 +600,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
                 data?.lead_approval_status != "approved" ? (
                 <Row className="mb-4">
                   <Col xs="12" className="mb-2">
-                    <h5 className="text-primary mb-3 mt-4">
+                    <h5 className=" mb-3 mt-4" style={{ color: "#b83016" }}>
                       Project Initiation{" "}
                     </h5>
                   </Col>
@@ -599,10 +616,12 @@ const MaturningMain = ({ data, setCheck, check }) => {
 
               {/* Agreement Start */}
 
-              {/* <h5 className="text-primary ">Maturing</h5>
+              {/* <h5 className=" " style={{ color: "#b83016"}}>Maturing</h5>
       <hr className="mb-4" /> */}
               <Col xs="12" className="mb-2">
-                <h5 className="text-primary mb-3 mt-4">Agreement Details </h5>
+                <h5 className=" mb-3 mt-4" style={{ color: "#b83016" }}>
+                  Agreement Details{" "}
+                </h5>
               </Col>
               {!data?.project_intro_status ? (
                 <Row className="mb-4">
@@ -620,7 +639,18 @@ const MaturningMain = ({ data, setCheck, check }) => {
                     <button
                       disabled={!agreeMentDropDown}
                       onClick={handleClickUpdate}
-                      className="btn btn-primary"
+                      className="btn"
+                      style={{
+                        backgroundColor: "#ec5c24",
+                        color: "whitesmoke",
+                        transition: "background-color 0.3s ease",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.target.style.backgroundColor = "#dd4319")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.target.style.backgroundColor = "#ec5c24")
+                      }
                     >
                       UPDATE
                     </button>
@@ -670,7 +700,13 @@ const MaturningMain = ({ data, setCheck, check }) => {
                             <div style={{ width: "28%" }}>
                               <div>{data?.agreement_title}</div>
                               <div>
-                                <span className="badge text-bg-primary">
+                                <span
+                                  className="badge "
+                                  style={{
+                                    backgroundColor: "#ec5c24",
+                                    color: "#fff",
+                                  }}
+                                >
                                   {data?.agreement_unique_id}
                                 </span>
                               </div>
@@ -755,7 +791,9 @@ const MaturningMain = ({ data, setCheck, check }) => {
                 !data?.po_id ? (
                   <>
                     <Row>
-                      <h5 className="text-primary mb-3 mt-2">Purchase Order</h5>
+                      <h5 className=" mb-3 mt-2" style={{ color: "#b83016" }}>
+                        Purchase Order
+                      </h5>
                     </Row>
                     <Row className="mb-2">
                       <Col xs="12">
@@ -895,8 +933,19 @@ const MaturningMain = ({ data, setCheck, check }) => {
                               }}
                             >
                               <button
-                                className="btn btn-primary"
-                                style={{ marginBottom: "20px" }}
+                                className="btn"
+                                style={{
+                                  backgroundColor: "#ec5c24",
+                                  color: "whitesmoke",
+                                  transition: "background-color 0.3s ease",
+                                  marginBottom: "20px",
+                                }}
+                                onMouseEnter={(e) =>
+                                  (e.target.style.backgroundColor = "#dd4319")
+                                }
+                                onMouseLeave={(e) =>
+                                  (e.target.style.backgroundColor = "#ec5c24")
+                                }
                                 onClick={handleCreatePo}
                               >
                                 Add PO
@@ -913,7 +962,10 @@ const MaturningMain = ({ data, setCheck, check }) => {
                     <Row className="mb-4">
                       <Col xs="12" className="mb-2 fs-18 d-flex">
                         <Col xs="6">
-                          <h5 className="text-primary mb-3 mt-2">
+                          <h5
+                            className=" mb-3 mt-2"
+                            style={{ color: "#b83016" }}
+                          >
                             Purchase Order
                           </h5>
                         </Col>
@@ -926,7 +978,8 @@ const MaturningMain = ({ data, setCheck, check }) => {
                               }}
                             >
                               <i
-                                className=" ri-edit-box-line fs-20 text-primary cursor-pointer"
+                                className=" ri-edit-box-line fs-20  cursor-pointer"
+                                style={{ color: "#b83016" }}
                                 // onClick={() => setOpen(!open)}
                                 onClick={() => {
                                   // successnotify("Edit Enabled");
@@ -966,7 +1019,13 @@ const MaturningMain = ({ data, setCheck, check }) => {
                                 <div style={{ width: "28%" }}>
                                   <div>{data?.po_title}</div>
                                   <div>
-                                    <span className="badge text-bg-primary">
+                                    <span
+                                      className="badge "
+                                      style={{
+                                        backgroundColor: "#ec5c24",
+                                        color: "#fff",
+                                      }}
+                                    >
                                       {data?.po_unique_id}
                                     </span>
                                   </div>
@@ -1016,7 +1075,10 @@ const MaturningMain = ({ data, setCheck, check }) => {
                 <>
                   <Col xs="12" className="mb-2 fs-18 d-flex">
                     <Col xs="6">
-                      <h5 className="text-primary mb-3 mt-2">
+                      <h5
+                        className=" mb-3 mt-2"
+                        style={{ color: "#b83016", marginBottom: "20px" }}
+                      >
                         Commercial Bond
                       </h5>
                     </Col>
@@ -1029,8 +1091,18 @@ const MaturningMain = ({ data, setCheck, check }) => {
                           }}
                         >
                           <button
-                            className="btn btn-primary"
-                            style={{ marginBottom: "20px" }}
+                            className="btn"
+                            style={{
+                              backgroundColor: "#ec5c24",
+                              color: "whitesmoke",
+                              transition: "background-color 0.3s ease",
+                            }}
+                            onMouseEnter={(e) =>
+                              (e.target.style.backgroundColor = "#dd4319")
+                            }
+                            onMouseLeave={(e) =>
+                              (e.target.style.backgroundColor = "#ec5c24")
+                            }
                             onClick={handleCreateCost}
                           >
                             Add Cost
@@ -1117,7 +1189,8 @@ const MaturningMain = ({ data, setCheck, check }) => {
                                 <div style={{ width: "7%" }}>
                                   {!data?.project_intro_status ? (
                                     <i
-                                      className=" ri-edit-box-line fs-20 text-primary cursor-pointer"
+                                      className=" ri-edit-box-line fs-20  cursor-pointer"
+                                      style={{ color: "#b83016" }}
                                       // onClick={() => setOpen(!open)}
                                       onClick={() => {
                                         // successnotify("Edit Enabled");
@@ -1144,7 +1217,13 @@ const MaturningMain = ({ data, setCheck, check }) => {
                                           {cost?.cost_item_name}
                                         </div>
                                         <div>
-                                          <span className="badge text-bg-primary">
+                                          <span
+                                            className="badge "
+                                            style={{
+                                              backgroundColor: "#ec5c24",
+                                              color: "#fff",
+                                            }}
+                                          >
                                             {cost?.cost_unique_id}
                                           </span>
                                         </div>
@@ -1232,8 +1311,19 @@ const MaturningMain = ({ data, setCheck, check }) => {
                           <Row className="my-4">
                             <div className="d-flex justify-content-end">
                               <button
-                                className="btn btn-primary"
-                                style={{ marginBottom: "20px" }}
+                                className="btn"
+                                style={{
+                                  backgroundColor: "#ec5c24",
+                                  color: "whitesmoke",
+                                  transition: "background-color 0.3s ease",
+                                  marginBottom: "20px",
+                                }}
+                                onMouseEnter={(e) =>
+                                  (e.target.style.backgroundColor = "#dd4319")
+                                }
+                                onMouseLeave={(e) =>
+                                  (e.target.style.backgroundColor = "#ec5c24")
+                                }
                                 onClick={handleCommercialConfirm}
                               >
                                 Send Commercial
@@ -1271,7 +1361,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
                       }}
                     >
                       <button
-                        className="btn btn-primary waves-effect waves-light ms-4 "
+                        className="btn btn- waves-effect waves-light ms-4 "
                         style={{ width: "170px" }}
                         onClick={tog_animationFlip}
                       >
@@ -1284,7 +1374,9 @@ const MaturningMain = ({ data, setCheck, check }) => {
               ) : (
                 <Row>
                   <Col xs={12}>
-                    <h5 className="text-primary mb-3 mt-2">Project Details</h5>
+                    <h5 className=" mb-3 mt-2" style={{ color: "#b83016" }}>
+                      Project Details
+                    </h5>
                     <Card style={{ boxShadow: "none" }}>
                       <CardBody
                         style={{
@@ -1337,10 +1429,10 @@ const MaturningMain = ({ data, setCheck, check }) => {
                                 </div>
                                 <div>
                                   <span
-                                    className="badge text-bg-primary"
+                                    className="badge "
                                     style={{
-                                      backgroundColor: "#7E97DD",
-                                      color: "#FFFFFF",
+                                      backgroundColor: "#ec5c24",
+                                      color: "#fff",
                                     }}
                                   >
                                     {data?.project_unique_id}
@@ -1450,7 +1542,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
       {/* {data?.cc_status_lead == "1" ? (
         <>
           <Row className="">
-            <h5 className="text-primary mb-3 mt-4">
+            <h5 className=" mb-3 mt-4"  style={{ color: "#b83016"}}>
               Project Feasibility Discussion
             </h5>
             {data?.hot_lead_status == "0" ? (
@@ -1468,7 +1560,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
                 <Col xs="2" className="d-flex align-items-end">
                   <button
                     type="button"
-                    className="btn btn-primary waves-effect waves-light ms-4"
+                    className="btn btn- waves-effect waves-light ms-4"
                     style={{ width: "80%", marginBottom: "10px" }}
                     onClick={() => handlePfd()}
                     disabled={seletecUserIdArr?.length > 0 ? false : true}
@@ -1487,7 +1579,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
                 <div>
                   <table className="table table-nowrap mt-4">
                     <thead>
-                      <tr className="table-primary">
+                      <tr className="table">
                         <th scope="col">Name</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Date</th>
@@ -1571,7 +1663,9 @@ const MaturningMain = ({ data, setCheck, check }) => {
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div>
             {" "}
-            <h5 className="text-primary mb-4">Commercial Details</h5>
+            <h5 className=" mb-4" style={{ color: "#b83016" }}>
+              Commercial Details
+            </h5>
           </div>
           {!data?.project_intro_status ? (
             <div>
@@ -1580,7 +1674,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
                 !editComm ? (
                   <>
                     <i
-                      className=" ri-edit-box-line fs-20 text-primary cursor-pointer"
+                      className=" ri-edit-box-line fs-20  cursor-pointer"
                       // onClick={() => setOpen(!open)}
                       onClick={() => {
                         // successnotify("Edit Enabled");
@@ -1603,7 +1697,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
           <div>
             <table className="table table-nowrap">
               <thead>
-                <tr className="table-primary">
+                <tr className="table" style={{ backdropFilter: "#ec5c24" }}>
                   <th scope="col">Particulars</th>
                   <th scope="col" style={{ numberAlign: "center" }}>
                     Value (min)
@@ -1720,8 +1814,8 @@ const MaturningMain = ({ data, setCheck, check }) => {
                 <p className="m-0 text-center">Time to complete?</p>
                 <p className="text-center">(Min)</p>
                 <span
-                  className="badge badge-soft-primary d-flex align-items-center justify-content-center px-4  fs-16"
-                  style={{ height: "40px" }}
+                  className="badge badge-soft d-flex align-items-center justify-content-center px-4  fs-16"
+                  style={{ height: "40px", backgroundColor: "#f07d47" }}
                 >
                   {sum}
                 </span>
@@ -1737,8 +1831,8 @@ const MaturningMain = ({ data, setCheck, check }) => {
                 <p className="m-0 text-center">How much to quote?</p>
                 <p className="text-center invisible">(Min)</p>
                 <span
-                  className="badge badge-soft-primary d-flex align-items-center justify-content-center px-4  fs-16"
-                  style={{ height: "40px" }}
+                  className="badge badge-soft d-flex align-items-center justify-content-center px-4  fs-16"
+                  style={{ height: "40px", backgroundColor: "#f07d47" }}
                 >
                   {/* {
                     commerClac?.filter(
@@ -1770,8 +1864,8 @@ const MaturningMain = ({ data, setCheck, check }) => {
                 <p className="m-0 text-center">Which grade of taskers </p>
                 <p className="text-center ">does it require?</p>
                 <span
-                  className="badge badge-soft-primary d-flex align-items-center justify-content-center px-4  fs-16"
-                  style={{ height: "40px" }}
+                  className="badge badge-soft d-flex align-items-center justify-content-center px-4  fs-16"
+                  style={{ height: "40px", backgroundColor: "#f07d47" }}
                 >
                   {GetValueDataGrade()}
                 </span>
@@ -1789,8 +1883,8 @@ const MaturningMain = ({ data, setCheck, check }) => {
               {data?.cc_status_lead == "0" || editComm ? (
                 <button
                   type="button"
-                  className="btn btn-primary waves-effect waves-light"
-                  // style={{ marginBottom: "auto" }}
+                  className="btn  waves-effect waves-light"
+                  style={{ backgroundColor: "#ec5c24" }}
                   onClick={() => {
                     setEditComm(false);
                     handleSubmitCommercial();
@@ -1980,8 +2074,19 @@ const MaturningMain = ({ data, setCheck, check }) => {
                       style={{ display: "flex", justifyContent: "flex-end" }}
                     >
                       <button
-                        className="btn btn-primary"
-                        style={{ marginBottom: "20px" }}
+                        className="btn"
+                        style={{
+                          backgroundColor: "#ec5c24",
+                          color: "whitesmoke",
+                          transition: "background-color 0.3s ease",
+                          marginBottom: "20px",
+                        }}
+                        onMouseEnter={(e) =>
+                          (e.target.style.backgroundColor = "#dd4319")
+                        }
+                        onMouseLeave={(e) =>
+                          (e.target.style.backgroundColor = "#ec5c24")
+                        }
                         onClick={handleUpdatePo}
                       >
                         Update PO

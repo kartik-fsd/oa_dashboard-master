@@ -166,8 +166,12 @@ const Pipeline = () => {
                 }}
               >
                 <h5
-                  className="text-primary fw-600 fs-16"
-                  style={{ letterSpacing: "2px", marginLeft: "15px" }}
+                  className=" fw-600 fs-16"
+                  style={{
+                    letterSpacing: "2px",
+                    marginLeft: "15px",
+                    color: "#b83016",
+                  }}
                 >
                   {location.pathname == "/management/dailytracking"
                     ? "Daily Performance"

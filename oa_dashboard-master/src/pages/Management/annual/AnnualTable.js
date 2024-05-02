@@ -93,7 +93,7 @@ const AnnualTable = ({ data }) => {
                     {d.project_title}
                   </span>
 
-                  {/* <span className="fs-11 text-primary">0.77%</span> */}
+                  {/* <span className="fs-11 "style={{color: "#b83016"}}>0.77%</span> */}
                 </div>
               </div>
             </div>
@@ -311,7 +311,7 @@ const AnnualTable = ({ data }) => {
                               {item.project_title}
                             </span>
 
-                            {/* <span className="fs-11 text-primary">0.77%</span> */}
+                            {/* <span className="fs-11 ">0.77%</span> */}
                           </div>
                         </div>
                       </div>

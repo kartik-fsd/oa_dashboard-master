@@ -72,8 +72,12 @@ const FinanceSummary = () => {
                   }}
                 >
                   <h5
-                    className="text-primary fw-600 fs-16"
-                    style={{ letterSpacing: "2px", marginLeft: "15px" }}
+                    className="fw-600 fs-16"
+                    style={{
+                      letterSpacing: "2px",
+                      marginLeft: "15px",
+                      color: "#b83016",
+                    }}
                   >
                     Receivables Summary
                   </h5>
@@ -85,16 +89,24 @@ const FinanceSummary = () => {
                           download
                         >
                           <i
-                            className=" ri-download-2-line text-primary"
-                            style={{ fontSize: "24px", cursor: "pointer" }}
+                            className=" ri-download-2-line "
+                            style={{
+                              fontSize: "24px",
+                              cursor: "pointer",
+                              color: "#b83016",
+                            }}
                           ></i>
                         </a>
                       </div>
                     ) : (
                       <div>
                         <i
-                          className=" ri-download-2-line text-primary"
-                          style={{ fontSize: "24px", cursor: "pointer" }}
+                          className=" ri-download-2-line "
+                          style={{
+                            fontSize: "24px",
+                            cursor: "pointer",
+                            color: "#b83016",
+                          }}
                           onClick={() => setOpen(!open)}
                         ></i>
                       </div>
@@ -112,8 +124,8 @@ const FinanceSummary = () => {
                         }}
                       >
                         <span
-                          className="badge badge-soft-primary d-flex align-items-center px-4  fs-16"
-                          style={{ height: "40px" }}
+                          className="badge badge-soft d-flex align-items-center px-4  fs-16"
+                          style={{ height: "40px", backgroundColor: "#f07d47" }}
                         >
                           Total : {indianNumbers(data.total?.toFixed(2))}
                         </span>
@@ -124,7 +136,20 @@ const FinanceSummary = () => {
                             style={{ background: "#fff", border: "none" }}
                           >
                             {loc == "/finance/ar-summary" ? (
-                              <button className="btn btn-primary">
+                              <button
+                                className="btn"
+                                style={{
+                                  backgroundColor: "#ec5c24",
+                                  color: "whitesmoke",
+                                  transition: "background-color 0.3s ease",
+                                }}
+                                onMouseEnter={(e) =>
+                                  (e.target.style.backgroundColor = "#dd4319")
+                                }
+                                onMouseLeave={(e) =>
+                                  (e.target.style.backgroundColor = "#ec5c24")
+                                }
+                              >
                                 <i
                                   className=" ri-filter-3-line align-bottom me-1  fs-14"
                                   // style={{

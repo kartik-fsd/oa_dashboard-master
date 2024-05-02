@@ -187,7 +187,10 @@ const UploadDumpModal = ({ open, setOpen, d }) => {
                           //   size={24}
                           //   className="text-light"
                           // />
-                          <Spinner color="primary"> Loading... </Spinner>
+                          <Spinner style={{ backgroundColor: "#ec5c24" }}>
+                            {" "}
+                            Loading...{" "}
+                          </Spinner>
                         ) : (
                           // <FeatherIcon icon="upload-cloud" size={24} />
                           <i

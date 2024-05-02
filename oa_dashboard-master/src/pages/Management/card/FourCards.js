@@ -30,8 +30,8 @@ const FourCards = () => {
                       <span className="ms-2 fs-15">reached</span>
                     </h4>
                     <span
-                      className="badge badge-soft-primary mt-1 invisible "
-                      style={{ fontSize: "9px" }}
+                      className="badge badge-soft mt-1 invisible "
+                      style={{ fontSize: "9px", backgroundColor: "#f07d47" }}
                     >
                       <i className=" ri-arrow-down-line align-bottom me-1 "></i>
                       10% Less Than Expected
@@ -66,13 +66,18 @@ const FourCards = () => {
               <div className="mb-2">
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="d-flex gap-2 align-items-center">
-                    <i className=" ri-stop-fill text-primary fs-16 "></i>
+                    <i
+                      className=" ri-stop-fill  fs-16 "
+                      style={{ color: "#b83016" }}
+                    ></i>
 
                     <p className="m-0 fs-14" style={{ fontWeight: "500" }}>
                       Average Perf Rate
                     </p>
                   </div>
-                  <p className="m-0 fs-12 text-primary">123</p>
+                  <p className="m-0 fs-12 " style={{ color: "#b83016" }}>
+                    123
+                  </p>
                 </div>
               </div>
               <div className="mb-2">
@@ -107,8 +112,8 @@ const FourCards = () => {
                     {/* <span className="ms-2 fs-15">reached</span> */}
                   </h4>
                   <span
-                    className="badge badge-soft-primary mt-1 "
-                    style={{ fontSize: "9px" }}
+                    className="badge badge-soft mt-1 "
+                    style={{ fontSize: "9px", backgroundColor: "#f07d47" }}
                   >
                     <i className=" ri-arrow-down-line align-bottom me-1"></i>
                     10% Less Than Expected
@@ -143,13 +148,18 @@ const FourCards = () => {
               <div className="mb-2">
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="d-flex gap-2 align-items-center">
-                    <i className=" ri-stop-fill text-primary fs-16 "></i>
+                    <i
+                      className=" ri-stop-fill  fs-16 "
+                      style={{ color: "#b83016" }}
+                    ></i>
 
                     <p className="m-0 fs-14" style={{ fontWeight: "500" }}>
                       Average Revenue
                     </p>
                   </div>
-                  <p className="m-0 fs-12 text-primary">123</p>
+                  <p className="m-0 fs-12 " style={{ color: "#b83016" }}>
+                    123
+                  </p>
                 </div>
               </div>
               <div className="mb-2">
@@ -184,8 +194,8 @@ const FourCards = () => {
                     {/* <span className="ms-2 fs-15">reached</span> */}
                   </h4>
                   <span
-                    className="badge badge-soft-primary mt-1 "
-                    style={{ fontSize: "9px" }}
+                    className="badge badge-soft mt-1 "
+                    style={{ fontSize: "9px", backgroundColor: "#f07d47" }}
                   >
                     <i className=" ri-arrow-up-line align-bottom me-1"></i>
                     3% greater Than Expected
@@ -220,13 +230,15 @@ const FourCards = () => {
               <div className="mb-2">
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="d-flex gap-2 align-items-center">
-                    <i className=" ri-stop-fill text-primary fs-16 "></i>
+                    <i className=" ri-stop-fill  fs-16 "></i>
 
                     <p className="m-0 fs-14" style={{ fontWeight: "500" }}>
                       Unique Taskers
                     </p>
                   </div>
-                  <p className="m-0 fs-12 text-primary">123</p>
+                  <p className="m-0 fs-12 " style={{ color: "#b83016" }}>
+                    123
+                  </p>
                 </div>
               </div>
               <div className="mb-2">
@@ -261,8 +273,8 @@ const FourCards = () => {
                     {/* <span className="ms-2 fs-15">reached</span> */}
                   </h4>
                   <span
-                    className="badge badge-soft-primary mt-1 "
-                    style={{ fontSize: "9px" }}
+                    className="badge badge-soft mt-1 "
+                    style={{ fontSize: "9px", backgroundColor: "#f07d47" }}
                   >
                     <i className=" ri-arrow-up-line align-bottom me-1"></i>
                     3% greater Than Expected
@@ -297,13 +309,15 @@ const FourCards = () => {
               <div className="mb-2">
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="d-flex gap-2 align-items-center">
-                    <i className=" ri-stop-fill text-primary fs-16 "></i>
+                    <i className=" ri-stop-fill  fs-16 "></i>
 
                     <p className="m-0 fs-14" style={{ fontWeight: "500" }}>
                       Wave Off
                     </p>
                   </div>
-                  <p className="m-0 fs-12 text-primary">123</p>
+                  <p className="m-0 fs-12 " style={{ color: "#b83016" }}>
+                    123
+                  </p>
                 </div>
               </div>
               <div className="mb-2">

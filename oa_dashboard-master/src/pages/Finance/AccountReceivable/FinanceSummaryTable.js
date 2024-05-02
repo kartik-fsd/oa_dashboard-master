@@ -142,7 +142,10 @@ const FinanceSummaryTable = ({
                 />
               ) : (
                 <div className="avatar-sm">
-                  <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                  <div
+                    className="avatar-title rounded-circle bg-soft"
+                    style={{ color: "#b83016", backgroundColor: "f07d47" }}
+                  >
                     {d?.brand_name?.charAt(0) ?? ""}
                   </div>
                 </div>
@@ -164,7 +167,12 @@ const FinanceSummaryTable = ({
                 ) : (
                   <div className="fs-10 text-muted">
                     Billed on {d?.created_on}{" "}
-                    <span className="badge badge-soft-primary">{d?.net}</span>
+                    <span
+                      className="badge badge-soft"
+                      style={{ backgroundColor: "f07d47" }}
+                    >
+                      {d?.net}
+                    </span>
                   </div>
                 )}
               </div>
@@ -181,11 +189,11 @@ const FinanceSummaryTable = ({
       ),
       selector: "amount",
       cell: (d) => (
-        <div className="text-primary fs-16" style={{ cursor: "pointer" }}>
+        <div className=" fs-16" style={{ cursor: "pointer", color: "#b83016" }}>
           <div>
             <span
-              className="badge badge-soft-primary"
-              style={{ textDecoration: "underline" }}
+              className="badge badge-soft"
+              style={{ textDecoration: "underline", backgroundColor: "f07d47" }}
             >
               {pathname == "/management/ar-summary"
                 ? d["user_id"]

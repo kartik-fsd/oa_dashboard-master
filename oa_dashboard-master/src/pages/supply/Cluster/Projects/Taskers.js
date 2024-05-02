@@ -136,7 +136,7 @@ const Taskers = ({ type }) => {
           <div className="d-flex flex-column">
             <div className="d-flex gap-2 align-items-center">
               <div
-                className="form-check form-switch form-switch-primary"
+                className="form-check form-switch form-switch-"
                 style={{ display: "flex", alignItems: "center", gap: "10px" }}
               >
                 <Input

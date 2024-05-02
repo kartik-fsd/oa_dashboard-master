@@ -1,7 +1,7 @@
-import { Interweave } from 'interweave';
-import CountUp from 'react-countup';
-import React, { useContext, useState } from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Interweave } from "interweave";
+import CountUp from "react-countup";
+import React, { useContext, useState } from "react";
+import { Link, useLocation, useParams } from "react-router-dom";
 import {
   Button,
   Card,
@@ -16,80 +16,80 @@ import {
   Progress,
   Row,
   UncontrolledDropdown,
-} from 'reactstrap';
-import { indianNumbers } from '../../../components/common/indianNumbers';
-import TestingCard from '../card/TestingCard';
-import MonthlyTable1 from './TableInvoice';
-import MonthlyTable2 from './MonthlyTable2';
-import MonthlyTable3 from './OtherExpensesTable';
-import MonthlyTable4 from './PayoutTable';
-import { api, farming } from '../../../globalConfig';
-import { investors_details } from '../../../assets/utils/managementapi';
-import axios from 'axios';
-import { useEffect } from 'react';
-import InvoiceModal from './InvoiceModal';
-import { project_details } from '../../../assets/utils/Business';
-import { Context } from '../../../App';
-import FlipModal from '../../BusinessDashVel/FlipModal';
-import InvoiceDetails from '../../Finance/Commericals/InvoiceDetails';
-import BreadCrumb from '../../../components/common/BreadCrumb';
-import AddPayout from './AddPayout';
-import OtherExpensesTable from './OtherExpensesTable';
-import TableInvoice from './TableInvoice';
-import PayoutTable from './PayoutTable';
-import { projDetailsofmonth } from '../../../assets/utils/farmingBase';
-import moment from 'moment/moment';
-import PipelineModal from '../PipelineModal';
-import CreateUbr from './CreateUbr';
-import { extract_token } from '../../../assets/utils/common';
+} from "reactstrap";
+import { indianNumbers } from "../../../components/common/indianNumbers";
+import TestingCard from "../card/TestingCard";
+import MonthlyTable1 from "./TableInvoice";
+import MonthlyTable2 from "./MonthlyTable2";
+import MonthlyTable3 from "./OtherExpensesTable";
+import MonthlyTable4 from "./PayoutTable";
+import { api, farming } from "../../../globalConfig";
+import { investors_details } from "../../../assets/utils/managementapi";
+import axios from "axios";
+import { useEffect } from "react";
+import InvoiceModal from "./InvoiceModal";
+import { project_details } from "../../../assets/utils/Business";
+import { Context } from "../../../App";
+import FlipModal from "../../BusinessDashVel/FlipModal";
+import InvoiceDetails from "../../Finance/Commericals/InvoiceDetails";
+import BreadCrumb from "../../../components/common/BreadCrumb";
+import AddPayout from "./AddPayout";
+import OtherExpensesTable from "./OtherExpensesTable";
+import TableInvoice from "./TableInvoice";
+import PayoutTable from "./PayoutTable";
+import { projDetailsofmonth } from "../../../assets/utils/farmingBase";
+import moment from "moment/moment";
+import PipelineModal from "../PipelineModal";
+import CreateUbr from "./CreateUbr";
+import { extract_token } from "../../../assets/utils/common";
 
 const Monthly = () => {
   const cardMap = [
     {
-      label: 'Billed',
-      labelClass: 'muted',
+      label: "Billed",
+      labelClass: "muted",
       counter: 123456,
       decimals: 0,
-      separator: ',',
-      suffix: '',
-      icon: ' ri-exchange-dollar-line',
-      iconClass: 'success',
+      separator: ",",
+      suffix: "",
+      icon: " ri-exchange-dollar-line",
+      iconClass: "success",
       percentage: `+ ${1234}`,
-      percentageClass: 'primary',
-      prefix: '',
+      percentageClass: "primary",
+      prefix: "",
     },
     {
-      label: 'Unbilled',
-      labelClass: 'muted',
+      label: "Unbilled",
+      labelClass: "muted",
       counter: 123456,
       decimals: 0,
-      separator: ',',
-      suffix: '',
-      icon: ' ri-arrow-go-back-line',
-      iconClass: 'warning',
+      separator: ",",
+      suffix: "",
+      icon: " ri-arrow-go-back-line",
+      iconClass: "warning",
       percentage: `+ ${1234}`,
-      percentageClass: 'primary',
-      prefix: '',
+      percentageClass: "primary",
+      prefix: "",
     },
     {
-      label: 'Colected',
-      labelClass: 'muted',
+      label: "Colected",
+      labelClass: "muted",
       counter: 123456,
       decimals: 0,
-      separator: ',',
-      suffix: '',
-      icon: ' ri-hand-coin-line',
-      iconClass: 'secondary',
+      separator: ",",
+      suffix: "",
+      icon: " ri-hand-coin-line",
+      iconClass: "secondary",
       percentage: `+ ${1234}`,
-      percentageClass: 'primary',
-      prefix: '',
+      percentageClass: "primary",
+      prefix: "",
     },
   ];
 
   const [projectDetails, setProjectDetails] = useState([]);
   const [open, setOpen] = useState(false);
   const [overViewData, setOverViewData] = React.useState([]);
-  const [modalType, setModalType] = useState('');
+  const [modalType, setModalType] = useState("");
   const [modal_animationFlip, setmodal_animationFlip] = useState(false);
   const [context, setContext] = useContext(Context);
   const [modal_edit, set_modal_edit] = useState(false);
@@ -98,18 +98,18 @@ const Monthly = () => {
   const [open3, setOpen3] = React.useState(false);
   const [open4, setOpen4] = React.useState(false);
   const [open5, setOpen5] = React.useState(false);
-  const [payoutTotal, setPayoutTotal] = React.useState('');
-  const [otherTotal, setOtherTotal] = React.useState('');
+  const [payoutTotal, setPayoutTotal] = React.useState("");
+  const [otherTotal, setOtherTotal] = React.useState("");
   const [update, setUpdate] = React.useState(false);
   const [eachProjectItem, setEachProjectItem] = React.useState({});
-  const [leads, setLeads] = React.useState('');
+  const [leads, setLeads] = React.useState("");
   // const [detMonth, setDetMonth] = React.useState(tableData);
 
   const { state } = useLocation();
   const location = useLocation();
   const { tableData, invId, startDate } = state;
 
-  console.log(startDate, 'dgetg');
+  console.log(startDate, "dgetg");
 
   // ubr mpa_date
 
@@ -127,7 +127,7 @@ const Monthly = () => {
   const [isErr, setIsErr] = React.useState(false);
   const [userData, setUserData] = React.useState([]);
 
-  console.log(userData, 'testingon');
+  console.log(userData, "testingon");
 
   const getTokenDetails = () => {
     let tokenapi = api.VENDOR_URL + extract_token;
@@ -149,13 +149,13 @@ const Monthly = () => {
   const detMonth = tableData;
   const data = overViewData;
 
-  let fileHead = location.pathname.split('/')[1];
+  let fileHead = location.pathname.split("/")[1];
 
-  console.log(tableData.invoice_id, 'table123');
+  console.log(tableData.invoice_id, "table123");
 
   const date = new Date();
 
-  console.log(moment(date).format('MM'), 'fzf');
+  console.log(moment(date).format("MM"), "fzf");
 
   const getTheModalData = () => {
     let apiData = api.VENDOR_URL + investors_details;
@@ -164,15 +164,15 @@ const Monthly = () => {
         params: {
           sow_id: tableData?.sow_id,
 
-          month: 'April',
-          year: '2022',
+          month: "April",
+          year: "2022",
         },
       })
       .then((res) => {
         setProjectDetails(res?.data?.project_details);
-        console.log(res.data?.project_details, 'projects');
+        console.log(res.data?.project_details, "projects");
       })
-      .catch((err) => console.log(err, 'err'));
+      .catch((err) => console.log(err, "err"));
   };
 
   const getProjectsApi = () => {
@@ -191,7 +191,7 @@ const Monthly = () => {
         } else {
           // setIsLoading(false);
           setOverViewData(res?.data?.project_details);
-          console.log(res.data, 'resdata');
+          console.log(res.data, "resdata");
         }
       })
       .catch((err) => console.log(err));
@@ -226,12 +226,12 @@ const Monthly = () => {
     return new Date(year, month, 0).getDate();
   }
 
-  const year = moment(date).format('YYYY');
-  const month = moment(date).format('MM'); // April (Note that months are zero-indexed in JavaScript, so April is represented as 3)
+  const year = moment(date).format("YYYY");
+  const month = moment(date).format("MM"); // April (Note that months are zero-indexed in JavaScript, so April is represented as 3)
   const daysInMonth = getDaysInMonth(year, month);
-  const todayDate = Number(moment(date).format('DD'));
+  const todayDate = Number(moment(date).format("DD"));
 
-  console.log(daysInMonth, todayDate, 'lion');
+  console.log(daysInMonth, todayDate, "lion");
 
   const actMilPerDay = (detMonth.act_milestone / daysInMonth) * todayDate;
   const expMilePerDay = (detMonth.exp_milestone / daysInMonth) * todayDate;
@@ -249,7 +249,7 @@ const Monthly = () => {
   const rev = revPer?.toFixed(2);
   const exp = expenPer?.toFixed(2);
 
-  console.log(mile, rev, exp, 'percen');
+  console.log(mile, rev, exp, "percen");
 
   // const milPer = (detMonth.act_milestone / detMonth.exp_milestone) * 100;
   // const revPer = (detMonth.act_revenue / detMonth.exp_revenue) * 100;
@@ -262,7 +262,7 @@ const Monthly = () => {
   ) : (
     <div className="page-content">
       <span>
-        <BreadCrumb title={''} pageTitle="Sow" />
+        <BreadCrumb title={""} pageTitle="Sow" />
       </span>
       <Row className="gap-3 mt-2">
         {/* <Col lg={12}>
@@ -341,10 +341,10 @@ const Monthly = () => {
                           <div className="avatar-title bg-white rounded-circle">
                             {
                               <img
-                                src={tableData?.brand_logo ?? '/logo512.png'}
+                                src={tableData?.brand_logo ?? "/logo512.png"}
                                 alt=""
                                 className="avatar-md"
-                                style={{ borderRadius: '50%' }}
+                                style={{ borderRadius: "50%" }}
                               />
                             }
                           </div>
@@ -356,8 +356,8 @@ const Monthly = () => {
                             <h4
                               className="fw-bold"
                               style={{
-                                cursor: 'pointer',
-                                textDecoration: 'underline',
+                                cursor: "pointer",
+                                textDecoration: "underline",
                               }}
                               onClick={() => setOpen3(!open3)}
                             >
@@ -369,10 +369,11 @@ const Monthly = () => {
                               {/* <div>
                                 <div>
                                   <span
-                                    className="fw-medium text-primary fs-11"
+                                    className="fw-medium  fs-11"
                                     style={{
                                       cursor: "pointer",
                                       textDecoration: "underline",
+                                         color: "#b83016",
                                     }}
                                     onClick={() => setOpen4(!open4)}
                                   >
@@ -390,14 +391,14 @@ const Monthly = () => {
                                 <UncontrolledDropdown className="dropdown d-inline-block">
                                   <DropdownToggle
                                     style={{
-                                      background: '#f4f6f9',
-                                      border: 'none',
-                                      padding: '1px 6px',
+                                      background: "#f4f6f9",
+                                      border: "none",
+                                      padding: "1px 6px",
                                     }}
                                   >
                                     <i
                                       className="ri-more-fill align-middle"
-                                      style={{ color: 'black' }}
+                                      style={{ color: "black" }}
                                     ></i>
                                   </DropdownToggle>
                                   <DropdownMenu className="dropdown-menu-end">
@@ -410,8 +411,8 @@ const Monthly = () => {
                                       <i className=" ri-eye-line align-bottom m-0 me-2 text-muted"></i>
                                       View Invoices
                                     </DropdownItem>
-                                    {userData?.type == 'all' ||
-                                    userData?.type == 'fin' ? (
+                                    {userData?.type == "all" ||
+                                    userData?.type == "fin" ? (
                                       <DropdownItem
                                         className="edit-item-btn d-flex align-items-center"
                                         onClick={() => {
@@ -422,10 +423,10 @@ const Monthly = () => {
                                         Create Invoice
                                       </DropdownItem>
                                     ) : (
-                                      ''
+                                      ""
                                     )}
-                                    {userData?.type == 'all' ||
-                                    userData?.type == 'fin' ? (
+                                    {userData?.type == "all" ||
+                                    userData?.type == "fin" ? (
                                       <DropdownItem
                                         className="edit-item-btn d-flex align-items-center"
                                         onClick={() => {
@@ -436,17 +437,18 @@ const Monthly = () => {
                                         Create UBR
                                       </DropdownItem>
                                     ) : (
-                                      ''
+                                      ""
                                     )}
                                   </DropdownMenu>
                                 </UncontrolledDropdown>
                               </div>
                               {/* <div>
                                 <span
-                                  className="fw-medium text-primary fs-11"
+                                  className="fw-medium  fs-11"
                                   style={{
                                     cursor: "pointer",
                                     textDecoration: "underline",
+                                       color: "#b83016",
                                   }}
                                   onClick={() => setOpen(!open)}
                                 >
@@ -457,11 +459,11 @@ const Monthly = () => {
                           </div>
                           <div className="hstack gap-3 flex-wrap mt-2">
                             <div>
-                              Company ID :{' '}
+                              Company ID :{" "}
                               <span
-                                className="fw-medium text-primary"
-                                style={{ cursor: 'pointer' }}
-                                onClick={() => tog_animationFlip('compId')}
+                                className="fw-medium "
+                                style={{ cursor: "pointer", color: "#b83016" }}
+                                onClick={() => tog_animationFlip("compId")}
                               >
                                 {data?.company_unique_id}
                               </span>
@@ -471,14 +473,15 @@ const Monthly = () => {
                               <div>
                                 Agreement ID :&nbsp;
                                 <span
-                                  className="fw-medium  text-primary"
+                                  className="fw-medium  "
                                   style={
-                                    context?.oaDetials?.role == 'super_admin' ||
-                                    context?.oaDetials?.role == 'manager' ||
-                                    context?.oaDetials?.role == 'head'
-                                      ? { cursor: 'pointer' }
+                                    context?.oaDetials?.role == "super_admin" ||
+                                    context?.oaDetials?.role == "manager" ||
+                                    context?.oaDetials?.role == "head"
+                                      ? { cursor: "pointer", color: "#b83016" }
                                       : {
-                                          pointerEvents: 'none',
+                                          pointerEvents: "none",
+                                          color: "#b83016",
                                         }
                                   }
                                   // onClick={() => tog_animationFlip("agreeId")}
@@ -487,11 +490,11 @@ const Monthly = () => {
                                   {data?.agreement_unique_id}
                                 </span>
                               </div>
-                              {data?.commercial_status == 'pending' ? (
+                              {data?.commercial_status == "pending" ? (
                                 <div
                                   style={{
-                                    position: 'absolute',
-                                    marginTop: '1px',
+                                    position: "absolute",
+                                    marginTop: "1px",
                                   }}
                                 >
                                   <p className="text-danger mt-1 fs-10">
@@ -525,7 +528,7 @@ const Monthly = () => {
                             {/* <div className="vr"></div> */}
 
                             <div>
-                              Project ID :{' '}
+                              Project ID :{" "}
                               <span className="fw-medium">
                                 {tableData?.prj_id}
                               </span>
@@ -556,21 +559,23 @@ const Monthly = () => {
                   </div> */}
                 </Row>
                 <Row className="row-cols-md-3 row-cols-1">
-                  <Col className={'col-lg border-end border-top'}>
+                  <Col className={"col-lg border-end border-top"}>
                     <div className="mt-3 mt-md-0 py-3 px-3">
                       <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                        <span className="text-primary">Milestone</span>
+                        <span style={{ color: "#b83016" }}>Milestone</span>
                         <div className="d-flex gap-1 justify-content-center align-items-center">
                           <i
                             className={`fs-16 float-end align-middle ${
                               mile > 80
-                                ? 'text-success ri-arrow-up-circle-line '
+                                ? "text-success ri-arrow-up-circle-line "
                                 : mile < 80 && mile > 50
-                                ? 'text-warning ri-arrow-up-circle-line '
-                                : 'text-danger ri-arrow-down-circle-line '
+                                ? "text-warning ri-arrow-up-circle-line "
+                                : "text-danger ri-arrow-down-circle-line "
                             } `}
                           ></i>
-                          <span className="fs-10 text-primary">{mile}%</span>
+                          <span className="fs-10 " style={{ color: "#b83016" }}>
+                            {mile}%
+                          </span>
                         </div>
                       </h5>
                       <div className="d-flex align-items-center">
@@ -609,7 +614,7 @@ const Monthly = () => {
                           <div>
                             <span
                               className="badge bg-light text-dark mb-0 fs-10"
-                              style={{ minWidth: '80px' }}
+                              style={{ minWidth: "80px" }}
                             >
                               {detMonth.per_milestone}
                             </span>
@@ -619,13 +624,16 @@ const Monthly = () => {
                       <div className="mt-2">
                         <p className="mb-0 text-muted d-flex justify-content-between">
                           <div className="d-flex align-items-center gap-1">
-                            <i className=" ri-stop-fill text-primary fs-14 "></i>
+                            <i
+                              className=" ri-stop-fill  fs-14 "
+                              style={{ color: "#b83016" }}
+                            ></i>
                             <span className="me-3 fs-10">Set Target</span>
                           </div>
                           <div>
                             <span
                               className="badge bg-light text-dark mb-0 fs-10"
-                              style={{ minWidth: '80px' }}
+                              style={{ minWidth: "80px" }}
                             >
                               {detMonth.exp_milestone}
                             </span>
@@ -634,21 +642,28 @@ const Monthly = () => {
                       </div>
                     </div>
                   </Col>
-                  <Col className={'col-lg border-end border-top'}>
+                  <Col className={"col-lg border-end border-top"}>
                     <div className="mt-3 mt-md-0 py-3 px-3">
                       <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                        <span className="text-primary">Revenue</span>
+                        <span style={{ color: "#b83016" }}>Revenue</span>
                         <div className="d-flex justify-content-center align-items-center gap-1">
                           <i
                             className={`fs-16 float-end align-middle  ${
                               rev > 80
-                                ? 'text-success ri-arrow-up-circle-line'
+                                ? "text-success ri-arrow-up-circle-line"
                                 : rev < 80 && rev > 50
-                                ? 'text-warning ri-arrow-up-circle-line'
-                                : 'text-danger ri-arrow-down-circle-line'
+                                ? "text-warning ri-arrow-up-circle-line"
+                                : "text-danger ri-arrow-down-circle-line"
                             } `}
                           ></i>
-                          <span className="fs-10 text-primary">{rev}%</span>
+                          <span
+                            className="fs-10 "
+                            style={{
+                              color: "#b83016",
+                            }}
+                          >
+                            {rev}%
+                          </span>
                         </div>
                       </h5>
                       <div className="d-flex align-items-center">
@@ -689,7 +704,7 @@ const Monthly = () => {
                           <div>
                             <span
                               className="badge bg-light text-dark mb-0 fs-10"
-                              style={{ minWidth: '80px' }}
+                              style={{ minWidth: "80px" }}
                             >
                               {indianNumbers(detMonth.per_revenue, 2)}
                             </span>
@@ -699,14 +714,19 @@ const Monthly = () => {
                       <div className="mt-2">
                         <p className="mb-0 text-muted d-flex justify-content-between ">
                           <div className="d-flex align-items-center gap-1">
-                            <i className=" ri-stop-fill text-primary fs-14 "></i>
+                            <i
+                              className=" ri-stop-fill  fs-14 "
+                              style={{
+                                color: "#b83016",
+                              }}
+                            ></i>
 
                             <span className="me-3 fs-10">Expected Revenue</span>
                           </div>
                           <div>
                             <span
                               className="badge bg-light text-dark mb-0 fs-10"
-                              style={{ minWidth: '80px' }}
+                              style={{ minWidth: "80px" }}
                             >
                               {indianNumbers(detMonth.exp_revenue, 2)}
                             </span>
@@ -716,21 +736,23 @@ const Monthly = () => {
                     </div>
                   </Col>
 
-                  <Col className={'col-lg border-end border-top'}>
+                  <Col className={"col-lg border-end border-top"}>
                     <div className="mt-3 mt-md-0 py-3 px-3">
                       <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                        <span className="text-primary">Expenses</span>
+                        <span style={{ color: "#b83016" }}>Expenses</span>
                         <div className="d-flex justify-content-center align-items-center gap-1">
                           <i
                             className={`fs-18 float-end align-middle  ${
                               exp > 80
-                                ? 'text-success ri-arrow-up-circle-line'
+                                ? "text-success ri-arrow-up-circle-line"
                                 : exp < 80 && exp > 50
-                                ? 'text-warning ri-arrow-up-circle-line'
-                                : 'text-danger ri-arrow-down-circle-line'
+                                ? "text-warning ri-arrow-up-circle-line"
+                                : "text-danger ri-arrow-down-circle-line"
                             } `}
                           ></i>
-                          <span className="fs-10 text-primary">{exp}%</span>
+                          <span className="fs-10 " style={{ color: "#b83016" }}>
+                            {exp}%
+                          </span>
                         </div>
                       </h5>
                       <div className="d-flex align-items-center">
@@ -769,7 +791,7 @@ const Monthly = () => {
                           <div>
                             <span
                               className="badge bg-light text-dark mb-0 fs-10"
-                              style={{ minWidth: '80px' }}
+                              style={{ minWidth: "80px" }}
                             >
                               {indianNumbers(detMonth.per_expenses)}
                             </span>
@@ -779,7 +801,12 @@ const Monthly = () => {
                       <div className="mt-2">
                         <p className="mb-0 text-muted d-flex justify-content-between ">
                           <div className="d-flex align-items-center gap-1">
-                            <i className=" ri-stop-fill text-primary fs-14 "></i>
+                            <i
+                              className=" ri-stop-fill  fs-14 "
+                              style={{
+                                color: "#b83016",
+                              }}
+                            ></i>
                             <span className="me-3 fs-10">
                               Expected Expenses
                             </span>
@@ -787,7 +814,7 @@ const Monthly = () => {
                           <div>
                             <span
                               className="badge bg-light text-dark mb-0 fs-10"
-                              style={{ minWidth: '80px' }}
+                              style={{ minWidth: "80px" }}
                             >
                               {indianNumbers(detMonth.exp_expenses)}
                             </span>
@@ -796,10 +823,10 @@ const Monthly = () => {
                       </div>
                     </div>
                   </Col>
-                  <Col className={'col-lg  border-top'}>
+                  <Col className={"col-lg  border-top"}>
                     <div className="mt-3 mt-md-0 py-3 px-3">
                       <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                        <span className="text-primary">Gross Margin</span>
+                        <span style={{ color: "#b83016" }}>Gross Margin</span>
                         {/* <i
                           className={
                             "fs-18 float-end align-middle ri-arrow-up-circle-line text-success"
@@ -829,7 +856,7 @@ const Monthly = () => {
                           </h2>
                         </div>
                       </div>
-                      <div className="mt-3 " style={{ width: '100%' }}>
+                      <div className="mt-3 " style={{ width: "100%" }}>
                         <p className="mb-0 text-muted d-flex justify-content-between">
                           <div className="d-flex align-items-center gap-1">
                             <i className=" ri-stop-fill text-warning fs-14 "></i>
@@ -839,26 +866,31 @@ const Monthly = () => {
                           <div>
                             <span
                               className="badge bg-light text-dark mb-0 fs-10"
-                              style={{ minWidth: '80px' }}
+                              style={{ minWidth: "80px" }}
                             >
-                              {detMonth.per_g_margin?.toFixed(2) + '%'}
+                              {detMonth.per_g_margin?.toFixed(2) + "%"}
                             </span>
                           </div>
                         </p>
                       </div>
-                      <div className="mt-2" style={{ width: '100%' }}>
+                      <div className="mt-2" style={{ width: "100%" }}>
                         <p className="mb-0 text-muted d-flex justify-content-between">
                           <div className="d-flex align-items-center gap-1">
-                            <i className=" ri-stop-fill text-primary fs-14 "></i>
+                            <i
+                              className=" ri-stop-fill  fs-14 "
+                              style={{
+                                color: "#b83016",
+                              }}
+                            ></i>
 
                             <span className="me-3 fs-10">Expected GM %</span>
                           </div>
                           <div>
                             <span
                               className="badge bg-light text-dark mb-0 fs-10"
-                              style={{ minWidth: '80px' }}
+                              style={{ minWidth: "80px" }}
                             >
-                              {detMonth.exp_g_margin?.toFixed(2) + '%'}
+                              {detMonth.exp_g_margin?.toFixed(2) + "%"}
                             </span>
                           </div>
                         </p>
@@ -1267,14 +1299,18 @@ const Monthly = () => {
         </Col> */}
 
         <Col xs="12">
-          <Card style={{ zIndex: '0' }}>
+          <Card style={{ zIndex: "0" }}>
             <CardHeader
               className="d-flex justify-content-between align-items-center"
-              style={{ height: '66px' }}
+              style={{ height: "66px" }}
             >
               <h5
-                className="text-primary fw-600 fs-16"
-                style={{ letterSpacing: '2px', marginLeft: '15px' }}
+                className=" fw-600 fs-16"
+                style={{
+                  letterSpacing: "2px",
+                  marginLeft: "15px",
+                  color: "#b83016",
+                }}
               >
                 Direct Payout
               </h5>
@@ -1283,9 +1319,9 @@ const Monthly = () => {
                 <span
                   className="badge badge-soft-dark d-flex align-items-center justify-content-center px-3  fs-12 text-center"
                   style={{
-                    height: '40px',
-                    minWidth: '150px',
-                    marginRight: '2px',
+                    height: "40px",
+                    minWidth: "150px",
+                    marginRight: "2px",
                   }}
                 >
                   Total Payout : {indianNumbers(payoutTotal, 2)}
@@ -1293,9 +1329,9 @@ const Monthly = () => {
                 <span
                   className="badge badge-soft-dark d-flex align-items-center justify-content-center px-3  fs-12 text-center"
                   style={{
-                    height: '40px',
-                    minWidth: '150px',
-                    marginRight: '220px',
+                    height: "40px",
+                    minWidth: "150px",
+                    marginRight: "220px",
                   }}
                 >
                   Total Leads : {indianNumbers(leads, 2)}
@@ -1323,11 +1359,15 @@ const Monthly = () => {
           <Card>
             <CardHeader
               className="d-flex justify-content-between align-items-center"
-              style={{ height: '66px' }}
+              style={{ height: "66px" }}
             >
               <h5
-                className="text-primary fw-600 fs-16"
-                style={{ letterSpacing: '2px', marginLeft: '15px' }}
+                className=" fw-600 fs-16"
+                style={{
+                  letterSpacing: "2px",
+                  marginLeft: "15px",
+                  color: "#b83016",
+                }}
               >
                 Indirect Payout
               </h5>
@@ -1336,26 +1376,26 @@ const Monthly = () => {
                   <span
                     className="badge badge-soft-dark d-flex align-items-center justify-content-center px-3  fs-12 text-center"
                     style={{
-                      height: '40px',
-                      minWidth: '150px',
-                      marginRight: '22px',
+                      height: "40px",
+                      minWidth: "150px",
+                      marginRight: "22px",
                     }}
                   >
                     Total Payout : {indianNumbers(otherTotal, 2)}
                   </span>
                 </div>
-                {userData?.type == 'all' || userData?.type == 'fin' ? (
+                {userData?.type == "all" || userData?.type == "fin" ? (
                   <button
                     type="button"
                     className="btn btn-primary waves-effect waves-light"
-                    style={{ marginRight: '228px' }}
+                    style={{ marginRight: "228px" }}
                     onClick={() => setOpen2(!open2)}
                   >
                     <i className=" ri-add-line align-bottom me-1"></i>
                     Payout
                   </button>
                 ) : (
-                  ''
+                  ""
                 )}
               </div>
             </CardHeader>
@@ -1421,7 +1461,7 @@ const Monthly = () => {
         setOpen={setOpen5}
         open={open5}
         table={tableData}
-        lastDate={moment(lastDateOfMonth).format('YYYY-MM-DD')}
+        lastDate={moment(lastDateOfMonth).format("YYYY-MM-DD")}
       />
     </div>
   );

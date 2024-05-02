@@ -332,7 +332,21 @@ function Training({ type }) {
               </Col>
             </Row>
             <div className="text-end">
-              <button type="submit" className="btn btn-primary">
+              <button
+                type="submit"
+                className="btn"
+                style={{
+                  backgroundColor: "#ec5c24",
+                  color: "whitesmoke",
+                  transition: "background-color 0.3s ease",
+                }}
+                onMouseEnter={(e) =>
+                  (e.target.style.backgroundColor = "#dd4319")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.backgroundColor = "#ec5c24")
+                }
+              >
                 Submit
               </button>
             </div>

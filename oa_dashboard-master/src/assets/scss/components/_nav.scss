@@ -35,7 +35,7 @@
             font-weight: $font-weight-medium;
             &::after {
                 content: "";
-                background: $primary;
+                background: #ec5c34;
                 height: 1px;
                 position: absolute;
                 width: 100%;
@@ -45,7 +45,7 @@
                 transform: scale(0);
             }
             &.active {
-                color: $primary;
+                color: #ec5c34;
                 &:after {
                     transform: scale(1);
                 }
@@ -107,7 +107,7 @@
 
             &.active {
                 &:before {
-                    border-top-color: $primary;
+                    border-top-color: #ec5c34;
                 }
             }
         }
@@ -144,7 +144,7 @@
                     top: 50%;
                     transform: translateY(-50%);
                 }
-                &.nav-titl {
+                &.nav-title {
                     bottom: -20px;
                 }
             }
@@ -184,7 +184,7 @@
 
             &.active {
                 &::before {
-                    border-left-color: $primary;
+                    border-left-color: #ec5c34;
                 }
             }
         }
@@ -216,7 +216,7 @@
                 right: 0;
                 height: 100%;
                 transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
-                background-color: $primary;
+                background-color: #ec5c34;
                 z-index: -1;
             }
 
@@ -239,7 +239,7 @@
         border-top: 3px solid transparent;
 
         &.active {
-            border-top-color: $primary;
+            border-top-color: #ec5c34;
         }
     }
 }
@@ -258,7 +258,7 @@ $value in $theme-colors {
 }
 
 .nav-custom {
-    background-color: $primary;
+    background-color: #ec5c34;
     border-radius: $card-border-radius;
 
     .nav-item {
@@ -279,7 +279,7 @@ $value in $theme-colors {
 
                 &.active {
                     color: $light;
-                    background-color: $primary;
+                    background-color: #ec5c34;
                 }
             }
         }
@@ -376,7 +376,7 @@ $value in $theme-colors {
             color: var(--#{$variable-prefix}dark);
             font-weight: $font-weight-medium;
             &.active, &.done{
-                background-color: $primary;
+                background-color: #ec5c34;
                 color: $white;
             }
         }
@@ -400,18 +400,18 @@ $value in $theme-colors {
                 transform: translateY(-50%);
             }
             &.done{
-                background-color: rgba($primary, 0.05);
-                color: $primary;
+                background-color: rgba(#ec5c34, 0.05);
+                color: #ec5c34;
                 &::before{
                     border-left-color: transparent;
                 }
             }
             &.active{
-                background-color: rgba($primary, 0.1);
-                color: $primary;
+                background-color: rgba(#ec5c34, 0.1);
+                color: #ec5c34;
                 box-shadow: none;
                 &::before{
-                    border-left-color: rgba($primary, 0.1);
+                    border-left-color: rgba(#ec5c34, 0.1);
                 }
             }
         }
@@ -453,7 +453,7 @@ $value in $theme-colors {
                 }
             }
             &.active{
-                border-color: $primary;
+                border-color: #ec5c34;
             }
             &.done{
                 border-color: $success;
@@ -470,9 +470,9 @@ $value in $theme-colors {
             border-bottom: 2px solid transparent;
 
             &.active {
-                border-color: $primary;
+                border-color: #ec5c34;
                 background-color: transparent;
-                color: $primary;
+                color: #ec5c34;
             }
         }
     }
@@ -493,6 +493,7 @@ $value in $theme-colors {
 }
 
 //customs nav
+
 .nav-customs {
     &.nav {
         padding-left: 34px;
@@ -533,7 +534,7 @@ $value in $theme-colors {
             &.active,
             &.active:before,
             &.active:after {
-                background-color: $primary;
+                background-color: #ec5c34;
                 color: $white;
             }
 

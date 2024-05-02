@@ -275,7 +275,7 @@ function AddAgreement({ isOpen, toggle, setModal, setCheck, check }) {
             </Col>
             <div className="d-flex justify-content-end">
               <Button
-                color="primary"
+                style={{ backgroundColor: "#ec5c24" }}
                 onClick={save}
                 disabled={but}
                 className="fs-15 me-2 mt-2"

@@ -39,7 +39,7 @@ const AddCompnay = ({ open, setOpen }) => {
         centered={true}
         size={"md"}
       >
-        <ModalHeader toggle={() => setOpen(false)} className="text-primary">
+        <ModalHeader toggle={() => setOpen(false)} style={{ color: "#b83016" }}>
           Add Comapny
         </ModalHeader>
         <ModalBody>
@@ -167,16 +167,16 @@ const AddCompnay = ({ open, setOpen }) => {
           <div className="d-flex justify-content-end gap-2 mt-4">
             {/* <button
               type="button"
-              className="btn btn-outline-primary btn-label waves-effect waves-light w-xs px-2"
-              style={{ marginLeft: "10px" }}
+              className="btn btn-outline btn-label waves-effect waves-light w-xs px-2"
+              style={{ marginLeft: "10px" ,borderColor:"#ec5c24"}}
             >
               <i className="bx bx-reset fs-16 me-2"></i>
               Reset
             </button> */}
             <button
               type="button"
-              className="btn btn-primary btn-label waves-effect waves-light w-xs px-2"
-              style={{ marginLeft: "10px" }}
+              className="btn  btn-label waves-effect waves-light w-xs px-2"
+              style={{ marginLeft: "10px", backgroundColor: "#ec5c24" }}
             >
               <i className=" ri-check-line  align-middle fs-14 me-1 "></i>
               Check

@@ -68,8 +68,12 @@ const DailyTable = ({ dayData }) => {
                   <p className="m-0 text-center">Target Revenue</p>
 
                   <span
-                    className="badge text-bg-primary "
-                    style={{ minWidth: "70px" }}
+                    className="badge"
+                    style={{
+                      minWidth: "70px",
+                      backgroundColor: "#ec5c24",
+                      color: "#ffffff",
+                    }}
                   >
                     {indianNumbers(dayData?.targeted_revenue, 2)}
                   </span>
@@ -144,8 +148,12 @@ const DailyTable = ({ dayData }) => {
                   <p className="m-0 text-center">Target Collectables</p>
 
                   <span
-                    className="badge text-bg-primary "
-                    style={{ minWidth: "80px" }}
+                    className="badge text-bg "
+                    style={{
+                      minWidth: "80px",
+                      backgroundColor: "#ec5c24",
+                      color: "#ffffff",
+                    }}
                   >
                     {indianNumbers(dayData?.targeted_collectable, 2)}
                   </span>
@@ -175,7 +183,10 @@ const DailyTable = ({ dayData }) => {
                 <td style={{ textAlign: "center" }} className="bg-light">
                   <div className="d-flex flex-column gap-1 align-items-center">
                     <span style={{ cursor: "pointer" }}>{item.week}</span>
-                    <span className="badge badge-soft-primary">
+                    <span
+                      className="badge badge-soft"
+                      style={{ backgroundColor: "#ec5c24", color: "#ffffff" }}
+                    >
                       {moment(item.date)?.format("DD-MMM-YYYY")}
                     </span>
                   </div>

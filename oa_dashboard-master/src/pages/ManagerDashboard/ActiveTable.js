@@ -115,22 +115,22 @@ const ActiveTable = ({
             <div>
               {/* {d?.brand_logo ? (
                 <img
-                  src={d.brand_logo}
+                  src={d?.brand_logo}
                   alt=""
                   className="rounded-circle avatar-sm"
                 />
               ) : (
                 <div className="avatar-sm">
-                  <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
-                    {d.brand_name[0]}
+                  <div className="avatar-title rounded-circle bg-soft-primary  " style:{{  color: "#b83016"}}>
+                    {d?.brand_name[0]}
                   </div>
                 </div>
               )} */}
               <div
-                className={`flex-shrink-0 chat-user-img ${d.add_lead_status} "user-own-img gap-2`}
+                className={`flex-shrink-0 chat-user-img ${d?.add_lead_status} "user-own-img gap-2`}
               >
                 <img
-                  src={d.brand_logo}
+                  src={d?.brand_logo}
                   alt="brandlogo"
                   className="rounded-circle avatar-xs"
                 />
@@ -142,28 +142,29 @@ const ActiveTable = ({
               <div
                 className="fs-11"
                 style={{
-                  cursor: d.invoice_id !== null ? "pointer" : "default",
+                  cursor: d?.invoice_id !== null ? "pointer" : "default",
                 }}
                 onClick={() => {
-                  if (d.invoice_id !== null) {
-                    history.push(`/management/monthly/${d.sow_id}`, {
+                  if (d?.invoice_id !== null) {
+                    history.push(`/management/monthly/${d?.sow_id}`, {
                       tableData: d,
                       invId: invId,
                       startDate: startDate,
                     });
-                    setInvid(d.invoice_id);
+                    setInvid(d?.invoice_id);
                   }
                 }}
               >
                 <span
                   className={`${
-                    d.invoice_id !== null ? "text-decoration-underline " : ""
-                  } text-primary  fs-11`}
+                    d?.invoice_id !== null ? "text-decoration-underline " : ""
+                  }   fs-11`}
+                  style={{ color: "#b83016" }}
                 >
-                  {d.brand_name}
+                  {d?.brand_name}
                 </span>
-                -{d.sow_id}
-                {/* {d.invoice_id !== null ? (
+                -{d?.sow_id}
+                {/* {d?.invoice_id !== null ? (
                   <span>
                     <i className=" bx bxs-badge-check align-middle text-success"></i>
                   </span>
@@ -183,13 +184,13 @@ const ActiveTable = ({
                 <div className="fs-10 text-muted ">
                   <span
                     className={`badge  ${
-                      d.invoice_id == null
+                      d?.invoice_id == null
                         ? "cursor-pointer badge-soft-danger"
                         : "badge-soft-primary"
                     }`}
                     onClick={() => {
                       if (
-                        d.invoice_id == null &&
+                        d?.invoice_id == null &&
                         (userData?.type == "all" || userData?.type == "fin")
                       ) {
                         setOpenInv(!openInv);
@@ -197,11 +198,11 @@ const ActiveTable = ({
                       }
                     }}
                   >
-                    {d.invoice_id == null
+                    {d?.invoice_id == null
                       ? userData?.type == "all" || userData?.type == "fin"
                         ? "Create MPA"
                         : ""
-                      : `MPA${d.invoice_id}`}
+                      : `MPA${d?.invoice_id}`}
                   </span>
                 </div>
               </div>
@@ -217,13 +218,13 @@ const ActiveTable = ({
       cell: (d) => (
         <span
           className={`${
-            d.act_g_margin?.toFixed(0) < 18
+            d?.act_g_margin?.toFixed(0) < 18
               ? "badge-soft-danger"
-              : d.act_g_margin?.toFixed(0) < 25 &&
-                d.act_g_margin?.toFixed(0) >= 18
+              : d?.act_g_margin?.toFixed(0) < 25 &&
+                d?.act_g_margin?.toFixed(0) >= 18
               ? "badge-soft-warning"
-              : d.act_g_margin?.toFixed(0) >= 25 &&
-                d.act_g_margin?.toFixed(0) <= 100
+              : d?.act_g_margin?.toFixed(0) >= 25 &&
+                d?.act_g_margin?.toFixed(0) <= 100
               ? "badge-soft-success"
               : ""
           }`}
@@ -239,7 +240,7 @@ const ActiveTable = ({
             fontSize: "10px",
           }}
         >
-          {d.act_g_margin?.toFixed(0)}
+          {d?.act_g_margin?.toFixed(0)}
         </span>
       ),
       center: true,
@@ -262,11 +263,11 @@ const ActiveTable = ({
               style={{ fontSize: "10px" }}
             >
               <p className="m-0 invisible">Milestone</p>
-              <p className="m-0">{d.exp_milestone}</p>
+              <p className="m-0">{d?.exp_milestone}</p>
             </div>
             <UncontrolledTooltip
               placement="top"
-              target={(window.onload = `mil-${d.sow_id}`)}
+              target={(window.onload = `mil-${d?.sow_id}`)}
               style={{
                 background: "#DCE0EA",
                 // zIndex: "1000000",
@@ -278,7 +279,10 @@ const ActiveTable = ({
                   <tr>
                     <td>
                       <div className="d-flex align-items-center gap-1">
-                        <i className="ri-stop-fill text-primary fs-14"></i>
+                        <i
+                          className="ri-stop-fill  fs-14"
+                          style={{ color: "#b83016" }}
+                        ></i>
                         <span className="me-3 fs-10">Set Target</span>
                       </div>
                     </td>
@@ -287,7 +291,7 @@ const ActiveTable = ({
                         className="me-3 fs-10"
                         style={{ justifyContent: "flex-end" }}
                       >
-                        {indianNumbers(d.exp_milestone)}
+                        {indianNumbers(d?.exp_milestone)}
                       </span>
                     </td>
                   </tr>
@@ -303,7 +307,7 @@ const ActiveTable = ({
                         className="me-3 fs-10"
                         style={{ justifyContent: "flex-end" }}
                       >
-                        {indianNumbers(d.per_milestone)}
+                        {indianNumbers(d?.per_milestone)}
                       </span>
                     </td>
                   </tr>
@@ -319,7 +323,7 @@ const ActiveTable = ({
                         className="me-3 fs-10"
                         style={{ justifyContent: "flex-end" }}
                       >
-                        {indianNumbers(d.act_milestone)}
+                        {indianNumbers(d?.act_milestone)}
                       </span>
                     </td>
                   </tr>
@@ -328,7 +332,7 @@ const ActiveTable = ({
             </UncontrolledTooltip>
             <div
               className="progress"
-              id={`mil-${d.sow_id}`}
+              id={`mil-${d?.sow_id}`}
               style={{ background: "#f2f2f2" }}
             >
               <div
@@ -336,10 +340,10 @@ const ActiveTable = ({
                 role="progressbar"
                 style={{
                   width: `${(
-                    ((d.per_milestone / d.exp_milestone) *
+                    ((d?.per_milestone / d?.exp_milestone) *
                       100 *
-                      d.act_milestone) /
-                    d.per_milestone
+                      d?.act_milestone) /
+                    d?.per_milestone
                   ).toFixed(2)}%`,
                 }}
                 aria-valuenow="30"
@@ -347,10 +351,10 @@ const ActiveTable = ({
                 aria-valuemax="100"
               >
                 {/* {(
-                  ((d.per_milestone / d.exp_milestone) *
+                  ((d?.per_milestone / d?.exp_milestone) *
                     100 *
-                    d.act_milestone) /
-                  d.per_milestone
+                    d?.act_milestone) /
+                  d?.per_milestone
                 ).toFixed(2)} */}
               </div>
               <div
@@ -358,11 +362,11 @@ const ActiveTable = ({
                 role="progressbar"
                 style={{
                   width: `${(
-                    (d.per_milestone / d.exp_milestone) * 100 -
-                    ((d.per_milestone / d.exp_milestone) *
+                    (d?.per_milestone / d?.exp_milestone) * 100 -
+                    ((d?.per_milestone / d?.exp_milestone) *
                       100 *
-                      d.act_milestone) /
-                      d.per_milestone
+                      d?.act_milestone) /
+                      d?.per_milestone
                   )?.toFixed(2)}%`,
                 }}
                 // style={{ width: "50%" }}
@@ -371,11 +375,11 @@ const ActiveTable = ({
                 aria-valuemax="100"
               >
                 {/* {(
-                  (d.per_milestone / d.exp_milestone) * 100 -
-                  ((d.per_milestone / d.exp_milestone) *
+                  (d?.per_milestone / d?.exp_milestone) * 100 -
+                  ((d?.per_milestone / d?.exp_milestone) *
                     100 *
-                    d.act_milestone) /
-                    d.per_milestone
+                    d?.act_milestone) /
+                    d?.per_milestone
                 )?.toFixed(2)} */}
               </div>
             </div>
@@ -404,11 +408,11 @@ const ActiveTable = ({
               style={{ fontSize: "10px" }}
             >
               <p className="m-0 invisible">Revenue</p>
-              <p className="m-0">{d.exp_revenue}</p>
+              <p className="m-0">{d?.exp_revenue}</p>
             </div>
             <UncontrolledTooltip
               placement="top"
-              target={(window.onload = `rev-${d.sow_id}`)}
+              target={(window.onload = `rev-${d?.sow_id}`)}
               style={{
                 background: "#DCE0EA",
                 zIndex: "1000000",
@@ -420,7 +424,10 @@ const ActiveTable = ({
                   <tr>
                     <td>
                       <div className="d-flex align-items-center gap-1">
-                        <i className="ri-stop-fill text-primary fs-14"></i>
+                        <i
+                          className="ri-stop-fill  fs-14"
+                          style={{ color: "#b83016" }}
+                        ></i>
                         <span className="me-3 fs-10">Expected</span>
                       </div>
                     </td>
@@ -429,7 +436,7 @@ const ActiveTable = ({
                         className="me-3 fs-10"
                         style={{ justifyContent: "flex-end" }}
                       >
-                        {indianNumbers(d.exp_revenue)}
+                        {indianNumbers(d?.exp_revenue)}
                       </span>
                     </td>
                   </tr>
@@ -445,7 +452,7 @@ const ActiveTable = ({
                         className="me-3 fs-10"
                         style={{ justifyContent: "flex-end" }}
                       >
-                        {indianNumbers(d.per_revenue)}
+                        {indianNumbers(d?.per_revenue)}
                       </span>
                     </td>
                   </tr>
@@ -461,7 +468,7 @@ const ActiveTable = ({
                         className="me-3 fs-10"
                         style={{ justifyContent: "flex-end" }}
                       >
-                        {indianNumbers(d.act_revenue)}
+                        {indianNumbers(d?.act_revenue)}
                       </span>
                     </td>
                   </tr>
@@ -471,7 +478,7 @@ const ActiveTable = ({
 
             <div
               className="progress"
-              id={`rev-${d.sow_id}`}
+              id={`rev-${d?.sow_id}`}
               style={{ background: "#f2f2f2" }}
             >
               <div
@@ -480,8 +487,8 @@ const ActiveTable = ({
                 role="progressbar"
                 style={{
                   width: `${(
-                    ((d.per_revenue / d.exp_revenue) * 100 * d.act_revenue) /
-                    d.per_revenue
+                    ((d?.per_revenue / d?.exp_revenue) * 100 * d?.act_revenue) /
+                    d?.per_revenue
                   ).toFixed(2)}%`,
                 }}
                 aria-valuenow="30"
@@ -489,8 +496,8 @@ const ActiveTable = ({
                 aria-valuemax="100"
               >
                 {/* {(
-                  ((d.per_revenue / d.exp_revenue) * 100 * d.act_revenue) /
-                  d.per_revenue
+                  ((d?.per_revenue / d?.exp_revenue) * 100 * d?.act_revenue) /
+                  d?.per_revenue
                 ).toFixed(2)} */}
               </div>
               <div
@@ -498,9 +505,9 @@ const ActiveTable = ({
                 role="progressbar"
                 style={{
                   width: `${(
-                    (d.per_revenue / d.exp_revenue) * 100 -
-                    ((d.per_revenue / d.exp_revenue) * 100 * d.act_revenue) /
-                      d.per_revenue
+                    (d?.per_revenue / d?.exp_revenue) * 100 -
+                    ((d?.per_revenue / d?.exp_revenue) * 100 * d?.act_revenue) /
+                      d?.per_revenue
                   )?.toFixed(2)}%`,
                 }}
                 aria-valuenow="25"
@@ -508,9 +515,9 @@ const ActiveTable = ({
                 aria-valuemax="100"
               >
                 {/* {(
-                  (d.per_revenue / d.exp_revenue) * 100 -
-                  ((d.per_revenue / d.exp_revenue) * 100 * d.act_revenue) /
-                    d.per_revenue
+                  (d?.per_revenue / d?.exp_revenue) * 100 -
+                  ((d?.per_revenue / d?.exp_revenue) * 100 * d?.act_revenue) /
+                    d?.per_revenue
                 )?.toFixed(2)} */}
               </div>
             </div>
@@ -539,11 +546,11 @@ const ActiveTable = ({
               style={{ fontSize: "10px" }}
             >
               <p className="m-0 invisible">expenses</p>
-              <p className="m-0">{d.exp_expenses}</p>
+              <p className="m-0">{d?.exp_expenses}</p>
             </div>
             <UncontrolledTooltip
               placement="top"
-              target={(window.onload = `exp-${d.sow_id}`)}
+              target={(window.onload = `exp-${d?.sow_id}`)}
               style={{
                 background: "#DCE0EA",
                 zIndex: "1000000",
@@ -555,7 +562,10 @@ const ActiveTable = ({
                   <tr>
                     <td>
                       <div className="d-flex align-items-center gap-1">
-                        <i className="ri-stop-fill text-primary fs-14"></i>
+                        <i
+                          className="ri-stop-fill  fs-14"
+                          style={{ color: "#b83016" }}
+                        ></i>
                         <span className="me-3 fs-10">Expected</span>
                       </div>
                     </td>
@@ -564,7 +574,7 @@ const ActiveTable = ({
                         className="me-3 fs-10"
                         style={{ justifyContent: "flex-end" }}
                       >
-                        {indianNumbers(d.exp_expenses)}
+                        {indianNumbers(d?.exp_expenses)}
                       </span>
                     </td>
                   </tr>
@@ -580,7 +590,7 @@ const ActiveTable = ({
                         className="me-3 fs-10"
                         style={{ justifyContent: "flex-end" }}
                       >
-                        {indianNumbers(d.per_expenses)}
+                        {indianNumbers(d?.per_expenses)}
                       </span>
                     </td>
                   </tr>
@@ -596,7 +606,7 @@ const ActiveTable = ({
                         className="me-3 fs-10"
                         style={{ justifyContent: "flex-end" }}
                       >
-                        {indianNumbers(d.act_expenses)}
+                        {indianNumbers(d?.act_expenses)}
                       </span>
                     </td>
                   </tr>
@@ -607,7 +617,7 @@ const ActiveTable = ({
             <div
               className="progress"
               style={{ background: "#f2f2f2" }}
-              id={`exp-${d.sow_id}`}
+              id={`exp-${d?.sow_id}`}
             >
               <div
                 id={`tooltipTop-${d?.sow_id}`}
@@ -615,8 +625,10 @@ const ActiveTable = ({
                 role="progressbar"
                 style={{
                   width: `${(
-                    ((d.per_expenses / d.exp_expenses) * 100 * d.act_expenses) /
-                    d.per_expenses
+                    ((d?.per_expenses / d?.exp_expenses) *
+                      100 *
+                      d?.act_expenses) /
+                    d?.per_expenses
                   ).toFixed(2)}%`,
                 }}
                 aria-valuenow="30"
@@ -624,8 +636,8 @@ const ActiveTable = ({
                 aria-valuemax="100"
               >
                 {/* {(
-                  ((d.per_revenue / d.exp_revenue) * 100 * d.act_revenue) /
-                  d.per_revenue
+                  ((d?.per_revenue / d?.exp_revenue) * 100 * d?.act_revenue) /
+                  d?.per_revenue
                 ).toFixed(2)} */}
               </div>
               <div
@@ -633,9 +645,11 @@ const ActiveTable = ({
                 role="progressbar"
                 style={{
                   width: `${(
-                    (d.per_expenses / d.exp_expenses) * 100 -
-                    ((d.per_expenses / d.exp_expenses) * 100 * d.act_expenses) /
-                      d.per_expenses
+                    (d?.per_expenses / d?.exp_expenses) * 100 -
+                    ((d?.per_expenses / d?.exp_expenses) *
+                      100 *
+                      d?.act_expenses) /
+                      d?.per_expenses
                   )?.toFixed(2)}%`,
                 }}
                 aria-valuenow="25"
@@ -643,9 +657,9 @@ const ActiveTable = ({
                 aria-valuemax="100"
               >
                 {/* {(
-                  (d.per_revenue / d.exp_revenue) * 100 -
-                  ((d.per_revenue / d.exp_revenue) * 100 * d.act_revenue) /
-                    d.per_revenue
+                  (d?.per_revenue / d?.exp_revenue) * 100 -
+                  ((d?.per_revenue / d?.exp_revenue) * 100 * d?.act_revenue) /
+                    d?.per_revenue
                 )?.toFixed(2)} */}
               </div>
             </div>
@@ -681,7 +695,7 @@ const ActiveTable = ({
               <p className="m-0">35000</p>
               <UncontrolledTooltip
                 placement="top"
-                target={(window.onload = `bill-${d.sow_id}`)}
+                target={(window.onload = `bill-${d?.sow_id}`)}
                 style={{
                   background: "#DCE0EA",
                   zIndex: "1000000",
@@ -710,14 +724,17 @@ const ActiveTable = ({
                             className="me-3 fs-10"
                             style={{ justifyContent: "flex-end" }}
                           >
-                            {indianNumbers(d.atd)}
+                            {indianNumbers(d?.atd)}
                           </span>
                         </td>
                       </tr>
                       <tr>
                         <td>
                           <div className="d-flex align-items-center gap-1">
-                            <i className="ri-stop-fill text-primary fs-14"></i>
+                            <i
+                              className="ri-stop-fill  fs-14"
+                              style={{ color: "#b83016" }}
+                            ></i>
                             <span className="me-3 fs-10">BTD</span>
                           </div>
                         </td>
@@ -726,7 +743,7 @@ const ActiveTable = ({
                             className="me-3 fs-10"
                             style={{ justifyContent: "flex-end" }}
                           >
-                            {indianNumbers(d.billed_amt)}
+                            {indianNumbers(d?.billed_amt)}
                           </span>
                         </td>
                       </tr>
@@ -735,11 +752,15 @@ const ActiveTable = ({
                 </div>
               </UncontrolledTooltip>
             </div>
-            <div className="progress" id={`bill-${d.sow_id}`}>
+            <div className="progress" id={`bill-${d?.sow_id}`}>
               <div
-                className="progress-bar progress-bar-striped progress-bar-animated bg-primary "
+                className="progress-bar progress-bar-striped progress-bar-animated"
                 role="progressbar"
-                style={{ width: `${(d.billed_amt / d.atd) * 100}%` }}
+                style={{
+                  width: `${(d?.billed_amt / d?.atd) * 100}%`,
+                  backgroundColor: "#ec5c24",
+                  color: "#ffffff",
+                }}
                 aria-valuenow="40"
                 aria-valuemin="0"
                 aria-valuemax="100"
@@ -747,7 +768,7 @@ const ActiveTable = ({
               {/* <div
                 className="progress-bar progress-bar-striped progress-bar-animated bg-primary "
                 role="progressbar"
-                style={{ width: `${(d.atd / d.atd) * 100}%` }}
+                style={{ width: `${(d?.atd / d?.atd) * 100}%` }}
                 aria-valuenow="40"
                 aria-valuemin="0"
                 aria-valuemax="100"
@@ -842,11 +863,11 @@ const ActiveTable = ({
               ></i>
             </DropdownToggle>
             <DropdownMenu className="dropdown-menu-end">
-              {d.invoice_id == null ? (
+              {d?.invoice_id == null ? (
                 <DropdownItem
                   className={
                     " edit-item-btn d-flex align-items-center " +
-                    `${d.invoice_id == null ? "" : "d-none"}`
+                    `${d?.invoice_id == null ? "" : "d-none"}`
                   }
                   onClick={() => {
                     setOpenInv(!openInv);
@@ -900,8 +921,8 @@ const ActiveTable = ({
             expandOnRowClicked={true}
             customStyles={customStyles}
             // onRowClicked={(d) => {
-            //   if (d.invoice_id !== null) {
-            //     history.push(`/management/monthly/${d.sow_id}`, {
+            //   if (d?.invoice_id !== null) {
+            //     history.push(`/management/monthly/${d?.sow_id}`, {
             //       tableData: d,
             //     });
             //   }

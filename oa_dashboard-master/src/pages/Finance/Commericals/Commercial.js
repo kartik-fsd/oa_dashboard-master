@@ -19,7 +19,17 @@ const Commercial = () => {
                 <h5 className="card-title mb-0">Commercial</h5>
                 <div>
                   <div style={{ height: "40px", marginRight: "230px" }}>
-                    {/* <button className="btn btn-primary">
+                    {/* <button className="btn" style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }>
                       {" "}
                       <i className="ri-add-line align-middle me-1"></i>Client
                     </button> */}

@@ -45,8 +45,12 @@ const formatOptionLabel = ({ label, data }) => {
             <>
               <div className="avatar-xxs">
                 <div
-                  className="avatar-title rounded-circle bg-soft-primary text-primary"
-                  style={{ textTransform: "capitalize" }}
+                  className="avatar-title rounded-circle "
+                  style={{
+                    textTransform: "capitalize",
+                    color: "#b83016",
+                    backgroundColor: "f07d47",
+                  }}
                 >
                   {data.full_name[0]}
                 </div>
@@ -413,8 +417,12 @@ const BasicTable = (props) => {
           <Card>
             <CardHeader style={{ marginBottom: "-5px" }}>
               <div
-                className="form-check form-switch form-switch-primary"
-                style={{ display: "flex", alignItems: "center", gap: "10px" }}
+                className="form-check form-switch"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                }}
               >
                 <Input
                   className="form-check-input"
@@ -446,17 +454,22 @@ const BasicTable = (props) => {
               >
                 <a
                   href={downloadUrl}
-                  className="btn btn-primary mx-3"
+                  className="btn mx-3"
                   type="submit"
                   id="button-addon1"
                   // onClick={handleDownload}
                   target="_blank"
                   rel="noreferrer"
+                  style={{ backgroundColor: "#ec5c24" }}
                 >
                   <i className=" ri-download-2-line align-middle me-1"></i>
                   Checkin
                 </a>
-                <CSVLink className="btn btn-primary " data={data}>
+                <CSVLink
+                  className="btn"
+                  data={data}
+                  style={{ backgroundColor: "#ec5c24" }}
+                >
                   <i className=" ri-download-2-line align-middle me-1"></i>
                   Download
                 </CSVLink>

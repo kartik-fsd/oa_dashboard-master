@@ -73,7 +73,12 @@ const LeadDetView = ({ data, setCheck, check }) => {
         />
         <span className="text-dark fw-semibold text-capitalize mx-2">
           {item.full_name}
-          <span className="badge badge-soft-primary ms-1 me-1">
+          <span
+            className="badge badge-soft ms-1 me-1"
+            style={{
+              backgroundColor: "#f07d47",
+            }}
+          >
             {item.team_name}
           </span>
           -<span className="text-muted ms-1">{item.role_designation}</span>
@@ -155,8 +160,11 @@ const LeadDetView = ({ data, setCheck, check }) => {
           />
           <span className="text-dark fw-semibold">
             djfdfjkehdik{" "}
-            <span className="badge badge-soft-primary ms-1 me-1">Primary</span>-
-            <span className="text-muted ms-1">jsbdjeh</span>
+            <span
+              className="badge badge-soft ms-1 me-1"
+              style={{ backgroundColor: "#f07d47" }}
+            ></span>
+            -<span className="text-muted ms-1">jsbdjeh</span>
           </span>
         </div>
       ),
@@ -178,7 +186,9 @@ const LeadDetView = ({ data, setCheck, check }) => {
           {/* Special access to approve all requests*/}
           {context.oaDetials?.role == "head" ? (
             <div>
-              <h5 className="text-primary mb-3 mt-4">Approve all request</h5>
+              <h5 className=" mb-3 mt-4" style={{ color: "#b83016" }}>
+                Approve all request
+              </h5>
               <Col xs="12" className="mb-2">
                 <div className="d-flex w-100">
                   <Col xs={6}>
@@ -218,12 +228,15 @@ const LeadDetView = ({ data, setCheck, check }) => {
 
             <Col xs="12" className="mt-5">
               <div className="d-flex justify-content-between">
-                <h5 className="text-primary mb-4">Lead Nurturing</h5>
+                <h5 className=" mb-4" style={{ color: "#b83016" }}>
+                  Lead Nurturing
+                </h5>
                 {data?.lead_maturing_status == "0" &&
                 !data?.project_intro_status ? (
                   <div>
                     <i
-                      className=" ri-edit-box-line fs-20 text-primary cursor-pointer"
+                      className=" ri-edit-box-line fs-20  cursor-pointer"
+                      style={{ color: "#b83016" }}
                       onClick={() => setOpen(!open)}
                     ></i>
                   </div>
@@ -294,7 +307,9 @@ const LeadDetView = ({ data, setCheck, check }) => {
               <hr style={{ marginTop: "24px", marginBottom: "24px" }}></hr>
             </Col>
             <Col xs="12" className="mt-2">
-              <h5 className="mb-4 text-primary">Difficulty level</h5>
+              <h5 className="mb-4 " style={{ color: "#b83016" }}>
+                Difficulty level
+              </h5>
               <div className="d-flex gap-4 align-items-center">
                 <label className="m-0 d-flex align-items-center">
                   <input
@@ -333,7 +348,9 @@ const LeadDetView = ({ data, setCheck, check }) => {
               <hr style={{ marginTop: "24px", marginBottom: "24px" }}></hr>
             </Col>
             <Col xs="12" className="mt-2">
-              <h5 className="mb-4 text-primary">Deliverables</h5>
+              <h5 className="mb-4 " style={{ color: "#b83016" }}>
+                Deliverables
+              </h5>
               <div>
                 <table className="table caption-top table-nowrap">
                   <thead className="table-light">

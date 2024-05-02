@@ -152,7 +152,11 @@ function AddImage(props) {
               }}
             >
               {loading ? (
-                <div className="spinner-border text-primary" role="status">
+                <div
+                  className="spinner-border "
+                  role="status"
+                  style={{ color: "#b83016" }}
+                >
                   <span className="sr-only">Loading...</span>
                 </div>
               ) : (

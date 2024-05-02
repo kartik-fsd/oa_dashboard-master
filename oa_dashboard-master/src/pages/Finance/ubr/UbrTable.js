@@ -54,7 +54,13 @@ const UbrTable = ({ data }) => {
                 />
               ) : (
                 <div className="avatar-xs">
-                  <div className="avatar-title rounded-circle bg-soft-primary  text-primary">
+                  <div
+                    className="avatar-title rounded-circle"
+                    style={{
+                      color: "#b83016",
+                      backgroundColor: "#f07d47",
+                    }}
+                  >
                     {d?.brand_name?.charAt(0) ?? ""}
                   </div>
                 </div>
@@ -69,7 +75,12 @@ const UbrTable = ({ data }) => {
               >
                 <div className="fs-10 text-muted">
                   Billing date {d?.billable_date}
-                  <span className="badge badge-soft-primary">{d?.ubr_id}</span>
+                  <span
+                    className="badge badge-soft"
+                    style={{ backgroundColor: "#f07d47" }}
+                  >
+                    {d?.ubr_id}
+                  </span>
                 </div>
               </div>
             </div>
@@ -81,11 +92,14 @@ const UbrTable = ({ data }) => {
       name: <div>MPA Id</div>,
       selector: (d) => d.mpa_id,
       cell: (d) => (
-        <div className="text-primary fs-16" style={{ cursor: "pointer" }}>
+        <div className=" fs-16" style={{ cursor: "pointer", color: "#b83016" }}>
           <div>
             <span
-              className="badge badge-soft-primary"
-              style={{ textDecoration: "underline" }}
+              className="badge badge-soft"
+              style={{
+                textDecoration: "underline",
+                backgroundColor: "#f07d47",
+              }}
             >
               {d?.mpa_id}
             </span>
@@ -108,7 +122,7 @@ const UbrTable = ({ data }) => {
     //   selector: (d) => d.bad_debt,
     //   sortable: true,
     //   cell: (d) => (
-    //     <div className={`text-primary`}>
+    //     <div className={``}>
     //       {d["m-0"] === "-" ? "-" : indianNumbers(d["m-0"])}
     //     </div>
     //   ),
@@ -126,7 +140,7 @@ const UbrTable = ({ data }) => {
       ),
       selector: (row) => row["0-30"],
       cell: (d) => (
-        <div className={`text-primary`}>
+        <div style={{ color: "#b83016" }}>
           {d["0-30"] === "-" ? "-" : indianNumbers(d["0-30"])}
         </div>
       ),
@@ -147,7 +161,7 @@ const UbrTable = ({ data }) => {
       selector: (row) => row["31-60"],
       sortable: true,
       cell: (d) => (
-        <div className={`text-primary`}>
+        <div style={{ color: "#b83016" }}>
           {d["31-60"] === "-" ? "-" : indianNumbers(d["31-60"])}
         </div>
       ),
@@ -166,7 +180,7 @@ const UbrTable = ({ data }) => {
       selector: (row) => row["61-90"],
       sortable: true,
       cell: (d) => (
-        <div className={`text-primary`}>
+        <div style={{ color: "#b83016" }}>
           {d["61-90"] === "-" ? "-" : indianNumbers(d["61-90"])}
         </div>
       ),
@@ -185,7 +199,7 @@ const UbrTable = ({ data }) => {
       selector: (row) => row["90+"],
       sortable: true,
       cell: (d) => (
-        <div className={`text-primary`}>
+        <div style={{ color: "#b83016" }}>
           {d["90+"] === "-" ? "-" : indianNumbers(d["90+"])}
         </div>
       ),

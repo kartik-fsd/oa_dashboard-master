@@ -108,7 +108,8 @@ const Agreement = (data) => {
 
           <button
             type="button"
-            className="btn btn-primary waves-effect waves-light"
+            className="btn waves-effect waves-light"
+            style={{ backgroundColor: "#ec5c24" }}
           >
             <i className=" ri-thumb-up-fill align-middle fs-14 me-2 "></i>{" "}
             Agreement Updated
@@ -127,8 +128,9 @@ const Agreement = (data) => {
           <>
             <button
               type="button"
-              className="btn btn-primary waves-effect waves-light"
+              className="btn waves-effect waves-light"
               onClick={() => hiddenFile.current.click()}
+              style={{ backgroundColor: "#ec5c24" }}
             >
               <i className="ri-upload-cloud-2-fill align-middle fs-14 me-2 "></i>
               Agreement
@@ -151,7 +153,8 @@ const Agreement = (data) => {
           //   </button>
           <button
             type="button"
-            className="btn btn-primary waves-effect waves-light"
+            className="btn waves-effect waves-light"
+            style={{ backgroundColor: "#ec5c24" }}
           >
             <i className=" ri-thumb-up-fill align-middle fs-14 me-2  "></i>{" "}
             E-Invoice Updated Updated
@@ -170,7 +173,8 @@ const Agreement = (data) => {
           <>
             <button
               type="button"
-              className="btn btn-primary  waves-effect waves-light"
+              className="btn  waves-effect waves-light"
+              style={{ backgroundColor: "#ec5c24" }}
               onClick={() => hiddenFile2.current.click()}
             >
               <i className="  ri-upload-cloud-2-fill align-middle fs-14 me-2 "></i>

@@ -56,7 +56,10 @@ const GetLeads = () => {
                   >
                     <div className="avatar-group-item">
                       <div className="avatar-xs">
-                        <div className="avatar-title rounded-circle bg-light text-primary">
+                        <div
+                          className="avatar-title rounded-circle bg-light"
+                          style={{ color: "#b83016" }}
+                        >
                           <img
                             src={"/logo192.png"}
                             width="15px"
@@ -175,7 +178,10 @@ const GetLeads = () => {
                           >
                             <div className="avatar-group-item">
                               <div className="avatar-xs">
-                                <div className="avatar-title rounded-circle bg-light text-primary">
+                                <div
+                                  className="avatar-title rounded-circle bg-light "
+                                  style={{ color: "#b83016" }}
+                                >
                                   1
                                 </div>
                               </div>
@@ -196,7 +202,10 @@ const GetLeads = () => {
                           >
                             <div className="avatar-group-item">
                               <div className="avatar-xs">
-                                <div className="avatar-title rounded-circle bg-light text-primary">
+                                <div
+                                  className="avatar-title rounded-circle bg-light"
+                                  style={{ color: "#b83016" }}
+                                >
                                   2
                                 </div>
                               </div>
@@ -217,7 +226,10 @@ const GetLeads = () => {
                           >
                             <div className="avatar-group-item">
                               <div className="avatar-xs">
-                                <div className="avatar-title rounded-circle bg-light text-primary">
+                                <div
+                                  className="avatar-title rounded-circle bg-light"
+                                  style={{ color: "#b83016" }}
+                                >
                                   3
                                 </div>
                               </div>

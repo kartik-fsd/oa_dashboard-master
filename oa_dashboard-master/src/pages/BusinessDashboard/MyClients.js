@@ -23,8 +23,12 @@ const MyClients = () => {
             <div className="avatar-group-item">
               <div className="avatar-sm">
                 <div
-                  className="avatar-title rounded-circle bg-light text-primary"
-                  style={{ fontSize: "24px", fontWeight: "600" }}
+                  className="avatar-title rounded-circle bg-light"
+                  style={{
+                    fontSize: "24px",
+                    fontWeight: "600",
+                    color: "#b83016",
+                  }}
                 >
                   D
                 </div>
@@ -48,7 +52,7 @@ const MyClients = () => {
               >
                 Dipanjan Banerjee
               </p>
-              <p style={{ margin: "0px" ,opacity:'0'}}>qwertfdd</p>
+              <p style={{ margin: "0px", opacity: "0" }}>qwertfdd</p>
             </div>
           </Col>
         </Row>
@@ -167,7 +171,21 @@ const MyClients = () => {
             >
               <h5 className="card-title mb-0 fs-20">MyClients</h5>
               <div style={{ display: "flex", gap: "12px" }}>
-                <button className="btn btn-primary" onClick={handleClientEdit}>
+                <button
+                  className="btn"
+                  style={{
+                    backgroundColor: "#ec5c24",
+                    color: "whitesmoke",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.backgroundColor = "#dd4319")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.backgroundColor = "#ec5c24")
+                  }
+                  onClick={handleClientEdit}
+                >
                   <i
                     className=" ri-edit-2-line align-middle me-1 "
                     style={{ marginBottom: "30px" }}

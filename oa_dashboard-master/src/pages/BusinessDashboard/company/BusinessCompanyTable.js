@@ -38,7 +38,8 @@ const BusinessCompanyTable = ({ data }) => {
             {d.company_unique_id}
           </span> */}
           <span
-            className="badge badge-soft-primary cursor-pointer"
+            className="badge badge-soft cursor-pointer"
+            style={{ backgroundColor: "#f07d47" }}
             onClick={() =>
               history.push(`/business-dashboard/company/${d.company_id}`)
             }
@@ -88,14 +89,25 @@ const BusinessCompanyTable = ({ data }) => {
 
           <div className="d-flex flex-column  ">
             <span
-              className="fs-11  text-primary"
-              style={{ wordBreak: "break-all", fontWeight: "450" }}
+              className="fs-11  "
+              style={{
+                wordBreak: "break-all",
+                fontWeight: "450",
+                color: "#b83016",
+              }}
             >
               {d.company_name}
             </span>
             <div>
-              {/* <span className="badge text-bg-primary">{"L123"}</span> */}
-              <span className="fs-10" style={{ fontWeight: "500" }}>
+              {/* <span className="badge">{"L123"}</span> */}
+              <span
+                className="fs-10"
+                style={{
+                  fontWeight: "500",
+                  backgroundColor: "$ec5c24",
+                  color: "#fff",
+                }}
+              >
                 {d.brand_name}
               </span>
             </div>

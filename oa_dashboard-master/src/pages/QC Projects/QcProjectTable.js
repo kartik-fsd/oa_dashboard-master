@@ -362,7 +362,7 @@ const QcProjectTable = ({ leadstatus, startdate, enddate, apply }) => {
             alignItems: "center",
           }}
         >
-          <Spinner color="primary">Loading</Spinner>
+          <Spinner style={{ backgroundColor: "#ec5c24" }}>Loading</Spinner>
         </div>
       ) : errMsg ? (
         <div

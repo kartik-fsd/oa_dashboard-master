@@ -20,8 +20,12 @@ const ClientMain = () => {
                 }}
               >
                 <h5
-                  className="text-primary fw-600 fs-16"
-                  style={{ letterSpacing: "2px", marginLeft: "15px" }}
+                  className=" fw-600 fs-16"
+                  style={{
+                    letterSpacing: "2px",
+                    marginLeft: "15px",
+                    color: "#b83016",
+                  }}
                 >
                   Client
                 </h5>
@@ -29,8 +33,9 @@ const ClientMain = () => {
                 <div>
                   <div style={{ height: "40px", marginRight: "230px" }}>
                     <button
-                      className="btn btn-primary d-none"
+                      className="btn d-none"
                       onClick={() => set_modal_edit2(true)}
+                      style={{ backgroundColor: "#ec5c24" }}
                     >
                       {" "}
                       <i className="ri-add-line align-middle me-1"></i>Client

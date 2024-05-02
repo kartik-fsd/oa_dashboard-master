@@ -100,7 +100,17 @@ const CompanyDetails = () => {
                         />
 
                         <button
-                          className="btn btn-primary"
+                          className="btn" style={{
+                      backgroundColor: "#ec5c24",
+                      color: "whitesmoke",
+                      transition: "background-color 0.3s ease",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#dd4319")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#ec5c24")
+                    }
                           type="submit"
                           id="button-addon1"
                           // onClick={handleCheck}
@@ -123,8 +133,8 @@ const CompanyDetails = () => {
                 <h5 className="mb-3">Company Details</h5>
                 <div>
                   <i
-                    className=" ri-edit-box-line fs-24 text-primary"
-                    style={{ cursor: "pointer" }}
+                    className=" ri-edit-box-line fs-24 "
+                    style={{ cursor: "pointer", color: "#b83016" }}
                     onClick={() => {
                       setEdit(false);
                       inputRef.current.focus();
@@ -141,10 +151,11 @@ const CompanyDetails = () => {
 
                 <button
                   type="button"
-                  className="btn btn-primary btn-label waves-effect waves-light "
+                  className="btn  btn-label waves-effect waves-light "
                   style={{
                     marginLeft: "16px",
                     paddingLeft: "14px",
+                    backgroundColor: "#ec5c24",
                   }}
                   onClick={handleLogoClick}
                 >
@@ -423,16 +434,16 @@ const CompanyDetails = () => {
                   </button> */}
                 <button
                   type="button"
-                  className="btn btn-outline-primary btn-label waves-effect waves-light w-xs px-2"
-                  style={{ marginLeft: "10px" }}
+                  className="btn btn-outline btn-label waves-effect waves-light w-xs px-2"
+                  style={{ marginLeft: "10px", borderColor: "#ec5c24" }}
                 >
                   <i className="bx bx-reset align-middle fs-14 me-1"></i>
                   Reset
                 </button>
                 <button
                   type="button"
-                  className="btn btn-primary btn-label waves-effect waves-light w-xs px-2"
-                  style={{ marginLeft: "10px" }}
+                  className="btn  btn-label waves-effect waves-light w-xs px-2"
+                  style={{ marginLeft: "10px", backgroundColor: "#ec5c24" }}
                 >
                   <i className="bx bx-save align-middle me-1  fs-14 "></i>
                   Save
@@ -457,7 +468,8 @@ const CompanyDetails = () => {
                 <h5>Founder Details</h5>
                 <button
                   type="button"
-                  className="btn btn-primary waves-effect waves-light"
+                  className="btn  waves-effect waves-light"
+                  style={{ backgroundColor: "#ec5c24" }}
                   onClick={handleAddFounder}
                 >
                   <i className=" ri-add-fill align-middle me-1"></i>

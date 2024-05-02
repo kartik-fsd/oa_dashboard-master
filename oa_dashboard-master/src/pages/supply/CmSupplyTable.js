@@ -159,8 +159,8 @@ const CmSupplyTable = ({ projectsData, totalData }) => {
                   <div>
                     {" "}
                     <span
-                      style={{ width: "50px" }}
-                      className="badge badge-soft-primary "
+                      style={{ width: "50px", backgroundColor: "#f07d47" }}
+                      className="badge badge-soft"
                     >
                       {d.rm_id}
                     </span>
@@ -317,11 +317,12 @@ const CmSupplyTable = ({ projectsData, totalData }) => {
             <div>
               <div>
                 <span
-                  className="badge badge-soft-primary"
+                  className="badge badge-soft"
                   style={{
                     width: "60px",
                     fontWeight: 600,
                     fontSize: "12px",
+                    backgroundColor: "#f07d47",
                   }}
                 >
                   {d[it.name].split(",")[0] + "/" + d[it.name].split(",")[2]}

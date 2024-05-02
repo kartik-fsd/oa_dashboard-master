@@ -69,8 +69,8 @@ const InvoiceTable2021 = ({ invtable }) => {
       cell: (d) => (
         <div>
           <span
-            className="badge rounded-pill badge-soft-primary"
-            style={{ width: "40px" }}
+            className="badge rounded-pill badge-soft"
+            style={{ width: "40px", backgroundColor: "#f07d47" }}
           >
             {d.invoice_id}
           </span>
@@ -82,7 +82,7 @@ const InvoiceTable2021 = ({ invtable }) => {
       selector: (row) => row.billed_date,
       cell: (d) => (
         <div>
-          <span className="text-primary">{d.billed_date}</span>
+          <span style={{ color: "#b83016" }}>{d.billed_date}</span>
         </div>
       ),
       sortable: true,

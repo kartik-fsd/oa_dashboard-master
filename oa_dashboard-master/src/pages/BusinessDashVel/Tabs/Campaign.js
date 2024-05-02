@@ -218,7 +218,10 @@ const Campaign = () => {
                       </p>
                     </div>
                     <div>
-                      <span className={"badge rounded-pill bg-primary"}>
+                      <span
+                        className={"badge rounded-pill"}
+                        style={{ backgroundColor: "#ec5c24" }}
+                      >
                         {item.cluster_name}
                       </span>
                       {/* <p className="card-text text-dark  m-0">{item.state}</p>
@@ -239,7 +242,8 @@ const Campaign = () => {
                       {item?.pincode?.map((el) => (
                         <span
                           key={el.pincode}
-                          className={"badge badge-soft-primary"}
+                          className={"badge badge-soft"}
+                          style={{ backgroundColor: "#f07d47" }}
                         >
                           {el.pincode}
                         </span>
@@ -249,11 +253,12 @@ const Campaign = () => {
                   <div className="d-flex justify-content-end mt-1">
                     <button
                       type="button"
-                      className="btn btn-primary waves-effect waves-light btn-sm"
+                      className="btn waves-effect waves-light btn-sm"
                       onClick={() => {
                         setShow(!show);
                         setCampId(item.campaign_id);
                       }}
+                      style={{ backgroundColor: "#ec5c24" }}
                     >
                       Request Leads
                     </button>

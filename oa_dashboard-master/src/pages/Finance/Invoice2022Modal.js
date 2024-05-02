@@ -67,7 +67,10 @@ const BillModal = ({ billMod, setBillMod }) => {
         <ModalFooter>
           <button
             type="button"
-            className="btn btn-primary waves-effect waves-light"
+            className="btn waves-effect waves-light"
+            style={{
+              backgroundColor: "#ec5c24",
+            }}
             onClick={() => {
               "";
             }}
@@ -286,7 +289,10 @@ const CreateInvoiceModal = ({ invMod, setInvMod, clientData }) => {
         <ModalFooter>
           <button
             type="button"
-            className="btn btn-primary waves-effect waves-light"
+            className="btn waves-effect waves-light"
+            style={{
+              backgroundColor: "#ec5c24",
+            }}
             onClick={handleCreateInv}
           >
             Generate
@@ -410,7 +416,10 @@ const EditInvModal = ({ editMod, setEditMod }) => {
         <ModalFooter>
           <button
             type="button"
-            className="btn btn-primary waves-effect waves-light"
+            className="btn waves-effect waves-light"
+            style={{
+              backgroundColor: "#ec5c24",
+            }}
             onClick={() => {
               "";
             }}

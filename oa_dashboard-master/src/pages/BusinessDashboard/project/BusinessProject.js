@@ -130,7 +130,7 @@ const BusinessProject = () => {
               <div>
                 {/* <button
                   type="button"
-                  className="btn btn-primary waves-effect waves-light me-3"
+                  className="btn  waves-effect waves-light me-3"
                   //   onClick={() => setOpen(!open)}
                 >
                   <i className=" ri-add-fill align-bottom me-1 fs-14"></i>
@@ -138,7 +138,10 @@ const BusinessProject = () => {
                 </button> */}
                 <button
                   type="button"
-                  className="btn btn-primary waves-effect waves-light"
+                  className="btn  waves-effect waves-light"
+                  style={{
+                    backgroundColor: "#ec5c24",
+                  }}
                 >
                   <i className=" ri-filter-3-line align-bottom fs-14 me-1"></i>
                   Filter

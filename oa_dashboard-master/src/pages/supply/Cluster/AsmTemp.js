@@ -323,7 +323,10 @@ const AsmTemp = () => {
                               <Col xs={6} md={4}>
                                 <div className="d-flex mt-4">
                                   <div className="flex-shrink-0 avatar-xs align-self-center me-3">
-                                    <div className="avatar-title bg-light rounded-circle fs-16 text-primary">
+                                    <div
+                                      className="avatar-title bg-light rounded-circle fs-16 "
+                                      style={{ color: "#b83016" }}
+                                    >
                                       <i className="ri-user-2-fill"></i>
                                     </div>
                                   </div>
@@ -339,7 +342,10 @@ const AsmTemp = () => {
                               <Col xs={6} md={4}>
                                 <div className="d-flex mt-4">
                                   <div className="flex-shrink-0 avatar-xs align-self-center me-3">
-                                    <div className="avatar-title bg-light rounded-circle fs-16 text-primary">
+                                    <div
+                                      className="avatar-title bg-light rounded-circle fs-16 "
+                                      style={{ color: "#b83016" }}
+                                    >
                                       <i className="ri-global-line"></i>
                                     </div>
                                   </div>
@@ -546,7 +552,12 @@ const AsmTemp = () => {
                                                   key={key}
                                                 >
                                                   <div className="avatar-xs">
-                                                    <div className="avatar-title rounded-circle bg-light text-primary">
+                                                    <div
+                                                      className="avatar-title rounded-circle bg-light "
+                                                      style={{
+                                                        color: "#b83016",
+                                                      }}
+                                                    >
                                                       {element.memberText}
                                                     </div>
                                                   </div>

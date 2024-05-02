@@ -65,7 +65,12 @@ const BusinessProjectTableTest = () => {
             <div>
               <div>Roopen Transportation services Priate Limited</div>
               <div>
-                <span className="badge text-bg-primary">L00245</span>
+                <span
+                  className="badge"
+                  style={{ backgroundColor: "#ec5c24", color: "#fff" }}
+                >
+                  L00245
+                </span>
               </div>
             </div>
           </div>
@@ -86,7 +91,15 @@ const BusinessProjectTableTest = () => {
             <div style={{ display: "flex", gap: "8px" }}>
               <div>Chandler Bing</div>
               <div>
-                <span className="badge text-bg-primary">L00245</span>
+                <span
+                  className="badge"
+                  style={{
+                    backgroundColor: "#ec5c24",
+                    color: "#fff",
+                  }}
+                >
+                  L00245
+                </span>
               </div>
             </div>
             <div className="text-muted fs-10">Chandlerbing@gmail.com</div>

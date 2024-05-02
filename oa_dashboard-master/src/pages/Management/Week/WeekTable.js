@@ -75,7 +75,10 @@ const WeekTable = ({ totalData, setStartDate, startDate, month }) => {
               className="card-title mb-0 fw-600 fs-16 flex-grow-1 "
               style={{ marginLeft: "15px" }}
             >
-              <h4 className="text-primary m-0" style={{ letterSpacing: "2px" }}>
+              <h4
+                className=" m-0"
+                style={{ letterSpacing: "2px", color: "#b83016" }}
+              >
                 Monthly Summary
               </h4>
               <div>
@@ -149,8 +152,12 @@ const WeekTable = ({ totalData, setStartDate, startDate, month }) => {
             <div className="flex-shrink-0 d-flex gap-4">
               <div>
                 <i
-                  className=" ri-download-2-line text-primary"
-                  style={{ fontSize: "24px", cursor: "pointer" }}
+                  className=" ri-download-2-line "
+                  style={{
+                    fontSize: "24px",
+                    cursor: "pointer",
+                    color: "#b83016",
+                  }}
                   onClick={() => setOpen(!open)}
                 ></i>
               </div>
@@ -228,8 +235,12 @@ const WeekTable = ({ totalData, setStartDate, startDate, month }) => {
                           <p className="m-0 text-center">Target Revenue</p>
 
                           <span
-                            className="badge text-bg-primary "
-                            style={{ minWidth: "70px" }}
+                            className="badge text-bg "
+                            style={{
+                              minWidth: "70px",
+                              backgroundColor: "#ec5c24",
+                              color: "#ffffff",
+                            }}
                           >
                             {indianNumbers(
                               totalData?.total_targeted_revenue,
@@ -314,8 +325,12 @@ const WeekTable = ({ totalData, setStartDate, startDate, month }) => {
                           <p className="m-0 text-center">Target Collectables</p>
 
                           <span
-                            className="badge text-bg-primary "
-                            style={{ minWidth: "80px" }}
+                            className="badge text-bg "
+                            style={{
+                              minWidth: "80px",
+                              backgroundColor: "#ec5c24",
+                              color: "#ffffff",
+                            }}
                           >
                             {indianNumbers(
                               totalData?.total_targeted_collectable,
@@ -363,7 +378,13 @@ const WeekTable = ({ totalData, setStartDate, startDate, month }) => {
                             >
                               {item.week}
                             </span>
-                            <span className="badge badge-soft-primary">
+                            <span
+                              className="badge badge-soft"
+                              style={{
+                                backgroundColor: "#ec5c24",
+                                color: "#ffffff",
+                              }}
+                            >
                               {item.date}
                             </span>
                           </div>

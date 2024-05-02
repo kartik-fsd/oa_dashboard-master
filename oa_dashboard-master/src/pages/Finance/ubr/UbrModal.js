@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Button,
   Col,
@@ -7,35 +7,35 @@ import {
   ModalBody,
   ModalHeader,
   Row,
-} from 'reactstrap';
-import Select from 'react-select';
-import Flatpickr from 'react-flatpickr';
-import './ubr.css';
-import { api, farming } from '../../../globalConfig';
+} from "reactstrap";
+import Select from "react-select";
+import Flatpickr from "react-flatpickr";
+import "./ubr.css";
+import { api, farming } from "../../../globalConfig";
 import {
   create_ubr_inv,
   getsowUbr,
   ubrSowid,
-} from '../../../assets/utils/farmingBase';
-import axios from 'axios';
-import { dangernotify, successnotify, warningnotify } from '../../Toasts';
-import { defer } from 'lodash';
-import moment from 'moment';
+} from "../../../assets/utils/farmingBase";
+import axios from "axios";
+import { dangernotify, successnotify, warningnotify } from "../../Toasts";
+import { defer } from "lodash";
+import moment from "moment";
 
 const UbrModal = ({ open, setOpen }) => {
   const [ubrSow, setUbrSow] = React.useState([]);
   const [addDesc, setAddDesc] = React.useState(false);
-  console.log(addDesc, 'testingononno');
-  const [desc, setDesc] = React.useState('');
-  const [qty, setQty] = React.useState('');
-  const [cost, setCost] = React.useState('');
+  console.log(addDesc, "testingononno");
+  const [desc, setDesc] = React.useState("");
+  const [qty, setQty] = React.useState("");
+  const [cost, setCost] = React.useState("");
   const [sowId, setSowId] = React.useState(null);
   const [sowidd, setSowIdd] = React.useState(null);
   const [ubrData, setUbrData] = React.useState([]);
   const [selectmpaIds, setSelectMpaIds] = React.useState([]);
-  const [ubrChang, setUbrchang] = React.useState('');
-  const [remAmt, setRemAmt] = React.useState('');
-  const [totUbr, setTotUbr] = React.useState('');
+  const [ubrChang, setUbrchang] = React.useState("");
+  const [remAmt, setRemAmt] = React.useState("");
+  const [totUbr, setTotUbr] = React.useState("");
   const [addedData, setAddedData] = React.useState([]);
   const [ronly, setRonly] = React.useState(false);
   const [ubr_transaction, setUbrTransaction] = React.useState([]);
@@ -44,21 +44,21 @@ const UbrModal = ({ open, setOpen }) => {
   const [isLoading, setIsLoading] = React.useState(false);
   const [isErr, setIsErr] = React.useState(false);
   const [sumc, calSumc] = React.useState(0);
-  const [invData, setInvData] = React.useState({ billing_status: 'billed' });
+  const [invData, setInvData] = React.useState({ billing_status: "billed" });
 
   const [mainLoader, setMainLoader] = React.useState(false);
 
-  console.log(invData, 'invdatadata');
+  console.log(invData, "invdatadata");
   const [def, setDef] = React.useState(
-    ubrData?.length > 0 ? Array(ubrData?.length).fill('') : []
+    ubrData?.length > 0 ? Array(ubrData?.length).fill("") : []
   );
 
   console.log(
-    ubrData?.length > 0 ? Array(ubrData.length).fill('') : [],
-    'wew',
+    ubrData?.length > 0 ? Array(ubrData.length).fill("") : [],
+    "wew",
     ubrData
   );
-  console.log(def, 'def');
+  console.log(def, "def");
 
   const handleSubmitFinal = () => {
     let obj = {};
@@ -72,19 +72,19 @@ const UbrModal = ({ open, setOpen }) => {
       .post(apiData, obj)
       .then((res) => {
         setMainLoader(false);
-        successnotify('successfully added');
+        successnotify("successfully added");
         setOpen(false);
       })
       .catch((err) => {
-        dangernotify('something went wrong');
+        dangernotify("something went wrong");
         console.log(err);
       })
       .finally(() => setMainLoader(false));
   };
 
   const setSelectSowId = (e) => {
-    e ? setSowId(e.value) : setSowId('');
-    setDef(ubrData?.length > 0 ? Array(ubrData?.length).fill('') : []);
+    e ? setSowId(e.value) : setSowId("");
+    setDef(ubrData?.length > 0 ? Array(ubrData?.length).fill("") : []);
     setTotUbr(0);
     // console.log(e.value, "ee");
   };
@@ -99,7 +99,7 @@ const UbrModal = ({ open, setOpen }) => {
         setUbrData(res.data.ubrdata);
         let clientid = res.data.ubrdata[0]?.client_id;
         setInvData({ ...invData, client_id: clientid });
-        console.log(res.data.ubrdata, 'datatesting');
+        console.log(res.data.ubrdata, "datatesting");
         let ids =
           res?.data?.ubrdata &&
           res.data.ubrdata.map((item) => ({
@@ -109,7 +109,7 @@ const UbrModal = ({ open, setOpen }) => {
             value: item.mpa_id,
           }));
         setSelectMpaIds(ids);
-        console.log(ids, 'testingids', res.data.ubrdata);
+        console.log(ids, "testingids", res.data.ubrdata);
       })
       .catch((err) => {
         setIsErr(true);
@@ -139,7 +139,7 @@ const UbrModal = ({ open, setOpen }) => {
     }, 0);
     setTotUbr(totalUbr);
     setRemAmt(totalUbr);
-    console.log(totalUbr, 'tot');
+    console.log(totalUbr, "tot");
   }, [ubrChang]);
 
   const formatOptionLabel = ({
@@ -160,8 +160,8 @@ const UbrModal = ({ open, setOpen }) => {
         <div className="d-flex gap-2 align-items-center ">
           <p className="m-0 fs-11">{brand_name}</p>
           <span
-            className="badge badge-soft-primary "
-            style={{ fontSize: '9px' }}
+            className="badge badge-soft"
+            style={{ fontSize: "9px", backgroundColor: "#f07d47" }}
           >
             {label}
           </span>
@@ -183,7 +183,7 @@ const UbrModal = ({ open, setOpen }) => {
   );
   const functionDelAmtAdded = () => {
     let test = remAmt;
-    console.log(addedData, 'fasak');
+    console.log(addedData, "fasak");
     if (addedData.length > 0) {
       console.log(addedData);
       let sum = 0;
@@ -193,7 +193,7 @@ const UbrModal = ({ open, setOpen }) => {
         sum = sum + addedDataAmt[i];
       }
 
-      console.log(sum, addedDataAmt, 'totaladdedDataAmt', 'testingamt');
+      console.log(sum, addedDataAmt, "totaladdedDataAmt", "testingamt");
       if (totUbr - sum < 0) {
         return totUbr;
       }
@@ -201,18 +201,18 @@ const UbrModal = ({ open, setOpen }) => {
     } else if (addedData.length == 0) {
       if (totUbr - Number(qty * cost) < 0) {
         // dangernotify("amount cannot exceed the total entered");
-        console.log(totUbr, qty * cost, 'testinfas');
+        console.log(totUbr, qty * cost, "testinfas");
         return totUbr;
       }
     }
-    console.log(totUbr, remAmt, qty * cost, 'checkout');
+    console.log(totUbr, remAmt, qty * cost, "checkout");
     return totUbr;
   };
 
   const handleSubmitAddTData = () => {
-    console.log('testing');
-    if (!Number(qty) || !Number(cost) || desc == '')
-      return warningnotify('please fill all the  details');
+    console.log("testing");
+    if (!Number(qty) || !Number(cost) || desc == "")
+      return warningnotify("please fill all the  details");
     let data = {
       quantity: +qty,
       description: desc,
@@ -229,25 +229,25 @@ const UbrModal = ({ open, setOpen }) => {
       for (let i = 0; i < addedDataAmt.length; i++) {
         sum = sum + addedDataAmt[i];
       }
-      console.log(sum, totUbr, addedDataAmt, 'totaladdedDataAmt', 'testingamt');
+      console.log(sum, totUbr, addedDataAmt, "totaladdedDataAmt", "testingamt");
 
       if (totUbr - sum - Number(data.amount) < 0) {
-        dangernotify('amount cannot exceed the total entered');
-        return '';
+        dangernotify("amount cannot exceed the total entered");
+        return "";
       }
     } else if (addedData.length == 0) {
       if (totUbr - Number(data.amount) < 0) {
-        dangernotify('amount cannot exceed the total entered');
-        return '';
+        dangernotify("amount cannot exceed the total entered");
+        return "";
       } else {
         setAddedData([...addedData, data]);
         setAddDesc(false);
-        return successnotify('Description added successfully');
+        return successnotify("Description added successfully");
       }
     }
     setAddedData([...addedData, data]);
 
-    console.log(data, 'data');
+    console.log(data, "data");
   };
 
   return (
@@ -257,18 +257,18 @@ const UbrModal = ({ open, setOpen }) => {
         toggle={() => {
           setRonly(false);
           setOpen(false);
-          setSowId('');
+          setSowId("");
           setAddedData([]);
           setTotUbr(0);
           setDef([]);
-          setDesc('');
+          setDesc("");
           setQty(0);
           setCost(0);
           setInvDesc([]);
           setUbrTransaction([]);
         }}
         centered={true}
-        size={'xl'}
+        size={"xl"}
       >
         {/* <ModalHeader toggle={() => setOpen(false)}>Add Client</ModalHeader> */}
         <ModalBody>
@@ -289,7 +289,7 @@ const UbrModal = ({ open, setOpen }) => {
               ></Select>
             </Col>
 
-            {sowId !== '' && (
+            {sowId !== "" && (
               <Col xs="6">
                 <Label className="mt-1">Select MpaId</Label>
                 <Select
@@ -334,7 +334,7 @@ const UbrModal = ({ open, setOpen }) => {
                   <Flatpickr
                     className="form-control"
                     options={{
-                      dateFormat: 'd M, Y',
+                      dateFormat: "d M, Y",
                     }}
                     name="po_date"
                     id="podate"
@@ -343,7 +343,7 @@ const UbrModal = ({ open, setOpen }) => {
                       console.log(e);
                       setInvData({
                         ...invData,
-                        po_date: moment(e[0]).format('YYYY-MM-DD'),
+                        po_date: moment(e[0]).format("YYYY-MM-DD"),
                       });
                     }}
                   />
@@ -357,7 +357,7 @@ const UbrModal = ({ open, setOpen }) => {
                   <Flatpickr
                     className="form-control"
                     options={{
-                      dateFormat: 'd M, Y',
+                      dateFormat: "d M, Y",
                     }}
                     name="due_date"
                     id="podate2"
@@ -365,7 +365,7 @@ const UbrModal = ({ open, setOpen }) => {
                     onChange={(e) => {
                       setInvData({
                         ...invData,
-                        due_date: moment(e[0]).format('YYYY-MM-DD'),
+                        due_date: moment(e[0]).format("YYYY-MM-DD"),
                       });
                     }}
                   />
@@ -377,14 +377,14 @@ const UbrModal = ({ open, setOpen }) => {
                   <Flatpickr
                     className="form-control"
                     options={{
-                      dateFormat: 'd M, Y',
+                      dateFormat: "d M, Y",
                     }}
                     name="start_date"
                     id="podate1"
                     onChange={(e) => {
                       setInvData({
                         ...invData,
-                        start_date: moment(e[0]).format('YYYY-MM-DD'),
+                        start_date: moment(e[0]).format("YYYY-MM-DD"),
                       });
                     }}
                   />
@@ -398,14 +398,14 @@ const UbrModal = ({ open, setOpen }) => {
                   <Flatpickr
                     className="form-control"
                     options={{
-                      dateFormat: 'd M, Y',
+                      dateFormat: "d M, Y",
                     }}
                     name="end_date"
                     id="podate2"
                     onChange={(e) => {
                       setInvData({
                         ...invData,
-                        end_date: moment(e[0]).format('YYYY-MM-DD'),
+                        end_date: moment(e[0]).format("YYYY-MM-DD"),
                       });
                     }}
                   />
@@ -483,7 +483,7 @@ const UbrModal = ({ open, setOpen }) => {
                                 type="number"
                                 className="form-control"
                                 id="basiInput"
-                                style={{ width: '900%' }}
+                                style={{ width: "900%" }}
                                 onChange={(e) => {
                                   if (e.target.value > item.amount) {
                                     warningnotify(
@@ -493,7 +493,7 @@ const UbrModal = ({ open, setOpen }) => {
                                     ubrData.map((it) =>
                                       it.mpa_id == item.mpa_id
                                         ? (it.enter_amount = e.target.value)
-                                        : ''
+                                        : ""
                                     );
                                     setUbrchang(e.target.value);
                                     def[index] = e.target.value;
@@ -564,11 +564,12 @@ const UbrModal = ({ open, setOpen }) => {
               <button
                 disabled={def.length == 0 || Number(totUbr) == 0}
                 type="button"
-                className="btn btn-primary waves-effect waves-light"
+                className="btn waves-effect waves-light"
+                style={{ backgroundColor: "#ec5c24" }}
                 onClick={() => {
                   setAddDesc(true);
                   setRonly(true);
-                  console.log(ubrData, 'ubrdata');
+                  console.log(ubrData, "ubrdata");
                   let obj = [];
                   for (let i = 0; i < ubrData.length; i++) {
                     if (Number(ubrData[i].enter_amount) <= 0) break;
@@ -580,14 +581,14 @@ const UbrModal = ({ open, setOpen }) => {
                   }
                   setUbrTransaction(obj);
 
-                  console.log(obj, 'ubrubrbye');
+                  console.log(obj, "ubrubrbye");
                 }}
               >
                 Add Description
               </button>
               {addDesc && (
                 <>
-                  {' '}
+                  {" "}
                   {addDesc ? (
                     <Row className="mt-4">
                       <Col xs="8">
@@ -640,7 +641,7 @@ const UbrModal = ({ open, setOpen }) => {
                               </div>
                             </Col>
                             <Col xs="4">
-                              {' '}
+                              {" "}
                               <div>
                                 <label
                                   htmlFor="basiInput"
@@ -666,7 +667,7 @@ const UbrModal = ({ open, setOpen }) => {
                                   Amount
                                 </label>
                                 <input
-                                  value={qty * cost > 0 ? qty * cost : ''}
+                                  value={qty * cost > 0 ? qty * cost : ""}
                                   type="number"
                                   className="form-control"
                                   id="basiInput"
@@ -687,11 +688,12 @@ const UbrModal = ({ open, setOpen }) => {
                       </label> */}
                           <button
                             type="button"
-                            className="btn btn-primary waves-effect waves-light mt-4"
+                            className="btn waves-effect waves-light mt-4"
+                            style={{ backgroundColor: "#ec5c24" }}
                             onClick={() => {
                               handleSubmitAddTData();
                               // setRemAmt(remAmt);
-                              setDesc('');
+                              setDesc("");
                               setQty(0);
                               setCost(0);
                             }}
@@ -712,7 +714,7 @@ const UbrModal = ({ open, setOpen }) => {
                   <span className="text-danger"> Note :</span>
                   {functionDelAmtAdded() == 0 ? (
                     <span className="text-success">
-                      &nbsp;All Details are added to sum{' '}
+                      &nbsp;All Details are added to sum{" "}
                     </span>
                   ) : (
                     <span className="text-warning">
@@ -726,7 +728,7 @@ const UbrModal = ({ open, setOpen }) => {
           </Row>
           <Row>
             <Col xs="12">
-              <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <div>
                   {mainLoader ? (
                     <>...loading</>
@@ -737,7 +739,18 @@ const UbrModal = ({ open, setOpen }) => {
                           inv_desc.reduce((acc, i) => acc + i.amount, 0) ||
                         totUbr == 0
                       }
-                      className="btn btn-primary"
+                      className="btn"
+                      style={{
+                        backgroundColor: "#ec5c24",
+                        color: "whitesmoke",
+                        transition: "background-color 0.3s ease",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.target.style.backgroundColor = "#dd4319")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.target.style.backgroundColor = "#ec5c24")
+                      }
                       type="submit"
                       id="button-addon1"
                       onClick={handleSubmitFinal}
@@ -785,7 +798,17 @@ export default UbrModal;
 //                     />
 
 //                     <button
-//                       className="btn btn-primary"
+//                       className="btn" style={{
+//   backgroundColor: "#ec5c24",
+//   color: "whitesmoke",
+//   transition: "background-color 0.3s ease",
+// }}
+// onMouseEnter={(e) =>
+//   (e.target.style.backgroundColor = "#dd4319")
+// }
+// onMouseLeave={(e) =>
+//   (e.target.style.backgroundColor = "#ec5c24")
+// }
 //                       type="submit"
 //                       id="button-addon1"
 //                     >
