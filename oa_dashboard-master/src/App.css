@@ -53,7 +53,8 @@ table {
 }
 
 ::-webkit-scrollbar-track-piece {
-  background: #888;
+  background: #a9a9f7;
+  scroll-behavior: smooth;
 }
 
 input.filter-text {

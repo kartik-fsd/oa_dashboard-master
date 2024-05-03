@@ -17,7 +17,7 @@ const DashboardSupply = () => {
   const [dataInsert, setDataInsert] = React.useState("");
 
   const [clusterType, setClusterType] = React.useState("");
-  document.title = "Taskmo | Supply";
+  document.title = "OnX | Supply";
   const startdateGetter = () => {
     const date = new Date();
     let month = date.getMonth() + 1;

@@ -85,7 +85,6 @@ const ManagerDashboard = () => {
   const final = path.pathname.slice(1);
   const split = final.split("/");
   const Cap = split[0][0].toUpperCase() + split[0].slice(1);
-  document.title = `${title}`;
 
   // const [managerList, setManagerList] = useState([]);
   // const [managerDetails, setManagerDetails] = useState({});
@@ -113,6 +112,17 @@ const ManagerDashboard = () => {
   const [detMonth, setDetMonth] = React.useState({});
 
   const params = useParams();
+
+  const tit = location.pathname.split("/");
+
+  if (tit.includes("business")) {
+    document.title = "OnX | Business";
+  }
+  if (tit.includes("finance")) {
+    document.title = "Onx | Finance";
+  } else {
+    document.title = "OnX | Operations";
+  }
 
   useEffect(() => {
     axios
@@ -412,7 +422,7 @@ const ManagerDashboard = () => {
               style={{ marginTop: "10px", padding: "13px" }}
             >
               <h5
-                className=" fw-600 fs-16"
+                className="fw-600 fs-16"
                 style={{
                   letterSpacing: "2px",
                   marginLeft: "15px",
@@ -440,7 +450,6 @@ const ManagerDashboard = () => {
                           display: "flex",
                           alignItems: "center",
                           gap: "10px",
-                          backgroundColor: "#f07d47",
                         }}
                       >
                         <Input
@@ -610,7 +619,7 @@ const ManagerDashboard = () => {
                     <Col className={"col-lg border-end "}>
                       <div className="mt-3 mt-md-0 py-3 px-3">
                         <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                          <span style={{ color: "#b83016" }}>Milestone</span>
+                          <span style={{ color: "#f3f3f3" }}>Milestone</span>
                           <div className="d-flex gap-1 justify-content-center align-items-center">
                             <i
                               className={`fs-16 float-end align-middle ${
@@ -621,12 +630,7 @@ const ManagerDashboard = () => {
                                   : "text-danger ri-arrow-down-circle-line "
                               } `}
                             ></i>
-                            <span
-                              className="fs-10 "
-                              style={{ color: "#b83016" }}
-                            >
-                              {mile}%
-                            </span>
+                            <span className="fs-10 ">{mile}%</span>
                           </div>
                         </h5>
                         <div className="d-flex align-items-center">
@@ -645,7 +649,7 @@ const ManagerDashboard = () => {
                           <p className="mb-0 text-muted d-flex justify-content-between">
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill text-warning fs-14 "></i>
-                              <span className="me-3 fs-10">
+                              <span className="me-3 fs-10 text-light">
                                 Performed Target
                               </span>
                             </div>
@@ -654,7 +658,7 @@ const ManagerDashboard = () => {
                                 className="badge bg-light text-dark mb-0 fs-10"
                                 style={{ minWidth: "80px" }}
                               >
-                                {detMonth.per_milestone}
+                                {detMonth?.per_milestone}
                               </span>
                             </div>
                           </p>
@@ -662,18 +666,17 @@ const ManagerDashboard = () => {
                         <div className="mt-2">
                           <p className="mb-0 text-muted d-flex justify-content-between">
                             <div className="d-flex align-items-center gap-1">
-                              <i
-                                className=" ri-stop-fill  fs-14 "
-                                style={{ color: "#b83016" }}
-                              ></i>
-                              <span className="me-3 fs-10">Set Target</span>
+                              <i className=" ri-stop-fill  fs-14 "></i>
+                              <span className="me-3 fs-10 text-light">
+                                Set Target
+                              </span>
                             </div>
                             <div>
                               <span
                                 className="badge bg-light text-dark mb-0 fs-10"
                                 style={{ minWidth: "80px" }}
                               >
-                                {detMonth.exp_milestone}
+                                {detMonth?.exp_milestone}
                               </span>
                             </div>
                           </p>
@@ -683,7 +686,7 @@ const ManagerDashboard = () => {
                     <Col className={"col-lg border-end "}>
                       <div className="mt-3 mt-md-0 py-3 px-3">
                         <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                          <span style={{ color: "#b83016" }}>Revenue</span>
+                          <span style={{ color: "#f3f3f3" }}>Revenue</span>
                           <div className="d-flex justify-content-center align-items-center gap-1">
                             <i
                               className={`fs-16 float-end align-middle  ${
@@ -694,12 +697,7 @@ const ManagerDashboard = () => {
                                   : "text-danger ri-arrow-down-circle-line"
                               } `}
                             ></i>
-                            <span
-                              className="fs-10 "
-                              style={{ color: "#b83016" }}
-                            >
-                              {rev}%
-                            </span>
+                            <span className="fs-10 ">{rev}%</span>
                           </div>
                         </h5>
                         <div className="d-flex align-items-center">
@@ -708,7 +706,7 @@ const ManagerDashboard = () => {
                             <h2 className="mb-0">
                               <div className="counter-value text-start">
                                 <span>
-                                  ₹ {indianNumbers(detMonth.act_revenue, 2)}
+                                  ₹ {indianNumbers(detMonth?.act_revenue, 2)}
                                 </span>
                               </div>
                             </h2>
@@ -718,7 +716,7 @@ const ManagerDashboard = () => {
                           <p className="mb-0 text-muted d-flex justify-content-between ">
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill text-warning fs-14 "></i>
-                              <span className="me-3 fs-10">
+                              <span className="me-3 fs-10 text-light">
                                 Performed Revenue
                               </span>
                             </div>
@@ -727,7 +725,7 @@ const ManagerDashboard = () => {
                                 className="badge bg-light text-dark mb-0 fs-10"
                                 style={{ minWidth: "80px" }}
                               >
-                                {indianNumbers(detMonth.per_revenue, 2)}
+                                {indianNumbers(detMonth?.per_revenue, 2)}
                               </span>
                             </div>
                           </p>
@@ -735,12 +733,9 @@ const ManagerDashboard = () => {
                         <div className="mt-2">
                           <p className="mb-0 text-muted d-flex justify-content-between ">
                             <div className="d-flex align-items-center gap-1">
-                              <i
-                                className=" ri-stop-fill  fs-14 "
-                                style={{ color: "#b83016" }}
-                              ></i>
+                              <i className=" ri-stop-fill  fs-14 "></i>
 
-                              <span className="me-3 fs-10">
+                              <span className="me-3 fs-10 text-light">
                                 Expected Revenue
                               </span>
                             </div>
@@ -749,7 +744,7 @@ const ManagerDashboard = () => {
                                 className="badge bg-light text-dark mb-0 fs-10"
                                 style={{ minWidth: "80px" }}
                               >
-                                {indianNumbers(detMonth.exp_revenue, 2)}
+                                {indianNumbers(detMonth?.exp_revenue, 2)}
                               </span>
                             </div>
                           </p>
@@ -760,7 +755,7 @@ const ManagerDashboard = () => {
                     <Col className={"col-lg border-end "}>
                       <div className="mt-3 mt-md-0 py-3 px-3">
                         <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                          <span style={{ color: "#b83016" }}>Expenses</span>
+                          <span style={{ color: "#f3f3f3" }}>Expenses</span>
                           <div className="d-flex justify-content-center align-items-center gap-1">
                             <i
                               className={`fs-18 float-end align-middle  ${
@@ -771,12 +766,7 @@ const ManagerDashboard = () => {
                                   : "text-danger ri-arrow-down-circle-line"
                               } `}
                             ></i>
-                            <span
-                              className="fs-10 "
-                              style={{ color: "#b83016" }}
-                            >
-                              {exp}%
-                            </span>
+                            <span className="fs-10 ">{exp}%</span>
                           </div>
                         </h5>
                         <div className="d-flex align-items-center">
@@ -785,7 +775,7 @@ const ManagerDashboard = () => {
                             <h2 className="mb-0">
                               <div className="counter-value text-start">
                                 <span>
-                                  ₹ {indianNumbers(detMonth.act_expenses, 2)}
+                                  ₹ {indianNumbers(detMonth?.act_expenses, 2)}
                                 </span>
                               </div>
                             </h2>
@@ -795,7 +785,7 @@ const ManagerDashboard = () => {
                           <p className="mb-0 text-muted d-flex justify-content-between ">
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill text-warning fs-14 "></i>
-                              <span className="me-3 fs-10">
+                              <span className="me-3 fs-10 text-light">
                                 Accured Expenses
                               </span>
                             </div>
@@ -804,7 +794,7 @@ const ManagerDashboard = () => {
                                 className="badge bg-light text-dark mb-0 fs-10"
                                 style={{ minWidth: "80px" }}
                               >
-                                {indianNumbers(detMonth.per_expenses)}
+                                {indianNumbers(detMonth?.per_expenses)}
                               </span>
                             </div>
                           </p>
@@ -812,11 +802,8 @@ const ManagerDashboard = () => {
                         <div className="mt-2">
                           <p className="mb-0 text-muted d-flex justify-content-between ">
                             <div className="d-flex align-items-center gap-1">
-                              <i
-                                className=" ri-stop-fill  fs-14 "
-                                style={{ color: "#b83016" }}
-                              ></i>
-                              <span className="me-3 fs-10">
+                              <i className=" ri-stop-fill  fs-14 "></i>
+                              <span className="me-3 fs-10 text-light">
                                 Expected Expenses
                               </span>
                             </div>
@@ -825,7 +812,7 @@ const ManagerDashboard = () => {
                                 className="badge bg-light text-dark mb-0 fs-10"
                                 style={{ minWidth: "80px" }}
                               >
-                                {indianNumbers(detMonth.exp_expenses)}
+                                {indianNumbers(detMonth?.exp_expenses)}
                               </span>
                             </div>
                           </p>
@@ -835,7 +822,7 @@ const ManagerDashboard = () => {
                     <Col className={"col-lg  "}>
                       <div className="mt-3 mt-md-0 py-3 px-3">
                         <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                          <span style={{ color: "#b83016" }}>Gross Margin</span>
+                          <span style={{ color: "#f3f3f3" }}>Gross Margin</span>
                           {/* <i
                             className={
                               "fs-18 float-end align-middle ri-arrow-up-circle-line text-success"
@@ -848,7 +835,7 @@ const ManagerDashboard = () => {
                             <h2 className="mb-0">
                               <div className="counter-value text-start">
                                 <span>
-                                  {detMonth.act_g_margin?.toFixed(2)}%
+                                  {detMonth?.act_g_margin?.toFixed(2)}%
                                 </span>
                               </div>
                             </h2>
@@ -859,14 +846,16 @@ const ManagerDashboard = () => {
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill text-warning fs-14 "></i>
 
-                              <span className="me-3 fs-10">Current GM %</span>
+                              <span className="me-3 fs-10 text-light">
+                                Current GM %
+                              </span>
                             </div>
                             <div>
                               <span
                                 className="badge bg-light text-dark mb-0 fs-10"
                                 style={{ minWidth: "80px" }}
                               >
-                                {detMonth.per_g_margin?.toFixed(2) + "%"}
+                                {detMonth?.per_g_margin?.toFixed(2) + "%"}
                               </span>
                             </div>
                           </p>
@@ -874,19 +863,18 @@ const ManagerDashboard = () => {
                         <div className="mt-2" style={{ width: "100%" }}>
                           <p className="mb-0 text-muted d-flex justify-content-between">
                             <div className="d-flex align-items-center gap-1">
-                              <i
-                                className=" ri-stop-fill  fs-14 "
-                                style={{ color: "#b83016" }}
-                              ></i>
+                              <i className=" ri-stop-fill  fs-14 "></i>
 
-                              <span className="me-3 fs-10">Expected GM %</span>
+                              <span className="me-3 fs-10 text-light">
+                                Expected GM %
+                              </span>
                             </div>
                             <div>
                               <span
                                 className="badge bg-light text-dark mb-0 fs-10"
                                 style={{ minWidth: "80px" }}
                               >
-                                {detMonth.exp_g_margin?.toFixed(2) + "%"}
+                                {detMonth?.exp_g_margin?.toFixed(2) + "%"}
                               </span>
                             </div>
                           </p>

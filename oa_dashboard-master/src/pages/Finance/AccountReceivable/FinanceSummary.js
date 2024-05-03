@@ -29,7 +29,7 @@ const FinanceSummary = () => {
   const [open, setOpen] = React.useState(false);
 
   const token = sessionStorage.getItem("token");
-
+  document.title = "OnX | Finance";
   console.log(filter, "qwd");
   console.log(window.location.pathname, "chages");
   const getAccData = () => {

@@ -9,7 +9,7 @@ import { ManPowerModals } from "./ManPowerModals";
 import ManPowerTable from "./ManPowerTable";
 
 const ManPowerReq = () => {
-  document.title = "Taskmo | Supply";
+  document.title = "OnX | Supply";
   const [data, setData] = React.useState([]);
   // const role = sessionStorage.getItem("role");
 

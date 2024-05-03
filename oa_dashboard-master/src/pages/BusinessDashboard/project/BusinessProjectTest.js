@@ -248,7 +248,7 @@ const BusinessProjectTest = () => {
                               backgroundColor: "#ec5c24",
                             }}
                           >
-                            <i className=" ri-filter-3-line align-bottom fs-14 me-1"></i>
+                            <i className="ri-filter-3-line align-bottom me-1 fs-14" />
                             Filter
                           </button>
                         </DropdownToggle>

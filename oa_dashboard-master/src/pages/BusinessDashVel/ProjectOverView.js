@@ -18,7 +18,7 @@ const ProjectOverView = ({ projectId }) => {
   let fileHead = location.pathname.split("/")[1];
 
   const { id } = useParams();
-  document.title = "Taskmo| Business-Dashboard";
+  document.title = "OnX| Business-Dashboard";
   const getProjectsApi = () => {
     let projectDetailsURL = api.TASKMO_URL + project_details;
     setIsLoading(true);

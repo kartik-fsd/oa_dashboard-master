@@ -59,8 +59,8 @@ function Agreement({ agreementData }) {
         >
           <u>
             <span
-              className="badge bg-info px-3"
-              style={{ padding: 5, fontSize: 12 }}
+              className="badge px-3"
+              style={{ padding: 5, fontSize: 12, backgroundColor: "#f07d47" }}
             >
               {d.agreement_unique_id}
             </span>

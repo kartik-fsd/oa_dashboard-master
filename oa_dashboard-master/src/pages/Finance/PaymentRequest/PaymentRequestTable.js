@@ -285,7 +285,7 @@ const PaymentRequestTable = ({ data, updated, setUpdated }) => {
               ></i>
             </DropdownToggle>
             <DropdownMenu className="dropdown-menu-end">
-              <DropdownItem
+              {/* <DropdownItem
                 className="edit-item-btn d-flex align-items-center"
                 onClick={() => {
                   setOpen(!open);
@@ -293,7 +293,7 @@ const PaymentRequestTable = ({ data, updated, setUpdated }) => {
               >
                 <i className=" ri-recycle-line align-bottom me-2 text-muted"></i>
                 Process
-              </DropdownItem>
+              </DropdownItem> */}
               {d.status == "none" && d.split_status == "none" ? (
                 <DropdownItem
                   className="edit-item-btn d-flex align-items-center"

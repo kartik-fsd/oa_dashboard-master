@@ -347,7 +347,7 @@ const TableForManager = (props) => {
   };
 
   const handleLink = (sowid) => {
-    let path = "https://app.backend.taskmo.co/sharemedia";
+    let path = "https://appbackend.onxtasks.com/sharemedia";
     let body = {};
     body.user_id = "99231";
     body.sow_id = sowid;
@@ -1456,7 +1456,7 @@ const TableForManager = (props) => {
             <button
               type="button"
               className="btn waves-effect waves-light"
-              style={{backgroundColor:"#ec5c24" }}
+              style={{ backgroundColor: "#ec5c24" }}
               onClick={() =>
                 copyDmLink(`dmlink${d.campaign_id}`, d.campaign_name)
               }
@@ -1552,7 +1552,7 @@ const TableForManager = (props) => {
 
   const getTodaydata = () => {
     axios
-      .get("https://app.backend.taskmo.co/projectdashboard/todayLeads")
+      .get("https://appbackend.onxtasks.com/projectdashboard/todayLeads")
       .then((res) => {
         setTodaysData(res?.data?.today_leads);
       })
@@ -1638,7 +1638,7 @@ const TableForManager = (props) => {
       .then((res) => setFinanceData(res.data.sows))
       .catch((err) => console.log(err));
   }, [location.pathname]);
-
+  console.log(location.pathname.split("/"), "kol");
   const tableData = {
     // columns: location.pathname == "/my-projects/dm" ? columnsDm : columns,
     // data: location.pathname == "/my-projects/dm" ? dmLeads : apiData,

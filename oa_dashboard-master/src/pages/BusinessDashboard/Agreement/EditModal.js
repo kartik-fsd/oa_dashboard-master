@@ -32,7 +32,7 @@ function AddAgreement({
   setCheck,
   check,
 }) {
-  document.title = "Editors | Velzon - React Admin & Dashboard Template";
+  document.title = "Add agreement | OnX";
   const [all, setAll] = useState({});
   const [editorData, setEditorData] = useState();
   const [resurl, setResurl] = React.useState("");

@@ -7,7 +7,7 @@ import CmSupplyTable from "./CmSupplyTable";
 import DashboardSupplyTable from "./DashboardSupplyTable";
 
 const CmSupply = () => {
-  document.title = "Taskmo | Supply";
+  document.title = "OnX | Supply";
   const [projectsData, setProjectsData] = React.useState([]);
   const [totalData, setTotalData] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);

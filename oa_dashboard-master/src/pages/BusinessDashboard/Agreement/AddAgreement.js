@@ -37,7 +37,7 @@ function AddAgreement({ isOpen, toggle, setModal, setCheck, check }) {
   const [all, setAll] = useState({});
   const [but, setbut] = React.useState(false);
 
-  document.title = "Editors | Velzon - React Admin & Dashboard Template";
+  document.title = "OnX | Business";
   function handleMulti2(selectedMulti2) {
     setselectedMulti2(selectedMulti2);
   }

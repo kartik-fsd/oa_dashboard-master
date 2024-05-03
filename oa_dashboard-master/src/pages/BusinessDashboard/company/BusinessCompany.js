@@ -15,7 +15,7 @@ const BusinessCompany = () => {
   const [context, setContext] = useContext(Context);
 
   const history = useHistory();
-
+  document.title = "OnX | Business";
   const toggle = () => {
     setModal(!modal);
   };
@@ -44,7 +44,7 @@ const BusinessCompany = () => {
                   color: "#b83016",
                 }}
               >
-                My Compay
+                My Company
               </h5>
               <div>
                 <Col xs="12">

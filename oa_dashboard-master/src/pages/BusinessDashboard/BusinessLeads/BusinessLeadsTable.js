@@ -126,19 +126,15 @@ const BusinessLeadsTable = ({ data }) => {
 
           <div className="d-flex flex-column gap-1 ">
             <span
-              className="fs-11  "
-              style={{
-                wordBreak: "break-all",
-                fontWeight: "450",
-                color: "#b83016",
-              }}
+              className="fs-11  text-secondary"
+              style={{ wordBreak: "break-all", fontWeight: "450" }}
             >
               {d.company_name}
             </span>
             <div>
               <span
                 className="badge  fs-7 cursor-pointer"
-                style={{ color: "#b83016", backgroundColor: "#f07d47" }}
+                style={{ backgroundColor: "#fa8f5c", color: "#E8E9EB" }}
                 onClick={() => {
                   history.push(
                     `/business-dashboard/clientDetails/${d.lead_id}`

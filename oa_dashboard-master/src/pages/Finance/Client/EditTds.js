@@ -100,7 +100,7 @@ const EditTds = ({ open, setOpen, data, setCheck, check }) => {
                 width: "100px",
                 backgroundColor: "#ec5c24",
               }}
-              className="btn d-flex gap-2 justify-content-center"
+              className="btn d-flex gap-2 justify-content-center text-light"
               onClick={handleUpdate}
               //   disabled={remark == ""}
             >

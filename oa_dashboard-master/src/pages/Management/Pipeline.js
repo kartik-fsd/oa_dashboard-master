@@ -66,6 +66,7 @@ const Pipeline = () => {
   const [setColor, setChangeColor] = React.useState(false);
 
   const [isLoading, setIsLoading] = React.useState(false);
+  document.title = "OnX | Management";
 
   let colorArrayData = [
     {

@@ -15,7 +15,7 @@ import { farming } from "../../../globalConfig";
 import ProcessRequestTable from "./ProcessRequestTable";
 
 const ProcessRequest = () => {
-  document.title = "Taskmo | Finance";
+  document.title = "OnX | Finance";
   const [leadData, setleadData] = React.useState({});
   const [updateboolProcess, setupdateBoolProcess] = React.useState(false);
   const [payment_stat, setPayment_stat] = React.useState("");
@@ -147,15 +147,17 @@ const ProcessRequest = () => {
                 <UncontrolledButtonDropdown
                   id="btnGroupDrop1"
                   style={{ marginRight: "220px" }}
+                  direction="end"
                 >
                   <DropdownToggle style={{ backgroundColor: "#ec5c24" }} caret>
                     <i
-                      className=" ri-filter-line align-bottom"
+                      className="ri-filter-line align-bottom"
                       style={{
                         // display:'inline-block',
                         marginRight: "4px",
                         marginTop: "10px",
                         fontSize: "13px",
+                        border: "none",
                       }}
                     ></i>
                     Filter

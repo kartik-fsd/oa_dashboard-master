@@ -1,7 +1,7 @@
-const moveToHotLead = "https://app.backend.taskmo.co/hotlead/moveToHotLead";
-const asmCardData = "https://spapp.backend.taskmo.co/agreement/overview";
-const getcurrentDate = "https://farming-backend.taskmo.in/test/getcurrenttime";
+const moveToHotLead = "https://Crmbackend.onxtasks.com/hotlead/moveToHotLead";
+const asmCardData = "https://Crmbackend.onxtasks.com/agreement/overview";
+const getcurrentDate = "https://Crmbackend.onxtasks.com/test/getcurrenttime";
 const sendWhatsappForSp =
-  "https://app.backend.taskmo.co/whatsapp/sendWhatsappForSp";
+  "https://Crmbackend.onxtasks.com/whatsapp/sendWhatsappForSp";
 
 export { moveToHotLead, sendWhatsappForSp, asmCardData, getcurrentDate };

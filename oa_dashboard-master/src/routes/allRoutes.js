@@ -278,6 +278,7 @@ import BusinessDashProjectInit from "../pages/BusinessDashboard/project/Business
 import SplitRequestNew from "../pages/Finance/PaymentRequest/SplitRequestNew";
 import AddAgreementDetails from "../pages/BusinessDashboard/Agreement/AgreementDetails";
 import Ubr from "../pages/Finance/ubr/Ubr";
+import Project from "../pages/ManagerDashboard/Projects/Project";
 // import BusinessClientTable from "../pages/BusinessDashboard/Clients/BusinessClientTable";
 // import ForgetPasswordPage from "../pages/Authentication/ForgetPassword";
 // import Register from "../pages/Authentication/Register";
@@ -320,6 +321,7 @@ const authProtectedRoutes = [
   { path: "/tie-breaker", component: TieBreaker },
 
   { path: "/business/project/:id", component: ManagerDashboard },
+  { path: "/business/projects", component: Project },
   { path: "/finance/project/:id", component: ManagerDashboard },
   { path: "/finance/daily-collections", component: DailyCollectable },
   { path: "/editsow/:id", component: EditSow },
@@ -362,7 +364,7 @@ const authProtectedRoutes = [
   { path: "/project-overview/:id", component: ProjectOverView },
   { path: "/finance/ar-summary", component: FinanceSummary },
   { path: "/finance/ar-overdueinvoices", component: FinanceOverDueInvoice },
-  //{ path: "/management/daily-collections", component: DailyCollectable },
+  { path: "/management/daily-collections", component: DailyCollectable },
   { path: "/management/monthly/:id", component: Monthly },
   { path: "/management/card", component: TestingCard },
   // { path: "/management/annual", component: Annual },

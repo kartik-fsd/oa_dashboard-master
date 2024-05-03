@@ -3,6 +3,7 @@ import { Button, Card, CardBody, CardHeader, Col, Container } from "reactstrap";
 import CommercialTableHeaders from "./CommercialTableHeaders";
 
 const Commercial = () => {
+  document.title = "Onx | Finance";
   return (
     <div className="page-content">
       <Container fluid>

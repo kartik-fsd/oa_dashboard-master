@@ -16,7 +16,7 @@ import PaymentRequestTable from "./PaymentRequestTable";
 
 const PaymentRequest = () => {
   // console.log("aurthur Schopenhauer");
-  document.title = "Taskmo | Finance";
+  document.title = "OnX | Finance";
   const [data, setData] = React.useState([]);
   const [ops, setOps] = React.useState("");
   const [req, setReq] = React.useState("notprocessed");
@@ -70,19 +70,27 @@ const PaymentRequest = () => {
               className="d-flex justify-content-between"
               style={{ marginTop: "10px", padding: "13px" }}
             >
-              <h5 className="card-title mb-0 fs-20">Payment Request</h5>
+              <h5 className="card-title mb-0 fs-15 d-flex align-items-center">
+                Payment Request
+              </h5>
               <div
-                style={{ display: "flex", gap: "10px", marginRight: "220px" }}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "6px",
+                  marginRight: "220px",
+                }}
               >
                 <div>
                   <button
                     type="button"
-                    className="btn"
+                    className="btn fs-13"
                     style={{
                       backgroundColor: "#ec5c24",
                       color: "whitesmoke",
                       transition: "background-color 0.3s ease",
-                      minWidth: "130px",
+                      minWidth: "100px",
                     }}
                     onMouseEnter={(e) =>
                       (e.target.style.backgroundColor = "#dd4319")
@@ -97,7 +105,7 @@ const PaymentRequest = () => {
                 <div>
                   <button
                     type="button"
-                    className="btn"
+                    className="btn fs-13"
                     style={{
                       backgroundColor: "#ec5c24",
                       color: "whitesmoke",
@@ -118,12 +126,12 @@ const PaymentRequest = () => {
                   {" "}
                   <button
                     type="button"
-                    className="btn"
+                    className="btn fs-13"
                     style={{
                       backgroundColor: "#ec5c24",
                       color: "whitesmoke",
                       transition: "background-color 0.3s ease",
-                      minWidth: "130px",
+                      minWidth: "100px",
                     }}
                     onMouseEnter={(e) =>
                       (e.target.style.backgroundColor = "#dd4319")
@@ -139,9 +147,11 @@ const PaymentRequest = () => {
                   <UncontrolledButtonDropdown
                     id="btnGroupDrop1"
                     // style={{ marginRight: "220px" }}
+                    direction="end"
                   >
                     <DropdownToggle
                       style={{ backgroundColor: "#ec5c24" }}
+                      className="fs-13"
                       caret
                     >
                       <i
@@ -175,10 +185,12 @@ const PaymentRequest = () => {
                 <div>
                   <UncontrolledButtonDropdown
                     id="btnGroupDrop1"
+                    direction="end"
                     // style={{ marginRight: "220px" }}
                   >
                     <DropdownToggle
                       style={{ backgroundColor: "#ec5c24" }}
+                      className="fs-13"
                       caret
                     >
                       <i

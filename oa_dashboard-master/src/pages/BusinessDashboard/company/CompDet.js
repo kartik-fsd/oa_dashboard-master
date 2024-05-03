@@ -103,7 +103,7 @@ const CompDet = () => {
                               className="badge badge-soft"
                               style={{ backgroundColor: "#f07d47" }}
                             >
-                              {clientDet.com_status}
+                              {clientDet.company_unique_id}
                             </span>
                             <div style={{ marginLeft: "auto" }}>
                               <i
@@ -180,7 +180,7 @@ const CompDet = () => {
                   <Col xs="12">
                     <div className="d-flex justify-content-between">
                       <h6 className="mb-3 mt-1" style={{ fontWeight: "600" }}>
-                        Comapny Details
+                        Company Details
                       </h6>
 
                       <i
@@ -254,7 +254,8 @@ const CompDet = () => {
                               className="m-0 fs-12 text-dark "
                               style={{ fontWeight: "500" }}
                             >
-                              &#x3a;&#xa0;&#xa0;&#xa0;&#xa0;UCB547576
+                              &#x3a;&#xa0;&#xa0;&#xa0;&#xa0;
+                              {clientDet.com_status}
                             </p>
                           </div>
                           <div className="fs-11 d-flex gap-3">
@@ -277,7 +278,7 @@ const CompDet = () => {
                           </div>
                           <div className="fs-11 d-flex gap-3">
                             <p className="m-0" style={{ width: "150px" }}>
-                              Comapny Start Date
+                              Company Start Date
                             </p>
                             <p className="m-0" style={{ fontWeight: "500" }}>
                               &#x3a;&#xa0;&#xa0;&#xa0;&#xa0;
@@ -421,7 +422,10 @@ const CompDet = () => {
                         // style={{ tableLayout: "fixed" }}
                       >
                         <thead>
-                          <tr style={{ background: "#f0f4ff" }}>
+                          <tr
+                            className="fs-11"
+                            style={{ background: "#f0f4ff" }}
+                          >
                             <th scope="col">GST</th>
                             <th scope="col">Address</th>
                             <th scope="col">City</th>
@@ -431,7 +435,7 @@ const CompDet = () => {
                             {/* <th scope="col"></th> */}
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="fs-11">
                           {clientDet.gsts?.map((item) => {
                             return (
                               <>
@@ -494,7 +498,7 @@ const CompDet = () => {
                         }}
                       ></i>
                     </div>
-                    <table className="table table-nowrap" style={{}}>
+                    <table className="table table-nowrap fs-11" style={{}}>
                       <thead>
                         <tr style={{ background: "#f0f4ff" }}>
                           <th scope="col">Client Name</th>
@@ -504,7 +508,7 @@ const CompDet = () => {
                           <th scope="col">Linkedin</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody className="fs-11">
                         {clientTab?.map((item) => {
                           return (
                             <>
@@ -551,7 +555,7 @@ const CompDet = () => {
                     </div>
 
                     <div className="table-responsive">
-                      <table className="table table-nowrap" style={{}}>
+                      <table className="table table-nowrap fs-11" style={{}}>
                         <thead>
                           <tr style={{ background: "#f0f4ff" }}>
                             <th scope="col">Founder Name</th>
@@ -560,7 +564,7 @@ const CompDet = () => {
                             <th scope="col">Founder Linkedin</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="fs-11">
                           {clientDet.founder_details?.map((item) => {
                             return (
                               <>

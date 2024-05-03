@@ -30,7 +30,7 @@ import CmTable from "./CmTable";
 import CmTable2 from "./Projects/CmTable2";
 
 const CmOverview = () => {
-  document.title = "Taskmo | Supply";
+  document.title = "OnX | Supply";
   const [open, setOpen] = React.useState(false);
   const [asmList, setAsmList] = React.useState([]);
   const [fliter, setFilter] = React.useState("onboarded");
@@ -208,7 +208,7 @@ const CmOverview = () => {
                               backgroundColor: "#f07d47",
                             }}
                           >
-                            <i className="mdi mdi-briefcase-check-outline"></i>
+                            <i className="mdi mdi-briefcase-check-outline text-light"></i>
                           </div>
                         </div>
                       </div>
@@ -222,7 +222,7 @@ const CmOverview = () => {
                         <span className={"fs-12 badge badge-soft-success"}>
                           <i
                             className={
-                              "fs-12 align-middle me-1  ri-record-circle-line "
+                              "fs-12 align-middle me-1  ri-record-circle-line"
                             }
                           ></i>
                           {cardData.new_onboarded}

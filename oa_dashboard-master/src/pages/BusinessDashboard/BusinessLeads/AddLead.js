@@ -449,7 +449,7 @@ const AddLead = (props) => {
               }}
               disabled={but}
               type="button"
-              className="btn  btn-label waves-effect waves-light w-xs px-2"
+              className="btn  btn-label waves-effect waves-light w-xs px-2 text-light"
               style={{ marginLeft: "10px", backgroundColor: "#ec5c24" }}
             >
               <i className=" bx bx-save  align-middle fs-14 me-1 "></i>

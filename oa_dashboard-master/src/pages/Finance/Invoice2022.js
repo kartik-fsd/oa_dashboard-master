@@ -126,6 +126,7 @@ const Invoice2022 = () => {
                   backgroundColor: "#ec5c24",
                   color: "whitesmoke",
                   transition: "background-color 0.3s ease",
+                  marginRight: "220px",
                 }}
                 onMouseEnter={(e) =>
                   (e.target.style.backgroundColor = "#dd4319")
@@ -133,7 +134,6 @@ const Invoice2022 = () => {
                 onMouseLeave={(e) =>
                   (e.target.style.backgroundColor = "#ec5c24")
                 }
-                style={{ marginRight: "220px" }}
                 onClick={() => setInvMod(!invMod)}
               >
                 Create Invoice

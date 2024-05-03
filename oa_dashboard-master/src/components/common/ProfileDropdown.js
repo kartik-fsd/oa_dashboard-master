@@ -51,7 +51,7 @@ const ProfileDropdown = () => {
       });
 
     axios
-      .get("https://farming-backend.taskmo.in/test/getcurrenttime")
+      .get("https://Crmbackend.onxtasks.com/test/getcurrenttime")
       .then((res) => {
         context.currentDate = res.data.date;
         setContext(...context);

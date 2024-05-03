@@ -160,14 +160,25 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
             </div>
 
             <div>
-              <div className="fs-12">
-                {d?.bd_name}
+              <div
+                className="fs-12 my-1"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
                 <span
-                  className="badge badge-soft ms-1"
-                  style={{ fontSize: "8px", backgroundColor: "#f07d47" }}
+                  className="badge badge-soft"
+                  style={{
+                    fontSize: "8px",
+                    backgroundColor: "#f07d47",
+                    width: "fit-content",
+                    fontWeight: 400,
+                  }}
                 >
                   {d?.company_unique_id}
                 </span>
+                {d?.bd_name}
               </div>
               <div className="fs-10 text-muted">{d?.cmp_name}</div>
               <div
@@ -219,14 +230,22 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
       left: true,
       cell: (d) => (
         <div>
-          <div className="fs-12">
-            {d.client_name}{" "}
+          <div
+            className="fs-12 mt-1"
+            style={{ display: "flex", flexDirection: "column", gap: 5 }}
+          >
             <span
               className="badge badge-soft ms-1"
-              style={{ fontSize: "8px", backgroundColor: "#f07d47" }}
+              style={{
+                fontSize: "8px",
+                backgroundColor: "#f07d47",
+                width: "fit-content",
+                fontWeight: 400,
+              }}
             >
               {d?.client_unique_id}
             </span>
+            {d.client_name}{" "}
           </div>
           <div className="fs-10 text-muted">{d.client_email}</div>
           <div className="fs-10 text-muted">{d.client_phone}</div>

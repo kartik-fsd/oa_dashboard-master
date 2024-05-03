@@ -9,7 +9,7 @@ import DailyTrackingWidget from "./DailyTrackingWidget";
 const DailyTracking = () => {
   const [opt, setOpt] = React.useState([]);
   const [year, setYear] = React.useState("FY24");
-
+  document.title = "OnX | Management";
   React.useEffect(() => {
     const link = api.VENDOR_URL + filter_fy;
 

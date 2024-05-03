@@ -29,7 +29,7 @@ const Earnings = () => {
   const [isStatus, setisStatus] = React.useState("all");
   const [totalPerfomance, setTotalPerformance] = React.useState("");
   const [dataInsert, setDataInsert] = React.useState("");
-
+  document.title = "OnX | Supply";
   const [startDate, setStartDate] = React.useState(new Date());
   const ExampleCustomInput = React.forwardRef(({ value, onClick }, ref) => (
     // <button className="example-custom-input" onClick={onClick} ref={ref}>

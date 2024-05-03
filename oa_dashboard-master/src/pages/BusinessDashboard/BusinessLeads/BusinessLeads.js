@@ -25,6 +25,7 @@ const BusinessLeads = () => {
   const [leadCards, setLeadCards] = React.useState([]);
   const [filt, setFilt] = React.useState("all");
   const [check, setCheck] = React.useState(false);
+  document.title = "Onx | Business";
 
   React.useEffect(() => {
     const link = api.TASKMO_URL + leads_list_business;
@@ -170,7 +171,7 @@ const BusinessLeads = () => {
               <div>
                 <button
                   type="button"
-                  className="btn  waves-effect waves-light me-1"
+                  className="btn waves-effect waves-light text-light me-1"
                   style={{ backgroundColor: "#ec5c24" }}
                   onClick={() => setOpen(!open)}
                 >
@@ -182,7 +183,7 @@ const BusinessLeads = () => {
                   <DropdownToggle className="btn  " tag="button">
                     <button
                       type="button"
-                      className="btn  waves-effect waves-light"
+                      className="btn  waves-effect waves-light text-light"
                       style={{ backgroundColor: "#ec5c24" }}
                     >
                       <i className=" ri-filter-3-line align-bottom fs-14 me-1"></i>

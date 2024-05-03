@@ -32,7 +32,7 @@ import moment from "moment";
 
 export const GetQcContext = createContext();
 export const QcMembers = () => {
-  document.title = "Taskmo | Quality";
+  document.title = "OnX | Quality";
 
   const [open, setOpen] = React.useState(false);
   const [openFilter, setOpenFilter] = React.useState(false);

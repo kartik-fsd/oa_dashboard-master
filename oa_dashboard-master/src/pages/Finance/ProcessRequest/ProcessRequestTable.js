@@ -355,6 +355,7 @@ const ProcessRequestTable = ({ leadData }) => {
       columns,
     data: leadData?.req,
   };
+  console.log(leadData?.req, "leads");
   return (
     <div>
       <DataTableExtensions

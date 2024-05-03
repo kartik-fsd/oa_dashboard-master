@@ -151,8 +151,8 @@ const ViewManagerProject = () => {
               {/* <h5 className="mb-3">Custom Hover Tabs</h5> */}
               <div style={{ boxShadow: "none" }}>
                 <Card className="border">
-                  <Nav pills className="nav nav-pills custom-hover-nav-tabs ">
-                    <NavItem className="top-bar">
+                  <Nav pills className="nav nav-pills custom-hover-nav-tabs">
+                    <NavItem>
                       <NavLink
                         style={{ cursor: "pointer" }}
                         className={classnames({
@@ -168,7 +168,7 @@ const ViewManagerProject = () => {
                         </h5>
                       </NavLink>
                     </NavItem>
-                    <NavItem className="top-bar">
+                    <NavItem>
                       <NavLink
                         style={{ cursor: "pointer" }}
                         className={classnames({
@@ -185,7 +185,7 @@ const ViewManagerProject = () => {
                       </NavLink>
                     </NavItem>
                     {context?.projectId != 0 && (
-                      <NavItem className="top-bar">
+                      <NavItem>
                         <NavLink
                           style={{ cursor: "pointer" }}
                           className={classnames({
@@ -205,7 +205,7 @@ const ViewManagerProject = () => {
                     {accessType == "fin" || accessType == "business" ? (
                       ""
                     ) : (
-                      <NavItem className="top-bar">
+                      <NavItem>
                         <NavLink
                           style={{ cursor: "pointer" }}
                           className={classnames({
@@ -225,7 +225,7 @@ const ViewManagerProject = () => {
                     {accessType == "fin" || accessType == "business" ? (
                       ""
                     ) : (
-                      <NavItem className="top-bar">
+                      <NavItem>
                         <NavLink
                           style={{ cursor: "pointer" }}
                           className={classnames({
@@ -246,7 +246,7 @@ const ViewManagerProject = () => {
                     {accessType == "fin" || accessType == "business" ? (
                       ""
                     ) : (
-                      <NavItem className="top-bar">
+                      <NavItem>
                         <NavLink
                           style={{ cursor: "pointer" }}
                           className={classnames({
@@ -264,7 +264,7 @@ const ViewManagerProject = () => {
                       </NavItem>
                     )}
 
-                    <NavItem className="top-bar">
+                    <NavItem>
                       <NavLink
                         style={{ cursor: "pointer" }}
                         className={classnames({
@@ -282,7 +282,7 @@ const ViewManagerProject = () => {
                     {accessType == "fin" || accessType == "business" ? (
                       ""
                     ) : (
-                      <NavItem className="top-bar">
+                      <NavItem>
                         <NavLink
                           style={{ cursor: "pointer" }}
                           className={classnames({
@@ -317,7 +317,7 @@ const ViewManagerProject = () => {
                       </NavLink>
                     </NavItem> */}
 
-                    <NavItem className="top-bar">
+                    <NavItem>
                       <NavLink
                         style={{ cursor: "pointer" }}
                         className={classnames({
@@ -370,26 +370,6 @@ const ViewManagerProject = () => {
                     )}
                   </Nav>
                 </Card>
-                {/* <Card className="border">
-                  <Nav pills className="nav nav-pills custom-hover-nav-tabs ">
-                    <NavItem className="top-bar">
-                      <NavLink
-                        style={{ cursor: "pointer" }}
-                        className={classnames({
-                          active: customHoverTab === "12",
-                        })}
-                        onClick={() => {
-                          customHovertoggle("12");
-                        }}
-                      >
-                        <i className="mdi mdi-fire nav-icon nav-tab-position"></i>
-                        <h5 className="nav-titl nav-tab-position m-0">
-                          Campaign
-                        </h5>
-                      </NavLink>
-                    </NavItem>
-                  </Nav>
-                </Card> */}
                 <div className="p-0">
                   <TabContent activeTab={customHoverTab} className="text-muted">
                     <TabPane tabId="0" id="custom-hover-customere">

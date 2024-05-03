@@ -24,6 +24,7 @@ const FinanceOverDueInvoice = () => {
       setcustomNav(tab);
     }
   };
+  document.title = "Onx | Finance";
 
   return (
     <>

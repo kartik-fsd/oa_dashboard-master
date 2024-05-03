@@ -4,7 +4,7 @@ import OverDueInvoicesTable from "../AccountReceivable/OverDueInvoicesTable";
 import ClientTable from "./ClientTable";
 
 const ClientMain = () => {
-  document.title = "Taskmo | Finance";
+  document.title = "OnX | Finance";
   const [modal_edit2, set_modal_edit2] = useState(false);
   return (
     <div className="page-content">

@@ -4,6 +4,7 @@ import DataTableExtensions from "react-data-table-component-extensions";
 import { useHistory } from "react-router-dom";
 import img from "../../../assets/images/users/avatar-1.jpg";
 import "./businessCompany.css";
+import { client_details } from "../../../assets/utils/Business";
 
 const BusinessCompanyTable = ({ data }) => {
   const [hover, setHover] = React.useState(false);
@@ -135,7 +136,7 @@ const BusinessCompanyTable = ({ data }) => {
       ),
     },
     {
-      name: "Total Counts",
+      name: "Total Clients",
       selector: (row) => row.clientTotal,
       // width: "90px",
       sortable: true,
@@ -168,6 +169,7 @@ const BusinessCompanyTable = ({ data }) => {
     columns,
     data,
   };
+  console.log(data, "hj1dat");
   return (
     <div className="company_table">
       <DataTableExtensions

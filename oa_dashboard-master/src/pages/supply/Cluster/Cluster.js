@@ -47,7 +47,7 @@ const Cluster = () => {
   const role = context.oaDetials.role;
 
   const history = useHistory();
-  document.title = "Taskmo | Supply";
+  document.title = "OnX | Supply";
 
   React.useEffect(() => {
     const link = farming.farming_URL + getclusters;

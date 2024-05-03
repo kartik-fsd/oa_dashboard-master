@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Nav, NavItem, NavLink, Progress } from "reactstrap";
 import classnames from "classnames";
-
+import "./Stepper.css";
 const Stepper = ({ rowData }) => {
   const [activeTab, setactiveTab] = useState(1);
   const [activeArrowTab, setactiveArrowTab] = useState(4);

@@ -27,9 +27,9 @@ const search_clusters = "/search_clusters";
 // Abhi
 
 const send_offer_letter =
-  "https://spapp.backend.taskmo.co/agreement/releaseOfferLetter";
+  "https://spappbackend.onxtasks.com/agreement/releaseOfferLetter";
 
-const assign_tasker = "https://app.backend.taskmo.co/lead/assignTasker";
+const assign_tasker = "https://appbackend.onxtasks.com/lead/assignTasker";
 
 export {
   supply_data,

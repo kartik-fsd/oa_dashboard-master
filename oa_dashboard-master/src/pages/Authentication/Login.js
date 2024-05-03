@@ -32,7 +32,6 @@ import { useFormik } from "formik";
 import { loginUser, socialLogin, resetLoginFlag } from "../../store/actions";
 
 import logoLight from "../../assets/images/onxAwignDark.svg";
-import { title } from "../../common/pathName";
 import ParticlesAuth from "../AuthenticationInner/ParticlesAuth";
 import axios from "axios";
 import { getOtp } from "../../assets/utils/login";
@@ -70,7 +69,7 @@ const Login = (props) => {
     enableReinitialize: true,
 
     initialValues: {
-      email: "admin@taskmo.com" || "",
+      email: "admin@onx.com" || "",
       password: "testing@123" || "",
     },
     validationSchema: Yup.object({
@@ -130,7 +129,7 @@ const Login = (props) => {
   const path = useLocation();
   const final = path.pathname.slice(1);
   const Cap = final.charAt(0).toUpperCase() + final.slice(1);
-  document.title = `${title}`;
+  document.title = "OnX | Master";
   const Mobile_Regex = new RegExp(/^[0]?[56789]\d{9}$/);
   const handlePassword = () => {
     setPass(!pass);
@@ -178,7 +177,15 @@ const Login = (props) => {
   };
   return (
     <React.Fragment>
-      <ParticlesAuth>
+      <main
+        style={{
+          backgroundImage: `url(${require("../../assets/images/LoginImage.webp")})`,
+          width: "100%",
+          height: "100vh",
+        }}
+      >
+        {" "}
+        <div className="bg-overlay"></div>
         <div className="auth-page-content">
           <Container>
             <Row>
@@ -219,13 +226,16 @@ const Login = (props) => {
 
             <Row className="justify-content-center">
               <Col md={8} lg={6} xl={5}>
-                <Card className="mt-4">
+                <Card
+                  className="mt-4 rounded-lg"
+                  style={{ backgroundColor: "#f3f3f3" }}
+                >
                   <CardBody className="p-4 mt-2">
                     <div className="text-center mt-2">
-                      <h5 className="text-primary">Welcome Back !</h5>
-                      <p className="text-muted">
+                      <h5 className="text-info">
+                        {" "}
                         Sign in to continue with OnX.
-                      </p>
+                      </h5>
                     </div>
                     {error && error ? (
                       <Alert color="danger"> {error} </Alert>
@@ -387,7 +397,7 @@ const Login = (props) => {
           </Container>
           {/* <p>something</p> */}
         </div>
-      </ParticlesAuth>
+      </main>
     </React.Fragment>
   );
 };

@@ -121,15 +121,15 @@ const InvoiceTable2020 = ({ invtable }) => {
       sortable: true,
       center: true,
       cell: (d) => (
-        <div className="amt_table" style={{ cursor: "pointer" }}>
+        <div
+          className="amt_table"
+          style={{ cursor: "pointer", color: "#ec5c24" }}
+        >
           <a
             href={`https://farming-backend.taskmo.in/invoatoken/downloadinvoice2021/2021?invoice_id=${d.invoice_id}&token=${token}`}
             target="_blank"
           >
-            <i
-              className="ri-download-2-fill"
-              style={{ fontSize: "19px", color: "#027bff" }}
-            ></i>
+            <i className="ri-download-2-fill" style={{ fontSize: "19px" }}></i>
           </a>
         </div>
       ),

@@ -88,7 +88,7 @@ const TableInvoice = (props) => {
         <div className="d-flex flex-column gap-1 justify-content-center align-items-center">
           <span>
             <span
-              className="badge rounded-pill badge-soft"
+              className="badge rounded-pill badge-soft text-light"
               style={{
                 minWidth: "55px",
                 textDecoration: "underline",
@@ -105,7 +105,7 @@ const TableInvoice = (props) => {
               </a>
             </span>
           </span>
-          <span className="fs-10 text-muted">
+          <span className="fs-10 text-light">
             <a
               target={"_blank"}
               href={`${farming.farming_URL}/invoatoken/xyz?invoice_id=${d.invoice_id}&token=${token} `}

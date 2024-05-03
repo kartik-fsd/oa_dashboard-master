@@ -16,7 +16,7 @@ import ProjectLeadsTable from "./ProjectLeadsTable";
 import { project_card } from "../../assets/utils/Business";
 
 const ProjectLeads = () => {
-  document.title = "Taskmo | Business";
+  document.title = "OnX | Management";
   const [projectList, setProjectList] = useState([]);
   const [loading, setLoading] = useState(false);
 

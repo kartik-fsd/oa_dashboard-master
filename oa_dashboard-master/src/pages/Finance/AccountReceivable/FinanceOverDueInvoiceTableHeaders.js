@@ -34,10 +34,17 @@ const FinanceOverDueInvoiceTableHeaders = () => {
   };
 
   React.useEffect(() => {
-    let link = farming.farming_URL + overdueInv + `/${start}/${end}`;
-    axios.get(link).then((res) => {
-      setTableData(res.data.inv).catch((err) => console.log(err));
-    });
+    const fetchData = async () => {
+      try {
+        const link = `${farming.farming_URL}${overdueInv}/${start}/${end}`;
+        const response = await axios.get(link);
+        setTableData(response.data.inv);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
   }, [start, end, check]);
   return (
     <>

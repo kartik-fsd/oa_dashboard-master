@@ -20,7 +20,7 @@ import LeadApproved from "./LeadApproved";
 import axios from "axios";
 
 const QcProjects = () => {
-  document.title = "Taskmo | Quality";
+  document.title = "OnX | Quality";
 
   const [open, setOpen] = React.useState(null);
   const [leadstatus, setLeadStatus] = React.useState("enable");

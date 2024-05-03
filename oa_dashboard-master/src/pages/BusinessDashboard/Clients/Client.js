@@ -7,7 +7,7 @@ import BusinessClientTable from "./BusinessClientTable";
 
 const Client = () => {
   const [clientList, setClientList] = React.useState([]);
-
+  document.title = "OnX | Business";
   React.useEffect(() => {
     const link = api.TASKMO_URL + client_list_business;
 

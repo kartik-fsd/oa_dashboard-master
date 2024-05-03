@@ -12,7 +12,7 @@ import { use } from "i18next";
 import { api } from "../../globalConfig";
 
 const BasicTwosVerify = () => {
-  document.title = "Enter OTP | QA Dashboard";
+  document.title = "OnX |Enter OTP";
 
   const mbNumber = sessionStorage.getItem("mbnumber");
   const [code, setCode] = useState("");
@@ -63,8 +63,16 @@ const BasicTwosVerify = () => {
   const handleChange = (code) => setCode(code);
   return (
     <React.Fragment>
-      <div className="auth-page-wrapper">
-        <ParticlesAuth>
+      <>
+        <main
+          style={{
+            backgroundImage: `url(${require("../../assets/images/LoginImage.webp")})`,
+            width: "100%",
+            height: "100vh",
+          }}
+        >
+          {" "}
+          <div className="bg-overlay"></div>
           <div className="auth-page-content">
             <Container>
               <Row>
@@ -75,7 +83,9 @@ const BasicTwosVerify = () => {
                         <img src={logoLight} alt="" height={80} width={250} />
                       </Link>
                     </div>
-                    <p className="mt-3 fs-15 fw-medium">Login to access</p>
+                    <p className="mt-3 fs-15 fw-medium text-light">
+                      Login to access
+                    </p>
                   </div>
                 </Col>
               </Row>
@@ -262,13 +272,13 @@ const BasicTwosVerify = () => {
                       </div>
                     </CardBody>
                   </Card>
-                  <div className="mt-4 text-center">
+                  <div className="mt-4 text-center text-light">
                     <p className="mb-0">
                       Didn't receive a code ?{" "}
                       <Link
                         to="/auth-pass-reset-basic"
                         className="fw-semibold text-decoration-underline"
-                        style={{ color: "#b83016" }}
+                        style={{ color: "#fed8b1" }}
                       >
                         Resend
                       </Link>{" "}
@@ -278,8 +288,8 @@ const BasicTwosVerify = () => {
               </Row>
             </Container>
           </div>
-        </ParticlesAuth>
-      </div>
+        </main>
+      </>
     </React.Fragment>
   );
 };

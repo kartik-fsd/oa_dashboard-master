@@ -73,18 +73,25 @@ const DashboardSupplyTableInside = () => {
       .then((res) => {
         setIsLoading(false);
         setProjectsData(res.data.projects);
-        let ot = res.data.totalData.map((item, i) => ({
-          ...item,
-          id: Number(i + 1),
-        }));
-        setTotalData(ot);
+
+        // Check if res.data.totalData exists before mapping over it
+        if (res.data.totalData) {
+          let ot = res.data.totalData.map((item, i) => ({
+            ...item,
+            id: Number(i + 1),
+          }));
+          setTotalData(ot);
+        } else {
+          // Handle the case where res.data.totalData is undefined or null
+          console.error("Total data is undefined or null:", res.data);
+        }
 
         console.log(res.data, "testing");
         console.log(res);
       })
       .catch((err) => {
         setIsError(true);
-        console.log(err);
+        console.error("Error fetching data:", err);
       })
       .finally(() => setIsLoading(false));
   };

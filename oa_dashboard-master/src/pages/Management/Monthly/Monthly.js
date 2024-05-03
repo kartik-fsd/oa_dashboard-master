@@ -425,7 +425,7 @@ const Monthly = () => {
                                     ) : (
                                       ""
                                     )}
-                                    {userData?.type == "all" ||
+                                    {/* {userData?.type == "all" ||
                                     userData?.type == "fin" ? (
                                       <DropdownItem
                                         className="edit-item-btn d-flex align-items-center"
@@ -438,7 +438,7 @@ const Monthly = () => {
                                       </DropdownItem>
                                     ) : (
                                       ""
-                                    )}
+                                    )} */}
                                   </DropdownMenu>
                                 </UncontrolledDropdown>
                               </div>

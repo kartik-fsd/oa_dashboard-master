@@ -20,7 +20,7 @@ const DailyCollectable = () => {
   const [colData, setColData] = React.useState([]);
   const [all, setAlldata] = React.useState([]);
   const [startDate, setStartDate] = React.useState(new Date());
-
+  document.title = "OnX | Management";
   const month = moment(startDate).format("/MM/YYYY");
   console.log(total, "month");
 

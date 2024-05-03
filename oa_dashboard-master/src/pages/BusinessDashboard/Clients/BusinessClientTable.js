@@ -130,7 +130,7 @@ const BusinessClientTable = ({ data }) => {
       ),
       selector: (row) => row["invoice_number"],
       sortable: true,
-      width: "300px",
+      width: "250px",
       cell: (d) => (
         <div className="p-3">
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
@@ -161,17 +161,6 @@ const BusinessClientTable = ({ data }) => {
                 }}
               >
                 {d?.brand_name}
-                <span
-                  className="badge badge-soft ms-2 cursor-pointer"
-                  style={{ fontSize: "8px", backgroundColor: "#f07d47" }}
-                  onClick={() => {
-                    history.push(
-                      `/business-dashboard/addclient/${d.client_id}`
-                    );
-                  }}
-                >
-                  {d?.company_unique_id}
-                </span>
               </div>
               <div className="fs-10 text-muted text-capitalize">
                 {d?.company_name}
@@ -206,6 +195,29 @@ const BusinessClientTable = ({ data }) => {
         </div>
       ),
     },
+
+    {
+      name: (
+        <div className="d-flex justify-content-center w-150">Client Id</div>
+      ),
+      selector: (row) => row?.company_unique_id,
+      width: "150px",
+      cell: (d) => (
+        <span
+          className="badge badge-soft ms-2 cursor-pointer"
+          style={{
+            fontSize: "8px",
+            backgroundColor: "#f07d47",
+            justifyContent: "center",
+          }}
+          onClick={() => {
+            history.push(`/business-dashboard/addclient/${d.client_id}`);
+          }}
+        >
+          {d?.company_unique_id}
+        </span>
+      ),
+    },
     // {
     //   name: "Client ID",
     //   selector: (row) => row.clientid,
@@ -226,16 +238,21 @@ const BusinessClientTable = ({ data }) => {
       left: true,
       // center:true,
       cell: (d) => (
-        <div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 5,
+            alignItems: "flex-start",
+          }}
+        >
           <div className="fs-12 text-capitalize">
-            {d.client_name}{" "}
-            <span
-              className="badge badge-soft-info ms-1"
-              style={{ fontSize: "8px" }}
-            >
+            {" "}
+            <span className="badge badge-soft-info" style={{ fontSize: "8px" }}>
               {d?.client_unique_id}
             </span>
           </div>
+          <div className="fs-12 text-capitalize">{d.client_name} </div>
           <div className="fs-10 text-muted">{d.client_email}</div>
           <div className="fs-10 text-muted">{d.client_phone}</div>
         </div>

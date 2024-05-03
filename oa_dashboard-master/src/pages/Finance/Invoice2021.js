@@ -6,7 +6,7 @@ import { farming } from "../../globalConfig";
 import InvoiceTable2021 from "./InvoiceTable2021";
 
 const Invoice2021 = () => {
-  document.title = "Taskmo | Finance";
+  document.title = "OnX | Finance";
   const [invtable, setInvTable] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
   const [err, setErr] = React.useState(false);

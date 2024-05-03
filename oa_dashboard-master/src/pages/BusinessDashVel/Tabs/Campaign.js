@@ -180,7 +180,8 @@ const Campaign = () => {
             <div className="col-lg-auto">
               <div className="hstack gap-2">
                 <button type="button" className="btn btn-danger">
-                  <i className="ri-equalizer-fill me-1 align-bottom"></i>{" "}
+                  {/* <i className="ri-equalizer-fill me-1 align-bottom"></i>{" "} */}
+                  <i className="ri-filter-3-line me-1 align-bottom" />
                   Filters
                 </button>
                 <button

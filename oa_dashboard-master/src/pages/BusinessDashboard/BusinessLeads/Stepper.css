@@ -1,0 +1,4 @@
+.progress,
+.progress-stacked {
+  --bs-progress-bar-bg: #f2aa8d !important;
+}
