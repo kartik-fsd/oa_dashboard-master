@@ -134,7 +134,16 @@ const DashboardSupply = () => {
                     alignItems: "center",
                   }}
                 >
-                  <h5 className="card-title mb-0">Performance</h5>
+                  <h5
+                    className="fw-600 fs-16"
+                    style={{
+                      letterSpacing: "2px",
+                      marginLeft: "15px",
+                      color: "#b83016",
+                    }}
+                  >
+                    Performance
+                  </h5>
 
                   <div style={{ marginLeft: "450px" }}>
                     <div className="input-light" style={{ width: "200px" }}>

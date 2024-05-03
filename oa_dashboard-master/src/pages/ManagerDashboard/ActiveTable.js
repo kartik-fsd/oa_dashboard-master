@@ -107,7 +107,7 @@ const ActiveTable = ({
       selector: (row) => row.sow_id,
       sortable: true,
       // omit: location.pathname !== "/finance/project/active" ? true : false,
-      // width:'180px',
+      width: "180px",
       // center: true,
       cell: (d) => (
         <div>
@@ -906,7 +906,7 @@ const ActiveTable = ({
           export={false}
           filterPlaceholder={`Search`}
           // className="filter_text"
-          style={{ paddingRight: "25px important" }}
+          // style={{ paddingRight: "25px important" }}
         >
           <DataTable
             columns={columns}

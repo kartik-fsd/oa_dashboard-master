@@ -367,7 +367,7 @@ const authProtectedRoutes = [
   { path: "/management/daily-collections", component: DailyCollectable },
   { path: "/management/monthly/:id", component: Monthly },
   { path: "/management/card", component: TestingCard },
-  // { path: "/management/annual", component: Annual },
+  { path: "/management/annual", component: Annual },
 
   { path: "/client", component: ClientMain },
   { path: "/Commericals", component: Commercial },

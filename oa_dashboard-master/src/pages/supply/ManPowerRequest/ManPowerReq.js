@@ -35,7 +35,16 @@ const ManPowerReq = () => {
               className="d-flex justify-content-between"
               style={{ marginTop: "10px", padding: "13px" }}
             >
-              <h5 className="card-title mb-0 fs-20">Supply Request</h5>
+              <h5
+                className="fw-600 fs-16"
+                style={{
+                  letterSpacing: "2px",
+                  marginLeft: "15px",
+                  color: "#b83016",
+                }}
+              >
+                Supply Request
+              </h5>
 
               {/* <button
                 className="btn btn-primary  "

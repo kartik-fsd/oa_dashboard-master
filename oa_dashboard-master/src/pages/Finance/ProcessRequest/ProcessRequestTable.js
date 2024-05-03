@@ -252,33 +252,41 @@ const ProcessRequestTable = ({ leadData }) => {
       sortable: true,
       width: "100px",
       center: true,
-      cell: (d) => (
-        <div className="amt_table " style={{ color: "#b83016" }}>
-          {d.payment_type == "direct_sp" ? (
+      cell: ({ payment_type }) => {
+        const badgeStyles = {
+          width: "60px",
+        };
+
+        let badgeClass = "";
+        let badgeText = "";
+
+        switch (payment_type) {
+          case "direct_sp":
+            badgeClass = "badge-soft-success";
+            badgeText = "Managed";
+            break;
+          case "indirect_sp":
+            badgeClass = "badge-soft-warning";
+            badgeText = "Grouped";
+            break;
+          default:
+            badgeClass = "badge-soft-info";
+            badgeText = "Direct";
+        }
+
+        return (
+          <div className="amt_table" style={{ color: "#b83016" }}>
             <span
-              className="badge rounded-pill badge-soft-success"
-              style={{ width: "60px" }}
+              className={`badge rounded-pill ${badgeClass}`}
+              style={badgeStyles}
             >
-              Managed
+              {badgeText}
             </span>
-          ) : d.payment_type == "indirect_sp" ? (
-            <span
-              className="badge rounded-pill badge-soft-warning"
-              style={{ width: "60px" }}
-            >
-              Grouped
-            </span>
-          ) : (
-            <span
-              className="badge rounded-pill badge-soft-info"
-              style={{ width: "60px" }}
-            >
-              Direct
-            </span>
-          )}
-        </div>
-      ),
+          </div>
+        );
+      },
     },
+
     {
       name: "Download",
       selector: (d) => "download",
@@ -304,45 +312,47 @@ const ProcessRequestTable = ({ leadData }) => {
     },
     {
       name: "process payment",
-      omit:
-        (userType == "fin" && role == "head") || role == "manager"
-          ? false
-          : true,
+      omit: !(
+        (userType === "fin" && role === "head") ||
+        role === "manager" ||
+        role === "super_admin"
+      ),
       selector: (d) => d.paid,
+      width: "200px",
       sortable: true,
-      center: "true",
+      center: true,
       cell: (d) => (
         <div>
           {isLoading ? (
-            <>
-              <div
-                className="spinner-border "
-                role="status"
-                style={{ color: "#b83016" }}
-              >
-                <span className="sr-only">Loading...</span>
-              </div>
-            </>
+            <div
+              className="spinner-border"
+              role="status"
+              style={{ color: "#b83016" }}
+            >
+              <span className="sr-only">Loading...</span>
+            </div>
           ) : (
             <div
               onClick={() => {
-                d.count > 0 && d.paid == 0 && onclickOpenSureD(d);
+                if (d.count > 0 && d.paid === 0) {
+                  onclickOpenSureD(d);
+                }
               }}
-              style={{ cursor: "pointer" }}
+              style={{
+                cursor:
+                  d.count === 0 || d.paid !== 0 ? "not-allowed" : "pointer",
+              }}
             >
-              {d.count == 0 ? (
-                <img
-                  src={window.location.origin + "/process_payment_grey.svg"}
-                />
-              ) : d.count > 0 && d.paid == "0" ? (
-                <img
-                  src={window.location.origin + "/process_payment_purple.svg"}
-                />
-              ) : (
-                <img
-                  src={window.location.origin + "/process_payment_green.svg"}
-                />
-              )}
+              <img
+                src={
+                  d.count === 0
+                    ? window.location.origin + "/process_payment_grey.svg"
+                    : d.count > 0 && d.paid === 0
+                    ? window.location.origin + "/process_payment_purple.svg"
+                    : window.location.origin + "/process_payment_green.svg"
+                }
+                alt="Payment"
+              />
             </div>
           )}
         </div>
@@ -355,7 +365,6 @@ const ProcessRequestTable = ({ leadData }) => {
       columns,
     data: leadData?.req,
   };
-  console.log(leadData?.req, "leads");
   return (
     <div>
       <DataTableExtensions

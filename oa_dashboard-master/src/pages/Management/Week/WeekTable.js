@@ -238,8 +238,8 @@ const WeekTable = ({ totalData, setStartDate, startDate, month }) => {
                             className="badge text-bg "
                             style={{
                               minWidth: "70px",
-                              backgroundColor: "#ec5c24",
-                              color: "#ffffff",
+                              backgroundColor: "#f9cdaf",
+                              color: "#400f0a",
                             }}
                           >
                             {indianNumbers(
@@ -328,8 +328,8 @@ const WeekTable = ({ totalData, setStartDate, startDate, month }) => {
                             className="badge text-bg "
                             style={{
                               minWidth: "80px",
-                              backgroundColor: "#ec5c24",
-                              color: "#ffffff",
+                              backgroundColor: "#f9cdaf",
+                              color: "#400f0a",
                             }}
                           >
                             {indianNumbers(
@@ -381,8 +381,8 @@ const WeekTable = ({ totalData, setStartDate, startDate, month }) => {
                             <span
                               className="badge badge-soft"
                               style={{
-                                backgroundColor: "#ec5c24",
-                                color: "#ffffff",
+                                backgroundColor: "#f9cdaf",
+                                color: "#400f0a",
                               }}
                             >
                               {item.date}

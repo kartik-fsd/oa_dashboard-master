@@ -165,11 +165,11 @@ const FinanceSummaryTable = ({
                 {pathname == "/management/ar-summary" ? (
                   <div className="fs-10 text-muted"></div>
                 ) : (
-                  <div className="fs-10 text-muted">
+                  <div className="fs-10 text-muted d-flex flex-column my-1">
                     Billed on {d?.created_on}{" "}
                     <span
                       className="badge badge-soft"
-                      style={{ backgroundColor: "#f07d47" }}
+                      style={{ backgroundColor: "#fde8d7", color: "#f07d47" }}
                     >
                       {d?.net}
                     </span>
@@ -189,13 +189,14 @@ const FinanceSummaryTable = ({
       ),
       selector: "amount",
       cell: (d) => (
-        <div className="fs-16" style={{ cursor: "pointer", color: "#b83016" }}>
+        <div className="fs-16" style={{ cursor: "pointer" }}>
           <div>
             <span
-              className="badge badge-soft"
+              className="badge badge-soft "
               style={{
                 textDecoration: "underline",
-                backgroundColor: "#ec5c24",
+                backgroundColor: "#f9cdaf",
+                color: "#400f0a",
               }}
             >
               {pathname == "/management/ar-summary"

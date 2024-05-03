@@ -125,7 +125,12 @@ const FinanceSummary = () => {
                       >
                         <span
                           className="badge badge-soft d-flex align-items-center px-4  fs-16"
-                          style={{ height: "40px", backgroundColor: "#f07d47" }}
+                          style={{
+                            height: "40px",
+                            backgroundColor: "#fde8d7",
+                            color: "#f07d47",
+                            cursor: "not-allowed",
+                          }}
                         >
                           Total : {indianNumbers(data.total?.toFixed(2))}
                         </span>
@@ -133,34 +138,37 @@ const FinanceSummary = () => {
                       <div>
                         <UncontrolledDropdown className="dropdown d-inline-block">
                           <DropdownToggle
-                            style={{ background: "#fff", border: "none" }}
+                            style={{
+                              background: "#fff",
+                              border: "none",
+                              display:
+                                loc !== "/finance/ar-summary"
+                                  ? "none"
+                                  : "block",
+                            }}
                           >
-                            {loc == "/finance/ar-summary" ? (
-                              <button
-                                className="btn"
-                                style={{
-                                  backgroundColor: "#ec5c24",
-                                  color: "whitesmoke",
-                                  transition: "background-color 0.3s ease",
-                                }}
-                                onMouseEnter={(e) =>
-                                  (e.target.style.backgroundColor = "#dd4319")
-                                }
-                                onMouseLeave={(e) =>
-                                  (e.target.style.backgroundColor = "#ec5c24")
-                                }
-                              >
-                                <i
-                                  className=" ri-filter-3-line align-bottom me-1  fs-14"
-                                  // style={{
-                                  //   fontSize: "13px",
-                                  // }}
-                                ></i>
-                                Filter
-                              </button>
-                            ) : (
-                              <></>
-                            )}
+                            <button
+                              className="btn"
+                              style={{
+                                backgroundColor: "#ec5c24",
+                                color: "whitesmoke",
+                                transition: "background-color 0.3s ease",
+                              }}
+                              onMouseEnter={(e) =>
+                                (e.target.style.backgroundColor = "#dd4319")
+                              }
+                              onMouseLeave={(e) =>
+                                (e.target.style.backgroundColor = "#ec5c24")
+                              }
+                            >
+                              <i
+                                className=" ri-filter-3-line align-bottom me-1  fs-14"
+                                // style={{
+                                //   fontSize: "13px",
+                                // }}
+                              ></i>
+                              Filter
+                            </button>
                           </DropdownToggle>
                           <DropdownMenu className="dropdown-menu-end">
                             <DropdownItem

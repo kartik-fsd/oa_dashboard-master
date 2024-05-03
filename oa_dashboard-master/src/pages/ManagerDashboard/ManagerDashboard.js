@@ -477,7 +477,7 @@ const ManagerDashboard = () => {
                   )}
                 </div>
               </h5>
-              <div>
+              <div style={{ marginLeft: "228px" }}>
                 <h5
                   className=" fw-600 fs-16"
                   style={{
@@ -613,13 +613,13 @@ const ManagerDashboard = () => {
                     className="row-cols-md-3 row-cols-1 m-2 bg-soft"
                     style={{
                       borderRadius: "12px",
-                      backgroundColor: "#f07d47",
+                      backgroundColor: "#f5aa7c",
                     }}
                   >
                     <Col className={"col-lg border-end "}>
                       <div className="mt-3 mt-md-0 py-3 px-3">
                         <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                          <span style={{ color: "#f3f3f3" }}>Milestone</span>
+                          <span style={{ color: "#400f0a" }}>Milestone</span>
                           <div className="d-flex gap-1 justify-content-center align-items-center">
                             <i
                               className={`fs-16 float-end align-middle ${
@@ -649,7 +649,10 @@ const ManagerDashboard = () => {
                           <p className="mb-0 text-muted d-flex justify-content-between">
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill text-warning fs-14 "></i>
-                              <span className="me-3 fs-10 text-light">
+                              <span
+                                className="me-3 fs-10 "
+                                style={{ color: "#762418" }}
+                              >
                                 Performed Target
                               </span>
                             </div>
@@ -667,7 +670,10 @@ const ManagerDashboard = () => {
                           <p className="mb-0 text-muted d-flex justify-content-between">
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill  fs-14 "></i>
-                              <span className="me-3 fs-10 text-light">
+                              <span
+                                className="me-3 fs-10 "
+                                style={{ color: "#762418" }}
+                              >
                                 Set Target
                               </span>
                             </div>
@@ -686,7 +692,7 @@ const ManagerDashboard = () => {
                     <Col className={"col-lg border-end "}>
                       <div className="mt-3 mt-md-0 py-3 px-3">
                         <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                          <span style={{ color: "#f3f3f3" }}>Revenue</span>
+                          <span style={{ color: "#400f0a" }}>Revenue</span>
                           <div className="d-flex justify-content-center align-items-center gap-1">
                             <i
                               className={`fs-16 float-end align-middle  ${
@@ -716,7 +722,10 @@ const ManagerDashboard = () => {
                           <p className="mb-0 text-muted d-flex justify-content-between ">
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill text-warning fs-14 "></i>
-                              <span className="me-3 fs-10 text-light">
+                              <span
+                                className="me-3 fs-10 "
+                                style={{ color: "#762418" }}
+                              >
                                 Performed Revenue
                               </span>
                             </div>
@@ -735,7 +744,10 @@ const ManagerDashboard = () => {
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill  fs-14 "></i>
 
-                              <span className="me-3 fs-10 text-light">
+                              <span
+                                className="me-3 fs-10 "
+                                style={{ color: "#762418" }}
+                              >
                                 Expected Revenue
                               </span>
                             </div>
@@ -755,7 +767,7 @@ const ManagerDashboard = () => {
                     <Col className={"col-lg border-end "}>
                       <div className="mt-3 mt-md-0 py-3 px-3">
                         <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                          <span style={{ color: "#f3f3f3" }}>Expenses</span>
+                          <span style={{ color: "#400f0a" }}>Expenses</span>
                           <div className="d-flex justify-content-center align-items-center gap-1">
                             <i
                               className={`fs-18 float-end align-middle  ${
@@ -785,7 +797,10 @@ const ManagerDashboard = () => {
                           <p className="mb-0 text-muted d-flex justify-content-between ">
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill text-warning fs-14 "></i>
-                              <span className="me-3 fs-10 text-light">
+                              <span
+                                className="me-3 fs-10 "
+                                style={{ color: "#762418" }}
+                              >
                                 Accured Expenses
                               </span>
                             </div>
@@ -803,7 +818,10 @@ const ManagerDashboard = () => {
                           <p className="mb-0 text-muted d-flex justify-content-between ">
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill  fs-14 "></i>
-                              <span className="me-3 fs-10 text-light">
+                              <span
+                                className="me-3 fs-10 "
+                                style={{ color: "#762418" }}
+                              >
                                 Expected Expenses
                               </span>
                             </div>
@@ -822,7 +840,7 @@ const ManagerDashboard = () => {
                     <Col className={"col-lg  "}>
                       <div className="mt-3 mt-md-0 py-3 px-3">
                         <h5 className="text-muted text-uppercase fs-13 d-flex justify-content-between align-items-center">
-                          <span style={{ color: "#f3f3f3" }}>Gross Margin</span>
+                          <span style={{ color: "#400f0a" }}>Gross Margin</span>
                           {/* <i
                             className={
                               "fs-18 float-end align-middle ri-arrow-up-circle-line text-success"
@@ -846,7 +864,10 @@ const ManagerDashboard = () => {
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill text-warning fs-14 "></i>
 
-                              <span className="me-3 fs-10 text-light">
+                              <span
+                                className="me-3 fs-10 "
+                                style={{ color: "#762418" }}
+                              >
                                 Current GM %
                               </span>
                             </div>
@@ -865,7 +886,10 @@ const ManagerDashboard = () => {
                             <div className="d-flex align-items-center gap-1">
                               <i className=" ri-stop-fill  fs-14 "></i>
 
-                              <span className="me-3 fs-10 text-light">
+                              <span
+                                className="me-3 fs-10 "
+                                style={{ color: "#762418" }}
+                              >
                                 Expected GM %
                               </span>
                             </div>

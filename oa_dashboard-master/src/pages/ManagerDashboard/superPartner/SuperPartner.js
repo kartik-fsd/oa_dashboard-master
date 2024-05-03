@@ -821,7 +821,16 @@ const SuperPartner = ({ type }) => {
             // setShowAdd(false);
           }}
         >
-          Supply Requests
+          <h5
+            className="fw-600 fs-16"
+            style={{
+              letterSpacing: "2px",
+              marginLeft: "15px",
+              color: "#b83016",
+            }}
+          >
+            Supply Requests
+          </h5>
         </ModalHeader>
 
         <ModalBody>

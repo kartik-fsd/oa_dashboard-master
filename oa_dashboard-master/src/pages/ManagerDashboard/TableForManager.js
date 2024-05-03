@@ -296,7 +296,6 @@ const TableForManager = (props) => {
   const [financeData, setFinanceData] = React.useState([]);
   const [context, setContext] = useContext(Context);
 
-  console.log(businessData, "buss");
   // console.log(userId, "type");
 
   const pathName = api.VENDOR_URL + extract_token;
@@ -557,7 +556,7 @@ const TableForManager = (props) => {
           {/* <div className="avatar-group">
             <div className="avatar-group-item">
               <div className="avatar-sm">
-                <div className="avatar-title rounded-circle bg-light " style:{{color: "#b83016"}}>
+                <div className="avatar-title rounded-circle bg-light text-primary">
                   {d.main_team}
                 </div>
               </div>
@@ -621,7 +620,7 @@ const TableForManager = (props) => {
                 {d.oa_name}{" "}
                 <span
                   className="badge badge-soft text-capitalize"
-                  style={{ backgroundColor: "#f07d47" }}
+                  style={{ backgroundColor: "#f9cdaf", color: "#92281a" }}
                 >
                   {d.oa_count > 0 ? `+${d.oa_count}` : "0"}
                 </span>
@@ -1638,7 +1637,7 @@ const TableForManager = (props) => {
       .then((res) => setFinanceData(res.data.sows))
       .catch((err) => console.log(err));
   }, [location.pathname]);
-  console.log(location.pathname.split("/"), "kol");
+
   const tableData = {
     // columns: location.pathname == "/my-projects/dm" ? columnsDm : columns,
     // data: location.pathname == "/my-projects/dm" ? dmLeads : apiData,
@@ -1675,14 +1674,14 @@ const TableForManager = (props) => {
     axios
       .get(apilink, { params: { add_lead_status: pathParam } })
       .then((res) => {
-        if (switchData) {
+        if (!switchData) {
           const enable = res?.data?.sows?.filter(
             (it) => it.add_lead_status == "enable"
           );
           setBusinessData(enable);
           setLoading(false);
         }
-        if (!switchData) {
+        if (switchData) {
           const disable = res?.data?.sows?.filter(
             (it) => it.add_lead_status == "disable"
           );

@@ -129,7 +129,14 @@ const Earnings = () => {
                       alignItems: "center",
                     }}
                   >
-                    <h5 className="card-title mb-0">
+                    <h5
+                      className="fw-600 fs-16"
+                      style={{
+                        letterSpacing: "2px",
+                        marginLeft: "15px",
+                        color: "#b83016",
+                      }}
+                    >
                       {location.pathname == "/supply/earnings"
                         ? "Earnings"
                         : "Performance"}

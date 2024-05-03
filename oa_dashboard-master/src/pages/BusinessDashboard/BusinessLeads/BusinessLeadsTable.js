@@ -134,7 +134,7 @@ const BusinessLeadsTable = ({ data }) => {
             <div>
               <span
                 className="badge  fs-7 cursor-pointer"
-                style={{ backgroundColor: "#fa8f5c", color: "#E8E9EB" }}
+                style={{ backgroundColor: "#fde8d7", color: "#400f0a" }}
                 onClick={() => {
                   history.push(
                     `/business-dashboard/clientDetails/${d.lead_id}`

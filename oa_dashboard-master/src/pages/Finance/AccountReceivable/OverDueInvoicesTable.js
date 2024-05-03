@@ -96,7 +96,7 @@ const OverDueInvoicesTable = ({ tableData, setCheck, check }) => {
                   Billed on {d.created_on}
                   <span
                     className="badge badge-soft"
-                    style={{ backgroundColor: "f07d47" }}
+                    style={{ backgroundColor: "#fde8d7", color: "#f07d47" }}
                   >
                     {d.net}
                   </span>
@@ -111,11 +111,16 @@ const OverDueInvoicesTable = ({ tableData, setCheck, check }) => {
       name: "Inv No",
       selector: "amount",
       cell: (d) => (
-        <div className=" fs-16" style={{ cursor: "pointer", color: "#b83016" }}>
+        <div className=" fs-16" style={{ cursor: "pointer" }}>
           <div>
             <span
               className="badge badge-soft"
-              style={{ textDecoration: "underline", backgroundColor: "f07d47" }}
+              style={{
+                textDecoration: "underline",
+
+                backgroundColor: "#f9cdaf",
+                color: "#400f0a",
+              }}
             >
               {d.year == "2022"
                 ? ` 22-23 / ${d["invoice_number"]}`

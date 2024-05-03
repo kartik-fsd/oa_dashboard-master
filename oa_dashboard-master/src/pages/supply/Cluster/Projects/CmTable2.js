@@ -316,7 +316,7 @@ const CmTable2 = ({ data }) => {
   return (
     <div>
       <Card>
-        <CardHeader>
+        <CardHeader className="mt-2">
           <h5 className="card-title ms-4 fs-20">Completed Profile</h5>
         </CardHeader>
         <CardBody>

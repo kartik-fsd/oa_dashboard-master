@@ -764,7 +764,16 @@ function EcommerceProductDetail({ data, youtube }) {
             set_open_supply(!open_supply);
           }}
         >
-          Supply Request
+          <h5
+            className="fw-600 fs-16"
+            style={{
+              letterSpacing: "2px",
+              marginLeft: "15px",
+              color: "#b83016",
+            }}
+          >
+            Supply Request
+          </h5>
         </ModalHeader>
 
         <ModalBody>

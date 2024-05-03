@@ -50,7 +50,7 @@ const DailyCollectable = () => {
   return (
     <div className="page-content">
       <Card>
-        <CardHeader>
+        <CardHeader className="mt-2">
           <div className="d-flex justify-content-between">
             <h5
               className="fw-600 fs-16 "
