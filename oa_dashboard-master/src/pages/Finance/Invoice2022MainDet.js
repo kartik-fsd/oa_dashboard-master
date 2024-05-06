@@ -174,7 +174,7 @@ const Invoice2022MainDet = () => {
             </Nav>
             {location.pathname == "/finance/inv22/maindetails" ? (
               <a
-                href={`https://farming-backend.taskmo.in/invtoken/downloadinvoice2022/2022?invoice_id=${invoiceNo}&token=${token}`}
+                href={`https://financebackend.onxtasks.com/invtoken/downloadinvoice2022/2022?invoice_id=${invoiceNo}&token=${token}`}
                 target="_blank"
               >
                 <i

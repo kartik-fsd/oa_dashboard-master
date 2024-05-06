@@ -265,7 +265,7 @@ const ProcessRequestTable = ({ leadData }) => {
             badgeClass = "badge-soft-success";
             badgeText = "Managed";
             break;
-          case "indirect_sp":
+          case "vendor":
             badgeClass = "badge-soft-warning";
             badgeText = "Grouped";
             break;

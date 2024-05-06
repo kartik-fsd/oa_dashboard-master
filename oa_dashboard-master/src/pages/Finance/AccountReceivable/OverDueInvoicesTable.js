@@ -194,7 +194,10 @@ const OverDueInvoicesTable = ({ tableData, setCheck, check }) => {
       width: "70px",
       center: true,
       omit:
-        type == "fin" && (role == "manager" || role == "head") ? false : true,
+        (type == "fin" && (role == "manager" || role == "head")) ||
+        role == "super_admin"
+          ? false
+          : true,
       cell: (d) => (
         <div>
           <UncontrolledDropdown className="dropdown d-inline-block">

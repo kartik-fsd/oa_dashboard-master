@@ -20,7 +20,7 @@ const DailyTracking = () => {
   }, []);
   return (
     <div className="page-content">
-      <Container>
+      <Container id="force">
         <Col lg={12}>
           <Card>
             <CardHeader>

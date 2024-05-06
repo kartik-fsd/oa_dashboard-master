@@ -468,9 +468,10 @@ const InvoiceDetails = ({
                     ) : (
                       ""
                     )}
-                    {commData == "pending" &&
-                    userData.role == "head" &&
-                    userData.type == "fin" ? (
+                    {(commData == "pending" &&
+                      userData.role == "head" &&
+                      userData.type == "fin") ||
+                    userData.role == "super_admin" ? (
                       <div className="hstack gap-2 justify-content-end d-print-none mt-4">
                         <Link
                           to="#"

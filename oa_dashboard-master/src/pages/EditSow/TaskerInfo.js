@@ -354,8 +354,7 @@ const TaskerInfo = (props) => {
               name="projecttitle"
               defaultValue={props.data.data?.xleads}
               readOnly={
-                context.oaDetials.email_id == "naveen.ram@taskmo.com" ||
-                context.oaDetials.email_id == "swaroop.chandra@taskmo.com"
+                context.oaDetials.email_id == "naveen.ram@awign.com"
                   ? false
                   : true
               }

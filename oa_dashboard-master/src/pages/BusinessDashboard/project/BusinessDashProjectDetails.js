@@ -117,7 +117,6 @@ const BusinessDashProjectDetails = () => {
   // }, []);
 
   const handleLeadsList = (sow) => {
-    // const link = "https://vendorbackend.taskmo.co/oa_vendor/fse_leads_data?sow_id=1511&overall=false"
     const link = api.OA_URL + fse_leads_data;
 
     axios

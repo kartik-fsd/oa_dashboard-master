@@ -127,7 +127,7 @@ const InvoiceTable2021 = ({ invtable }) => {
       cell: (d) => (
         <div className="amt_table" style={{ cursor: "pointer" }}>
           <a
-            href={`https://farming-backend.taskmo.in/invoatoken/downloadinvoice2021/2021?invoice_id=${d.invoice_id}&token=${token}`}
+            href={`https://financebackend.onxtasks.com/invoatoken/downloadinvoice2021/2021?invoice_id=${d.invoice_id}&token=${token}`}
             target="_blank"
           >
             <i

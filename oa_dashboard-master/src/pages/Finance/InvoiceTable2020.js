@@ -126,7 +126,7 @@ const InvoiceTable2020 = ({ invtable }) => {
           style={{ cursor: "pointer", color: "#ec5c24" }}
         >
           <a
-            href={`https://farming-backend.taskmo.in/invoatoken/downloadinvoice2021/2021?invoice_id=${d.invoice_id}&token=${token}`}
+            href={`https://financebackend.onxtasks.com/invoatoken/downloadinvoice2021/2021?invoice_id=${d.invoice_id}&token=${token}`}
             target="_blank"
           >
             <i className="ri-download-2-fill" style={{ fontSize: "19px" }}></i>

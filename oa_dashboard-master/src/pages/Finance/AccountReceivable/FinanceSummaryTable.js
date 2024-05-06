@@ -354,7 +354,10 @@ const FinanceSummaryTable = ({
       width: "70px",
       center: true,
       omit:
-        type == "fin" && (role == "manager" || role == "head") ? false : true,
+        (type == "fin" && (role == "manager" || role == "head")) ||
+        role === "super_admin"
+          ? false
+          : true,
       // omit: false,
       cell: (d) => (
         // <div>

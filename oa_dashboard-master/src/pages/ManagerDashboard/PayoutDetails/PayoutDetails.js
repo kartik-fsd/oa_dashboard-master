@@ -278,13 +278,6 @@ const PayoutDetails = ({ type }) => {
               ? "badge badge-outline-success w-50"
               : "badge badge-outline-warning w-50"
           }
-          style={
-            d.user_type == "tasker"
-              ? { border: "1px solid #ba94f9", color: "#ba94f9" }
-              : d.user_type == "direct_sp"
-              ? { border: "1px solid #FFA45E", color: "#FFA45E" }
-              : { border: "1px solid #63bbbe", color: "#63bbbe" }
-          }
         >
           {d.user_type == "tasker"
             ? "Direct"

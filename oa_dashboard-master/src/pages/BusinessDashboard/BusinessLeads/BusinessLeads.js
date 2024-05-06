@@ -54,8 +54,12 @@ const BusinessLeads = () => {
               <CardBody>
                 <div className="d-flex align-items-center">
                   <div className="avatar-sm flex-shrink-0">
-                    <span className="avatar-title bg-soft-success text-success rounded-circle fs-3">
-                      <i className={"align-middle  ri-shopping-bag-line"}></i>
+                    <span className="avatar-title bg-soft text-dark rounded-circle fs-3">
+                      <i
+                        className={
+                          "align-middle  ri-shopping-bag-line text-light"
+                        }
+                      ></i>
                     </span>
                   </div>
                   <div className="flex-grow-1 ms-3">
@@ -85,18 +89,18 @@ const BusinessLeads = () => {
                   </div>
                   <div className="flex-grow-1 ms-3">
                     <p className="text-uppercase fw-semibold fs-12 text-muted mb-1">
-                      Lead Nurturing
+                      Nurturing
                     </p>
                     <h4 className=" mb-0">{leadCards[0]?.lead_nurturing}</h4>
                   </div>
-                  <div className="flex-shrink-0 align-self-end">
+                  {/* <div className="flex-shrink-0 align-self-end">
                     <span className={"badge badge-soft-danger me-1"}>
                       {leadCards[0]?.lead_nurturing_late}
                     </span>
                     <span className={"badge badge-soft-success"}>
                       {leadCards[0]?.lead_nurturing_early}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </CardBody>
             </Card>
@@ -115,18 +119,18 @@ const BusinessLeads = () => {
                   </div>
                   <div className="flex-grow-1 ms-3">
                     <p className="text-uppercase fw-semibold fs-12 text-muted mb-1">
-                      Lead Maturing
+                      Maturing
                     </p>
                     <h4 className=" mb-0">{leadCards[0]?.lead_maturing}</h4>
                   </div>
-                  <div className="flex-shrink-0 align-self-end">
+                  {/* <div className="flex-shrink-0 align-self-end">
                     <span className={"badge badge-soft-danger me-1"}>
                       {leadCards[0]?.lead_maturing_late}
                     </span>
                     <span className={"badge badge-soft-success"}>
                       {leadCards[0]?.lead_maturing_early}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </CardBody>
             </Card>
@@ -149,14 +153,14 @@ const BusinessLeads = () => {
                     </p>
                     <h4 className=" mb-0">{leadCards[0]?.hot_lead}</h4>
                   </div>
-                  <div className="flex-shrink-0 align-self-end">
-                    <span className={"badge badge-soft-danger me-1"}>
+                  {/* <div className="flex-shrink-0 align-self-end">
+                    <span className={"badge badge-soft me-1"}>
                       {leadCards[0]?.hot_lead_late}
                     </span>
-                    <span className={"badge badge-soft-success"}>
+                    <span className={"badge badge-soft-"}>
                       {leadCards[0]?.hot_lead_early}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </CardBody>
             </Card>

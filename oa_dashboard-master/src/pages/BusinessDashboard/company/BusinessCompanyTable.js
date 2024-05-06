@@ -40,7 +40,7 @@ const BusinessCompanyTable = ({ data }) => {
           </span> */}
           <span
             className="badge badge-soft cursor-pointer"
-            style={{ backgroundColor: "#f07d47" }}
+            style={{ backgroundColor: "#fde8d7", color: "#ec5c24" }}
             onClick={() =>
               history.push(`/business-dashboard/company/${d.company_id}`)
             }
