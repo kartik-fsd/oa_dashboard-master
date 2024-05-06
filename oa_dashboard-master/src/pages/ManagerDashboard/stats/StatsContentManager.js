@@ -256,7 +256,7 @@ function StatsContent({ monthData }) {
             ></Card>
           )}
         </Col>
-        <Col xs={12} md={4}>
+        {/* <Col xs={12} md={4}>
           {!loadingtraining ? (
             <TopReferrals graphData={earningStats} monthData={monthData} />
           ) : (
@@ -266,7 +266,7 @@ function StatsContent({ monthData }) {
               style={{ width: "100%", height: "400px" }}
             ></Card>
           )}
-        </Col>
+        </Col> */}
       </Row>
     </React.Fragment>
   );
