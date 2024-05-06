@@ -75,7 +75,7 @@ const ViewManagerProject = () => {
 
   console.log(context?.oaDetials?.role, accessType, "contextfasak");
 
-  let projectDetailsURL = api.TASKMO_URL + project_details;
+  let projectDetailsURL = api.ONX_URL + project_details;
 
   React.useEffect(() => {
     if (context?.projectId > 0) {
@@ -334,23 +334,7 @@ const ViewManagerProject = () => {
                       </NavLink>
                     </NavItem>
 
-                    <NavItem>
-                      {/* <NavLink
-                        style={{ cursor: "pointer" }}
-                        className={classnames({
-                          active: customHoverTab === "9",
-                        })}
-                        onClick={() => {
-                          customHovertoggle("9");
-                        }}
-                      >
-                        <i className="mdi mdi-fire nav-icon nav-tab-position"></i>
-                        <h5 className="nav-titl nav-tab-position m-0">
-                          Campaign
-                        </h5>
-                      </NavLink> */}
-                    </NavItem>
-                    {user === "super_admin" && (
+                    {/* {user === "super_admin" && (
                       <NavItem className="top-bar">
                         <NavLink
                           style={{ cursor: "pointer" }}
@@ -367,7 +351,7 @@ const ViewManagerProject = () => {
                           </h5>
                         </NavLink>
                       </NavItem>
-                    )}
+                    )} */}
                   </Nav>
                 </Card>
                 <div className="p-0">
@@ -444,9 +428,9 @@ const ViewManagerProject = () => {
                     <TabPane tabId="10" id="custom-hover-customere">
                       <ProjectOverViewSection data={overViewData} />
                     </TabPane>
-                    <TabPane tabId="12" id="custom-hover-customere">
+                    {/* <TabPane tabId="12" id="custom-hover-customere">
                       <Campaign />
-                    </TabPane>
+                    </TabPane> */}
                   </TabContent>
                 </div>
               </div>

@@ -27,7 +27,7 @@ const AddClientDet = () => {
   console.log(clientDet, "datadetaial");
 
   React.useEffect(() => {
-    const link = api.TASKMO_URL + client_details;
+    const link = api.ONX_URL + client_details;
     setIsLoading(true);
     axios
       .get(link, { params: { client_id: clientId } })

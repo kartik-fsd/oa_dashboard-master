@@ -21,7 +21,7 @@ const ClientPers = ({ open, setOpen, data, setCheck, check }) => {
   const { id } = useParams();
 
   const handleUpdate = () => {
-    const link = api.TASKMO_URL + update_client_details;
+    const link = api.ONX_URL + update_client_details;
     editData.client_id = id;
 
     console.log(editData, "editdata");

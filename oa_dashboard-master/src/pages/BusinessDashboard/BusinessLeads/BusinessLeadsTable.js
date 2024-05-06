@@ -101,7 +101,7 @@ const BusinessLeadsTable = ({ data }) => {
       name: "Company",
       selector: (row) => row.company_name,
       sortable: true,
-      width: "250px",
+      width: "300px",
       cell: (d) => (
         <div
           style={{
@@ -124,17 +124,15 @@ const BusinessLeadsTable = ({ data }) => {
             />
           </div>
 
-          <div className="d-flex flex-column gap-1 ">
-            <span
-              className="fs-11  text-secondary"
-              style={{ wordBreak: "break-all", fontWeight: "450" }}
-            >
-              {d.company_name}
-            </span>
-            <div>
+          <div className="d-flex flex-column gap-1">
+            <>
               <span
                 className="badge  fs-7 cursor-pointer"
-                style={{ backgroundColor: "#fde8d7", color: "#400f0a" }}
+                style={{
+                  backgroundColor: "#fde8d7",
+                  color: "#400f0a",
+                  width: "max-content",
+                }}
                 onClick={() => {
                   history.push(
                     `/business-dashboard/clientDetails/${d.lead_id}`
@@ -143,7 +141,13 @@ const BusinessLeadsTable = ({ data }) => {
               >
                 {d.lead_unique_id}
               </span>
-            </div>
+            </>
+            <span
+              className="fs-11  text-secondary"
+              style={{ wordBreak: "break-all", fontWeight: "450" }}
+            >
+              {d.company_name}
+            </span>
           </div>
         </div>
       ),
@@ -212,60 +216,60 @@ const BusinessLeadsTable = ({ data }) => {
         <div className="fs-12">{d.created_at}</div>
       ),
     },
-    {
-      name: (
-        <div>
-          <div className="text-center mb-1">Lead Journey</div>
-          <div className="fs-10 d-flex" style={{ gap: "56px" }}>
-            <span>Nurturing</span>
-            <span>Maturing</span>
-            <span>Hot Lead</span>
-            <span>Initiation</span>
-          </div>
-        </div>
-      ),
-      selector: (row) => row.difficulty_level,
-      sortable: true,
-      center: true,
-      width: "400px",
-      cell: (d) => (
-        <div
-          style={{
-            flexGrow: "1",
-            display: "flex",
-            flexDirection: "column",
-            paddingBottom: "6px",
-          }}
-        >
-          <div className="text-center fs-12 mb-3 invisible">Lead Journey</div>
-          <div style={{ alignSelf: "center" }}>{<Stepper rowData={d} />}</div>
-          <div style={{ display: "flex", gap: "55px", fontSize: "9px" }}>
-            <div className="d-flex flex-column align-items-center gap-1">
-              <span>{d.lead_nurturing_date}</span>
-              {/* <span style={{ fontSize: "8px" }}>HH-MM</span> */}
-            </div>
-            <div className="d-flex flex-column align-items-center gap-1">
-              <span>{d.lead_maturing_date?.split(" ")[0]}</span>
-              {/* <span style={{ fontSize: "8px" }}>
-                {d.lead_maturing_date?.split(" ")[1]}
-              </span> */}
-            </div>
-            <div className="d-flex flex-column align-items-center gap-1">
-              <span>{d.hot_lead_date?.split(" ")[0]}</span>
-              {/* <span style={{ fontSize: "8px" }}>
-                {d.hot_lead_date?.split(" ")[1]}
-              </span> */}
-            </div>
-            <div className="d-flex flex-column align-items-center gap-1">
-              <span>{d.project_initiation_date?.split(" ")[0]}</span>
-              {/* <span style={{ fontSize: "8px" }}>
-                {d.hot_lead_date?.split(" ")[1]}
-              </span> */}
-            </div>
-          </div>
-        </div>
-      ),
-    },
+    // {
+    //   name: (
+    //     <div>
+    //       <div className="text-center mb-1">Lead Journey</div>
+    //       <div className="fs-10 d-flex" style={{ gap: "56px" }}>
+    //         <span>Nurturing</span>
+    //         <span>Maturing</span>
+    //         <span>Hot Lead</span>
+    //         <span>Initiation</span>
+    //       </div>
+    //     </div>
+    //   ),
+    //   selector: (row) => row.difficulty_level,
+    //   sortable: true,
+    //   center: true,
+    //   width: "400px",
+    //   cell: (d) => (
+    //     <div
+    //       style={{
+    //         flexGrow: "1",
+    //         display: "flex",
+    //         flexDirection: "column",
+    //         paddingBottom: "6px",
+    //       }}
+    //     >
+    //       <div className="text-center fs-12 mb-3 invisible">Lead Journey</div>
+    //       <div style={{ alignSelf: "center" }}>{<Stepper rowData={d} />}</div>
+    //       <div style={{ display: "flex", gap: "55px", fontSize: "9px" }}>
+    //         <div className="d-flex flex-column align-items-center gap-1">
+    //           <span>{d.lead_nurturing_date}</span>
+    //           {/* <span style={{ fontSize: "8px" }}>HH-MM</span> */}
+    //         </div>
+    //         <div className="d-flex flex-column align-items-center gap-1">
+    //           <span>{d.lead_maturing_date?.split(" ")[0]}</span>
+    //           {/* <span style={{ fontSize: "8px" }}>
+    //             {d.lead_maturing_date?.split(" ")[1]}
+    //           </span> */}
+    //         </div>
+    //         <div className="d-flex flex-column align-items-center gap-1">
+    //           <span>{d.hot_lead_date?.split(" ")[0]}</span>
+    //           {/* <span style={{ fontSize: "8px" }}>
+    //             {d.hot_lead_date?.split(" ")[1]}
+    //           </span> */}
+    //         </div>
+    //         <div className="d-flex flex-column align-items-center gap-1">
+    //           <span>{d.project_initiation_date?.split(" ")[0]}</span>
+    //           {/* <span style={{ fontSize: "8px" }}>
+    //             {d.hot_lead_date?.split(" ")[1]}
+    //           </span> */}
+    //         </div>
+    //       </div>
+    //     </div>
+    //   ),
+    // },
   ];
   const tableData = {
     columns,

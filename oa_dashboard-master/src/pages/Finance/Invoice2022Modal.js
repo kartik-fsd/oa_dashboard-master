@@ -416,7 +416,7 @@ const EditInvModal = ({ editMod, setEditMod }) => {
         <ModalFooter>
           <button
             type="button"
-            className="btn waves-effect waves-light"
+            className="btn waves-effect waves-light text-light"
             style={{
               backgroundColor: "#ec5c24",
             }}

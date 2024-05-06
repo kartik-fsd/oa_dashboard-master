@@ -107,7 +107,7 @@ const ActiveTable = ({
       selector: (row) => row.sow_id,
       sortable: true,
       // omit: location.pathname !== "/finance/project/active" ? true : false,
-      width: "180px",
+      width: "230px",
       // center: true,
       cell: (d) => (
         <div>
@@ -232,19 +232,19 @@ const ActiveTable = ({
             fontWeight: 900,
             borderRadius: "50%",
             padding: "6px",
-            width: "35px",
-            height: "35px",
+            width: "40px",
+            height: "40px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            fontSize: "10px",
+            fontSize: "12px",
           }}
         >
           {d?.act_g_margin?.toFixed(0)}
         </span>
       ),
       center: true,
-      width: "60px",
+      width: "100px",
     },
 
     {

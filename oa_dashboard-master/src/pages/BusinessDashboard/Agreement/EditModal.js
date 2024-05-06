@@ -39,7 +39,7 @@ function AddAgreement({
   const saveData = (e) => {
     e.preventDefault();
     console.log(all, "send");
-    const link = api.TASKMO_URL + agreement_update;
+    const link = api.ONX_URL + agreement_update;
     axios
       .patch(link, all)
       .then((res) => {

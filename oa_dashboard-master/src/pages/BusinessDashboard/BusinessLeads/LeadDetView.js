@@ -13,7 +13,7 @@ import {
 import axios from "axios";
 import { Context } from "../../../App";
 import { useParams } from "react-router-dom";
-import { dataAravindApproval } from "../../../assets/utils/TaskmoUrl";
+import { dataAravindApproval } from "../../../assets/utils/OnxUrl";
 import MaturningMain from "./MaturningMain";
 import { find } from "lodash";
 import { successnotify, warningnotify } from "../../Toasts";
@@ -29,7 +29,7 @@ const LeadDetView = ({ data, setCheck, check }) => {
   const { id } = useParams();
   const request_by_id = context.oaDetials.id;
   const current_date = context.currentDate;
-  const request_approval_url = api.TASKMO_URL + request_approval;
+  const request_approval_url = api.ONX_URL + request_approval;
 
   const showcomCalc = (data) => {
     if (!data.lead_maturing) {
@@ -88,7 +88,7 @@ const LeadDetView = ({ data, setCheck, check }) => {
   };
 
   React.useEffect(() => {
-    const link = api.TASKMO_URL + search_approval_list;
+    const link = api.ONX_URL + search_approval_list;
     axios
       .get(link, { params: { search: "bh" } })
       .then((res) => {
@@ -109,7 +109,7 @@ const LeadDetView = ({ data, setCheck, check }) => {
   }, []);
 
   const approvalSendFunction = () => {
-    const link = api.TASKMO_URL + update_lead_details;
+    const link = api.ONX_URL + update_lead_details;
     if (seletecUserIdArr.length > 0) {
       let itemtests = seletecUserIdArr.map((item) => {
         return {

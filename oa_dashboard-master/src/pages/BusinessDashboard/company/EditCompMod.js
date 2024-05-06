@@ -41,7 +41,7 @@ const EditCompMod = ({ open, setOpen, data, check, setCheck }) => {
   };
 
   const handleUpdate = () => {
-    const link = api.TASKMO_URL + update_company_details;
+    const link = api.ONX_URL + update_company_details;
     editData.company_id = id;
     if (img !== "") {
       editData.brand_logo = img;

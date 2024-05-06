@@ -20,7 +20,7 @@ const ProjectOverView = ({ projectId }) => {
   const { id } = useParams();
   document.title = "OnX| Business-Dashboard";
   const getProjectsApi = () => {
-    let projectDetailsURL = api.TASKMO_URL + project_details;
+    let projectDetailsURL = api.ONX_URL + project_details;
     setIsLoading(true);
     axios
       .get(projectDetailsURL, {

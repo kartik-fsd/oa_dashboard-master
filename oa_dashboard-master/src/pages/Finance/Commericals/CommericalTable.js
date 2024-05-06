@@ -24,7 +24,7 @@ import {
   client_details,
   update_client,
 } from "../../../assets/utils/farmingBase";
-import { pending_project_lists } from "../../../assets/utils/TaskmoUrl";
+import { pending_project_lists } from "../../../assets/utils/OnxUrl";
 import { api } from "../../../globalConfig";
 import InvoiceDetails from "./InvoiceDetails";
 
@@ -204,7 +204,7 @@ const CommericalTable = ({ status, update, setUpdate }) => {
   };
 
   const getCommercialData = () => {
-    let commericalApi = api.TASKMO_URL + pending_project_lists;
+    let commericalApi = api.ONX_URL + pending_project_lists;
     axios
       .get(commericalApi, { params: { commercial_status: status } })
       .then((res) => {

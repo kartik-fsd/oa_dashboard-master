@@ -58,7 +58,7 @@ const BusinessAgreementTable = ({ status, update, setUpdate, tab }) => {
   // invoice
   const [modal_edit, set_modal_edit] = useState(false);
   const getBusinessAgreementData = () => {
-    let GetBusinessAgApiLink = api.TASKMO_URL + agreement_list;
+    let GetBusinessAgApiLink = api.ONX_URL + agreement_list;
     setIsLoading(true);
     axios
       .get(GetBusinessAgApiLink, { params: { type: status } })

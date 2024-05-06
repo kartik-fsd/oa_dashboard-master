@@ -24,7 +24,7 @@ const ClientProf = ({ open, setOpen, data, setCheck, check }) => {
   console.log(data.client_since, "date");
 
   const handleUpdate = () => {
-    const link = api.TASKMO_URL + update_client_details;
+    const link = api.ONX_URL + update_client_details;
     editData.client_id = id;
 
     console.log(editData, "editdata");

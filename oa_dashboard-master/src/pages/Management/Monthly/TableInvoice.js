@@ -88,11 +88,11 @@ const TableInvoice = (props) => {
         <div className="d-flex flex-column gap-1 justify-content-center align-items-center">
           <span>
             <span
-              className="badge rounded-pill badge-soft text-light"
+              className="badge rounded-pill badge-soft text-dark"
               style={{
                 minWidth: "55px",
                 textDecoration: "underline",
-                backgroundColor: "#f07d47",
+                backgroundColor: "#fde8d7",
               }}
             >
               <a
@@ -101,20 +101,24 @@ const TableInvoice = (props) => {
                 download
                 rel="noreferrer"
               >
-                {d.invoice_number}
+                <span className="fs-10" style={{ color: "#f07d47" }}>
+                  {d.invoice_number}
+                </span>
               </a>
             </span>
           </span>
-          <span className="fs-10 text-light">
-            <a
-              target={"_blank"}
-              href={`${farming.farming_URL}/invoatoken/xyz?invoice_id=${d.invoice_id}&token=${token} `}
-              download
-              rel="noreferrer"
-            >
+
+          <a
+            target={"_blank"}
+            href={`${farming.farming_URL}/invoatoken/xyz?invoice_id=${d.invoice_id}&token=${token} `}
+            download
+            rel="noreferrer"
+          >
+            <span className="fs-10" style={{ color: "#400f0a" }}>
+              {" "}
               {d.bill_date}
-            </a>
-          </span>
+            </span>
+          </a>
         </div>
       ),
     },
@@ -322,7 +326,7 @@ const TableInvoice = (props) => {
           >
             {` -`}
           </div> */}
-          <span>{d.e_invoice_no}</span>
+          <span color="dark">{d.e_invoice_no}</span>
         </div>
       ),
     },
@@ -372,7 +376,11 @@ const TableInvoice = (props) => {
         <div>
           <span
             className="badge badge-soft"
-            style={{ minWidth: "100px", backgroundColor: "#f07d47" }}
+            style={{
+              minWidth: "100px",
+              backgroundColor: "#fde8d7",
+              color: "#400f0a",
+            }}
           >
             {d?.is_paid == "yes"
               ? "Paid"

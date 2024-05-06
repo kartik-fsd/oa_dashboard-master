@@ -62,7 +62,7 @@ const BusinessDashProjectDetails = () => {
   }, []);
 
   const getProjectDetails = async () => {
-    let apiLink = api.TASKMO_URL + project_details;
+    let apiLink = api.ONX_URL + project_details;
     setIsLoading(true);
     try {
       let {

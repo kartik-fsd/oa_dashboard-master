@@ -35,7 +35,7 @@ const AddgstDet = ({ open, setOpen, companyGst, setCheck, check }) => {
   const handleCheckGst = (e) => {
     e.preventDefault();
 
-    const link = api.TASKMO_URL + check_gst;
+    const link = api.ONX_URL + check_gst;
     axios
       .get(link, { params: { gst: gst } })
       .then((res) => {
@@ -49,8 +49,8 @@ const AddgstDet = ({ open, setOpen, companyGst, setCheck, check }) => {
   };
 
   const company = () => {
-    const compLink = api.TASKMO_URL + company_details;
-    // const clientLink = api.TASKMO_URL + client_list_business;
+    const compLink = api.ONX_URL + company_details;
+    // const clientLink = api.ONX_URL + client_list_business;
     axios
       .get(compLink)
       .then((res) => console.log(res.data))
@@ -58,7 +58,7 @@ const AddgstDet = ({ open, setOpen, companyGst, setCheck, check }) => {
   };
 
   const handleSubmit = () => {
-    const link = api.TASKMO_URL + create_gst;
+    const link = api.ONX_URL + create_gst;
     data.company_id = id;
     console.log(data, "data123");
     const comp = Object.values(data);

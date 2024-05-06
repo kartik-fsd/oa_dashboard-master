@@ -23,7 +23,7 @@ const ClientDetails = ({ toggleTab, comId }) => {
 
   const handleCheckClient = (e) => {
     e.preventDefault();
-    const link = api.TASKMO_URL + check_client_email;
+    const link = api.ONX_URL + check_client_email;
     axios
       .get(link, { params: { email: mail } })
       .then((res) => {
@@ -38,7 +38,7 @@ const ClientDetails = ({ toggleTab, comId }) => {
   };
 
   const handleSubmit = () => {
-    const link = api.TASKMO_URL + create_client;
+    const link = api.ONX_URL + create_client;
     data.company_id = comId;
 
     // if (id == undefined) {

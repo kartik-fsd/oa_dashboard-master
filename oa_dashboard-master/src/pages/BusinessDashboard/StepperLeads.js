@@ -63,6 +63,7 @@ const StepperLeads = ({ rowData }) => {
               style={{
                 width: "20px",
                 height: "20px",
+                textAlign: "center",
               }}
               id="pills-gen-info-tab"
               className={classnames(

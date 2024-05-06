@@ -30,7 +30,7 @@
 // const DataTables = ({ data }) => {
 //   const { id } = useParams();
 
-//   // document.title = "Datatables | Velzon - React Admin & Dashboard Template";
+//   // document.title = "Datatables | OnX ";
 //   return (
 //     <React.Fragment>
 //       {/* <div className="page-content"> */}

@@ -63,7 +63,7 @@ const LeadDetEdit = ({ open, setOpen, data, setCheck, check }) => {
   };
 
   const handleUpdate = () => {
-    const link = api.TASKMO_URL + update_lead_details;
+    const link = api.ONX_URL + update_lead_details;
     editData.lead_id = id;
     editData.milestones = JSON.stringify(mileStoneData);
     if (selectedOption) {

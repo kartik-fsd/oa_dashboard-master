@@ -24,7 +24,7 @@ const CompanyAddressEdit = ({ open, setOpen, data, check, setCheck }) => {
   console.log(dataEdit, "compedt");
 
   const handleSubmit = () => {
-    const link = api.TASKMO_URL + update_company_details;
+    const link = api.ONX_URL + update_company_details;
     dataEdit.company_id = id;
 
     axios

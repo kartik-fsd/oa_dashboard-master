@@ -28,7 +28,7 @@ const BusinessLeads = () => {
   document.title = "Onx | Business";
 
   React.useEffect(() => {
-    const link = api.TASKMO_URL + leads_list_business;
+    const link = api.ONX_URL + leads_list_business;
 
     axios
       .get(link, { params: { status: filt } })
@@ -37,7 +37,7 @@ const BusinessLeads = () => {
   }, [filt, check]);
 
   React.useEffect(() => {
-    const link = api.TASKMO_URL + lead_cards;
+    const link = api.ONX_URL + lead_cards;
 
     axios
       .get(link)

@@ -20,7 +20,7 @@ const AboutCompMod = ({ open, setOpen, data, check, setCheck }) => {
   console.log(data, "datq123");
 
   const handleUpdate = () => {
-    const link = api.TASKMO_URL + update_company_details;
+    const link = api.ONX_URL + update_company_details;
     editData.company_id = id;
     axios
       .patch(link, editData)

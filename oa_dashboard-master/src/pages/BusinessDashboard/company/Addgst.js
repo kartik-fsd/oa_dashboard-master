@@ -19,7 +19,7 @@ const Addgst = ({ toggleTab, comId }) => {
   const handleCheckGst = (e) => {
     e.preventDefault();
 
-    const link = api.TASKMO_URL + check_gst;
+    const link = api.ONX_URL + check_gst;
     axios
       .get(link, { params: { gst: gst } })
       .then((res) => {
@@ -33,7 +33,7 @@ const Addgst = ({ toggleTab, comId }) => {
   };
 
   const handleSubmit = () => {
-    const link = api.TASKMO_URL + create_gst;
+    const link = api.ONX_URL + create_gst;
     // data.company_id = id;
     console.log(data, "data123");
     data.company_id = comId;

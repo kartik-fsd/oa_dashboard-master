@@ -460,7 +460,7 @@ const BasicTable = (props) => {
                   // onClick={handleDownload}
                   target="_blank"
                   rel="noreferrer"
-                  style={{ backgroundColor: "#ec5c24" }}
+                  style={{ backgroundColor: "#ec5c24", color: "#ffffff" }}
                 >
                   <i className=" ri-download-2-line align-middle me-1"></i>
                   Checkin
@@ -468,7 +468,7 @@ const BasicTable = (props) => {
                 <CSVLink
                   className="btn"
                   data={data}
-                  style={{ backgroundColor: "#ec5c24" }}
+                  style={{ backgroundColor: "#ec5c24", color: "#ffffff" }}
                 >
                   <i className=" ri-download-2-line align-middle me-1"></i>
                   Download

@@ -17,7 +17,7 @@ const Addclient = () => {
   const defaultDate = moment(clientDet.client_since).format("YYYY-MM-DD");
 
   React.useEffect(() => {
-    const link = api.TASKMO_URL + client_details;
+    const link = api.ONX_URL + client_details;
     setIsLoading(true);
     axios
       .get(link, { params: { client_id: clientId } })

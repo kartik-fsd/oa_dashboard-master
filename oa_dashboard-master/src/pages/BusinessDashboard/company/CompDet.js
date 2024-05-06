@@ -50,7 +50,7 @@ const CompDet = () => {
   };
 
   React.useEffect(() => {
-    const link = api.TASKMO_URL + company_details;
+    const link = api.ONX_URL + company_details;
 
     axios
       .get(link, { params: { company_id: id } })

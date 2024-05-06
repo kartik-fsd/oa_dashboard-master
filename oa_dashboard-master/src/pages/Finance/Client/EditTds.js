@@ -30,7 +30,7 @@ const EditTds = ({ open, setOpen, data, setCheck, check }) => {
   console.log(det, "details");
 
   const handleUpdate = () => {
-    const link = api.TASKMO_URL + update_company_details;
+    const link = api.ONX_URL + update_company_details;
     det.company_id = data?.company_id;
     axios
       .patch(link, det)

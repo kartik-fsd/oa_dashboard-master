@@ -34,7 +34,7 @@ const FounderDetEdit = ({ open, setOpen, data, setCheck, check }) => {
   };
 
   const handleSubmit = () => {
-    const link = api.TASKMO_URL + update_company_details;
+    const link = api.ONX_URL + update_company_details;
     const dataEdit = {};
     dataEdit.company_id = id;
     dataEdit.founder_details = JSON.stringify(mileStoneData);
@@ -89,8 +89,10 @@ const FounderDetEdit = ({ open, setOpen, data, setCheck, check }) => {
                         : true
                     }
                     type="button"
-                    className="btn  waves-effect waves-light btn-sm"
-                    style={{ backgroundColor: "#ec5c24" }}
+                    className="btn  waves-effect waves-light text-light btn-sm"
+                    style={{
+                      backgroundColor: "#ec5c24",
+                    }}
                     onClick={handleClickAdd}
                   >
                     Add
@@ -269,7 +271,7 @@ const FounderDetEdit = ({ open, setOpen, data, setCheck, check }) => {
         <ModalFooter>
           <button
             type="button"
-            className="btn  waves-effect waves-light"
+            className="btn  waves-effect waves-light text-light"
             style={{ backgroundColor: "#ec5c24" }}
             onClick={() => handleSubmit()}
           >

@@ -63,7 +63,7 @@ const EditOtherMod = ({ open, setOpen, d, setCheck, check }) => {
             setData({});
           }}
         >
-          <h5 style={{ color: "#3f5289 " }}>Edit Details</h5>
+          <h5 style={{ color: "#3f5289" }}>Edit Details</h5>
         </ModalHeader>
         <form onSubmit={handleEdit}>
           <ModalBody>
@@ -218,7 +218,7 @@ const EditOtherMod = ({ open, setOpen, d, setCheck, check }) => {
           <ModalFooter>
             <button
               type="submit"
-              className="btn waves-effect waves-light"
+              className="btn waves-effect waves-light text-light"
               style={{ backgroundColor: "#ec5c24" }}
             >
               Submit

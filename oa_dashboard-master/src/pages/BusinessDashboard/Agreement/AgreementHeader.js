@@ -35,7 +35,7 @@ const AgreementHeader = () => {
     setModal(!modal);
   };
   const getBusinessAgreementData = () => {
-    let GetBusinessAgApiLink = api.TASKMO_URL + agreement_list;
+    let GetBusinessAgApiLink = api.ONX_URL + agreement_list;
     axios
       .get(GetBusinessAgApiLink, { params: { type: Atype } })
       .then((res) => {

@@ -21,7 +21,7 @@ function CommentBox({ project_data }) {
   const [check, setCheck] = React.useState(false);
 
   const chatSentURL = "https://admin-api.taskmo.co/api/create-lead-remark";
-  const chatURL = api.TASKMO_URL + chat_remark;
+  const chatURL = api.ONX_URL + chat_remark;
 
   React.useEffect(() => {
     setText("");

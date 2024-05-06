@@ -23,7 +23,7 @@ const BusinessTrackingTable = ({ year }) => {
   const [eachProjectItem, setEachProjectItem] = React.useState({});
 
   React.useEffect(() => {
-    const link = api.TASKMO_URL + business_team_rev;
+    const link = api.ONX_URL + business_team_rev;
 
     axios
       .get(link, { params: { fy: year } })

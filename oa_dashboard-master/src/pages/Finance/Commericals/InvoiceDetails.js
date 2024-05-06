@@ -21,7 +21,7 @@ import { api, farming } from "../../../globalConfig";
 import {
   approve_commercial,
   view_commercial,
-} from "../../../assets/utils/TaskmoUrl";
+} from "../../../assets/utils/OnxUrl";
 import axios from "axios";
 import moment from "moment";
 import { Interweave } from "interweave";
@@ -50,10 +50,9 @@ const InvoiceDetails = ({
   const [billCost, setBillCost] = React.useState("");
   console.log(data, "faskaone");
 
-  document.title =
-    "Invoice Details | Velzon - React Admin & Dashboard Template";
+  document.title = "Invoice Details | OnX";
   const getAgreementData = () => {
-    let apiAgree = api.TASKMO_URL + view_commercial;
+    let apiAgree = api.ONX_URL + view_commercial;
     setIsLoading(true);
     axios
       .get(apiAgree, { params: { project_id: data || id } })

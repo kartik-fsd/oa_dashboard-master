@@ -260,7 +260,7 @@ const AddPayout = ({ open, setOpen, tableData, setUpdate, update }) => {
           <ModalFooter>
             <button
               type="submit"
-              className="btn waves-effect waves-light"
+              className="btn waves-effect waves-light text-light"
               style={{ backgroundColor: "#ec5c24" }}
             >
               Submit

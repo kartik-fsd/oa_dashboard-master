@@ -24,7 +24,7 @@ import Flatpickr from "react-flatpickr";
 import "./FlipModal.css";
 import { successnotify, warningnotify } from "../Toasts";
 import { api } from "../../globalConfig";
-import { create_project } from "../../assets/utils/TaskmoUrl";
+import { create_project } from "../../assets/utils/OnxUrl";
 import axios from "axios";
 import { update_lead_details } from "../../assets/utils/Business";
 
@@ -67,7 +67,7 @@ const FlipModal = ({
     spoc_contact: "",
   });
 
-  const update_lead_details_url = api.TASKMO_URL + update_lead_details;
+  const update_lead_details_url = api.ONX_URL + update_lead_details;
 
   const handleDelete = (idd) => {
     let delItem = spocObj.filter((item) => item.id !== idd);
@@ -91,7 +91,7 @@ const FlipModal = ({
     //   project_end_date
     // );
 
-    let apiData = api.TASKMO_URL + create_project;
+    let apiData = api.ONX_URL + create_project;
     let obj2 = {
       lead_id: dataFromnewAddProject.lead_id,
       company_id: dataFromnewAddProject.company_id,

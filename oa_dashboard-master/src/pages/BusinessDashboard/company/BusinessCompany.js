@@ -24,7 +24,7 @@ const BusinessCompany = () => {
   console.log(compList, "complist");
 
   React.useEffect(() => {
-    const link = api.TASKMO_URL + company_list_business;
+    const link = api.ONX_URL + company_list_business;
     axios
       .get(link)
       .then((res) => setCompList(res.data.company_list))

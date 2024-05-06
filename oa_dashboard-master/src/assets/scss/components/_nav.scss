@@ -22,6 +22,7 @@
 .nav-pills{
     .nav-link.active, .show>.nav-link{
         box-shadow: $element-shadow;
+        background-color: #f5aa7c;
     }
 }
 
@@ -132,7 +133,7 @@
             }
             &.active {
                 .nav-tab-position {
-                    color: $white;
+                    color: #92281a;
                 }
             }
             .nav-tab-position {

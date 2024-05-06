@@ -610,10 +610,9 @@ const ManagerDashboard = () => {
               location.pathname == "/business/project" ? (
                 <div>
                   <Row
-                    className="row-cols-md-3 row-cols-1 m-2 bg-soft"
+                    className="row-cols-md-3 row-cols-1 m-2 bg-soft-primary"
                     style={{
                       borderRadius: "12px",
-                      backgroundColor: "#f5aa7c",
                     }}
                   >
                     <Col className={"col-lg border-end "}>

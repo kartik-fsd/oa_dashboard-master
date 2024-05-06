@@ -44,7 +44,7 @@ const AddClientMod = ({
 
   const handleCheckClient = (e) => {
     e.preventDefault();
-    const link = api.TASKMO_URL + check_client_email;
+    const link = api.ONX_URL + check_client_email;
     axios
       .get(link, { params: { email: mail } })
       .then((res) => {
@@ -58,7 +58,7 @@ const AddClientMod = ({
   };
 
   const client = () => {
-    const clientLink = api.TASKMO_URL + client_list_business;
+    const clientLink = api.ONX_URL + client_list_business;
     axios
       .get(clientLink)
       .then((res) => console.log(res.data))
@@ -66,7 +66,7 @@ const AddClientMod = ({
   };
 
   const handleSubmit = () => {
-    const link = api.TASKMO_URL + create_client;
+    const link = api.ONX_URL + create_client;
 
     if (id == undefined) {
       data.company_id = companyId;

@@ -36,7 +36,7 @@ import { useParams } from "react-router-dom";
 import {
   agreement_list_select,
   dataAravindApproval,
-} from "../../../assets/utils/TaskmoUrl";
+} from "../../../assets/utils/OnxUrl";
 import { successnotify, warningnotify } from "../../Toasts";
 import FlipModal from "../../BusinessDashVel/FlipModal";
 import moment from "moment";
@@ -120,7 +120,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
     project_id: data?.project_id,
   });
   useEffect(() => {
-    const link = api.TASKMO_URL + commercial_calculator;
+    const link = api.ONX_URL + commercial_calculator;
     setIsLoading(true);
     axios
       .get(link)
@@ -140,7 +140,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
   }, [sum, a, b, c, d, e, f]);
 
   React.useEffect(() => {
-    const link = api.TASKMO_URL + search_approval_list;
+    const link = api.ONX_URL + search_approval_list;
     axios
       .get(link, { params: { search: "pfd" } })
       .then((res) => {
@@ -260,7 +260,11 @@ const MaturningMain = ({ data, setCheck, check }) => {
           {" "}
           <span
             className="badge"
-            style={{ width: "80px", backgroundColor: "#ec5c24", color: "#fff" }}
+            style={{
+              width: "80px",
+              backgroundColor: "#f9cdaf",
+              color: "#762418",
+            }}
           >
             {item.agreement_unique_id}
           </span>
@@ -279,8 +283,8 @@ const MaturningMain = ({ data, setCheck, check }) => {
   };
 
   const handleSubmitCommercial = () => {
-    const link = api.TASKMO_URL + update_lead_details;
-    const link2 = api.TASKMO_URL + "/create_pfd";
+    const link = api.ONX_URL + update_lead_details;
+    const link2 = api.ONX_URL + "/create_pfd";
     const parsedId = parseInt(id, 10);
     const body = {
       lead_id: id,
@@ -319,13 +323,13 @@ const MaturningMain = ({ data, setCheck, check }) => {
   const [AgreementSelect, setAgreementSelect] = useState([]);
   const [agreeLoading, setAgreeLoading] = useState(false);
   const [agreeMentDropDown, setAgreeMentDropDown] = useState(null);
-  const link = api.TASKMO_URL + update_lead_details;
-  const apiData = api.TASKMO_URL + agreement_list_select;
-  const project_detail_update_url = api.TASKMO_URL + project_detail_update;
-  const create_po_url = api.TASKMO_URL + create_po;
-  const create_cost_url = api.TASKMO_URL + create_cost;
-  const cost_update_url = api.TASKMO_URL + cost_update;
-  const po_update_url = api.TASKMO_URL + po_update;
+  const link = api.ONX_URL + update_lead_details;
+  const apiData = api.ONX_URL + agreement_list_select;
+  const project_detail_update_url = api.ONX_URL + project_detail_update;
+  const create_po_url = api.ONX_URL + create_po;
+  const create_cost_url = api.ONX_URL + create_cost;
+  const cost_update_url = api.ONX_URL + cost_update;
+  const po_update_url = api.ONX_URL + po_update;
 
   const getAgreementDataDetails = () => {
     setAgreeLoading(true);

@@ -36,7 +36,7 @@ function ChatSmall({ project_data }) {
   const [userId, setUserId] = React.useState(0);
   const [check, setCheck] = React.useState(false);
 
-  const chatURL = api.TASKMO_URL + chat_remark;
+  const chatURL = api.ONX_URL + chat_remark;
   const pathName = api.VENDOR_URL + extract_token;
   const chatSentURL = "https://admin-api.taskmo.co/api/create-lead-remark";
 

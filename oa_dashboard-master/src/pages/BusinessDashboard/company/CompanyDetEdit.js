@@ -107,7 +107,7 @@ const CompanyDetEdit = ({ open, setOpen, data, check, setCheck }) => {
   console.log(fundDef, "defvalue");
 
   const handleUpdate = () => {
-    const link = api.TASKMO_URL + update_company_details;
+    const link = api.ONX_URL + update_company_details;
     editData.company_id = id;
     axios
       .patch(link, editData)

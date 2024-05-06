@@ -9,7 +9,7 @@ const Client = () => {
   const [clientList, setClientList] = React.useState([]);
   document.title = "OnX | Business";
   React.useEffect(() => {
-    const link = api.TASKMO_URL + client_list_business;
+    const link = api.ONX_URL + client_list_business;
 
     axios
       .get(link)

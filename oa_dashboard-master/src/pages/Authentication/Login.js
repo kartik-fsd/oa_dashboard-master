@@ -207,22 +207,6 @@ const Login = (props) => {
                 </div>
               </Col>
             </Row>
-            {/* <Row>
-          <Col lg={12}>
-            <div className="auth-bg-black">
-              <div className="text-center text-white-50 ">
-                <div>
-                  <Link to="/" className="d-inline-block auth-logo">
-                    <img src={logoLight} alt="" height={80} width={250} />
-                  </Link>
-                </div>
-                <p className="mt-3 fs-15 fw-medium">
-                  Taskmo Admin & Performance Tracker
-                </p>
-              </div>
-            </div>
-          </Col>
-        </Row> */}
 
             <Row className="justify-content-center">
               <Col md={8} lg={6} xl={5}>

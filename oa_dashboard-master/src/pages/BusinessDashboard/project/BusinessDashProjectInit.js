@@ -23,7 +23,7 @@ import {
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import StepperProject from "../BusinessLeads/StepperProject";
 import Select from "react-select";
-import { dataAravindApproval } from "../../../assets/utils/TaskmoUrl";
+import { dataAravindApproval } from "../../../assets/utils/OnxUrl";
 import { Context } from "../../../App";
 import { successnotify } from "../../Toasts";
 
@@ -40,8 +40,8 @@ const BusinessDashProjectInit = () => {
   const [opt, setOpt] = React.useState([]);
   const [seletecUserIdArr, setSelectedUserIdArr] = useState([]);
 
-  const project_details_url = api.TASKMO_URL + project_details;
-  const search_approval_list_url = api.TASKMO_URL + search_approval_list;
+  const project_details_url = api.ONX_URL + project_details;
+  const search_approval_list_url = api.ONX_URL + search_approval_list;
 
   function tog_animationFlip(d) {
     setModalType(d);

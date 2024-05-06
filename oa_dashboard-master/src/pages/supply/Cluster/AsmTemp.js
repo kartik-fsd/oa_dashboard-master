@@ -95,7 +95,7 @@ const AsmTemp = () => {
     }
   };
 
-  document.title = "Profile | Velzon - React Admin & Dashboard Template";
+  document.title = "Profile | OnX";
 
   return (
     <React.Fragment>
@@ -348,12 +348,6 @@ const AsmTemp = () => {
                                     >
                                       <i className="ri-global-line"></i>
                                     </div>
-                                  </div>
-                                  <div className="flex-grow-1 overflow-hidden">
-                                    <p className="mb-1">Website :</p>
-                                    <Link to="#" className="fw-semibold">
-                                      www.velzon.com
-                                    </Link>
                                   </div>
                                 </div>
                               </Col>

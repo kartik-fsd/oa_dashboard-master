@@ -8,7 +8,7 @@ import {
   create_lead,
   search_client_list,
   search_company_list,
-} from "../../../assets/utils/TaskmoUrl";
+} from "../../../assets/utils/OnxUrl";
 import Select from "react-select";
 import { useHistory } from "react-router-dom";
 import { use } from "i18next";
@@ -50,7 +50,7 @@ const AddLead = (props) => {
           }
         : {};
 
-    let apiData = api.TASKMO_URL + create_lead;
+    let apiData = api.ONX_URL + create_lead;
     console.log(body, "body");
     let comp = Object.values(body);
     // console.log(comp,'testingcomp')
@@ -155,7 +155,7 @@ const AddLead = (props) => {
   };
 
   const getCompanyList = () => {
-    let apiData = api.TASKMO_URL + search_company_list;
+    let apiData = api.ONX_URL + search_company_list;
     axios
       .get(apiData)
       // .then((res) => {
@@ -178,7 +178,7 @@ const AddLead = (props) => {
   };
 
   const getClientList = (id) => {
-    let apiData = api.TASKMO_URL + search_client_list;
+    let apiData = api.ONX_URL + search_client_list;
     axios
       .get(apiData, { params: { company_id: id } })
       .then((res) => {

@@ -29,6 +29,7 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { upload_issue_proof } from "../../../assets/utils/sow";
 import { dangernotify, successnotify, warningnotify } from "../../Toasts";
+import "./Select.css";
 
 function AddAgreement({ isOpen, toggle, setModal, setCheck, check }) {
   const { id } = useParams();
@@ -43,7 +44,7 @@ function AddAgreement({ isOpen, toggle, setModal, setCheck, check }) {
   }
   const [company_list, setCompany_list] = useState({});
   React.useEffect(() => {
-    const link = api.TASKMO_URL + company_list_select;
+    const link = api.ONX_URL + company_list_select;
     axios
       .get(link)
       .then((res) => {
@@ -93,7 +94,7 @@ function AddAgreement({ isOpen, toggle, setModal, setCheck, check }) {
     console.log(all, "send", !isOpen);
     setbut(true);
 
-    const path = api.TASKMO_URL + create_agreement;
+    const path = api.ONX_URL + create_agreement;
     if (Object.keys(all)?.length >= 4) {
       axios
         .post(path, all)

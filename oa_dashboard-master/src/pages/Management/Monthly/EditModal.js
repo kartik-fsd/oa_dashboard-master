@@ -515,7 +515,7 @@ const EditInvModal = ({ editMod, setEditMod, editData, setCheck, check }) => {
                         </label>
                         <button
                           type="button"
-                          className="btn waves-effect waves-light"
+                          className="btn waves-effect waves-light text-light"
                           style={{ backgroundColor: "#ec5c24" }}
                           onClick={() => {
                             handleSubmitAdd();
@@ -536,7 +536,7 @@ const EditInvModal = ({ editMod, setEditMod, editData, setCheck, check }) => {
         <ModalFooter>
           <button
             type="button"
-            className="btn waves-effect waves-light"
+            className="btn waves-effect waves-light text-light"
             style={{ backgroundColor: "#ec5c24" }}
             onClick={() => {
               handleSubmitEdit();

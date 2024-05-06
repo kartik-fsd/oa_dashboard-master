@@ -640,6 +640,7 @@ const PayoutDetails = ({ type }) => {
                 marginTop: "-5px",
                 marginRight: "220px",
                 backgroundColor: "#ec5c24",
+                color: "#ffffff",
               }}
               className="btn"
               onClick={() => {
@@ -893,7 +894,7 @@ const PayoutDetails = ({ type }) => {
                       height: "38px",
                       backgroundColor: "#ec5c24",
                     }}
-                    className="btn"
+                    className="btn text-light"
                     onClick={() => {
                       setDate1(null);
                       setDate2(null);
@@ -1073,7 +1074,7 @@ const PayoutDetails = ({ type }) => {
                 width: "100px",
                 backgroundColor: "#ec5c24",
               }}
-              className="btn d-flex gap-2 justify-content-center"
+              className="btn text-light d-flex gap-2 justify-content-center"
               onClick={() => handleAdd()}
               disabled={remark == ""}
             >

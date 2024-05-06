@@ -8,7 +8,7 @@ import { agreement_details } from "../../../assets/utils/Business";
 import { api } from "../../../globalConfig";
 import axios from "axios";
 import BreadCrumb from "../../../components/common/BreadCrumb";
-import { dataAravindApproval } from "../../../assets/utils/TaskmoUrl";
+import { dataAravindApproval } from "../../../assets/utils/OnxUrl";
 import { Context } from "../../../App";
 import { successnotify } from "../../Toasts";
 
@@ -28,7 +28,7 @@ function AddAgreementDetails() {
   const [AgreeData, setData] = useState([]);
   const [check, setCheck] = useState(false);
   React.useEffect(() => {
-    const link = api.TASKMO_URL + agreement_details;
+    const link = api.ONX_URL + agreement_details;
     axios
       .get(link, { params: { agreement_id: id } })
       .then((res) => {

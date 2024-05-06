@@ -254,7 +254,7 @@ const Campaign = () => {
                   <div className="d-flex justify-content-end mt-1">
                     <button
                       type="button"
-                      className="btn waves-effect waves-light btn-sm"
+                      className="btn waves-effect waves-light text-light btn-sm"
                       onClick={() => {
                         setShow(!show);
                         setCampId(item.campaign_id);

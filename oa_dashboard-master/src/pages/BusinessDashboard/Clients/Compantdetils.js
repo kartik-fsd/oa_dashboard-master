@@ -31,7 +31,7 @@ const Compantdetils = ({ open, setOpen, data, setCheck, check }) => {
   console.log(compId, compGst, id, "tiger");
 
   const companyList = () => {
-    const link = api.TASKMO_URL + company_list_dropdown;
+    const link = api.ONX_URL + company_list_dropdown;
 
     axios
       .get(link)
@@ -44,7 +44,7 @@ const Compantdetils = ({ open, setOpen, data, setCheck, check }) => {
   }, []);
 
   //   const handleCompanyList = (e) => {
-  //     const link = api.TASKMO_URL + search_company_gst;
+  //     const link = api.ONX_URL + search_company_gst;
   //     // console.log(e.value, "eee");
   //     setCompId(e.value);
   //     axios
@@ -55,7 +55,7 @@ const Compantdetils = ({ open, setOpen, data, setCheck, check }) => {
 
   const handleCompanyList = (e) => {
     if (e) {
-      const link = api.TASKMO_URL + search_company_gst;
+      const link = api.ONX_URL + search_company_gst;
       setCompId(e.value);
       axios
         .get(link, { params: { company_id: e.value } })
@@ -77,7 +77,7 @@ const Compantdetils = ({ open, setOpen, data, setCheck, check }) => {
   };
 
   const handleUpdate = () => {
-    const link = api.TASKMO_URL + update_client_company_details;
+    const link = api.ONX_URL + update_client_company_details;
     let body = {
       client_id: id,
       company_id: compId,

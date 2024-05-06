@@ -19,7 +19,7 @@ const BuissnessCrad = () => {
   const [flit, setFilt] = React.useState(todayDate);
 
   React.useEffect(() => {
-    const link = api.TASKMO_URL + bussiness_stats_overall;
+    const link = api.ONX_URL + bussiness_stats_overall;
 
     axios
       .get(link, { params: { date: flit } })

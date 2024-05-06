@@ -56,7 +56,7 @@ import { Interweave } from "interweave";
 import { Context } from "../../../App";
 
 const ItemDetails = (props) => {
-  // document.title = "Item Details | Velzon - React Admin & Dashboard Template";
+  // document.title = "Item Details | OnX";
 
   const [context, setContext] = useContext(Context);
 
@@ -190,7 +190,7 @@ const ItemDetails = (props) => {
                         // href="apps-ecommerce-add-product"
                         id="TooltipTop"
                         className="btn btn-soft"
-                        style={{ backgroundColor: "#f07d47" }}
+                        style={{ backgroundColor: "#f5aa7c", color: "#92281a" }}
                         onClick={() => setOpen(true)}
                       >
                         <i className="ri-live-fill align-bottom"></i>

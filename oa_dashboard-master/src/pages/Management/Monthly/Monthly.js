@@ -176,7 +176,7 @@ const Monthly = () => {
   };
 
   const getProjectsApi = () => {
-    let projectDetailsURL = api.TASKMO_URL + project_details;
+    let projectDetailsURL = api.ONX_URL + project_details;
     // setIsLoading(true);
     axios
       .get(projectDetailsURL, {
@@ -1387,8 +1387,8 @@ const Monthly = () => {
                 {userData?.type == "all" || userData?.type == "fin" ? (
                   <button
                     type="button"
-                    className="btn btn-primary waves-effect waves-light"
-                    style={{ marginRight: "228px" }}
+                    className="btn waves-effect waves-light text-light"
+                    style={{ marginRight: "228px", backgroundColor: "#f07d47" }}
                     onClick={() => setOpen2(!open2)}
                   >
                     <i className=" ri-add-line align-bottom me-1"></i>

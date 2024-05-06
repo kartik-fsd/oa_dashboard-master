@@ -31,7 +31,7 @@ const BusinessProjectTest = () => {
   const [filt, setFilt] = useState("intro");
 
   const getProjectListData = () => {
-    let apiData = api.TASKMO_URL + project_list;
+    let apiData = api.ONX_URL + project_list;
     setIsLoading(true);
     axios
       .get(apiData, { params: { status: filt } })
@@ -45,7 +45,7 @@ const BusinessProjectTest = () => {
   };
 
   const getCardData = () => {
-    let link = api.TASKMO_URL + project_card;
+    let link = api.ONX_URL + project_card;
     setLoading2(true);
     axios
       .get(link)
@@ -64,7 +64,7 @@ const BusinessProjectTest = () => {
   }, [filt]);
 
   // React.useEffect(() => {
-  //   const link = api.TASKMO_URL + leads_list_business;
+  //   const link = api.ONX_URL + leads_list_business;
 
   //   axios
   //     .get(link, { params: { status: filt } })

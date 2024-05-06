@@ -18,7 +18,7 @@ const LeadMain = () => {
   const { id } = useParams();
   console.log(leadsDet, "reesleadsDet");
   React.useEffect(() => {
-    const link = api.TASKMO_URL + lead_details;
+    const link = api.ONX_URL + lead_details;
     setIsLoading(true);
     axios
       .get(link, { params: { lead_id: id } })

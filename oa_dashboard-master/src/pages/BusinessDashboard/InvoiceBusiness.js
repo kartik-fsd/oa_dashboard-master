@@ -20,10 +20,7 @@ import Flatpickr from "react-flatpickr";
 
 import { Link, useParams } from "react-router-dom";
 import { api, farming } from "../../globalConfig";
-import {
-  approve_commercial,
-  view_commercial,
-} from "../../assets/utils/TaskmoUrl";
+import { approve_commercial, view_commercial } from "../../assets/utils/OnxUrl";
 import axios from "axios";
 import moment from "moment";
 import { Interweave } from "interweave";
@@ -51,11 +48,10 @@ const InvoiceBusiness = ({
   const [calModalOpen, setCalModalOpen] = React.useState(false);
   const [dateModal, setDateModal] = React.useState(null);
 
-  document.title =
-    "Invoice Details | Velzon - React Admin & Dashboard Template";
+  document.title = "Invoice Details | OnX";
 
   const handleApprove = () => {
-    let approveApi = api.TASKMO_URL + approve_agreement;
+    let approveApi = api.ONX_URL + approve_agreement;
 
     axios
       .put(approveApi, { agreement_id: data.agreement_id, end_time: dateModal })

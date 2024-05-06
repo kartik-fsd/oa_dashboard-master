@@ -77,14 +77,22 @@ const OtherExpensesTable = ({ table, setOtherTotal, update, inv }) => {
           {d.type == "manual_payment" ? (
             <span
               className="badge rounded-pill badge-soft"
-              style={{ minWidth: "30px", backgroundColor: "#f07d47" }}
+              style={{
+                minWidth: "30px",
+                backgroundColor: "#fde8d7",
+                color: "#f07d47",
+              }}
             >
               Payout
             </span>
           ) : (
             <span
               className="badge rounded-pill badge-soft"
-              style={{ minWidth: "30px", backgroundColor: "#f07d47" }}
+              style={{
+                minWidth: "30px",
+                backgroundColor: "#f9cdaf",
+                color: "#92281a",
+              }}
             >
               Expense
             </span>
@@ -131,7 +139,11 @@ const OtherExpensesTable = ({ table, setOtherTotal, update, inv }) => {
 
           <span
             className="badge rounded-pill badge-soft"
-            style={{ minWidth: "30px", backgroundColor: "#f07d47" }}
+            style={{
+              minWidth: "30px",
+              backgroundColor: "#fde8d7",
+              color: "#400f0a",
+            }}
           >
             {d.display_date}
           </span>

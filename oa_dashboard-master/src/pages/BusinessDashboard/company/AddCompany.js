@@ -24,7 +24,7 @@ import BreadCrumb from "../../../components/common/BreadCrumb";
 import ClientDetails from "./ClientDetails";
 import Addgst from "./Addgst";
 import axios from "axios";
-import { check_company_entity } from "../../../assets/utils/TaskmoUrl";
+import { check_company_entity } from "../../../assets/utils/OnxUrl";
 import { api } from "../../../globalConfig";
 import { useHistory } from "react-router-dom";
 import Flatpickr from "react-flatpickr";
@@ -130,7 +130,7 @@ const AddCompany = () => {
 
   console.log(editData, "edtdata");
 
-  const check_company_entity_url = api.TASKMO_URL + check_company_entity;
+  const check_company_entity_url = api.ONX_URL + check_company_entity;
 
   function toggleTab(tab, value) {
     if (activeTab !== tab) {
@@ -220,7 +220,7 @@ const AddCompany = () => {
   };
 
   const handleComapnyDetails = () => {
-    const link = api.TASKMO_URL + create_company;
+    const link = api.ONX_URL + create_company;
     data.brand_logo = img;
     data.founder_details = JSON.stringify(mileStoneData);
     console.log(data);

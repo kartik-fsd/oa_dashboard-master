@@ -4,7 +4,8 @@ module.exports = {
     VENDOR_URL: process.env.REACT_APP_BASE_URL + "vendor",
     FINANCE_URL: process.env.REACT_APP_BASE_URL + "finance",
     AWS_URL: process.env.REACT_APP_BASE_URL + "aws",
-    TASKMO_URL: process.env.REACT_APP_BASE_URL + "taskmo",
+    //ONX_URL: process.env.REACT_APP_BASE_URL + "taskmo",
+    ONX_URL: process.env.REACT_APP_BASE_URL + "taskmo",
   },
   business: {
     BUSINESS_URL: process.env.REACT_APP_BUSINESS_URL,
