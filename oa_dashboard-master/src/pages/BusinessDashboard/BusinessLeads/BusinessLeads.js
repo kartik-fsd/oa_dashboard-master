@@ -54,12 +54,8 @@ const BusinessLeads = () => {
               <CardBody>
                 <div className="d-flex align-items-center">
                   <div className="avatar-sm flex-shrink-0">
-                    <span className="avatar-title bg-soft text-dark rounded-circle fs-3">
-                      <i
-                        className={
-                          "align-middle  ri-shopping-bag-line text-light"
-                        }
-                      ></i>
+                    <span className="avatar-title bg-soft-success text-success rounded-circle fs-3">
+                      <i className={"align-middle  ri-shopping-bag-line"}></i>
                     </span>
                   </div>
                   <div className="flex-grow-1 ms-3">

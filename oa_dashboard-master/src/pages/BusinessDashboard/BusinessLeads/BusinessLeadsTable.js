@@ -84,31 +84,38 @@ const BusinessLeadsTable = ({ data }) => {
       name: "Lead ID",
       selector: (row) => row.project_unique_id,
       sortable: true,
-      omit: true,
+      // omit: true,
+      width: "160px",
+      left: true,
       cell: (row) => (
-        <div>
+        <div className="p-3">
           <span
-            className="badge rounded-pill badge-soft"
-            style={{ backgroundColor: "#f07d47" }}
+            className="badge  fs-7 cursor-pointer"
+            style={{
+              backgroundColor: "#fde8d7",
+              color: "#400f0a",
+              width: "max-content",
+            }}
+            onClick={() => {
+              history.push(`/business-dashboard/clientDetails/${row.lead_id}`);
+            }}
           >
-            L00243
+            {row.lead_unique_id}
           </span>
         </div>
       ),
-      width: "200px",
     },
     {
       name: "Company",
       selector: (row) => row.company_name,
       sortable: true,
-      width: "300px",
+      width: "350px",
       cell: (d) => (
         <div
           style={{
             display: "flex",
             flexDirection: "row",
-
-            gap: "10px",
+            gap: "12px",
             alignItems: "center",
           }}
         >
@@ -124,31 +131,14 @@ const BusinessLeadsTable = ({ data }) => {
             />
           </div>
 
-          <div className="d-flex flex-column gap-1">
-            <>
-              <span
-                className="badge  fs-7 cursor-pointer"
-                style={{
-                  backgroundColor: "#fde8d7",
-                  color: "#400f0a",
-                  width: "max-content",
-                }}
-                onClick={() => {
-                  history.push(
-                    `/business-dashboard/clientDetails/${d.lead_id}`
-                  );
-                }}
-              >
-                {d.lead_unique_id}
-              </span>
-            </>
+          <>
             <span
               className="fs-11  text-secondary"
               style={{ wordBreak: "break-all", fontWeight: "450" }}
             >
               {d.company_name}
             </span>
-          </div>
+          </>
         </div>
       ),
     },
@@ -158,25 +148,10 @@ const BusinessLeadsTable = ({ data }) => {
       sortable: true,
       width: "250px",
       cell: (d) => (
-        <div>
-          {/* <div className="d-flex flex-column gap-1">
-            <div>
-              <span className="fs-10">Name&nbsp;:</span>
-              <span className="fs-12">&nbsp;{d.client_name}</span>
-            </div>
-
-            <div>
-              <span className="fs-10">Phone&nbsp;:</span>
-              <span className="fs-12">&nbsp;{d.client_phone}</span>
-            </div>
-            <div>
-              <span className="fs-10">Email&nbsp;:</span>
-              <span className="fs-12">&nbsp;{d.client_email}</span>
-            </div>
-          </div> */}
-          <p className="m-0 fs-12 text-capitalize"> {d.client_name} </p>
-          <p className="m-0 fs-10 text-muted "> {d.client_email} </p>
-          <p className="m-0 fs-10 text-muted  "> {d.client_phone} </p>
+        <div className="intermediate-details">
+          <p className="m-0 fs-12 text-capitalize m-1">{d.client_name}</p>
+          <p className="m-0 fs-10 text-muted m-1">{d.client_email}</p>
+          <p className="m-0 fs-10 text-muted m-1">{d.client_phone}</p>
         </div>
       ),
     },
@@ -200,11 +175,38 @@ const BusinessLeadsTable = ({ data }) => {
     // },
     {
       name: "Created By",
-      selector: (row) => row.user_name,
-      width: "150px",
-      sortable: true,
-      center: true,
-      cell: (d) => <div className="fs-12">{d.user_name}</div>,
+      selector: (row) => row.company_city,
+      width: "250px",
+      left: true,
+      // center: true,
+      cell: (d) => (
+        <div>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <div>
+              {d?.brand_logo ? (
+                <img
+                  src={d?.user_profile}
+                  alt=""
+                  className="rounded-circle avatar-sm"
+                />
+              ) : (
+                <div className="avatar-sm">
+                  <div
+                    className="avatar-title rounded-circle    text-capitalize"
+                    style={{ color: "#b83016" }}
+                  >
+                    {d?.client_name[0] ?? ""}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <>
+              <div className="fs-12">{d?.user_name}</div>
+            </>
+          </div>
+        </div>
+      ),
     },
     {
       name: "Created On",
