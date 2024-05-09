@@ -36,7 +36,7 @@ const CommercialTableHeaders = () => {
                   alignItems: "center",
                 }}
               >
-                <Nav pills className="nav-customs nav-danger ">
+                <Nav pills>
                   <NavItem>
                     <NavLink
                       style={{ cursor: "pointer" }}

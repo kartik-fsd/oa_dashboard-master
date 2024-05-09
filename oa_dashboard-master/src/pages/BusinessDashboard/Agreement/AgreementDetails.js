@@ -241,7 +241,7 @@ function AddAgreementDetails() {
                 {!AgreeData.agreement_upload ? (
                   <button
                     type="button"
-                    className="btn  waves-effect waves-light cursor-pointer h-75"
+                    className="btn waves-effect waves-light text-light cursor-pointer h-75"
                     style={{
                       backgroundColor: "#ec5c24",
                     }}
@@ -258,7 +258,7 @@ function AddAgreementDetails() {
                   >
                     <button
                       type="button"
-                      className="btn  waves-effect waves-light cursor-pointer"
+                      className="btn  waves-effect waves-light text-light cursor-pointer"
                       style={{
                         backgroundColor: "#ec5c24",
                       }}

@@ -410,7 +410,7 @@ const Issues = () => {
                 >
                   {resdataname === "" ? (
                     <i
-                      className=" bx bx-upload fs-14"
+                      className="bx bx-upload fs-14 text-light"
                       style={{ marginRight: "12px" }}
                     ></i>
                   ) : (
@@ -420,7 +420,7 @@ const Issues = () => {
                     ></i>
                   )}
                   {resdataname == "" ? (
-                    <span className="mb-2">Upload a file </span>
+                    <span className="mb-2 text-light">Upload a file </span>
                   ) : (
                     <span className="mb-2">{resdataname}</span>
                   )}

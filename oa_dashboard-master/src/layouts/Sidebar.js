@@ -87,18 +87,18 @@ const Sidebar = ({ layoutModeType, sideBar, setSideBar }) => {
             <i className="ri-record-circle-line"></i>
           </button>
         </div>
-        <div id="scrollbar">
-          <Container fluid>
-            <div id="two-column-menu"></div>
-            <ul className="navbar-nav" id="navbar-nav">
-              <VerticalLayouts setSideBar={setSideBar} />
-            </ul>
-          </Container>
-        </div>
-        <div
-          className="sidebar-background"
-          style={{ background: "red !important" }}
-        ></div>
+
+        <React.Fragment>
+          <SimpleBar id="scrollbar" className="h-100">
+            <Container fluid>
+              <div id="two-column-menu"></div>
+              <ul className="navbar-nav" id="navbar-nav">
+                <VerticalLayout layoutType={setSideBar} />
+              </ul>
+            </Container>
+          </SimpleBar>
+          <div className="sidebar-background"></div>
+        </React.Fragment>
       </div>
       <div
         className="vertical-overlay"

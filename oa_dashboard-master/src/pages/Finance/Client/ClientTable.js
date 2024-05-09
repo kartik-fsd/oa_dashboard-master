@@ -151,7 +151,7 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
                 <div className="avatar-sm">
                   <div
                     className="avatar-title rounded-circle bg-soft"
-                    style={{ color: "#b83016", backgroundColor: "#f07d47" }}
+                    style={{ color: "#762418", backgroundColor: "#fde8d7" }}
                   >
                     {d?.bd_name[0] ?? ""}
                   </div>
@@ -171,7 +171,8 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
                   className="badge badge-soft"
                   style={{
                     fontSize: "8px",
-                    backgroundColor: "#f07d47",
+                    color: "#762418",
+                    backgroundColor: "#f5aa7c",
                     width: "fit-content",
                     fontWeight: 400,
                   }}
@@ -238,7 +239,8 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
               className="badge badge-soft ms-1"
               style={{
                 fontSize: "8px",
-                backgroundColor: "#f07d47",
+                backgroundColor: "#f9cdaf",
+                color: "#762418",
                 width: "fit-content",
                 fontWeight: 400,
               }}
