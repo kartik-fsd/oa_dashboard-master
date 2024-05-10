@@ -319,7 +319,7 @@ const SuperPartner = ({ type }) => {
     //   width: "400px",
     // },
     {
-      name: "Taskers",
+      name: "Networks",
       selector: (row) => row.total_fses,
       center: true,
       width: "150px",
@@ -524,7 +524,7 @@ const SuperPartner = ({ type }) => {
       <React.Fragment>
         {/* <ToastContainer /> */}
         {/* <div className="d-flex justify-content-between align-items-center w-80 px-4 mb-3">
-          <h5 className="card-title mb-0">Super Partner List</h5>
+          <h5 className="card-title mb-0">Pro Network List</h5>
           <div className="flex-shrink-0">
             <button
               className="btn btn-danger add-btn"
@@ -537,7 +537,7 @@ const SuperPartner = ({ type }) => {
         <Card>
           <CardHeader style={{ marginBottom: "-6px" }}>
             <div className="d-flex flex-column">
-              {/* <h5 className="card-title mt-2">Super Partner List </h5> */}
+              {/* <h5 className="card-title mt-2">Pro Network List </h5> */}
               <div
                 className="d-flex align-items-center gap-2 mt-3"
                 // style={{ marginBottom: "30px" }}

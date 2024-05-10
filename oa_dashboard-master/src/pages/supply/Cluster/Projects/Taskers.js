@@ -161,7 +161,7 @@ const Taskers = ({ type }) => {
             </Label> */}
               </div>
               <h5 className="mt-2 ">
-                {switchData ? "All Taskers" : "Active Taskers"}
+                {switchData ? "All Networks" : "Active Networks"}
               </h5>
             </div>
 

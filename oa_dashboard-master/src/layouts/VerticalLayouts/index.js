@@ -1,19 +1,23 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Collapse } from "reactstrap";
 // Import Data
 import navdata from "../LayoutMenuData";
 //i18n
 import { withTranslation } from "react-i18next";
 
+import Navdata1 from "../LayoutMenuDatan";
+import withRouter from "../../common/withRouter";
+
 const VerticalLayout = (props) => {
-  const navData = navdata().props.children;
+  const navData = Navdata1().props.children;
+  const path = props.router.location.pathname;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     const initMenu = () => {
-      const pathName = process.env.PUBLIC_URL + props.location.pathname;
+      const pathName = process.env.PUBLIC_URL + path;
       const ul = document.getElementById("navbar-nav");
       const items = ul.getElementsByTagName("a");
       let itemsArray = [...items]; // converts NodeList to Array
@@ -28,7 +32,7 @@ const VerticalLayout = (props) => {
     if (props.layoutType === "vertical") {
       initMenu();
     }
-  }, [props.location.pathname, props.layoutType]);
+  }, [path, props.layoutType]);
 
   function activateParentDropdown(item) {
     item.classList.add("active");
@@ -98,33 +102,13 @@ const VerticalLayout = (props) => {
   return (
     <React.Fragment>
       {/* menu Items */}
-
       {(navData || []).map((item, key) => {
         return (
           <React.Fragment key={key}>
             {/* Main Header */}
             {item["isHeader"] ? (
-              <li className="menu-title d-flex justify-content-between">
-                <i className={item.icon}></i>
-                <span data-key="t-menu">{props.t(item.label)}</span>
-                <div
-                  style={{
-                    fontSize: "16px",
-                    margin: "10px",
-                    borderRadius: "50%",
-                    // border: "1px solid #919da9",
-                    width: "25px",
-                    height: "25px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                  onClick={() => {
-                    props.setSideBar(true);
-                  }}
-                >
-                  X
-                </div>
+              <li className="menu-title">
+                <span data-key="t-menu">{props.t(item.label)} </span>
               </li>
             ) : item.subItems ? (
               <li className="nav-item">
@@ -150,7 +134,7 @@ const VerticalLayout = (props) => {
                   isOpen={item.stateVariables}
                   id="sidebarApps"
                 >
-                  <ul className="nav nav-sm flex-column">
+                  <ul className="nav nav-sm flex-column test">
                     {/* subItms  */}
                     {item.subItems &&
                       (item.subItems || []).map((subItem, key) => (
@@ -161,7 +145,6 @@ const VerticalLayout = (props) => {
                                 to={subItem.link ? subItem.link : "/#"}
                                 className="nav-link"
                               >
-                                <i className={subItem.icon}></i>
                                 {props.t(subItem.label)}
                                 {subItem.badgeName ? (
                                   <span
@@ -185,6 +168,17 @@ const VerticalLayout = (props) => {
                                 data-bs-toggle="collapse"
                               >
                                 {props.t(subItem.label)}
+                                {subItem.badgeName ? (
+                                  <span
+                                    className={
+                                      "badge badge-pill bg-" +
+                                      subItem.badgeColor
+                                    }
+                                    data-key="t-new"
+                                  >
+                                    {subItem.badgeName}
+                                  </span>
+                                ) : null}
                               </Link>
                               <Collapse
                                 className="menu-dropdown"
@@ -219,12 +213,6 @@ const VerticalLayout = (props) => {
                                                 data-bs-toggle="collapse"
                                               >
                                                 {props.t(childItem.label)}
-                                                <span
-                                                  className="badge badge-pill bg-danger"
-                                                  data-key="t-new"
-                                                >
-                                                  New
-                                                </span>
                                               </Link>
                                               <Collapse
                                                 className="menu-dropdown"
@@ -247,7 +235,7 @@ const VerticalLayout = (props) => {
                                                         >
                                                           {props.t(
                                                             subChildItem.label
-                                                          )}
+                                                          )}{" "}
                                                         </Link>
                                                       </li>
                                                     )
@@ -274,7 +262,7 @@ const VerticalLayout = (props) => {
                   className="nav-link menu-link"
                   to={item.link ? item.link : "/#"}
                 >
-                  <i className={item.icon}></i>
+                  <i className={item.icon}></i>{" "}
                   <span>{props.t(item.label)}</span>
                   {item.badgeName ? (
                     <span

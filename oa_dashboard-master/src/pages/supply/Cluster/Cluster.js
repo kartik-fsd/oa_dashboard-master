@@ -255,7 +255,7 @@ const Cluster = () => {
                             </div> */}
                             <div className="d-flex gap-2 align-items-center">
                               <p className="m-0 mb-1 fs-12 text-muted text-center">
-                                Taskers
+                                Networks
                               </p>
                               <div
                                 className="badge badge-soft-success p-1 px-2 fs-13"

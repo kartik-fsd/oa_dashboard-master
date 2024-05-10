@@ -66,7 +66,9 @@ const ViewProject = () => {
                       }}
                     >
                       <i className="mdi mdi-account-tie-outline nav-icon nav-tab-position"></i>
-                      <h5 className="nav-titl nav-tab-position m-0">Taskers</h5>
+                      <h5 className="nav-titl nav-tab-position m-0">
+                        Networks
+                      </h5>
                     </NavLink>
                   </NavItem>
 

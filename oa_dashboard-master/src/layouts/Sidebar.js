@@ -100,10 +100,7 @@ const Sidebar = ({ layoutModeType, sideBar, setSideBar }) => {
           <div className="sidebar-background"></div>
         </React.Fragment>
       </div>
-      <div
-        className="vertical-overlay"
-        style={{ background: "red !important" }}
-      ></div>
+      <div className="vertical-overlay"></div>
     </React.Fragment>
   );
 };

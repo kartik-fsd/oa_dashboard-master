@@ -217,7 +217,7 @@ const ViewManagerProject = () => {
                         >
                           <i className="mdi mdi-account-tie-outline nav-icon nav-tab-position"></i>
                           <h5 className="nav-titl nav-tab-position m-0">
-                            Taskers
+                            Networks
                           </h5>
                         </NavLink>
                       </NavItem>
@@ -237,7 +237,7 @@ const ViewManagerProject = () => {
                         >
                           <i className="mdi mdi-account-group-outline nav-icon nav-tab-position"></i>
                           <h5 className="nav-titl nav-tab-position m-0">
-                            Super Partner
+                            Pro Network
                           </h5>
                         </NavLink>
                       </NavItem>

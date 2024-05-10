@@ -88,7 +88,7 @@ const QcManagers = () => {
                     />
                   </div>
                   <span className=" fs-6 fw-500 mt-2">
-                    <strong>All Taskers</strong>
+                    <strong>All Networks</strong>
                   </span>
                 </div>
 

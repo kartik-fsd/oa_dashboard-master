@@ -243,9 +243,9 @@ export const QcMembers = () => {
                       </div>
                       <span className=" fs-6 fw-500 mt-2">
                         {switchData ? (
-                          <strong>All Taskers</strong>
+                          <strong>All Networks</strong>
                         ) : (
-                          <strong>Worked Taskers</strong>
+                          <strong>Worked Networks</strong>
                         )}
                       </span>
                     </div>

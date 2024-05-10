@@ -1865,7 +1865,7 @@ const MaturningMain = ({ data, setCheck, check }) => {
                   borderRadius: "12px",
                 }}
               >
-                <p className="m-0 text-center">Which grade of taskers </p>
+                <p className="m-0 text-center">Which grade of networks </p>
                 <p className="text-center ">does it require?</p>
                 <span
                   className="badge badge-soft d-flex align-items-center justify-content-center px-4  fs-16"

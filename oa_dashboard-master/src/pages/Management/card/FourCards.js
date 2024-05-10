@@ -233,7 +233,7 @@ const FourCards = () => {
                     <i className=" ri-stop-fill  fs-16 "></i>
 
                     <p className="m-0 fs-14" style={{ fontWeight: "500" }}>
-                      Unique Taskers
+                      Unique Networks
                     </p>
                   </div>
                   <p className="m-0 fs-12 " style={{ color: "#b83016" }}>
@@ -247,7 +247,7 @@ const FourCards = () => {
                     <i className=" ri-stop-fill text-success fs-16 "></i>
 
                     <p className="m-0 fs-14" style={{ fontWeight: "500" }}>
-                      Average Taskers
+                      Average Networks
                     </p>
                   </div>
                   <p className="m-0 fs-12 text-success">123</p>

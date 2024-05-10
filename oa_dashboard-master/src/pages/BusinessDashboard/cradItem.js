@@ -24,7 +24,7 @@ const widget = [
     bgcolor: "bg-soft-primary",
   },
   {
-    title: "Active Taskers",
+    title: "Active Networks",
     daily: 123,
     monthly: "monthly",
     yearly: "ytd",

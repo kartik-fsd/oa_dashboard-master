@@ -133,7 +133,7 @@ const CmTable2 = ({ data }) => {
     },
 
     {
-      name: "Taskers",
+      name: "Networks",
       selector: (row) => row.date,
       sortable: true,
       omit: true,

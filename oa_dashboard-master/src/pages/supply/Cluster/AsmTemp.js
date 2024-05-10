@@ -203,7 +203,7 @@ const AsmTemp = () => {
                       >
                         <i className="ri-price-tag-line d-inline-block d-md-none"></i>{" "}
                         <span className="d-none d-md-inline-block">
-                          Taskers
+                          Networks
                         </span>
                       </NavLink>
                     </NavItem>

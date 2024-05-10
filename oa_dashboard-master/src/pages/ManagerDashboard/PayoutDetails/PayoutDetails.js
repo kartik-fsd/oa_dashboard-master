@@ -292,7 +292,7 @@ const PayoutDetails = ({ type }) => {
       width: "200px",
     },
     {
-      name: "Taskers",
+      name: "Networks",
       selector: (d) => d.users,
       cell: (d) => (
         <div className="amt_table fs-14 fw-light " style={{ color: "#b83016" }}>

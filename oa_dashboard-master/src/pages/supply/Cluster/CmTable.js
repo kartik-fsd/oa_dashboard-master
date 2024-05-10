@@ -211,7 +211,7 @@ const CmTable = ({ data, role, onboardData }) => {
     // },
 
     {
-      name: "Taskers",
+      name: "Networks",
       selector: (row) => row.date,
       sortable: true,
       omit: location.pathname == "/hr/onboarding" ? true : false,
