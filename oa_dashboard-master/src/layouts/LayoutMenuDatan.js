@@ -106,7 +106,21 @@ const Navdata1 = () => {
     if (iscurrentState !== "Sow") {
       setIsSow(false);
     }
-  }, [history, iscurrentState, isSales, isOperations, isFinance, isManagement]);
+    if (iscurrentState !== "qc") {
+      setIsQc(false);
+    }
+  }, [
+    history,
+    iscurrentState,
+    isSales,
+    isOperations,
+    isFinance,
+    isSupply,
+    isManagement,
+    isDashboard,
+    isSow,
+    isQc,
+  ]);
 
   useEffect(() => {
     const pathName = api.VENDOR_URL + extract_token;
@@ -201,16 +215,8 @@ const Navdata1 = () => {
           {
             id: 2,
             label: "Qualified",
-            link: "/#",
+            link: "/business/project/new",
             parentId: "sales",
-            click: function (e) {
-              e.preventDefault();
-              setIsQualified(!isQualified);
-            },
-            stateVariables: isQualified,
-            childItems: [
-              { id: 1, label: "New Projects", link: "/business/project/new" },
-            ],
           },
           {
             id: 3,
@@ -314,7 +320,7 @@ const Navdata1 = () => {
       },
       {
         id: "sales",
-        label: "sales",
+        label: "Sales",
         link: "/#",
         isChildItem: true,
         click: function (e) {
@@ -376,11 +382,6 @@ const Navdata1 = () => {
             link: "/supply/request",
             parentId: "pages",
           },
-          {
-            id: 2,
-            label: "My Network",
-            link: `/supply/cluster/cm`,
-          },
         ],
       },
       {
@@ -429,7 +430,7 @@ const Navdata1 = () => {
           },
           {
             id: 2,
-            label: "Networks",
+            label: "Teams",
             link: "/supply/cluster",
             parentId: "pages",
           },
@@ -587,9 +588,6 @@ const Navdata1 = () => {
   if (userType?.operations === "1") {
     menuFinal.push(operation);
   }
-  if (userType?.qc === "1") {
-    menuFinal.push(qcMain);
-  }
 
   //for finance
   if (userType?.finance === "1") {
@@ -604,7 +602,9 @@ const Navdata1 = () => {
   if (userType?.management === "1") {
     menuFinal.push(management);
   }
-
+  if (userType?.qc === "1") {
+    menuFinal.push(qcMain);
+  }
   const menuItems = [
     {
       label: "Menu",

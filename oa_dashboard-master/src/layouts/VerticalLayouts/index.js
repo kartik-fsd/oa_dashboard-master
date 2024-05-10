@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Collapse } from "reactstrap";
@@ -9,10 +9,12 @@ import { withTranslation } from "react-i18next";
 
 import Navdata1 from "../LayoutMenuDatan";
 import withRouter from "../../common/withRouter";
+import { Context } from "../../App";
 
 const VerticalLayout = (props) => {
   const navData = Navdata1().props.children;
   const path = props.router.location.pathname;
+  const [context] = useContext(Context);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -98,7 +100,8 @@ const VerticalLayout = (props) => {
       item.classList.remove("active");
     });
   };
-
+  // Extracting role from the context
+  const { role } = context.oaDetials || {};
   return (
     <React.Fragment>
       {/* menu Items */}
@@ -131,8 +134,8 @@ const VerticalLayout = (props) => {
                 </Link>
                 <Collapse
                   className="menu-dropdown"
-                  isOpen={item.stateVariables}
                   id="sidebarApps"
+                  isOpen={item.stateVariables || role !== "super_admin"}
                 >
                   <ul className="nav nav-sm flex-column test">
                     {/* subItms  */}
