@@ -162,7 +162,7 @@ const ManagerDashboard = () => {
         })
         .catch((err) => console.log(err, "errint"));
     }
-  }, [oashow, workteam]);
+  }, [formData.oa_work_id, oashow, searchProjectUrl, workteam]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -87,7 +87,13 @@ const ProjectOverViewSection = ({ data, setCheck, check }) => {
         })
         .catch((err) => console.log(err, "errint"));
     }
-  }, [oashow, workteam]);
+  }, [
+    formData.oa_work_id,
+    managers_oa_url,
+    oashow,
+    work_id_manager_url,
+    workteam,
+  ]);
 
   function tog_animationFlip(d) {
     setModalType(d);
@@ -156,6 +162,7 @@ const ProjectOverViewSection = ({ data, setCheck, check }) => {
         console.log(err);
       });
   };
+  console.log(data?.commercial_status, "pokp");
 
   return (
     <React.Fragment>
@@ -219,6 +226,7 @@ const ProjectOverViewSection = ({ data, setCheck, check }) => {
                                   {data?.agreement_unique_id}
                                 </span>
                               </div>
+
                               {data?.commercial_status == "pending" ? (
                                 <div
                                   style={{
