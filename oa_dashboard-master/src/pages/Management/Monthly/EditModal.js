@@ -406,7 +406,7 @@ const EditInvModal = ({ editMod, setEditMod, editData, setCheck, check }) => {
             <Col xs="12" className="mt-4">
               <button
                 type="button"
-                className="btn waves-effect waves-light"
+                className="btn waves-effect waves-light text-light"
                 style={{ backgroundColor: "#ec5c24" }}
                 onClick={() => {
                   setAddDesc(!addDesc);

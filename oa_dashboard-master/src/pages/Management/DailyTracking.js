@@ -39,7 +39,7 @@ const DailyTracking = () => {
                     color: "#b83016",
                   }}
                 >
-                  Annual Pipeline
+                  Sales Roaster
                 </h5>
                 <div>
                   <div style={{ height: "35px", marginRight: "220px" }}>

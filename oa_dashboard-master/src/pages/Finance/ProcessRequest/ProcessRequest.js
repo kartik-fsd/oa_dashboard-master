@@ -52,7 +52,7 @@ const ProcessRequest = () => {
               className="d-flex justify-content-between"
               style={{ marginTop: "10px", padding: "13px" }}
             >
-              <h5 className="card-title mb-0 fs-20">Process Request</h5>
+              <h5 className="card-title mb-0 fs-20">Network Request</h5>
               <div>
                 {/* <button
               className="btn" style={{

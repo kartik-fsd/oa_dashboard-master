@@ -1030,8 +1030,8 @@ const Navdata = () => {
     },
 
     {
-      id: "Process Request",
-      label: "Process Request",
+      id: "Network Request",
+      label: "Network Request",
       icon: "mdi mdi-briefcase-clock-outline",
       link: "/processrequest",
       click: function (e) {

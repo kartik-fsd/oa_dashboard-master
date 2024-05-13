@@ -403,7 +403,8 @@ const TableInvoice = (props) => {
       // omit: true,
       cell: (d) => (
         <>
-          {props.userData?.type == "all" || props.userData?.type == "fin" ? (
+          {(props.userData?.type == "all" || props.userData?.type == "fin") &&
+          d.is_paid === "no" ? (
             <div>
               <UncontrolledDropdown className="dropdown d-inline-block">
                 <DropdownToggle style={{ background: "#fff", border: "none" }}>

@@ -564,7 +564,7 @@ const UbrModal = ({ open, setOpen }) => {
               <button
                 disabled={def.length == 0 || Number(totUbr) == 0}
                 type="button"
-                className="btn waves-effect waves-light"
+                className="btn waves-effect waves-light text-light"
                 style={{ backgroundColor: "#ec5c24" }}
                 onClick={() => {
                   setAddDesc(true);
