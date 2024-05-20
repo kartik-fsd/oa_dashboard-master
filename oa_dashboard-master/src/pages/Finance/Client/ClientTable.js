@@ -900,7 +900,7 @@ const ClientTable = ({ modal_edit2, set_modal_edit2 }) => {
                     width: "100px",
                     backgroundColor: "#ec5c24",
                   }}
-                  className="btn d-flex gap-2 justify-content-center"
+                  className="btn d-flex gap-2 justify-content-center text-light"
                   //   onClick={() => handleAdd()}
                   //   disabled={remark == ""}
                 >

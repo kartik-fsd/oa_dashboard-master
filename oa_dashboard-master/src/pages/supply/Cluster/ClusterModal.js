@@ -310,7 +310,7 @@ const CityModal = ({ cityMod, setCityMod, clustId, setCheck, check }) => {
             <Col xs={"12"} className="d-flex justify-content-end">
               <button
                 type="button"
-                className="btn waves-effect waves-light"
+                className="btn waves-effect waves-light text-light"
                 style={{ backgroundColor: "#ec5c24" }}
                 disabled={city.length < 1 ? true : false}
                 onClick={handleAddCity}
@@ -451,7 +451,7 @@ const AddManager = ({
               {manager == null ? (
                 <button
                   type="button"
-                  className="btn waves-effect waves-light"
+                  className="btn waves-effect waves-light text-light"
                   style={{ backgroundColor: "#ec5c24" }}
                   onClick={handleManager}
                 >
@@ -469,7 +469,7 @@ const AddManager = ({
                   </button>
                   <button
                     type="button"
-                    className="btn waves-effect waves-light"
+                    className="btn waves-effect waves-light text-light"
                     style={{ backgroundColor: "#ec5c24" }}
                     onClick={() => setAddMod(false)}
                   >
@@ -667,7 +667,7 @@ const EditModal = ({ openEdit, setOpenEdit, userData, setCheck, check }) => {
             <Col xs={"12"} className="d-flex justify-content-end">
               <button
                 type="button"
-                className="btn waves-effect waves-light"
+                className="btn waves-effect waves-light text-light"
                 style={{ backgroundColor: "#ec5c24" }}
                 disabled={name == "" && resurl == "" ? true : false}
                 onClick={handleUpdate}

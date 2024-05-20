@@ -108,7 +108,7 @@ const Agreement = (data) => {
 
           <button
             type="button"
-            className="btn waves-effect waves-light"
+            className="btn waves-effect waves-light text-light"
             style={{ backgroundColor: "#ec5c24" }}
           >
             <i className=" ri-thumb-up-fill align-middle fs-14 me-2 "></i>{" "}
@@ -128,7 +128,7 @@ const Agreement = (data) => {
           <>
             <button
               type="button"
-              className="btn waves-effect waves-light"
+              className="btn waves-effect waves-light text-light"
               onClick={() => hiddenFile.current.click()}
               style={{ backgroundColor: "#ec5c24" }}
             >
@@ -153,7 +153,7 @@ const Agreement = (data) => {
           //   </button>
           <button
             type="button"
-            className="btn waves-effect waves-light"
+            className="btn waves-effect waves-light text-light"
             style={{ backgroundColor: "#ec5c24" }}
           >
             <i className=" ri-thumb-up-fill align-middle fs-14 me-2  "></i>{" "}

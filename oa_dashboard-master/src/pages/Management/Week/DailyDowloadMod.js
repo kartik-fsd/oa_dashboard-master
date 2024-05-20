@@ -99,7 +99,7 @@ const DailyDowloadMod = ({ open, setOpen, switchData }) => {
                 >
                   <button
                     type="button"
-                    className="btn waves-effect waves-light"
+                    className="btn waves-effect waves-light text-light"
                     style={{ backgroundColor: "#ec5c24" }}
                     disabled={
                       location.pathname == "/finance/project/active"
@@ -132,7 +132,7 @@ const DailyDowloadMod = ({ open, setOpen, switchData }) => {
             >
               <button
                 type="button"
-                className="btn waves-effect waves-light"
+                className="btn waves-effect waves-light text-light"
                 style={{ backgroundColor: "#ec5c24" }}
                 disabled={
                   location.pathname == "/finance/project/active"
@@ -153,7 +153,7 @@ const DailyDowloadMod = ({ open, setOpen, switchData }) => {
             >
               <button
                 type="button"
-                className="btn waves-effect waves-light"
+                className="btn waves-effect waves-light text-light"
                 style={{ backgroundColor: "#ec5c24" }}
                 disabled={
                   location.pathname == "/finance/project/active"

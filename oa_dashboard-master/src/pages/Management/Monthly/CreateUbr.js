@@ -114,7 +114,7 @@ const CreateUbr = ({ open, setOpen, table, lastDate }) => {
         <ModalFooter>
           <button
             type="submit"
-            className="btn waves-effect waves-light"
+            className="btn waves-effect waves-light text-light"
             style={{ backgroundColor: "#ec5c24" }}
             onClick={() => handleCreate()}
             disabled={

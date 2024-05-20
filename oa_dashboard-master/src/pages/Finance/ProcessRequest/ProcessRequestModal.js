@@ -49,7 +49,7 @@ const ProcessRequestModal = ({
         <ModalFooter>
           <button
             type="button"
-            className="btn waves-effect waves-light"
+            className="btn waves-effect waves-light text-light"
             style={{ backgroundColor: "#ec5c24" }}
             disabled={payment_ref ? false : true}
             onClick={() => {
@@ -60,7 +60,7 @@ const ProcessRequestModal = ({
           </button>
           <button
             type="button"
-            className="btn waves-effect waves-light"
+            className="btn waves-effect waves-light text-light"
             style={{ backgroundColor: "#ec5c24" }}
             onClick={() => {
               setReqMod(false);

@@ -159,7 +159,7 @@ const QcMemberModalEdit = (props) => {
               <Col xs={"12"} className="d-flex justify-content-end">
                 <button
                   type="submit"
-                  className="btn waves-effect waves-light"
+                  className="btn waves-effect waves-light text-light"
                   style={{ backgroundColor: "#ec5c24" }}
                   // onClick={() => {
                   //   updateQc();
@@ -464,7 +464,7 @@ const QcFilterModal = (props) => {
               <Col xs={"4"}>
                 <button
                   type="submit"
-                  className="btn waves-effect waves-light"
+                  className="btn waves-effect waves-light text-light"
                   style={{ backgroundColor: "#ec5c24" }}
                   // onClick={() => {
                   //   updateQc();

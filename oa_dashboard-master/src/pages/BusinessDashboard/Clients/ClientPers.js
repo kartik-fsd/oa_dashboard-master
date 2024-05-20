@@ -156,7 +156,7 @@ const ClientPers = ({ open, setOpen, data, setCheck, check }) => {
         <ModalFooter>
           <button
             type="button"
-            className="btn waves-effect waves-light"
+            className="btn waves-effect waves-light text-light"
             // disabled={Object.keys(compDet)?.length > 0 ? false : true}
             style={{ backgroundColor: "#ec5c24" }}
             onClick={handleUpdate}

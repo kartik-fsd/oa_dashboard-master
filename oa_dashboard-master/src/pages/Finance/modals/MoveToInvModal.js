@@ -98,7 +98,7 @@ const MoveToInvModal = ({ open3, setOpen3, data, table }) => {
             <Col xs="3">
               <button
                 type="button"
-                className="btn waves-effect waves-light"
+                className="btn waves-effect waves-light text-light"
                 style={{ backgroundColor: "#ec5c24" }}
                 disabled={invoice == "" ? true : false}
               >

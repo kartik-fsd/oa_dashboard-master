@@ -178,10 +178,10 @@ const Header = ({
                 <FullScreenDropdown />
 
                 {/* Dark/Light Mode set */}
-                <LightDark
+                {/* <LightDark
                   layoutMode={layoutModeType}
                   setLayoutModeType={setLayoutModeType}
-                />
+                /> */}
 
                 {/* NotificationDropdown */}
                 {/* <NotificationDropdown /> */}

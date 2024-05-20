@@ -1454,7 +1454,7 @@ const TableForManager = (props) => {
             />
             <button
               type="button"
-              className="btn waves-effect waves-light"
+              className="btn waves-effect waves-light text-light"
               style={{ backgroundColor: "#ec5c24" }}
               onClick={() =>
                 copyDmLink(`dmlink${d.campaign_id}`, d.campaign_name)

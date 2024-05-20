@@ -305,7 +305,7 @@ const Addclient = () => {
         </button> */}
         <button
           type="button"
-          className="btn  btn-label waves-effect waves-light w-xs px-2"
+          className="btn  btn-label waves-effect waves-light w-xs px-2 text-light"
           style={{ marginLeft: "10px", background: "#ec5c24" }}
         >
           <i className=" ri-arrow-down-line align-middle fs-14 ms-1 "></i>

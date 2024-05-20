@@ -34,7 +34,7 @@ const ManagerTotalLeads = ({ monthData }) => {
     const pathName = api.OA_URL + sow_leads_chart;
     setShimer(true);
     sample
-      .get(pathName, { sow_id: id, filter: "month", month: "0", year: "0" })
+      .get(pathName, { sow_id: id, filter: "o", month: "v", year: "e" })
       .then((res) => {
         const total = res?.data?.data?.value.reduce((acc, i) => acc + i, 0);
         setTotalLeads(total);

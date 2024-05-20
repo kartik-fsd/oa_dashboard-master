@@ -454,7 +454,7 @@ export const QcMembers = () => {
 
                       <button
                         type="button"
-                        className="btn waves-effect waves-light"
+                        className="btn waves-effect waves-light text-light"
                         style={{ backgroundColor: "#ec5c24" }}
                         onClick={handleFseSearch}
                         disabled={
@@ -546,7 +546,7 @@ export const QcMembers = () => {
                     <Col xs={"12"} className="d-flex justify-content-end">
                       <button
                         type="submit"
-                        className="btn waves-effect waves-light"
+                        className="btn waves-effect waves-light text-light"
                         style={{ backgroundColor: "#ec5c24" }}
                         disabled={
                           Object.values(addQc).includes("qc") ||

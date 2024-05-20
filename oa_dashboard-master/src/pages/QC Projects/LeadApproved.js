@@ -78,7 +78,7 @@ const LeadApproved = (props) => {
                 {!datadown && (
                   <button
                     type="button"
-                    className="btn waves-effect waves-light"
+                    className="btn waves-effect waves-light text-light"
                     style={{ backgroundColor: "#ec5c24" }}
                     onClick={() => hiddenFileInput.current.click()}
                   >
@@ -105,7 +105,7 @@ const LeadApproved = (props) => {
                   >
                     <button
                       type="button"
-                      className="btn waves-effect waves-light"
+                      className="btn waves-effect waves-light text-light"
                       style={{ backgroundColor: "#ec5c24" }}
                       onClick={() => ""}
                     >

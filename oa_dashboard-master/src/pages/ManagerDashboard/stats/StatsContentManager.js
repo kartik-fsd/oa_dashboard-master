@@ -31,13 +31,13 @@ function StatsContent({ monthData }) {
   const overallName =
     api.OA_URL +
     overall_leads_chart_oa +
-    `?sow_id=${params}&type=current&month=0&year=0`;
+    `?sow_id=${params}&type=year&month=0&year=0`;
   const leadspath = api.OA_URL + oa_leads_stats;
   const linkURL = api.VENDOR_URL + get_sow_target + `?sow_id=${params}`;
   const trainingDailyUrl =
     api.OA_URL +
     training_chart_daily +
-    `?sow_id=${params}&type=month&month=0&year=0`;
+    `?sow_id=${params}&type=year&month=0&year=0`;
   const overallNameOA =
     api.OA_URL + overall_leads_chart_oa + `?sow_id=${params}`;
 
@@ -241,11 +241,11 @@ function StatsContent({ monthData }) {
         </Col>
       </Row>
       <Row>
-        <Col xs={12} md={4}>
+        <Col xs={12} md={6}>
           <ManagerTotalLeads monthData={monthData} />
         </Col>
 
-        <Col xs={12} md={4}>
+        <Col xs={12} md={6}>
           {!loadingTwo ? (
             <BarChart graphData={graphData2} monthData={monthData} />
           ) : (

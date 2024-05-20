@@ -205,7 +205,7 @@ function TableSupportAgent(props) {
             <Col className="d-flex justify-content-end gap-2">
               <button
                 type="button"
-                className="btn waves-effect waves-light"
+                className="btn waves-effect waves-light text-light"
                 style={{ backgroundColor: "#ec5c24" }}
                 onClick={handleRelieve}
               >
@@ -213,7 +213,7 @@ function TableSupportAgent(props) {
               </button>
               <button
                 type="button"
-                className="btn waves-effect waves-light"
+                className="btn waves-effect waves-light text-light"
                 style={{ backgroundColor: "#ec5c24" }}
                 onClick={() => setRelieveMod(false)}
               >
