@@ -92,12 +92,12 @@ const AddLead = (props) => {
     { value: "Referral (Client) ", label: "Referral (Client) " },
     { value: " Website Traffic", label: " Website Traffic" },
     { value: "  Google Ads ", label: "  Google Ads " },
-    { value: "  Quess cross selling ", label: "  Quess cross selling  " },
+
     { value: "  Google Ads ", label: "  Google Ads " },
-    { value: "  Quess cross selling ", label: "  Quess cross selling " },
+
     { value: "  Google Ads ", label: "  Google Ads " },
     { value: "  WhatsApp marketing  ", label: "  WhatsApp marketing " },
-    { value: "  Quess Mail Shoot ", label: "  Quess Mail Shoot " },
+
     { value: "  WhatsApp marketing  ", label: "  WhatsApp marketing " },
     {
       value: "  Internal cross selling   ",
@@ -423,11 +423,11 @@ const AddLead = (props) => {
             <Select
               aria-label=".form-select-sm example"
               onChange={(e) => {
-                setSourceOfLead(e?.value.trim());
+                setSourceOfLead(e ? e.value.trim() : "");
               }}
               options={sourceLeadOpt}
               isClearable
-            ></Select>
+            />
           </div>
           <div className="mt-3">
             <label htmlFor="exampleFormControlTextarea5" className="form-label">

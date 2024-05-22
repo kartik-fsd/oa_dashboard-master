@@ -203,7 +203,7 @@ const CommericalTable = ({ status, update, setUpdate }) => {
     data: projectList,
   };
 
-  const getCommercialData = () => {
+  useEffect(() => {
     let commericalApi = api.ONX_URL + pending_project_lists;
     axios
       .get(commericalApi, { params: { commercial_status: status } })
@@ -212,11 +212,7 @@ const CommericalTable = ({ status, update, setUpdate }) => {
         setProjectList(res?.data?.project_list);
       })
       .catch((err) => console.log(err));
-  };
-
-  useEffect(() => {
-    getCommercialData();
-  }, [update]);
+  }, [status, update]);
   return (
     <>
       <DataTableExtensions
