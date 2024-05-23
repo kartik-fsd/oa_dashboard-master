@@ -351,6 +351,34 @@ const Navdata1 = () => {
       },
     ],
   };
+
+  const cmSupply = [
+    {
+      id: 1,
+      label: "Request",
+      link: "/supply/request",
+      parentId: "cmsupply",
+    },
+    {
+      id: "2",
+      label: "My Team",
+      link: `/supply/cluster/cm`,
+      parentId: "cmsupply",
+    },
+
+    {
+      id: 3,
+      label: "Performance",
+      link: "/supply/dashboard",
+      parentId: "cmsupply",
+    },
+    {
+      id: 4,
+      label: "Earnings",
+      link: "/supply/earnings",
+      parentId: "cmsupply",
+    },
+  ];
   const supply = {
     id: "supply",
     label: "Supply",
@@ -363,80 +391,83 @@ const Navdata1 = () => {
       updateIconSidebar(e);
     },
     stateVariables: isSupply,
-    subItems: [
-      {
-        id: "mapping",
-        label: "Mapping",
-        link: "/#",
-        parentId: "supply",
-        isChildItem: true,
-        click: function (e) {
-          e.preventDefault();
-          setIsMapping(!isMapping);
-        },
-        stateVariables: isMapping,
-        childItems: [
-          {
-            id: 1,
-            label: "Request",
-            link: "/supply/request",
-            parentId: "pages",
-          },
-        ],
-      },
-      {
-        id: "tracking",
-        label: "Tracker",
-        link: "/#",
-        parentId: "supply",
-        isChildItem: true,
-        click: function (e) {
-          e.preventDefault();
-          setIsTracking(!isTracking);
-        },
-        stateVariables: isTracking,
-        childItems: [
-          {
-            id: 1,
-            label: "Performance",
-            link: "/supply/dashboard",
-            parentId: "supply",
-          },
-          {
-            id: 2,
-            label: "Earnings",
-            link: "/supply/earnings",
-            parentId: "supply",
-          },
-        ],
-      },
-      {
-        id: "acquisition",
-        label: "Acquisition",
-        link: "/#",
-        isChildItem: true,
-        click: function (e) {
-          e.preventDefault();
-          setIsAcquisition(!isAcquisition);
-        },
-        parentId: "supply",
-        stateVariables: isAcquisition,
-        childItems: [
-          {
-            id: 1,
-            label: "Onboarding",
-            link: "/hr/onboarding",
-            parentId: "pages",
-          },
-          {
-            id: 2,
-            label: "Teams",
-            link: "/supply/cluster",
-            parentId: "pages",
-          },
-        ],
-      },
-    ],
+    subItems:
+      userType.role === "cm"
+        ? cmSupply
+        : [
+            {
+              id: "mapping",
+              label: "Mapping",
+              link: "/#",
+              parentId: "supply",
+              isChildItem: true,
+              click: function (e) {
+                e.preventDefault();
+                setIsMapping(!isMapping);
+              },
+              stateVariables: isMapping,
+              childItems: [
+                {
+                  id: 1,
+                  label: "Request",
+                  link: "/supply/request",
+                  parentId: "pages",
+                },
+              ],
+            },
+            {
+              id: "tracking",
+              label: "Tracker",
+              link: "/#",
+              parentId: "supply",
+              isChildItem: true,
+              click: function (e) {
+                e.preventDefault();
+                setIsTracking(!isTracking);
+              },
+              stateVariables: isTracking,
+              childItems: [
+                {
+                  id: 1,
+                  label: "Performance",
+                  link: "/supply/dashboard",
+                  parentId: "supply",
+                },
+                {
+                  id: 2,
+                  label: "Earnings",
+                  link: "/supply/earnings",
+                  parentId: "supply",
+                },
+              ],
+            },
+            {
+              id: "acquisition",
+              label: "Acquisition",
+              link: "/#",
+              isChildItem: true,
+              click: function (e) {
+                e.preventDefault();
+                setIsAcquisition(!isAcquisition);
+              },
+              parentId: "supply",
+              stateVariables: isAcquisition,
+              childItems: [
+                {
+                  id: 1,
+                  label: "Onboarding",
+                  link: "/hr/onboarding",
+                  parentId: "pages",
+                },
+                {
+                  id: 2,
+                  label: "Teams",
+                  link: "/supply/cluster",
+                  parentId: "pages",
+                },
+              ],
+            },
+          ],
   };
 
   const management = {

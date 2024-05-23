@@ -37,6 +37,33 @@ const DailyTrackingTable = ({ year }) => {
   console.log(totalData, "projectData");
   let columns = [];
 
+  function formatMonthName(date) {
+    if (!date) {
+      return null; // Handle null or undefined date
+    }
+
+    const month = date?.getMonth(); // Get the month index (0-11)
+    const shortMonths = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    const monthName = shortMonths[month];
+
+    const year = date.getFullYear(); // Extract the year
+
+    return `${monthName} ${year.toString().slice(-2)}`; // Format as "Apr 23"
+  }
+
   const constColumns = [
     {
       name: (
@@ -138,7 +165,7 @@ const DailyTrackingTable = ({ year }) => {
         <div className="d-flex" style={{ gap: "62px" }}>
           <div className="d-flex justify-content-center align-items-center flex-column ">
             <span className="fs-12 text-dark" style={{ fontWeight: "500" }}>
-              {d?.month_name}
+              {formatMonthName(new Date(d?.month_name))}
             </span>
             <div className="d-flex flex-column gap-1">
               <span className="badge rounded-pill badge-soft-info mt-2">
@@ -147,8 +174,8 @@ const DailyTrackingTable = ({ year }) => {
             </div>
           </div>
           <div className="d-flex justify-content-center align-items-center flex-column ">
-            <span className="fs-12 text-dark" style={{ visibility: "hidden" }}>
-              {d?.month_name}
+            <span className="fs-12 text-dark" style={{ fontWeight: "500" }}>
+              {formatMonthName(new Date(d?.month_name))}
             </span>
             <div className="d-flex flex-column gap-1">
               {/* <a onClick={() => setOpen(!open)} className=""> */}
