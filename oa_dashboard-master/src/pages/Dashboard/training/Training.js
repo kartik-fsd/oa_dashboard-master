@@ -64,16 +64,42 @@ function Training({ type }) {
   };
 
   const timeArray = [
+    ["11:00", "11:30"],
     ["11:00", "12:00"],
+    ["11:30", "12:00"],
+    ["12:00", "12:30"],
     ["12:00", "13:00"],
+    ["12:30", "13:00"],
+    ["13:00", "13:30"],
     ["13:00", "14:00"],
+    ["13:30", "14:00"],
+    ["14:00", "14:30"],
     ["14:00", "15:00"],
+    ["14:30", "15:00"],
+    ["15:00", "15:30"],
     ["15:00", "16:00"],
+    ["15:30", "16:00"],
+    ["16:00", "16:30"],
     ["16:00", "17:00"],
+    ["16:30", "17:00"],
+    ["17:00", "17:30"],
     ["17:00", "18:00"],
+    ["17:30", "18:00"],
+    ["18:00", "18:30"],
     ["18:00", "19:00"],
+    ["18:30", "19:00"],
+    ["19:00", "19:30"],
     ["19:00", "20:00"],
+    ["19:30", "20:00"],
   ];
+
+  const convertTo12HourFormat = (time) => {
+    const [hour, minute] = time.split(":");
+    const period = +hour < 12 ? "AM" : "PM";
+    const adjustedHour = +hour % 12 || 12; // Convert "00" to "12" for AM
+    return `${adjustedHour}:${minute} ${period}`;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const { title, training_link, date, time, training_type } = formData;
@@ -221,97 +247,25 @@ function Training({ type }) {
                     onChange={handleChange}
                   >
                     <option>Select Time Slots</option>
-                    <option
-                      value="1"
-                      disabled={
-                        timeData > "11:00" && formData?.date <= dataFormat
+                    {timeArray.map((slot, index) => {
+                      const isDisabled =
+                        timeData > slot[0] && formData?.date <= dataFormat
                           ? true
-                          : false
-                      }
-                    >
-                      11:00 - 12:00
-                    </option>
-                    <option
-                      value="2"
-                      disabled={
-                        timeData > "12:00" && formData?.date <= dataFormat
-                          ? true
-                          : false
-                      }
-                    >
-                      12:00 - 1:00
-                    </option>
-
-                    <option
-                      value="3"
-                      disabled={
-                        timeData > "13:00" && formData?.date <= dataFormat
-                          ? true
-                          : false
-                      }
-                    >
-                      1:00 - 2:00
-                    </option>
-                    <option
-                      value="4"
-                      disabled={
-                        timeData > "14:00" && formData?.date <= dataFormat
-                          ? true
-                          : false
-                      }
-                    >
-                      2:00 - 3:00
-                    </option>
-                    <option
-                      value="5"
-                      disabled={
-                        timeData > "15:00" && formData?.date <= dataFormat
-                          ? true
-                          : false
-                      }
-                    >
-                      3:00 - 4:00
-                    </option>
-                    <option
-                      value="6"
-                      disabled={
-                        timeData > "16:00" && formData?.date <= dataFormat
-                          ? true
-                          : false
-                      }
-                    >
-                      4:00 - 5:00
-                    </option>
-                    <option
-                      value="7"
-                      disabled={
-                        timeData > "17:00" && formData?.date <= dataFormat
-                          ? true
-                          : false
-                      }
-                    >
-                      5:00 - 6:00
-                    </option>
-                    <option
-                      value="8"
-                      disabled={
-                        timeData > "18:00" && formData?.date <= dataFormat
-                          ? true
-                          : false
-                      }
-                    >
-                      6:00 - 7:00
-                    </option>
-                    <option
-                      value="9"
-                      disabled={
-                        timeData > "19:00" && formData?.date <= dataFormat
-                          ? true
-                          : false
-                      }
-                    >
-                      7:00 - 8:00
-                    </option>
+                          : false;
+                      return (
+                        <option
+                          key={index}
+                          value={index + 1}
+                          disabled={isDisabled}
+                          style={{
+                            backgroundColor: isDisabled ? "#f1f1f1" : "",
+                          }}
+                        >
+                          {convertTo12HourFormat(slot[0])} -{" "}
+                          {convertTo12HourFormat(slot[1])}
+                        </option>
+                      );
+                    })}
                   </select>
                 </Col>
               </Row>
