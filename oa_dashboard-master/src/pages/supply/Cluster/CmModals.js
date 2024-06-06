@@ -57,7 +57,9 @@ const AddTsmMod = ({ setOpen, open }) => {
             warningnotify(res.data.message);
           } else {
             const dataEnter = {
-              asm_id: res.data?.vendor_id,
+              //   asm_id: res.data?.vendor_id,
+              mobile_number: res.data?.mobile_number,
+              full_name: res.data?.full_name,
             };
             axios
               .post(sendWhatsappForSp, dataEnter)

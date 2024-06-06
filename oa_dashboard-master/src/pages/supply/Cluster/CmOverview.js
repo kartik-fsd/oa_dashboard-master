@@ -509,7 +509,7 @@ const CmOverview = () => {
                       )} */}
                       <button
                         type="button"
-                        className="btn"
+                        className="btn btn-sm"
                         style={{
                           backgroundColor: "#ec5c24",
                           color: "whitesmoke",
