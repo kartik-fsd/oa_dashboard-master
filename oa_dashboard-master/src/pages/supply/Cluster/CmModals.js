@@ -59,15 +59,15 @@ const AddTsmMod = ({ setOpen, open }) => {
             const dataEnter = {
               asm_id: res.data?.vendor_id,
             };
-            // axios
-            //   .post(sendWhatsappForSp, dataEnter)
-            //   .then((res) => {
-            //     successnotify("success");
-            //     setOpen(false);
-            //   })
-            //   .catch((err) => {
-            //     warningnotify("oops something went wrong...!");
-            //   });
+            axios
+              .post(sendWhatsappForSp, dataEnter)
+              .then((res) => {
+                successnotify("success");
+                setOpen(false);
+              })
+              .catch((err) => {
+                warningnotify("oops something went wrong...!");
+              });
           }
         })
         .catch((err) => {
