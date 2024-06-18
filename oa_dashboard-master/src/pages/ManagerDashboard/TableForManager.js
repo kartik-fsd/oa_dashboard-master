@@ -473,7 +473,7 @@ const TableForManager = (props) => {
                 className="rounded-avatar-xs"
                 width="40px"
                 height={"40px"}
-                // style={{ borderRadius: "50%" }}
+                style={{ borderRadius: "50%" }}
               />
               <span className="user-status"></span>
             </div>

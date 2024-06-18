@@ -41,7 +41,7 @@ const DailyTracking = () => {
                 >
                   Sales Roaster
                 </h5>
-                <div>
+                {/* <div>
                   <div style={{ height: "35px", marginRight: "220px" }}>
                     <div style={{ width: "120px" }}>
                       <select
@@ -63,7 +63,7 @@ const DailyTracking = () => {
                       </select>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </CardHeader>
             <CardBody>

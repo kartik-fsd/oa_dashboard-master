@@ -234,7 +234,11 @@ const PipelineModal = ({ setOpen, open, data }) => {
                             alignContent: "center",
                           }}
                         >
-                          <div>
+                          <div
+                            style={{
+                              display: data?.mileVisble === 0 ? "none" : "",
+                            }}
+                          >
                             <p className="text-muted text-uppercase fs-14 text-end mb-2">
                               {"MileStone"}
                             </p>

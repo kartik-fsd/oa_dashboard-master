@@ -284,13 +284,14 @@ const DailyTrackingTable = ({ year }) => {
     // }),
   ];
 
-  const pileLineFunction = (data, item) => {
+  const pileLineFunction = (data, item, visible) => {
     // console.log(data, item, "sample123");
     // let [ot] = data.projects.filter(
     //   (it) => it.project_title == item.project_title
     // );
     item.month_data = data.month;
     item.year = data.year;
+    item.mileVisble = visible?.show;
     setEachProjectItem(item);
     setOpen(true);
   };
@@ -365,7 +366,21 @@ const DailyTrackingTable = ({ year }) => {
 
             {/* )} */}
           </div>
-          <div className="text-muted fs-10 fw-normal">{item.sow_id}</div>
+          <div
+            className="text-muted fs-10 fw-normal"
+            onClick={() =>
+              pileLineFunction({ month: "00", year: "2024" }, item, {
+                show: 0,
+              })
+            }
+            style={{
+              textDecoration: "underline",
+              color: "#769ff5",
+              cursor: "pointer",
+            }}
+          >
+            {item.sow_id}
+          </div>
           <div
             className="badge badge-soft-dark"
             style={{
@@ -387,7 +402,9 @@ const DailyTrackingTable = ({ year }) => {
       center: true,
       cell: (d) => (
         <div
-          onClick={() => pileLineFunction(d, item)}
+          onClick={() => {
+            pileLineFunction(d, item, { show: 1 });
+          }}
           className="d-flex gap-1 fs-12 align-items-center"
           style={{
             textDecoration: "underline",
