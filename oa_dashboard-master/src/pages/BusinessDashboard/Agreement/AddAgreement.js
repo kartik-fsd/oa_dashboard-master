@@ -62,15 +62,25 @@ function AddAgreement({ isOpen, toggle, setModal, setCheck, check }) {
       .catch((err) => console.group(err));
   }, []);
   const uploadDoc = (e) => {
-    const path = api.AWS_URL + upload_issue_proof;
-    const axiosData = new FormData();
-    axiosData.append("file", e.target.files[0]);
-    axios
-      .post(path, axiosData)
-      .then((res) => {
-        setResurl(res?.data?.url);
-      })
-      .catch((err) => warningnotify("oops something went wrong...!"));
+
+    const file = e.target.files[0];
+
+    // Check if the file size is greater than 20MB (20 * 1024 * 1024 bytes)
+    if (file.size > 15 * 1024 * 1024) {
+      warningnotify("File size should not exceed 10MB");
+      return; // Prevent the upload
+    }
+    else {
+      const path = api.AWS_URL + upload_issue_proof;
+      const axiosData = new FormData();
+      axiosData.append("file", e.target.files[0]);
+      axios
+        .post(path, axiosData)
+        .then((res) => {
+          setResurl(res?.data?.url);
+        })
+        .catch((err) => warningnotify("oops something went wrong...!"));
+    }
   };
   const formatOptionData = (it) => {
     return (
@@ -233,6 +243,13 @@ function AddAgreement({ isOpen, toggle, setModal, setCheck, check }) {
                   Upload
                 </button>
               </div>
+              <div className="text-danger" style={{ display: "flex", alignItems: "center", justifyContent: "center" }} >
+                <span className="fs-10 m-2">
+                  Please upload a PDF file that is 10MB or smaller.
+                </span>
+                <i className="ri-information-line fs-12"></i>
+              </div>
+
             </Col>
           </Row>
 

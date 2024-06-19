@@ -117,15 +117,14 @@ function AddAgreementDetails() {
                         {AgreeData.agreement_unique_id}
                       </span>
                       <span
-                        className={`badge  ${
-                          AgreeData?.agreement_status === "active"
+                        className={`badge  ${AgreeData?.agreement_status === "active"
                             ? "bg-success"
                             : AgreeData?.agreement_status === "rejected"
-                            ? "bg-danger"
-                            : AgreeData?.agreement_status === "pending"
-                            ? "btn-warning"
-                            : ""
-                        }`}
+                              ? "bg-danger"
+                              : AgreeData?.agreement_status === "pending"
+                                ? "btn-warning"
+                                : ""
+                          }`}
                         style={{
                           padding: 4,
                           fontSize: 12,
