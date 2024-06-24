@@ -292,8 +292,8 @@ const ProjectLeadsTable = ({ data }) => {
             row.difficulty_level == "Low"
               ? "info"
               : row.difficulty_level == "High"
-              ? "primary"
-              : "secondary"
+                ? "primary"
+                : "secondary"
           }
           className="badge-label"
           style={{ width: "65px" }}
@@ -439,7 +439,7 @@ const ProjectLeadsTable = ({ data }) => {
                     />
                   </Col>
                   <Col xs={3}>
-                    <Label>Tasker CPL</Label>
+                    <Label>Network CPL</Label>
                     <input
                       type="text"
                       className="form-control"

@@ -119,7 +119,7 @@ function TaskerChart({ token }) {
         .then((res) => {
           setGraphData5({
             type: "5",
-            title: "Overall Tasker stats",
+            title: "Overall Network stats",
             data: res,
             colors: [
               "#683395",

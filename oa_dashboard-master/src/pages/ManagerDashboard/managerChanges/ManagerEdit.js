@@ -216,7 +216,7 @@ function ManagerEdit(props) {
                   className="p-3"
                   style={{ border: "1px solid #3478f1", borderRadius: "6px" }}
                 >
-                  <p style={{ margin: "0px" }}>Tasker ratio & SP ratio</p>
+                  <p style={{ margin: "0px" }}>Network ratio & SP ratio</p>
                   <div className="d-flex  justify-content-between">
                     <span className="float-left mt-4">{def}</span>
                     <span className="float-right  mt-4">{100 - def}</span>
@@ -481,7 +481,7 @@ export default ManagerEdit;
                   added the tr,spratio,training slot
                   <Row style={{ marginTop: "10px" }}>
                     <Col lg={4}>
-                      <Label>Tasker Ratio</Label>
+                      <Label>Network Ratio</Label>
                       <Input
                         type="text"
                         readOnly

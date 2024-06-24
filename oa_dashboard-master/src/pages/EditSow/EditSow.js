@@ -135,7 +135,7 @@ const EditSow = () => {
                         toggleCustom("1");
                       }}
                     >
-                      Tasker Info
+                      Network Info
                     </NavLink>
                   </NavItem>
                   <NavItem>
@@ -148,7 +148,7 @@ const EditSow = () => {
                         toggleCustom("2");
                       }}
                     >
-                      Tasker Process
+                      Network Process
                     </NavLink>
                   </NavItem>
                   <NavItem>

@@ -209,7 +209,7 @@ const FourCards = () => {
                     <i className=" ri-stop-fill text-warning fs-16 "></i>
 
                     <p className="m-0 fs-14" style={{ fontWeight: "500" }}>
-                      Tasker Payout
+                      Network Payout
                     </p>
                   </div>
                   <p className="m-0 fs-12 text-warning">123</p>

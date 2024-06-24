@@ -50,7 +50,7 @@ const ecomWidgets = [
   {
     id: 3,
     cardColor: "success",
-    label: "Tasker and SP Ratio",
+    label: "Network and SP Ratio",
     badge: "ri-arrow-right-up-line",
     badgeClass: "success",
     percentage: "+29.08",

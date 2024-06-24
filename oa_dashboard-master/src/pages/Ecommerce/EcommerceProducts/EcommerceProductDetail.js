@@ -350,7 +350,7 @@ function EcommerceProductDetail({ data, youtube }) {
                             </div>
 
                             <div style={{ display: "flex" }}>
-                              <div style={{ width: "130px" }}> Tasker CPL </div>
+                              <div style={{ width: "130px" }}> Network CPL </div>
 
                               <div>
                                 <span className="text-dark">
@@ -814,7 +814,7 @@ function EcommerceProductDetail({ data, youtube }) {
                   <button
                     type="submit"
                     className="btn btn-success d-flex align-items-center gap-2"
-                    // onClick={submitManager}
+                  // onClick={submitManager}
                   >
                     <i className="ri ri-checkbox-circle-line fs-18"></i>
                     Submit

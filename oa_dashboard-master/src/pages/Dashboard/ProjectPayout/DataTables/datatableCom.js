@@ -184,7 +184,7 @@ const BasicTable = (props) => {
       sortable: true,
     },
     {
-      name: <span className="font-weight-bold fs-13">Tasker Name</span>,
+      name: <span className="font-weight-bold fs-13">Network Name</span>,
       selector: (row) => row.full_name,
       sortable: true,
       cell: (d) => (
@@ -284,6 +284,7 @@ const BasicTable = (props) => {
               <DropdownItem
                 onClick={() => {
                   handleLeads(row);
+                  console.log(row, "row")
                 }}
                 className="d-flex align-items-center"
               >
@@ -300,7 +301,7 @@ const BasicTable = (props) => {
                   className="d-flex align-items-center"
                 >
                   <i className="ri-add-line align-bottom me-2 text-muted"></i>
-                  Assign Tasker
+                  Assign Network
                 </DropdownItem>
               ) : (
                 ""
@@ -318,8 +319,8 @@ const BasicTable = (props) => {
       window.location.pathname == "/business-dashboard/project-details"
         ? data
         : tableDataArray.length > 0
-        ? tableDataArray
-        : data,
+          ? tableDataArray
+          : data,
   };
   //, background: "#F3F3F8"
 
@@ -434,9 +435,9 @@ const BasicTable = (props) => {
                     setSwitchData(e.target.checked);
                     handleChange(e.target.checked);
                   }}
-                  // checked={
-                  //   rowData?.sow_status !== "accepted" ? "checked" : ""
-                  // }
+                // checked={
+                //   rowData?.sow_status !== "accepted" ? "checked" : ""
+                // }
                 />
                 <Label
                   className="form-check-label fs-14"
@@ -480,10 +481,10 @@ const BasicTable = (props) => {
                 {...tableData}
                 export={false}
                 filterPlaceholder={`Search`}
-                // style={{
-                //   paddingRight: "25px !important",
-                //   marginRight: "130px !important",
-                // }}
+              // style={{
+              //   paddingRight: "25px !important",
+              //   marginRight: "130px !important",
+              // }}
               >
                 <DataTable columns={columns} data={data} pagination />
               </DataTableExtensions>
@@ -804,7 +805,7 @@ const BasicTable = (props) => {
                 // setOpen(false);
               }}
             >
-              Assign Tasker
+              Assign Network
             </ModalHeader>
             <form onSubmit={handleAddEmpDetWithModal}>
               <ModalBody>

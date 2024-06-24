@@ -132,7 +132,7 @@ const TopReferrals = ({ graphData, monthData }) => {
                     minimumIntegerDigits: 2,
                     useGrouping: false,
                   })}%)`}</span>{" "}
-                  Direct Tasker
+                  Direct Network
                 </p>
                 <p className="mb-0 mt-2 text-muted">
                   <span
@@ -149,7 +149,7 @@ const TopReferrals = ({ graphData, monthData }) => {
                     (earningStats?.managed / earningStats?.total_users) *
                     100
                   ).toFixed(0)}%)`}</span>{" "}
-                  Managed Tasker
+                  Managed Network
                 </p>
               </Col>
               <Col xs={1}>

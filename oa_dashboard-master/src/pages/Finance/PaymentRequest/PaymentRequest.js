@@ -119,7 +119,7 @@ const PaymentRequest = () => {
                       (e.target.style.backgroundColor = "#ec5c24")
                     }
                   >
-                    Tasker: <span>{indianNumbers(ops.tasker, 2)}</span>
+                    Network: <span>{indianNumbers(ops.tasker, 2)}</span>
                   </button>
                 </div>
                 <div>
@@ -186,7 +186,7 @@ const PaymentRequest = () => {
                   <UncontrolledButtonDropdown
                     id="btnGroupDrop1"
                     direction="end"
-                    // style={{ marginRight: "220px" }}
+                  // style={{ marginRight: "220px" }}
                   >
                     <DropdownToggle
                       style={{ backgroundColor: "#ec5c24" }}

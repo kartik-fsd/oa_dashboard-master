@@ -239,7 +239,7 @@ const DataTables = ({ data, check, setCheck, check2, setCheck2 }) => {
         centered={true}
       >
         <ModalHeader className="p-3" toggle={attendanceHandle}>
-          Tasker Attendance List
+          Network Attendance List
         </ModalHeader>
 
         <ModalBody>
@@ -299,9 +299,8 @@ const DataTables = ({ data, check, setCheck, check2, setCheck2 }) => {
                         }}
                       >
                         <h5 className="text-reset fs-14 mb-0">
-                          {`${item.full_name} ${"("} ${item.user_id} ${")"} - ${
-                            item.city
-                          } - ${item.mobile_number}`}
+                          {`${item.full_name} ${"("} ${item.user_id} ${")"} - ${item.city
+                            } - ${item.mobile_number}`}
                         </h5>
                         <div>
                           {(item?.sows || []).map((sow) => (
@@ -463,9 +462,9 @@ const DataTables = ({ data, check, setCheck, check2, setCheck2 }) => {
                               style={
                                 item.completion_status !== "none"
                                   ? {
-                                      cursor: "not-allowed",
-                                      filter: "blur(1px)",
-                                    }
+                                    cursor: "not-allowed",
+                                    filter: "blur(1px)",
+                                  }
                                   : {}
                               }
                               type="text"
@@ -475,18 +474,18 @@ const DataTables = ({ data, check, setCheck, check2, setCheck2 }) => {
                                 compId == ""
                                   ? ""
                                   : compId == item.completion_id
-                                  ? radioState == "present"
-                                    ? "enter passcode"
-                                    : radioState == "rejected"
-                                    ? "enter remark"
+                                    ? radioState == "present"
+                                      ? "enter passcode"
+                                      : radioState == "rejected"
+                                        ? "enter remark"
+                                        : ""
                                     : ""
-                                  : ""
                               }
                               name="passcode"
                               onChange={handleChange}
                               disabled={
                                 compId !== item.completion_id ||
-                                radioState == "absent"
+                                  radioState == "absent"
                                   ? true
                                   : false
                               }
@@ -500,9 +499,9 @@ const DataTables = ({ data, check, setCheck, check2, setCheck2 }) => {
                               style={
                                 item.completion_status !== "none"
                                   ? {
-                                      cursor: "not-allowed",
-                                      filter: "blur(1px)",
-                                    }
+                                    cursor: "not-allowed",
+                                    filter: "blur(1px)",
+                                  }
                                   : {}
                               }
                               type="textarea"
@@ -513,18 +512,18 @@ const DataTables = ({ data, check, setCheck, check2, setCheck2 }) => {
                                 compId == ""
                                   ? ""
                                   : compId == item.completion_id
-                                  ? radioState == "present"
-                                    ? "enter passcode"
-                                    : radioState == "rejected"
-                                    ? "enter remark"
+                                    ? radioState == "present"
+                                      ? "enter passcode"
+                                      : radioState == "rejected"
+                                        ? "enter remark"
+                                        : ""
                                     : ""
-                                  : ""
                               }
                               name="passcode"
                               onChange={handleChange}
                               disabled={
                                 compId !== item.completion_id ||
-                                radioState == "absent"
+                                  radioState == "absent"
                                   ? true
                                   : false
                               }
@@ -549,9 +548,9 @@ const DataTables = ({ data, check, setCheck, check2, setCheck2 }) => {
                           }
                           onClick={() => handleAttendance(item)}
                           style={loadingApi ? { pointerEvents: "none" } : {}}
-                          // disabled={
-                          //   item.completion_status !== "null" ? false : true
-                          // }
+                        // disabled={
+                        //   item.completion_status !== "null" ? false : true
+                        // }
                         >
                           <i className="mdi mdi-account-check-outline align-bottom"></i>
                           submit

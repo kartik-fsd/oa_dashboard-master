@@ -124,7 +124,7 @@ const DashboardMainPage = () => {
                       >
                         <i className="ri-group-line nav-icon nav-tab-position"></i>
                         <h5 className="nav-titl nav-tab-position m-0">
-                          Tasker
+                          Network
                         </h5>
                       </NavLink>
                     </NavItem>

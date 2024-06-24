@@ -80,7 +80,7 @@ const CmTable = ({ data, role, onboardData }) => {
       //             <span className="text-muted fs-10">
       //               active since:{" "}
       //               {d.active_since == 0
-      //                 ? "New Tasker"
+      //                 ? "New Network"
       //                 : `${d.active_since} days`}
       //             </span>
       //           ) : (
@@ -97,8 +97,8 @@ const CmTable = ({ data, role, onboardData }) => {
             <div style={{ display: "flex", gap: "12px" }}>
               <div className="d-flex align-items-center">
                 {d?.profile_image != "" &&
-                // d?.profile_image != "null" ? (
-                d?.profile_image?.includes("https") ? (
+                  // d?.profile_image != "null" ? (
+                  d?.profile_image?.includes("https") ? (
                   <img
                     loading="lazy"
                     className=" rounded-circle img-fluid userprofile"
@@ -271,25 +271,24 @@ const CmTable = ({ data, role, onboardData }) => {
       cell: (d) => (
         <div onClick={() => console.log(d.onboard_status, "asf")}>
           <span
-            className={`badge rounded-pill badge-outline-${
-              d.onboard_status == "onboarded"
+            className={`badge rounded-pill badge-outline-${d.onboard_status == "onboarded"
                 ? "success"
                 : d.onboard_status == "inactive"
-                ? "danger"
-                : d.onboard_status == "none"
-                ? "warning"
-                : "primary"
-            }`}
+                  ? "danger"
+                  : d.onboard_status == "none"
+                    ? "warning"
+                    : "primary"
+              }`}
             style={{ width: "80px" }}
           >
             {/* {d.onboard_status} */}
             {d.onboard_status == "onboarded"
               ? "Active"
               : d.onboard_status == "inactive"
-              ? "Inactive"
-              : d.onboard_status == "none"
-              ? "New"
-              : "Hold"}
+                ? "Inactive"
+                : d.onboard_status == "none"
+                  ? "New"
+                  : "Hold"}
           </span>
         </div>
       ),
@@ -303,19 +302,18 @@ const CmTable = ({ data, role, onboardData }) => {
       cell: (d) => (
         <div className="text-center">
           <span
-            className={`badge text-capitalize rounded-pill badge-outline-${
-              d.documentation_status == "verified"
+            className={`badge text-capitalize rounded-pill badge-outline-${d.documentation_status == "verified"
                 ? "success"
                 : d.documentation_status == "rejected"
-                ? "danger"
-                : d.documentation_status == "none"
-                ? "warning"
-                : d.documentation_status == "duplicate"
-                ? "secondary"
-                : d.documentation_status == "needs_review"
-                ? "info"
-                : "primary"
-            }`}
+                  ? "danger"
+                  : d.documentation_status == "none"
+                    ? "warning"
+                    : d.documentation_status == "duplicate"
+                      ? "secondary"
+                      : d.documentation_status == "needs_review"
+                        ? "info"
+                        : "primary"
+              }`}
             style={{ width: "70px" }}
           >
             {d.documentation_status == "none"

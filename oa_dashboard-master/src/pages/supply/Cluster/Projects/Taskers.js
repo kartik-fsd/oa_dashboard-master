@@ -149,9 +149,9 @@ const Taskers = ({ type }) => {
                     setSwitchData(e.target.checked);
                     handleChange(e.target.checked);
                   }}
-                  // checked={
-                  //   rowData?.sow_status !== "accepted" ? "checked" : ""
-                  // }
+                // checked={
+                //   rowData?.sow_status !== "accepted" ? "checked" : ""
+                // }
                 />
                 {/* <Label
               className="form-check-label fs-14"
@@ -168,7 +168,7 @@ const Taskers = ({ type }) => {
             {/* <div></div> */}
             <div
               className="d-flex align-items-center gap-2"
-              // style={{ marginBottom: "40px" }}
+            // style={{ marginBottom: "40px" }}
             >
               <div className="d-flex align-items-center gap-1 fs-12">
                 <span
@@ -225,7 +225,7 @@ const Taskers = ({ type }) => {
                 className="btn btn-danger add-btn"
                 onClick={() => setOpen(true)}
               >
-                <i className="ri-add-line align-bottom"></i> Assign Tasker
+                <i className="ri-add-line align-bottom"></i> Assign Network
               </button>
             ) : (
               ""
@@ -254,7 +254,7 @@ const Taskers = ({ type }) => {
             setUserSows([]);
           }}
         >
-          ASSIGN TASKER
+          ASSIGN NETWORK
         </ModalHeader>
 
         <ModalBody>
@@ -320,9 +320,8 @@ const Taskers = ({ type }) => {
                       }}
                     >
                       <h5 className="text-reset fs-14 mb-0">
-                        {`${userSows[0]?.fse_name} ${"("} ${
-                          userSows[0]?.user_id
-                        } ${")"}`}
+                        {`${userSows[0]?.fse_name} ${"("} ${userSows[0]?.user_id
+                          } ${")"}`}
                       </h5>
                       <div className="d-flex flex-wrap">
                         {(userSows || []).map(
